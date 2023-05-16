@@ -1,9 +1,7 @@
 package com.mady.backend.services;
 
 
-import com.mady.backend.utils.Role;
 import com.squareup.okhttp.*;
-
 import net.minidev.json.JSONObject;
 import net.minidev.json.parser.JSONParser;
 import org.springframework.beans.factory.annotation.Value;
