@@ -1,0 +1,32 @@
+<div class="card">
+    <div class="card-header bg-default">
+        <div class="row">
+          <div class="col-sm-8">
+            <h2 class="card-title text-white">
+              <i class="nc-icon nc-layout-11"></i>
+              Statistiques sur les cas
+            </h2>
+          </div>
+        </div>
+    </div>
+    <div class="card-body">
+        <app-search-bar [expanded]="true" [isLoading]="statSpinner.loadingEvent$ | async" (onSearchEvent)="onSearch($event)"></app-search-bar>
+        <hr>
+        <div class="spinner-center">
+          <button mat-button [ngClass]="!isService ? 'active' : ''" (click)="isService=false">Type de cas</button>
+          <button mat-button [ngClass]="isService ? 'active' : ''" (click)="isService=true">Services</button>
+        </div>
+        <hr>
+
+        <div class="mt-2">
+          <app-spinner [filterBy]="statistiqueUrl" #statSpinner></app-spinner>
+        </div>
+
+        <div *ngIf="isService && params" class="mt-1">
+          <app-statistique-services [params]="params"></app-statistique-services>
+        </div>
+        <div *ngIf="!isService && params">
+          <app-statistique-type-cas [params]="params"></app-statistique-type-cas>
+        </div>
+    </div>
+</div>

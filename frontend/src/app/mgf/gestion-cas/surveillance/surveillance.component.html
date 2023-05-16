@@ -1,0 +1,202 @@
+<div class="card">
+  <div class="card-header bg-default">
+    <div class="row">
+      <div class="col-sm-8">
+        <h2 class="card-title text-white">
+          <i class="nc-icon nc-layout-11"></i>
+          Rapports de surveillance
+        </h2>
+      </div>
+      <div class="col-sm-4 text-right mt-2">
+        <!-- <button *ngIf="permissions.can_add" mat-raised-button routerLink="edit" class="mr-1" color="info">
+            <mat-icon>add</mat-icon>
+          </button> -->
+        <button mat-raised-button color="primary" (click)="onRefresh()">
+          <mat-icon>refresh</mat-icon>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="card-body">
+    <app-search-bar-surveillance [isLoading]="spinner.loadingEvent$ | async" (onSearchEvent)="onSearch($event)"></app-search-bar-surveillance>
+        <hr>
+    <!-- Spinner -->
+    <app-spinner [filterBy]="surveillanceUrl" #spinner></app-spinner>
+
+   <!--  <div class="row">
+      <div class="col-12">
+        <mat-accordion>
+          <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false" expanded="true">
+            <mat-expansion-panel-header>
+              <mat-panel-title>Recherche</mat-panel-title>
+            </mat-expansion-panel-header>
+            <form>
+              <div class="row">
+                <div class="col-md-3">
+                  <mat-form-field>
+                    <mat-label>Année</mat-label>
+                    <mat-select name="annee" [(ngModel)]="params.annee">
+                      <mat-option *ngFor="let an of annees$ | async" [value]="an">{{ an }}</mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                </div>
+                <div class="col-md-3">
+                  <mat-form-field>
+                    <mat-label>Mois</mat-label>
+                    <mat-select name="mois" [(ngModel)]="params.mois">
+                      <mat-option *ngFor="let m of mois$ | async" [value]="m.code">{{ m.libelle }}</mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                </div>
+                <div class="col-md-3">
+                  <mat-form-field>
+                    <mat-label>Secteur/Village</mat-label>
+                    <mat-select name="secteur" [(ngModel)]="params.idSecteur">
+                      <mat-option *ngFor="let loc of localite$ | async" [value]="loc.id">{{ loc.nom }}</mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                </div>
+                <div class="col-md-3 col-sm-12 form-inline">
+                  <button type="button" mat-raised-button color="info" class="mr-1" (click)="onSearch()"
+                    [disabled]="srvSpinner.loadingEvent$ | async">
+                    <mat-icon>search</mat-icon>
+                    Rechercher
+                  </button>
+                  <button type="button" mat-raised-button (click)="resetForm()">
+                    <mat-icon>restart_alt</mat-icon>
+                    Annuler
+                  </button>
+                </div>
+              </div>
+            </form>
+          </mat-expansion-panel>
+        </mat-accordion>
+      </div>
+    </div> -->
+
+    <!-- <hr> -->
+
+    <!-- Spinner -->
+    <!-- <app-spinner [filterBy]="surveillanceUrl" #srvSpinner></app-spinner> -->
+
+    <div [hidden]="!dataSource || dataSource.data.length === 0">
+      <div class="row">
+        <div class="col-md-2 label">
+          Total : {{ dataSource.data.length }}
+        </div>
+        <div class="col-md-10 text-right">
+          <button type="button" [class.spinner]="isExporting" [disabled]="isExporting" color="info" mat-raised-button
+            (click)="onExport()">
+            <mat-icon>file_download</mat-icon>
+          </button>
+        </div>
+      </div>
+      <hr>
+     <!--  <div class="mat-table-header">
+        <mat-form-field>
+          <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Rechercher">
+        </mat-form-field>
+      </div> -->
+      <div class="mat-table-container mat-elevation-z0 table-responsive-sm">
+        <mat-table [dataSource]="dataSource" matSort>
+          <!-- annee Column -->
+          <!-- <ng-container matColumnDef="annee">
+                  <mat-header-cell *matHeaderCellDef  mat-sort-header>Année</mat-header-cell>
+                  <mat-cell *matCellDef="let row">{{ row.annee }}</mat-cell>
+              </ng-container> -->
+          <!-- date Column --> 
+          <ng-container matColumnDef="date">
+            <mat-header-cell *matHeaderCellDef>Date</mat-header-cell>
+            <mat-cell *matCellDef="let row">{{ row.date | date : 'dd/MM/yyyy ' }}</mat-cell>
+          </ng-container>
+
+          <!-- mois Column -->
+          <ng-container matColumnDef="mois">
+            <mat-header-cell *matHeaderCellDef mat-sort-header>Mois</mat-header-cell>
+            <mat-cell *matCellDef="let row">{{ row.mois }}</mat-cell>
+          </ng-container>
+          <!-- TypeCas Column -->
+          <ng-container matColumnDef="typeCas">
+            <mat-header-cell *matHeaderCellDef mat-sort-header>Type de cas</mat-header-cell>
+            <mat-cell *matCellDef="let row">{{ row.typeCas }}</mat-cell>
+          </ng-container>
+          <!-- casAvere Column -->
+          <ng-container matColumnDef="casAvere">
+            <mat-header-cell *matHeaderCellDef mat-sort-header>Cas avéré</mat-header-cell>
+            <mat-cell *matCellDef="let row">{{ row.casAvere }}</mat-cell>
+          </ng-container>
+          <!-- casEmpeche Column -->
+          <ng-container matColumnDef="casEmpeche">
+            <mat-header-cell *matHeaderCellDef mat-sort-header>Cas empeché</mat-header-cell>
+            <mat-cell *matCellDef="let row">{{ row.casEmpeche }}</mat-cell>
+          </ng-container>
+          <!-- localite Column -->
+          <ng-container matColumnDef="prefectures">
+            <mat-header-cell *matHeaderCellDef mat-sort-header>Prefecture</mat-header-cell>
+            <mat-cell *matCellDef="let row">
+              <span *ngIf="(row.prefecture| findLocalite : localite.PREFECTURE | async) as prefecture ">
+                {{ prefecture.nom }}
+              </span>
+            </mat-cell>
+          </ng-container>
+          <ng-container matColumnDef="communes">
+            <mat-header-cell *matHeaderCellDef mat-sort-header>Communes</mat-header-cell>
+            <mat-cell *matCellDef="let row">
+              <span *ngIf="(row.commune| findLocalite : localite.COMMUNE | async) as commune">
+                {{ commune.nom }}
+              </span>
+            </mat-cell>
+          </ng-container>
+
+          <ng-container matColumnDef="quartiers">
+            <mat-header-cell *matHeaderCellDef mat-sort-header>Quartiers</mat-header-cell>
+            <mat-cell *matCellDef="let row">
+              <span *ngIf="(row.quartier| findLocalite : localite.QUARTIER | async) as quartier">
+                {{ quartier.nom }}
+              </span>
+            </mat-cell>
+          </ng-container>
+
+          <ng-container matColumnDef="secteurs">
+            <mat-header-cell *matHeaderCellDef mat-sort-header>Secteurs</mat-header-cell>
+            <mat-cell *matCellDef="let row">
+              <span *ngIf="(row.secteur| findLocalite : localite.SECTEUR | async) as secteur">
+                {{ secteur.nom }}
+              </span>
+            </mat-cell>
+          </ng-container>
+
+
+          <!-- surveillant Column -->
+          <ng-container matColumnDef="surveillant">
+            <mat-header-cell *matHeaderCellDef mat-sort-header>Surveillant</mat-header-cell>
+            <mat-cell *matCellDef="let row"><a [routerLink]="['/users/info', row.userId]">{{ row.surveillant
+                }}</a></mat-cell>
+          </ng-container>
+          <!-- Action Column -->
+          <ng-container matColumnDef="action">
+            <mat-header-cell *matHeaderCellDef> ACTION </mat-header-cell>
+            <mat-cell *matCellDef="let row">
+              <button *ngIf="permissions.can_delete" mat-mini-fab color="warn" (click)="onDelete(row.id)"
+                aria-label="Supprimer" title="Supprimer">
+                <mat-icon>delete</mat-icon>
+              </button>
+            </mat-cell>
+          </ng-container>
+          <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+          <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+        </mat-table>
+        <!-- <mat-paginator [pageSize]="10" [pageSizeOptions]="dataSource.data.length | tableOptions"></mat-paginator> -->
+        <mat-paginator #paginator (page)="pageChanged($event)" [length]="totalRows" [pageIndex]="currentPage"
+          [pageSize]="pageSize" [pageSizeOptions]="dataSource.data.length | tableOptions"></mat-paginator>
+      </div>
+    </div>
+    <!-- <div *ngIf="dataSource.data.length === 0 && !isLoading && !isError" class="text-info text-center mt-2"> -->
+    <div *ngIf="dataSource.data.length === 0 && ((spinner.loadingEvent$ | async) === false)" class="text-info text-center mt-2">
+          Aucun rapport trouvé !!!
+     </div>
+    <!--  <div *ngIf="isError" class="text-danger text-center mt-2">
+        Une erreur réseau est survenue veuillez réessayer plus tard !!!.
+      </div> -->
+  </div>
+</div>

@@ -1,0 +1,59 @@
+<div class="card">
+  <div class="card-header bg-default">
+    <div class="row">
+      <div class="col-sm-12 form-inline">
+        <button mat-mini-fab color="info" routerLink="..">
+          <mat-icon>reply</mat-icon>
+        </button>
+        <h2 class="card-title ml-1 text-white">
+          {{ isNew ? 'Enregistrement d\'un role' : 'Modification d\'un role'}}
+        </h2>
+      </div>
+    </div>
+  </div>
+
+  <div class="card-body">
+
+    <!-- Spinner -->
+    <app-spinner [filterBy]="roleUrl" [diameter]="30" #roleSpinner></app-spinner>
+
+    <div class="row">
+      <div class="col-md-8 offset-md-2 col-sm-12">
+        <form [formGroup]="roleForm">
+          <div class="row">
+            <div class="col-12">
+              <mat-form-field>
+                <mat-label>Nom</mat-label>
+                <input matInput type="text" formControlName="nom" placeholder="Saisissez le nom du role">
+                <mat-error>Nom incorrect</mat-error>
+              </mat-form-field>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <mat-form-field>
+                <mat-label>Description</mat-label>
+                <textarea matInput formControlName="description" placeholder="Faites une description du role"></textarea>
+              </mat-form-field>
+            </div>
+          </div>
+        </form>
+        <fieldset class="fieldset-border">
+          <legend class="fieldset-border">Permissions</legend>
+          <div class="row">
+            <div class="col-md-4" *ngFor="let form of permissionForms; index as i">
+              <mat-checkbox [disabled]="form.disable" [(ngModel)]="permissionForms[i].value" [matTooltip]="form.permission.description" >{{ form.permission.libelle }}</mat-checkbox>
+              <hr>
+            </div>
+          </div>
+
+        </fieldset>
+
+        <div class="text-center mt-2">
+          <button [disabled]="roleSpinner.loadingEvent$ | async" type="button" mat-raised-button color="primary" (click)="onSubmit()">Enregistrer</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

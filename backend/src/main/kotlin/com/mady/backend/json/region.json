@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "nom": "Conakry",
+    "code": "GN-C-01",
+    "longitude": -13.712222,
+    "latitude": 9.509167,
+    "description": "Gouvernorat de Conakry",
+    "isView": true
+  },
+  {
+    "id": 2,
+    "nom": "Boké",
+    "code": "GN-B-02",
+    "longitude": -14.29668,
+    "latitude": 10.93944,
+    "description": "Région de Boké",
+    "isView": true
+  },
+  {
+    "id": 3,
+    "nom": "Kindia",
+    "code": "GN-D-03",
+    "longitude": -12.86569,
+    "latitude": 10.05531,
+    "description": "Région de Kindia",
+    "isView": true
+  },
+  {
+    "id": 4,
+    "nom": "Mamou",
+    "code": "GN-M-04",
+    "longitude": -12.09159,
+    "latitude": 10.37396,
+    "description": "Région de Mamou",
+    "isView": true
+  },
+  {
+    "id": 5,
+    "nom": "Faranah",
+    "code": "GN-F-05",
+    "longitude": -10.75,
+    "latitude": 10.04,
+    "description": "Région de Faranah",
+    "isView": true
+  },
+  {
+    "id": 6,
+    "nom": "Kankan",
+    "code": "GN-K-06",
+    "longitude": -9.305553,
+    "latitude": 10.38404,
+    "description": "Région de Kankan",
+    "isView": true
+  },
+  {
+    "id": 7,
+    "nom": "Labé",
+    "code": "GN-L-07",
+    "longitude": -12.2833333,
+    "latitude": 11.3166667,
+    "description": "Région de Labé",
+    "isView": true
+  },
+  {
+    "id": 8,
+    "nom": "Nzérékoré",
+    "code": "GN-N-08",
+    "longitude": -8.818018,
+    "latitude": 7.754822,
+    "description": "Région de Nzérékoré",
+    "isView": true
+  }
+]

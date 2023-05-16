@@ -1,0 +1,97 @@
+<div class="card">
+    <div class="card-header bg-default">
+        <div class="row">
+          <div class="col-sm-8 form-inline">
+            <button mat-mini-fab color="info" [routerLink]="returnUrl">
+              <mat-icon>reply</mat-icon>
+            </button>
+            <h2 class="card-title ml-1 text-white">
+              Utilisateur
+            </h2>
+          </div>
+          <div class="col-sm-4 text-right">
+            <button mat-mini-fab color="info" [routerLink]="['/users/edit', {id: userId}]">
+                <mat-icon>edit</mat-icon>
+            </button>
+            <button mat-mini-fab color="warn" (click)="onDelete(userId)">
+                <mat-icon>delete</mat-icon>
+            </button>
+          </div>
+        </div>
+    </div>
+
+    <div class="card-body">
+        <!-- Spinner -->
+        <app-spinner [filterBy]="userUrl"></app-spinner>
+
+        <div *ngIf="(user$ | async) as user">
+            <div class="row">
+                <div class="col-md-6">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            <div class="row">
+                                <div class="col">Nom d'utilisateur</div>
+                                <div class="col font-weight-bold font-italic">{{ user.username }}</div>
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            <div class="row">
+                                <div class="col">Nom</div>
+                                <div class="col font-weight-bold">{{ user.nom }}</div>
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            <div class="row">
+                                <div class="col">Prenom</div>
+                                <div class="col font-weight-bold">{{ user.prenom }}</div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            <div class="row">
+                                <div class="col">Email</div>
+                                <div class="col font-weight-bold">{{ user.email }}</div>
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            <div class="row">
+                                <div class="col">Telephone</div>
+                                <div class="col font-weight-bold">{{ user.telephone }}</div>
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            <div class="row">
+                                <div class="col">Statut</div>
+                                <div class="col font-weight-bold">
+                                    <mat-slide-toggle [checked]="user.statut === 'Activated'" (change)="onChangeStatus(user.id)" color="primary">
+                                    </mat-slide-toggle>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Localité -->
+<div class="card card-body" *ngIf="localite">
+    <h2>Localité</h2>
+    <app-display-localite [localite]="localite"></app-display-localite>
+</div>
+
+<!-- Permissions -->
+<div class="card card-body" *ngIf="role">
+    <div class="row">
+        <div class="col">
+            <fieldset class="fieldset-border">
+                <legend class="fieldset-border">{{ role.nom }}</legend>
+                <button mat-button color="info-default" *ngFor="let perm of role.permissions" [title]="perm.description || ''">{{ perm.libelle}}</button>
+            </fieldset>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,614 @@
+[
+  {
+    "id": 1,
+    "nom": "Conakry",
+    "code": "GN-C-0101",
+    "longitude": null,
+    "latitude": null,
+    "description": "Ville de Conakry",
+    "isView": true,
+    "region": {
+      "id": 1,
+      "nom": "Conakry",
+      "code": "GN-C-01",
+      "longitude": null,
+      "latitude": null,
+      "description": "Gouvernorat de Conakry",
+      "isView": true
+    }
+  },
+  {
+    "id": 2,
+    "nom": "Boké",
+    "code": "GN-B-0201",
+    "longitude": null,
+    "latitude": null,
+    "description": "Préfecture de Boké ",
+    "isView": true,
+    "region": {
+      "id": 2,
+      "nom": "Boké",
+      "code": "GN-B-02",
+      "longitude": null,
+      "latitude": null,
+      "description": "Région de Boké",
+      "isView": true
+    }
+  },
+  {
+    "id": 3,
+    "nom": "Boffa",
+    "code": "GN-B-0202",
+    "longitude": null,
+    "latitude": null,
+    "description": "Préfecture de Boffa ",
+    "isView": true,
+    "region": {
+      "id": 2,
+      "nom": "Boké",
+      "code": "GN-B-02",
+      "longitude": null,
+      "latitude": null,
+      "description": "Région de Boké",
+      "isView": true
+    }
+  },
+  {
+    "id": 4,
+    "nom": "Fria",
+    "code": "GN-B-0203",
+    "longitude": null,
+    "latitude": null,
+    "description": "Préfecture de Fria ",
+    "isView": true,
+    "region": {
+      "id": 2,
+      "nom": "Boké",
+      "code": "GN-B-02",
+      "longitude": null,
+      "latitude": null,
+      "description": "Région de Boké",
+      "isView": true
+    }
+  },
+  {
+    "id": 5,
+    "nom": "Gaoual",
+    "code": "GN-B-0204",
+    "longitude": null,
+    "latitude": null,
+    "description": "Préfecture de Gaoual ",
+    "isView": true,
+    "region": {
+      "id": 2,
+      "nom": "Boké",
+      "code": "GN-B-02",
+      "longitude": null,
+      "latitude": null,
+      "description": "Région de Boké",
+      "isView": true
+    }
+  },
+  {
+    "id": 6,
+    "nom": "Koundara",
+    "code": "GN-B-0205",
+    "longitude": null,
+    "latitude": null,
+    "description": "Préfecture de Koundara ",
+    "isView": true,
+    "region": {
+      "id": 2,
+      "nom": "Boké",
+      "code": "GN-B-02",
+      "longitude": null,
+      "latitude": null,
+      "description": "Région de Boké",
+      "isView": true
+    }
+  },
+  {
+    "id": 7,
+    "nom": "Kindia",
+    "code": "GN-D-0301",
+    "longitude": null,
+    "latitude": null,
+    "description": "Préfecture de Kindia ",
+    "isView": true,
+    "region": {
+      "id": 3,
+      "nom": "Kindia",
+      "code": "GN-D-03",
+      "longitude": null,
+      "latitude": null,
+      "description": "Région de Kindia",
+      "isView": true
+    }
+  },
+  {
+    "id": 8,
+    "nom": "Coyah",
+    "code": "GN-D-0302",
+    "longitude": null,
+    "latitude": null,
+    "description": "Préfecture de Coyah ",
+    "isView": true,
+    "region": {
+      "id": 3,
+      "nom": "Kindia",
+      "code": "GN-D-03",
+      "longitude": null,
+      "latitude": null,
+      "description": "Région de Kindia",
+      "isView": true
+    }
+  },
+  {
+    "id": 9,
+    "nom": "Dubréka",
+    "code": "GN-D-0303",
+    "longitude": null,
+    "latitude": null,
+    "description": "Préfecture de Dubréka ",
+    "isView": true,
+    "region": {
+      "id": 3,
+      "nom": "Kindia",
+      "code": "GN-D-03",
+      "longitude": null,
+      "latitude": null,
+      "description": "Région de Kindia",
+      "isView": true
+    }
+  },
+  {
+    "id": 10,
+    "nom": "Forécariah",
+    "code": "GN-D-0304",
+    "longitude": null,
+    "latitude": null,
+    "description": "Préfecture de Forécariah ",
+    "isView": true,
+    "region": {
+      "id": 3,
+      "nom": "Kindia",
+      "code": "GN-D-03",
+      "longitude": null,
+      "latitude": null,
+      "description": "Région de Kindia",
+      "isView": true
+    }
+  },
+  {
+    "id": 11,
+    "nom": "Télimélé",
+    "code": "GN-D-0305",
+    "longitude": null,
+    "latitude": null,
+    "description": "Préfecture de Télimélé ",
+    "isView": true,
+    "region": {
+      "id": 3,
+      "nom": "Kindia",
+      "code": "GN-D-03",
+      "longitude": null,
+      "latitude": null,
+      "description": "Région de Kindia",
+      "isView": true
+    }
+  },
+  {
+    "id": 12,
+    "nom": "Mamou",
+    "code": "GN-M-0401",
+    "longitude": null,
+    "latitude": null,
+    "description": "Préfecture de Mamou",
+    "isView": true,
+    "region": {
+      "id": 4,
+      "nom": "Mamou",
+      "code": "GN-M-04",
+      "longitude": null,
+      "latitude": null,
+      "description": "Région de Mamou",
+      "isView": true
+    }
+  },
+  {
+    "id": 13,
+    "nom": "Dalaba",
+    "code": "GN-M-0402",
+    "longitude": null,
+    "latitude": null,
+    "description": "Préfecture de Dalaba",
+    "isView": true,
+    "region": {
+      "id": 4,
+      "nom": "Mamou",
+      "code": "GN-M-04",
+      "longitude": null,
+      "latitude": null,
+      "description": "Région de Mamou",
+      "isView": true
+    }
+  },
+  {
+    "id": 14,
+    "nom": "Pita",
+    "code": "GN-M-0403",
+    "longitude": null,
+    "latitude": null,
+    "description": "Préfecture de Pita",
+    "isView": true,
+    "region": {
+      "id": 4,
+      "nom": "Mamou",
+      "code": "GN-M-04",
+      "longitude": null,
+      "latitude": null,
+      "description": "Région de Mamou",
+      "isView": true
+    }
+  },
+  {
+    "id": 15,
+    "nom": "Faranah",
+    "code": "GN-F-0501",
+    "longitude": null,
+    "latitude": null,
+    "description": "Préfecture de Faranah",
+    "isView": true,
+    "region": {
+      "id": 5,
+      "nom": "Faranah",
+      "code": "GN-F-05",
+      "longitude": null,
+      "latitude": null,
+      "description": "Région de Faranah",
+      "isView": true
+    }
+  },
+  {
+    "id": 16,
+    "nom": "Dabola",
+    "code": "GN-F-0502",
+    "longitude": null,
+    "latitude": null,
+    "description": "Préfecture de Dabola",
+    "isView": true,
+    "region": {
+      "id": 5,
+      "nom": "Faranah",
+      "code": "GN-F-05",
+      "longitude": null,
+      "latitude": null,
+      "description": "Région de Faranah",
+      "isView": true
+    }
+  },
+  {
+    "id": 17,
+    "nom": "Dinguiraye",
+    "code": "GN-F-0503",
+    "longitude": null,
+    "latitude": null,
+    "description": "Préfecture de Dinguiraye",
+    "isView": true,
+    "region": {
+      "id": 5,
+      "nom": "Faranah",
+      "code": "GN-F-05",
+      "longitude": null,
+      "latitude": null,
+      "description": "Région de Faranah",
+      "isView": true
+    }
+  },
+  {
+    "id": 18,
+    "nom": "Kissidougou",
+    "code": "GN-F-0504",
+    "longitude": null,
+    "latitude": null,
+    "description": "Préfecture de Kissidougou",
+    "isView": true,
+    "region": {
+      "id": 5,
+      "nom": "Faranah",
+      "code": "GN-F-05",
+      "longitude": null,
+      "latitude": null,
+      "description": "Région de Faranah",
+      "isView": true
+    }
+  },
+  {
+    "id": 19,
+    "nom": "Kankan",
+    "code": "GN-K-0601",
+    "longitude": null,
+    "latitude": null,
+    "description": "Préfecture de Kankan",
+    "isView": true,
+    "region": {
+      "id": 6,
+      "nom": "Kankan",
+      "code": "GN-K-06",
+      "longitude": null,
+      "latitude": null,
+      "description": "Région de Kankan",
+      "isView": true
+    }
+  },
+  {
+    "id": 20,
+    "nom": "Kérouané",
+    "code": "GN-K-0602",
+    "longitude": null,
+    "latitude": null,
+    "description": "Préfecture de Kérouané",
+    "isView": true,
+    "region": {
+      "id": 6,
+      "nom": "Kankan",
+      "code": "GN-K-06",
+      "longitude": null,
+      "latitude": null,
+      "description": "Région de Kankan",
+      "isView": true
+    }
+  },
+  {
+    "id": 21,
+    "nom": "Kouroussa",
+    "code": "GN-K-0603",
+    "longitude": null,
+    "latitude": null,
+    "description": "Préfecture de Kouroussa",
+    "isView": true,
+    "region": {
+      "id": 6,
+      "nom": "Kankan",
+      "code": "GN-K-06",
+      "longitude": null,
+      "latitude": null,
+      "description": "Région de Kankan",
+      "isView": true
+    }
+  },
+  {
+    "id": 22,
+    "nom": "Mandiana",
+    "code": "GN-K-0604",
+    "longitude": null,
+    "latitude": null,
+    "description": "Préfecture de Mandiana",
+    "isView": true,
+    "region": {
+      "id": 6,
+      "nom": "Kankan",
+      "code": "GN-K-06",
+      "longitude": null,
+      "latitude": null,
+      "description": "Région de Kankan",
+      "isView": true
+    }
+  },
+  {
+    "id": 23,
+    "nom": "Siguiri",
+    "code": "GN-K-0605",
+    "longitude": null,
+    "latitude": null,
+    "description": "Préfecture de Siguiri",
+    "isView": true,
+    "region": {
+      "id": 6,
+      "nom": "Kankan",
+      "code": "GN-K-06",
+      "longitude": null,
+      "latitude": null,
+      "description": "Région de Kankan",
+      "isView": true
+    }
+  },
+  {
+    "id": 24,
+    "nom": "Labé",
+    "code": "GN-L-0701",
+    "longitude": null,
+    "latitude": null,
+    "description": "Préfecture de Labé",
+    "isView": true,
+    "region": {
+      "id": 7,
+      "nom": "Labé",
+      "code": "GN-L-07",
+      "longitude": null,
+      "latitude": null,
+      "description": "Région de Labé",
+      "isView": true
+    }
+  },
+  {
+    "id": 25,
+    "nom": "Koubia",
+    "code": "GN-L-0702",
+    "longitude": null,
+    "latitude": null,
+    "description": "Préfecture de Koubia",
+    "isView": true,
+    "region": {
+      "id": 7,
+      "nom": "Labé",
+      "code": "GN-L-07",
+      "longitude": null,
+      "latitude": null,
+      "description": "Région de Labé",
+      "isView": true
+    }
+  },
+  {
+    "id": 26,
+    "nom": "Lélouma",
+    "code": "GN-L-0703",
+    "longitude": null,
+    "latitude": null,
+    "description": "Préfecture de Lélouma",
+    "isView": true,
+    "region": {
+      "id": 7,
+      "nom": "Labé",
+      "code": "GN-L-07",
+      "longitude": null,
+      "latitude": null,
+      "description": "Région de Labé",
+      "isView": true
+    }
+  },
+  {
+    "id": 27,
+    "nom": "Mali",
+    "code": "GN-L-0704",
+    "longitude": null,
+    "latitude": null,
+    "description": "Préfecture de Mali",
+    "isView": true,
+    "region": {
+      "id": 7,
+      "nom": "Labé",
+      "code": "GN-L-07",
+      "longitude": null,
+      "latitude": null,
+      "description": "Région de Labé",
+      "isView": true
+    }
+  },
+  {
+    "id": 28,
+    "nom": "Tougué",
+    "code": "GN-L-0705",
+    "longitude": null,
+    "latitude": null,
+    "description": "Préfecture de Tougué",
+    "isView": true,
+    "region": {
+      "id": 7,
+      "nom": "Labé",
+      "code": "GN-L-07",
+      "longitude": null,
+      "latitude": null,
+      "description": "Région de Labé",
+      "isView": true
+    }
+  },
+  {
+    "id": 29,
+    "nom": "Nzérékoré",
+    "code": "GN-N-0801",
+    "longitude": null,
+    "latitude": null,
+    "description": "Préfecture de Nzérékoré",
+    "isView": true,
+    "region": {
+      "id": 8,
+      "nom": "Nzérékoré",
+      "code": "GN-N-08",
+      "longitude": null,
+      "latitude": null,
+      "description": "Région de Nzérékoré",
+      "isView": true
+    }
+  },
+  {
+    "id": 30,
+    "nom": "Guéckédou",
+    "code": "GN-N-0802",
+    "longitude": null,
+    "latitude": null,
+    "description": "Préfecture de Guéckédou",
+    "isView": true,
+    "region": {
+      "id": 8,
+      "nom": "Nzérékoré",
+      "code": "GN-N-08",
+      "longitude": null,
+      "latitude": null,
+      "description": "Région de Nzérékoré",
+      "isView": true
+    }
+  },
+  {
+    "id": 31,
+    "nom": "Beyla",
+    "code": "GN-N-0803",
+    "longitude": null,
+    "latitude": null,
+    "description": "Préfecture de Beyla",
+    "isView": true,
+    "region": {
+      "id": 8,
+      "nom": "Nzérékoré",
+      "code": "GN-N-08",
+      "longitude": null,
+      "latitude": null,
+      "description": "Région de Nzérékoré",
+      "isView": true
+    }
+  },
+  {
+    "id": 32,
+    "nom": "Lola",
+    "code": "GN-N-0804",
+    "longitude": null,
+    "latitude": null,
+    "description": "Préfecture de Lola",
+    "isView": true,
+    "region": {
+      "id": 8,
+      "nom": "Nzérékoré",
+      "code": "GN-N-08",
+      "longitude": null,
+      "latitude": null,
+      "description": "Région de Nzérékoré",
+      "isView": true
+    }
+  },
+  {
+    "id": 33,
+    "nom": "Yomou",
+    "code": "GN-N-0805",
+    "longitude": null,
+    "latitude": null,
+    "description": "Préfecture de Yomou",
+    "isView": true,
+    "region": {
+      "id": 8,
+      "nom": "Nzérékoré",
+      "code": "GN-N-08",
+      "longitude": null,
+      "latitude": null,
+      "description": "Région de Nzérékoré",
+      "isView": true
+    }
+  },
+  {
+    "id": 34,
+    "nom": "Macenta",
+    "code": "GN-N-0806",
+    "longitude": null,
+    "latitude": null,
+    "description": "Préfecture de Macenta",
+    "isView": true,
+    "region": {
+      "id": 8,
+      "nom": "Nzérékoré",
+      "code": "GN-N-08",
+      "longitude": null,
+      "latitude": null,
+      "description": "Région de Nzérékoré",
+      "isView": true
+    }
+  }
+]

@@ -1,0 +1,76 @@
+<div class="card">
+    <div class="card-header bg-default">
+      <div class="row">
+        <div class="col-sm-8">
+          <h2 class="card-title text-white">
+            <i class="nc-icon nc-settings"></i>
+            Categories
+          </h2>
+        </div>
+        <div class="col-sm-4 text-right mt-2">
+          <button *ngIf="permissions.can_add" mat-raised-button routerLink="edit" class="mr-1" color="info">
+            <mat-icon>add</mat-icon>
+          </button>
+          <button mat-raised-button color="primary" (click)="onRefresh()">
+            <mat-icon>refresh</mat-icon>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      
+      <!-- Spinner -->
+      <app-spinner [filterBy]="categorieUrl" [diameter]="30" #calSpinner></app-spinner>
+  
+      <div [hidden]="!dataSource || dataSource.data.length == 0">
+        <div class="mat-table-header">
+          <mat-form-field>
+              <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Rechercher">
+          </mat-form-field>
+        </div>
+        <div class="mat-table-container mat-elevation-z0 table-responsive-sm">
+          <mat-table [dataSource]="dataSource" matSort>
+            <!-- libelle Column -->
+            <ng-container matColumnDef="libelle">
+              <mat-header-cell *matHeaderCellDef  mat-sort-header>Categorie</mat-header-cell>
+              <mat-cell *matCellDef="let row">{{ row.libelle }}</mat-cell>
+            </ng-container>
+          
+            <!-- Statut column -->
+            <ng-container matColumnDef="statut">
+              
+            
+              <mat-header-cell *matHeaderCellDef  mat-sort-header>Statut</mat-header-cell>
+              <mat-cell *matCellDef="let row">
+                <mat-slide-toggle [checked]="row.statut === 'Activated'" (change)="onChangeStatus(row.id, row)" color="primary"></mat-slide-toggle>
+              </mat-cell>
+            </ng-container>
+            <!-- Description Column -->
+            <ng-container matColumnDef="description">
+              <mat-header-cell *matHeaderCellDef mat-sort-header>Description</mat-header-cell>
+              <mat-cell *matCellDef="let row">{{ row.description }}</mat-cell>
+            </ng-container>
+            <!-- Action Column -->
+            <ng-container matColumnDef="action">
+              <mat-header-cell *matHeaderCellDef> ACTION </mat-header-cell>
+              <mat-cell  *matCellDef="let row">
+                <button *ngIf="permissions.can_edit" style="margin: 1.5px;" mat-mini-fab color="primary" (click)="gotoEdit(row.id)"
+                  aria-label="Modifier" title="Modifier">
+                  <mat-icon>edit</mat-icon>
+                </button>
+                <button *ngIf="permissions.can_delete" mat-mini-fab color="accent" (click)="onDelete(row.id)" aria-label="Supprimer" title="Supprimer">
+                  <mat-icon>delete</mat-icon>
+                </button>
+              </mat-cell>
+            </ng-container>
+            <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+              <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+          </mat-table>
+          <mat-paginator [pageSize]="10" [pageSizeOptions]="dataSource.data.length | tableOptions"></mat-paginator>
+        </div>
+      </div>
+      <div *ngIf="dataSource && dataSource.data.length == 0 && ((calSpinner.loadingEvent$ | async) === false)" class="text-info text-center mt-2">
+        Aucune categorie d'alerte trouvée !!!
+      </div>
+    </div>
+</div>

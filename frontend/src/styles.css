@@ -1,0 +1,144 @@
+/* You can add global styles to this file, and also import other style files */
+
+@keyframes spinner {
+  to {transform: rotate(360deg);}
+}
+
+.spinner:before {
+    content: '';
+    box-sizing: border-box;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    margin-top: -10px;
+    margin-left: -10px;
+    border-radius: 50%;
+    border: 2px solid #ffffff;
+    border-top-color: #000000;
+    animation: spinner .8s linear infinite;
+}
+
+.my-snack-warning{
+	color: black !important;
+	font-size: 14px !important;
+	font-family: Roboto, Arial, sana-serif !important;
+  background-color:brown !important;
+
+}
+
+.my-snack-success{
+	color: black !important;
+	font-size: 14px !important;
+	font-family: Roboto, Arial, sana-serif !important;
+  background-color:green !important;
+}
+
+fieldset.fieldset-border {
+  border: 1px groove #ddd !important;
+  padding: 0 1.4em 1.4em 1.4em !important;
+  margin: 0 0 1.5em 0 !important;
+  -webkit-box-shadow:  0px 0px 0px 0px #000 !important;
+          box-shadow:  0px 0px 0px 0px #000 !important;
+}
+
+legend.fieldset-border {
+  font-size: 1.2em !important;
+  font-weight: bold !important;
+  text-align: left !important;
+  width:inherit !important;
+  padding:0 10px !important;
+  border-bottom:none !important;
+}
+
+.mat-info {
+  background-color: #51bcda !important;
+  color: whitesmoke !important;
+  opacity: 1 !important;
+}
+
+.mat-info-default {
+  /* background-color: whitesmoke !important; */
+  color: #51bcda  !important;
+  opacity: 1 !important;
+}
+
+.mat-cancel {
+  color: #e95e38 !important;
+  opacity: 1;
+}
+
+.mat-success {
+  /*background-color: whitesmoke  !important; */
+  color: #6bd098 !important;
+  opacity: 1 !important;
+}
+
+.mat-own {
+  background-color: #66615B !important;
+  color: #fff !important;
+  opacity: 1 !important;
+}
+
+/* .mat-primary {
+    background-color: #66615B !important;
+    color: #fff !important;
+    opacity: 1 !important;
+  } */
+
+.my-page-title {
+  background-color: #ff6b81 !important;
+  color: #fff !important;
+  opacity: 1 !important;
+}
+
+.clickable {
+  cursor: pointer !important;
+}
+.clickable:hover{
+  background-color: #b2bec3 !important;
+  /* color: whitesmoke !important; */
+}
+
+.cdk-global-overlay-wrapper, .cdk-overlay-container {
+	z-index: 9999 !important;
+}
+
+/* ======================  mat table css ========================= */
+
+.mat-table-container {
+  display: flex;
+  flex-direction: column;
+  min-width: 300px;
+  transition: 0.2s;
+}
+.mat-table-header {
+  min-height: 64px;
+  padding: 8px 24px 0;
+}
+.mat-form-field {
+  font-size: 14px;
+  width: 100%;
+}
+
+.mat-header-cell {
+  flex-direction: column !important;
+  justify-content: center !important;
+}
+.mat-cell {
+  text-align: center !important;
+  justify-content: center !important;
+}
+
+.spinner-center {
+  display: flex !important; 
+  flex-direction: row !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+.recherche-stat {
+  display: flex;
+  align-items: center;
+}

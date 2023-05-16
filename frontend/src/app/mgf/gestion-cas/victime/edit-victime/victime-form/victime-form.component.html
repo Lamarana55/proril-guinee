@@ -1,0 +1,78 @@
+<!-- Spinner -->
+<app-spinner [filterBy]="victimeUrl" [diameter]="30" #vicSpinner></app-spinner>
+
+<form [formGroup]="victiomForm">
+    <div class="row">
+      <div class="col-12">
+        <mat-form-field>
+          <mat-label>Nom</mat-label>
+          <input type="text" matInput formControlName="nom">
+          <mat-error>Le nom est obligatoire</mat-error>
+        </mat-form-field>
+      </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+          <mat-form-field>
+            <mat-label>Prénom</mat-label>
+            <input type="text" matInput formControlName="prenom">
+            <mat-error>Le prénom est obligatoire</mat-error>
+          </mat-form-field>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+          <mat-form-field>
+            <mat-label>Age</mat-label>
+            <input type="number" matInput formControlName="age">
+            <mat-error>L'age est obligatoire</mat-error>
+          </mat-form-field>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+          <mat-form-field>
+            <mat-label>Sexe</mat-label>
+            <mat-select formControlName="sexe">
+                <mat-option *ngFor="let s of ['F', 'M']" [value]="s">{{ s }}</mat-option>
+            </mat-select>
+            <mat-error>Le champs sexe est obligatoire</mat-error>
+          </mat-form-field>
+        </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <mat-form-field>
+          <mat-label>Handicap</mat-label>
+          <mat-select formControlName="handicap">
+              <mat-option *ngFor="let h of ['OUI', 'NON']" [value]="h">{{ h }}</mat-option>
+          </mat-select>
+          <mat-error>Le champs handicap est obligatoire</mat-error>
+        </mat-form-field>
+      </div>
+  </div>
+    <div class="row">
+      <div class="col-12">
+        <mat-form-field>
+          <mat-label>Adresse</mat-label>
+          <textarea matInput formControlName="adresse"></textarea>
+        </mat-form-field>
+      </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+          <mat-form-field>
+            <mat-label>Contact du tuteur</mat-label>
+            <input type="tel" matInput formControlName="contactTuteur">
+            <mat-error>Le contact du tuteur est obligatoire</mat-error>
+          </mat-form-field>
+        </div>
+    </div>
+
+    <div class="text-center">
+      <button type="button" [class.spinner]="vicSpinner.loadingEvent$ | async" mat-raised-button color="primary" 
+      [disabled]="victiomForm.invalid || (vicSpinner.loadingEvent$ | async)" (click)="onSubmit()">
+        Enregistrer
+      </button>
+    </div>
+</form>

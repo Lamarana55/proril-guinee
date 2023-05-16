@@ -1,0 +1,44 @@
+<div class="wrapper wrapper-full-page ">
+  <div class="full-page lock-page section-image" filter-color="black" data-image="./assets/img/bg/unicef-bg-1.png">
+    <!--   you can change the color of the filter page using: data-color="blue | green | orange | red | purple" -->
+    <div class="content">
+      <div class="container">
+        <div class="col-lg-6 col-md-12 ml-auto mr-auto">
+          <div class="card card-lock text-center">
+            <div class="card-header ">
+              <img src="./assets/img/logo-mgf.png" alt="...">
+            </div>
+            <div class="card-body ">
+              <h4 class="card-title text-primary"> Changement de mots de passe</h4>
+              <div class="text-justify h5">
+                Nous enverrons un lien de réinitialisation du mot de passe à votre adresse e-mail
+              </div>
+              <form [formGroup]="resetForm">
+                <div class="form-group">
+                  <input formControlName="email" type="email" class="form-control" placeholder="Entrer votre email...">
+                </div>
+                <div class="card-footer ">
+                  <a (click)="onSubmit()" class="btn btn-outline-primary btn-round">Envoyer</a>
+                </div>
+
+              </form>
+              
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer footer-black  footer-white ">
+      <div class="container">
+        <div class="row">
+          <div class="credits ml-auto">
+            <span class="copyright">
+              &copy; {{test | date: 'yyyy'}}, Réalisée par  <a target="_blank" rel="noopener noreferrer" href="https://ande.gov.gn/" >ANDE GUINEE</a> 
+            </span>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+</div>

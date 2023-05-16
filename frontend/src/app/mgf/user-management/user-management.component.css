@@ -1,0 +1,8 @@
+.active {
+  background-color: #66615B !important;
+  color: whitesmoke !important;
+}
+
+button[routerlink]{
+  font-size: 20px;
+}

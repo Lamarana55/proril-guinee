@@ -1,0 +1,1328 @@
+[
+  {
+    "id": 1,
+    "nom": "Admin",
+    "prenom": "Administrateur ",
+    "telephone": "628228638",
+    "email": "ande.developper@gmail.com",
+    "username": "admin@admin.com",
+    "password": "1234",
+    "statut": "Activated",
+    "fonction": "ADMIN",
+    "role": {
+      "id": 1,
+      "nom": "ROLE_ADMIN",
+      "description": "Role administrateur du système",
+      "permissions": [
+        {
+          "id": 1,
+          "libelle": "CAN_VIEW_USER_MENU"
+        },
+        {
+          "id": 2,
+          "libelle": "CAN_VIEW_USER_INFO"
+        },
+        {
+          "id": 3,
+          "libelle": "CAN_VIEW_USER_LIST"
+        },
+        {
+          "id": 4,
+          "libelle": "CAN_ADD_USER"
+        },
+        {
+          "id": 5,
+          "libelle": "CAN_UPDATE_USER"
+        },
+        {
+          "id": 6,
+          "libelle": "CAN_DELETE_USER"
+        },
+        {
+          "id": 7,
+          "libelle": "CAN_VIEW_ROLE_MENU"
+        },
+        {
+          "id": 8,
+          "libelle": "CAN_VIEW_ROLE_LIST"
+        },
+        {
+          "id": 9,
+          "libelle": "CAN_VIEW_ROLE_INFO"
+        },
+        {
+          "id": 10,
+          "libelle": "CAN_ADD_ROLE"
+        },
+        {
+          "id": 11,
+          "libelle": "CAN_UPDATE_ROLE"
+        },
+        {
+          "id": 12,
+          "libelle": "CAN_DELETE_ROLE"
+        },
+        {
+          "id": 13,
+          "libelle": "CAN_VIEW_CAS_MENU"
+        },
+        {
+          "id": 14,
+          "libelle": "CAN_VIEW_CAS_LIST"
+        },
+        {
+          "id": 15,
+          "libelle": "CAN_VIEW_CAS_INFO"
+        },
+        {
+          "id": 16,
+          "libelle": "CAN_ADD_CAS"
+        },
+        {
+          "id": 17,
+          "libelle": "CAN_UPDATE_CAS"
+        },
+        {
+          "id": 18,
+          "libelle": "CAN_VIEW_QUESTION_INFO"
+        },
+        {
+          "id": 19,
+          "libelle": "CAN_VIEW_ALERT_INFO"
+        },
+        {
+          "id": 20,
+          "libelle": "CAN_UPDATE_VICTIME"
+        },
+        {
+          "id": 21,
+          "libelle": "CAN_UPDATE_TYPE_CAS"
+        },
+        {
+          "id": 22,
+          "libelle": "CAN_UPDATE_SURVEILLANCE"
+        },
+        {
+          "id": 23,
+          "libelle": "CAN_UPDATE_QUESTION"
+        },
+        {
+          "id": 24,
+          "libelle": "CAN_UPDATE_PARTENAIRE"
+        },
+        {
+          "id": 25,
+          "libelle": "CAN_UPDATE_CAS_STATUS"
+        },
+        {
+          "id": 26,
+          "libelle": "CAN_UPDATE_CAS_RESPONSE"
+        },
+        {
+          "id": 27,
+          "libelle": "CAN_UPDATE_ALERT"
+        },
+        {
+          "id": 28,
+          "libelle": "CAN_DELETE_VICTIME"
+        },
+        {
+          "id": 29,
+          "libelle": "CAN_DELETE_TYPE_CAS"
+        },
+        {
+          "id": 30,
+          "libelle": "CAN_DELETE_SURVEILLANCE"
+        },
+        {
+          "id": 31,
+          "libelle": "CAN_DELETE_QUESTION"
+        },
+        {
+          "id": 32,
+          "libelle": "CAN_DELETE_PARTENAIRE"
+        },
+        {
+          "id": 33,
+          "libelle": "CAN_DELETE_CAS_TRAITEMENT"
+        },
+        {
+          "id": 34,
+          "libelle": "CAN_DELETE_ALERTE"
+        },
+        {
+          "id": 35,
+          "libelle": "CAN_AFFECT_ALERTE_USER"
+        },
+        {
+          "id": 36,
+          "libelle": "CAN_ADD_VICTIME"
+        },
+        {
+          "id": 37,
+          "libelle": "CAN_ADD_TYPE_CAS"
+        },
+        {
+          "id": 38,
+          "libelle": "CAN_ADD_SURVEILLANCE"
+        },
+        {
+          "id": 39,
+          "libelle": "CAN_ADD_QUESTION"
+        },
+        {
+          "id": 40,
+          "libelle": "CAN_ADD_PARTENAIRE"
+        },
+        {
+          "id": 41,
+          "libelle": "CAN_ADD_ALERT"
+        },
+        {
+          "id": 42,
+          "libelle": "CAN_VIEW_DASHBOARD"
+        },
+        {
+          "id": 43,
+          "libelle": "CAN_VIEW_ALERT_MENU"
+        },
+        {
+          "id": 44,
+          "libelle": "CAN_VIEW_ALERT_LIST"
+        },
+        {
+          "id": 45,
+          "libelle": "CAN_VIEW_TYPE_CAS_MENU"
+        },
+        {
+          "id": 46,
+          "libelle": "CAN_VIEW_TYPE_CAS_INFO"
+        },
+        {
+          "id": 47,
+          "libelle": "CAN_VIEW_TYPE_CAS_LIST"
+        },
+        {
+          "id": 48,
+          "libelle": "CAN_VIEW_SURVEILLANCE_MENU"
+        },
+        {
+          "id": 49,
+          "libelle": "CAN_VIEW_SURVEILLANCE_INFO"
+        },
+        {
+          "id": 50,
+          "libelle": "CAN_VIEW_SURVEILLANCE_LIST"
+        },
+        {
+          "id": 51,
+          "libelle": "CAN_VIEW_PARTENAIRE_MENU"
+        },
+        {
+          "id": 52,
+          "libelle": "CAN_VIEW_PARTENAIRE_LIST"
+        },
+        {
+          "id": 53,
+          "libelle": "CAN_VIEW_PARTENAIRE_INFO"
+        },
+        {
+          "id": 54,
+          "libelle": "CAN_VIEW_STATISTIQUE_MENU"
+        },
+        {
+          "id": 55,
+          "libelle": "CAN_VIEW_STATISTIQUE_LIST"
+        },
+        {
+          "id": 56,
+          "libelle": "CAN_VIEW_QUESTION_MENU"
+        },
+        {
+          "id": 57,
+          "libelle": "CAN_VIEW_QUESTION_LIST"
+        },
+        {
+          "id": 58,
+          "libelle": "CAN_VIEW_VICTIME_MENU"
+        },
+        {
+          "id": 59,
+          "libelle": "CAN_VIEW_VICTIME_INFO"
+        },
+        {
+          "id": 60,
+          "libelle": "CAN_VIEW_VICTIME_LIST"
+        },
+
+        {
+          "id": 61,
+          "libelle": "CAN_VIEW_ARTICLE_MENU"
+        },
+        {
+          "id": 62,
+          "libelle": "CAN_VIEW_ARTICLE_LIST"
+        },
+        {
+          "id": 63,
+          "libelle": "CAN_VIEW_ARTICLE_INFO"
+        },
+        {
+          "id": 64,
+          "libelle": "CAN_ADD_ARTICLE"
+        },
+        {
+          "id": 65,
+          "libelle": "CAN_UPDATE_ARTICLE"
+        },
+        {
+          "id": 66,
+          "libelle": "CAN_DELETE_ARTICLE"
+        },
+        {
+          "id": 67,
+          "libelle": "CAN_VIEW_CATEGORIE_ARTICLE_MENU"
+        },
+        {
+          "id": 68,
+          "libelle": "CAN_VIEW_CATEGORIE_ARTICLE_LIST"
+        },
+        {
+          "id": 69,
+          "libelle": "CAN_VIEW_CATEGORIE_ARTICLE_INFO"
+        },
+        {
+          "id": 70,
+          "libelle": "CAN_ADD_CATEGORIE_ARTICLE"
+        },
+        {
+          "id": 71,
+          "libelle": "CAN_UPDATE_CATEGORIE_ARTICLE"
+        },
+        {
+          "id": 72,
+          "libelle": "CAN_DELETE_CATEGORIE_ARTICLE"
+        },
+        {
+          "id": 73,
+          "libelle": "CAN_VIEW_IMAGE_ARTICLE"
+        },
+        {
+          "id": 74,
+          "libelle": "CAN_ADD_IMAGE_ARTICLE"
+        },
+        {
+          "id": 75,
+          "libelle": "CAN_UPDATE_IMAGE_ARTICLE"
+        },
+        {
+          "id": 76,
+          "libelle": "CAN_DELETE_IMAGE_ARTICLE"
+        }
+      ]
+    },
+    "localite": {
+      "id": 1,
+      "idRegion": 1,
+      "idPrefecture": 1,
+      "idCommune": 1,
+      "idQuartier": null,
+      "idSecteur": null
+    }
+  },
+  {
+    "id": 2,
+    "nom": "Point Focal Kaloum",
+    "prenom": "Point Focal",
+    "telephone": "621000000",
+    "email": "pointfocal.kaloum@pointfocal.com",
+    "username": "pointfocal.kaloum@pointfocal.com",
+    "password": "1234",
+    "statut": "Activated",
+    "fonction": "USER",
+    "role": {
+      "id": 2,
+      "nom": "ROLE_POINT_FOCAL",
+      "description": "Role point focal d'une commune",
+      "permissions": [
+
+        {
+          "id": 13,
+          "libelle": "CAN_VIEW_CAS_MENU"
+        },
+        {
+          "id": 14,
+          "libelle": "CAN_VIEW_CAS_LIST"
+        },
+        {
+          "id": 15,
+          "libelle": "CAN_VIEW_CAS_INFO"
+        },
+        {
+          "id": 16,
+          "libelle": "CAN_ADD_CAS"
+        },
+        {
+          "id": 17,
+          "libelle": "CAN_UPDATE_CAS"
+        },
+        {
+          "id": 18,
+          "libelle": "CAN_VIEW_QUESTION_INFO"
+        },
+        {
+          "id": 19,
+          "libelle": "CAN_VIEW_ALERT_INFO"
+        },
+        {
+          "id": 20,
+          "libelle": "CAN_UPDATE_VICTIME"
+        },
+        {
+          "id": 22,
+          "libelle": "CAN_UPDATE_SURVEILLANCE"
+        },
+        {
+          "id": 23,
+          "libelle": "CAN_UPDATE_QUESTION"
+        },
+        {
+          "id": 24,
+          "libelle": "CAN_UPDATE_PARTENAIRE"
+        },
+        {
+          "id": 25,
+          "libelle": "CAN_UPDATE_CAS_STATUS"
+        },
+        {
+          "id": 26,
+          "libelle": "CAN_UPDATE_CAS_RESPONSE"
+        },
+        {
+          "id": 27,
+          "libelle": "CAN_UPDATE_ALERT"
+        },
+        {
+          "id": 28,
+          "libelle": "CAN_DELETE_VICTIME"
+        },
+        {
+          "id": 30,
+          "libelle": "CAN_DELETE_SURVEILLANCE"
+        },
+        {
+          "id": 31,
+          "libelle": "CAN_DELETE_QUESTION"
+        },
+        {
+          "id": 32,
+          "libelle": "CAN_DELETE_PARTENAIRE"
+        },
+        {
+          "id": 33,
+          "libelle": "CAN_DELETE_CAS_TRAITEMENT"
+        },
+        {
+          "id": 34,
+          "libelle": "CAN_DELETE_ALERTE"
+        },
+        {
+          "id": 35,
+          "libelle": "CAN_AFFECT_ALERTE_USER"
+        },
+        {
+          "id": 36,
+          "libelle": "CAN_ADD_VICTIME"
+        },
+        {
+          "id": 38,
+          "libelle": "CAN_ADD_SURVEILLANCE"
+        },
+        {
+          "id": 39,
+          "libelle": "CAN_ADD_QUESTION"
+        },
+        {
+          "id": 40,
+          "libelle": "CAN_ADD_PARTENAIRE"
+        },
+        {
+          "id": 41,
+          "libelle": "CAN_ADD_ALERT"
+        },
+        {
+          "id": 42,
+          "libelle": "CAN_VIEW_DASHBOARD"
+        },
+        {
+          "id": 43,
+          "libelle": "CAN_VIEW_ALERT_MENU"
+        },
+        {
+          "id": 44,
+          "libelle": "CAN_VIEW_ALERT_LIST"
+        },
+        {
+          "id": 46,
+          "libelle": "CAN_VIEW_TYPE_CAS_INFO"
+        },
+        {
+          "id": 48,
+          "libelle": "CAN_VIEW_SURVEILLANCE_MENU"
+        },
+        {
+          "id": 49,
+          "libelle": "CAN_VIEW_SURVEILLANCE_INFO"
+        },
+        {
+          "id": 50,
+          "libelle": "CAN_VIEW_SURVEILLANCE_LIST"
+        },
+        {
+          "id": 51,
+          "libelle": "CAN_VIEW_PARTENAIRE_MENU"
+        },
+        {
+          "id": 52,
+          "libelle": "CAN_VIEW_PARTENAIRE_LIST"
+        },
+        {
+          "id": 53,
+          "libelle": "CAN_VIEW_PARTENAIRE_INFO"
+        },
+        {
+          "id": 54,
+          "libelle": "CAN_VIEW_STATISTIQUE_MENU"
+        },
+        {
+          "id": 55,
+          "libelle": "CAN_VIEW_STATISTIQUE_LIST"
+        },
+        {
+          "id": 56,
+          "libelle": "CAN_VIEW_QUESTION_MENU"
+        },
+        {
+          "id": 57,
+          "libelle": "CAN_VIEW_QUESTION_LIST"
+        },
+        {
+          "id": 58,
+          "libelle": "CAN_VIEW_VICTIME_MENU"
+        },
+        {
+          "id": 59,
+          "libelle": "CAN_VIEW_VICTIME_INFO"
+        },
+        {
+          "id": 60,
+          "libelle": "CAN_VIEW_VICTIME_LIST"
+        }
+      ]
+    },
+    "localite": {
+      "id": 1,
+      "idRegion": 1,
+      "idPrefecture": 1,
+      "idCommune": 1,
+      "idQuartier": null,
+      "idSecteur": null
+    }
+  },
+  {
+    "id": 3,
+    "nom": "Point Focal Dixinn",
+    "prenom": "Point Focal",
+    "telephone": "624127136",
+    "email": "pointfocal.dixinn@pointfocal.com",
+    "username": "pointfocal.dixinn@pointfocal.com",
+    "password": "1234",
+    "statut": "Activated",
+    "fonction": "USER",
+    "role": {
+      "id": 2,
+      "nom": "ROLE_POINT_FOCAL",
+      "description": "Role point focal d'une commune",
+      "permissions": [
+
+        {
+          "id": 13,
+          "libelle": "CAN_VIEW_CAS_MENU"
+        },
+        {
+          "id": 14,
+          "libelle": "CAN_VIEW_CAS_LIST"
+        },
+        {
+          "id": 15,
+          "libelle": "CAN_VIEW_CAS_INFO"
+        },
+        {
+          "id": 16,
+          "libelle": "CAN_ADD_CAS"
+        },
+        {
+          "id": 17,
+          "libelle": "CAN_UPDATE_CAS"
+        },
+        {
+          "id": 18,
+          "libelle": "CAN_VIEW_QUESTION_INFO"
+        },
+        {
+          "id": 19,
+          "libelle": "CAN_VIEW_ALERT_INFO"
+        },
+        {
+          "id": 20,
+          "libelle": "CAN_UPDATE_VICTIME"
+        },
+        {
+          "id": 22,
+          "libelle": "CAN_UPDATE_SURVEILLANCE"
+        },
+        {
+          "id": 23,
+          "libelle": "CAN_UPDATE_QUESTION"
+        },
+        {
+          "id": 24,
+          "libelle": "CAN_UPDATE_PARTENAIRE"
+        },
+        {
+          "id": 25,
+          "libelle": "CAN_UPDATE_CAS_STATUS"
+        },
+        {
+          "id": 26,
+          "libelle": "CAN_UPDATE_CAS_RESPONSE"
+        },
+        {
+          "id": 27,
+          "libelle": "CAN_UPDATE_ALERT"
+        },
+        {
+          "id": 28,
+          "libelle": "CAN_DELETE_VICTIME"
+        },
+        {
+          "id": 30,
+          "libelle": "CAN_DELETE_SURVEILLANCE"
+        },
+        {
+          "id": 31,
+          "libelle": "CAN_DELETE_QUESTION"
+        },
+        {
+          "id": 32,
+          "libelle": "CAN_DELETE_PARTENAIRE"
+        },
+        {
+          "id": 33,
+          "libelle": "CAN_DELETE_CAS_TRAITEMENT"
+        },
+        {
+          "id": 34,
+          "libelle": "CAN_DELETE_ALERTE"
+        },
+        {
+          "id": 35,
+          "libelle": "CAN_AFFECT_ALERTE_USER"
+        },
+        {
+          "id": 36,
+          "libelle": "CAN_ADD_VICTIME"
+        },
+        {
+          "id": 38,
+          "libelle": "CAN_ADD_SURVEILLANCE"
+        },
+        {
+          "id": 39,
+          "libelle": "CAN_ADD_QUESTION"
+        },
+        {
+          "id": 40,
+          "libelle": "CAN_ADD_PARTENAIRE"
+        },
+        {
+          "id": 41,
+          "libelle": "CAN_ADD_ALERT"
+        },
+        {
+          "id": 42,
+          "libelle": "CAN_VIEW_DASHBOARD"
+        },
+        {
+          "id": 43,
+          "libelle": "CAN_VIEW_ALERT_MENU"
+        },
+        {
+          "id": 44,
+          "libelle": "CAN_VIEW_ALERT_LIST"
+        },
+        {
+          "id": 46,
+          "libelle": "CAN_VIEW_TYPE_CAS_INFO"
+        },
+        {
+          "id": 48,
+          "libelle": "CAN_VIEW_SURVEILLANCE_MENU"
+        },
+        {
+          "id": 49,
+          "libelle": "CAN_VIEW_SURVEILLANCE_INFO"
+        },
+        {
+          "id": 50,
+          "libelle": "CAN_VIEW_SURVEILLANCE_LIST"
+        },
+        {
+          "id": 51,
+          "libelle": "CAN_VIEW_PARTENAIRE_MENU"
+        },
+        {
+          "id": 52,
+          "libelle": "CAN_VIEW_PARTENAIRE_LIST"
+        },
+        {
+          "id": 53,
+          "libelle": "CAN_VIEW_PARTENAIRE_INFO"
+        },
+        {
+          "id": 54,
+          "libelle": "CAN_VIEW_STATISTIQUE_MENU"
+        },
+        {
+          "id": 55,
+          "libelle": "CAN_VIEW_STATISTIQUE_LIST"
+        },
+        {
+          "id": 56,
+          "libelle": "CAN_VIEW_QUESTION_MENU"
+        },
+        {
+          "id": 57,
+          "libelle": "CAN_VIEW_QUESTION_LIST"
+        },
+        {
+          "id": 58,
+          "libelle": "CAN_VIEW_VICTIME_MENU"
+        },
+        {
+          "id": 59,
+          "libelle": "CAN_VIEW_VICTIME_INFO"
+        },
+        {
+          "id": 60,
+          "libelle": "CAN_VIEW_VICTIME_LIST"
+        }
+      ]
+    },
+    "localite": {
+      "id": 2,
+      "idRegion": 1,
+      "idPrefecture": 1,
+      "idCommune": 2,
+      "idQuartier": null,
+      "idSecteur": null
+    }
+  },
+  {
+    "id": 4,
+    "nom": "Point Focal Matam",
+    "prenom": "Point Focal",
+    "telephone": "623007445",
+    "email": "pointfocal.matam@pointfocal.com",
+    "username": "pointfocal.matam@pointfocal.com",
+    "password": "1234",
+    "statut": "Activated",
+    "fonction": "USER",
+    "role": {
+      "id": 2,
+      "nom": "ROLE_POINT_FOCAL",
+      "description": "Role point focal d'une commune",
+      "permissions": [
+
+        {
+          "id": 13,
+          "libelle": "CAN_VIEW_CAS_MENU"
+        },
+        {
+          "id": 14,
+          "libelle": "CAN_VIEW_CAS_LIST"
+        },
+        {
+          "id": 15,
+          "libelle": "CAN_VIEW_CAS_INFO"
+        },
+        {
+          "id": 16,
+          "libelle": "CAN_ADD_CAS"
+        },
+        {
+          "id": 17,
+          "libelle": "CAN_UPDATE_CAS"
+        },
+        {
+          "id": 18,
+          "libelle": "CAN_VIEW_QUESTION_INFO"
+        },
+        {
+          "id": 19,
+          "libelle": "CAN_VIEW_ALERT_INFO"
+        },
+        {
+          "id": 20,
+          "libelle": "CAN_UPDATE_VICTIME"
+        },
+        {
+          "id": 22,
+          "libelle": "CAN_UPDATE_SURVEILLANCE"
+        },
+        {
+          "id": 23,
+          "libelle": "CAN_UPDATE_QUESTION"
+        },
+        {
+          "id": 24,
+          "libelle": "CAN_UPDATE_PARTENAIRE"
+        },
+        {
+          "id": 25,
+          "libelle": "CAN_UPDATE_CAS_STATUS"
+        },
+        {
+          "id": 26,
+          "libelle": "CAN_UPDATE_CAS_RESPONSE"
+        },
+        {
+          "id": 27,
+          "libelle": "CAN_UPDATE_ALERT"
+        },
+        {
+          "id": 28,
+          "libelle": "CAN_DELETE_VICTIME"
+        },
+        {
+          "id": 30,
+          "libelle": "CAN_DELETE_SURVEILLANCE"
+        },
+        {
+          "id": 31,
+          "libelle": "CAN_DELETE_QUESTION"
+        },
+        {
+          "id": 32,
+          "libelle": "CAN_DELETE_PARTENAIRE"
+        },
+        {
+          "id": 33,
+          "libelle": "CAN_DELETE_CAS_TRAITEMENT"
+        },
+        {
+          "id": 34,
+          "libelle": "CAN_DELETE_ALERTE"
+        },
+        {
+          "id": 35,
+          "libelle": "CAN_AFFECT_ALERTE_USER"
+        },
+        {
+          "id": 36,
+          "libelle": "CAN_ADD_VICTIME"
+        },
+        {
+          "id": 38,
+          "libelle": "CAN_ADD_SURVEILLANCE"
+        },
+        {
+          "id": 39,
+          "libelle": "CAN_ADD_QUESTION"
+        },
+        {
+          "id": 40,
+          "libelle": "CAN_ADD_PARTENAIRE"
+        },
+        {
+          "id": 41,
+          "libelle": "CAN_ADD_ALERT"
+        },
+        {
+          "id": 42,
+          "libelle": "CAN_VIEW_DASHBOARD"
+        },
+        {
+          "id": 43,
+          "libelle": "CAN_VIEW_ALERT_MENU"
+        },
+        {
+          "id": 44,
+          "libelle": "CAN_VIEW_ALERT_LIST"
+        },
+        {
+          "id": 46,
+          "libelle": "CAN_VIEW_TYPE_CAS_INFO"
+        },
+        {
+          "id": 48,
+          "libelle": "CAN_VIEW_SURVEILLANCE_MENU"
+        },
+        {
+          "id": 49,
+          "libelle": "CAN_VIEW_SURVEILLANCE_INFO"
+        },
+        {
+          "id": 50,
+          "libelle": "CAN_VIEW_SURVEILLANCE_LIST"
+        },
+        {
+          "id": 51,
+          "libelle": "CAN_VIEW_PARTENAIRE_MENU"
+        },
+        {
+          "id": 52,
+          "libelle": "CAN_VIEW_PARTENAIRE_LIST"
+        },
+        {
+          "id": 53,
+          "libelle": "CAN_VIEW_PARTENAIRE_INFO"
+        },
+        {
+          "id": 54,
+          "libelle": "CAN_VIEW_STATISTIQUE_MENU"
+        },
+        {
+          "id": 55,
+          "libelle": "CAN_VIEW_STATISTIQUE_LIST"
+        },
+        {
+          "id": 56,
+          "libelle": "CAN_VIEW_QUESTION_MENU"
+        },
+        {
+          "id": 57,
+          "libelle": "CAN_VIEW_QUESTION_LIST"
+        },
+        {
+          "id": 58,
+          "libelle": "CAN_VIEW_VICTIME_MENU"
+        },
+        {
+          "id": 59,
+          "libelle": "CAN_VIEW_VICTIME_INFO"
+        },
+        {
+          "id": 60,
+          "libelle": "CAN_VIEW_VICTIME_LIST"
+        }
+      ]
+    },
+    "localite": {
+      "id": 3,
+      "idRegion": 1,
+      "idPrefecture": 1,
+      "idCommune": 3,
+      "idQuartier": null,
+      "idSecteur": null
+    }
+  },
+  {
+    "id": 5,
+    "nom": "Point Focal Ratoma",
+    "prenom": "Point Focal",
+    "telephone": "621289991",
+    "email": "pointfocal.ratoma@pointfocal.com",
+    "username": "pointfocal.ratoma@pointfocal.com",
+    "password": "1234",
+    "statut": "Activated",
+    "fonction": "USER",
+    "role": {
+      "id": 2,
+      "nom": "ROLE_POINT_FOCAL",
+      "description": "Role point focal d'une commune",
+      "permissions": [
+
+        {
+          "id": 13,
+          "libelle": "CAN_VIEW_CAS_MENU"
+        },
+        {
+          "id": 14,
+          "libelle": "CAN_VIEW_CAS_LIST"
+        },
+        {
+          "id": 15,
+          "libelle": "CAN_VIEW_CAS_INFO"
+        },
+        {
+          "id": 16,
+          "libelle": "CAN_ADD_CAS"
+        },
+        {
+          "id": 17,
+          "libelle": "CAN_UPDATE_CAS"
+        },
+        {
+          "id": 18,
+          "libelle": "CAN_VIEW_QUESTION_INFO"
+        },
+        {
+          "id": 19,
+          "libelle": "CAN_VIEW_ALERT_INFO"
+        },
+        {
+          "id": 20,
+          "libelle": "CAN_UPDATE_VICTIME"
+        },
+        {
+          "id": 22,
+          "libelle": "CAN_UPDATE_SURVEILLANCE"
+        },
+        {
+          "id": 23,
+          "libelle": "CAN_UPDATE_QUESTION"
+        },
+        {
+          "id": 24,
+          "libelle": "CAN_UPDATE_PARTENAIRE"
+        },
+        {
+          "id": 25,
+          "libelle": "CAN_UPDATE_CAS_STATUS"
+        },
+        {
+          "id": 26,
+          "libelle": "CAN_UPDATE_CAS_RESPONSE"
+        },
+        {
+          "id": 27,
+          "libelle": "CAN_UPDATE_ALERT"
+        },
+        {
+          "id": 28,
+          "libelle": "CAN_DELETE_VICTIME"
+        },
+        {
+          "id": 30,
+          "libelle": "CAN_DELETE_SURVEILLANCE"
+        },
+        {
+          "id": 31,
+          "libelle": "CAN_DELETE_QUESTION"
+        },
+        {
+          "id": 32,
+          "libelle": "CAN_DELETE_PARTENAIRE"
+        },
+        {
+          "id": 33,
+          "libelle": "CAN_DELETE_CAS_TRAITEMENT"
+        },
+        {
+          "id": 34,
+          "libelle": "CAN_DELETE_ALERTE"
+        },
+        {
+          "id": 35,
+          "libelle": "CAN_AFFECT_ALERTE_USER"
+        },
+        {
+          "id": 36,
+          "libelle": "CAN_ADD_VICTIME"
+        },
+        {
+          "id": 38,
+          "libelle": "CAN_ADD_SURVEILLANCE"
+        },
+        {
+          "id": 39,
+          "libelle": "CAN_ADD_QUESTION"
+        },
+        {
+          "id": 40,
+          "libelle": "CAN_ADD_PARTENAIRE"
+        },
+        {
+          "id": 41,
+          "libelle": "CAN_ADD_ALERT"
+        },
+        {
+          "id": 42,
+          "libelle": "CAN_VIEW_DASHBOARD"
+        },
+        {
+          "id": 43,
+          "libelle": "CAN_VIEW_ALERT_MENU"
+        },
+        {
+          "id": 44,
+          "libelle": "CAN_VIEW_ALERT_LIST"
+        },
+        {
+          "id": 46,
+          "libelle": "CAN_VIEW_TYPE_CAS_INFO"
+        },
+        {
+          "id": 48,
+          "libelle": "CAN_VIEW_SURVEILLANCE_MENU"
+        },
+        {
+          "id": 49,
+          "libelle": "CAN_VIEW_SURVEILLANCE_INFO"
+        },
+        {
+          "id": 50,
+          "libelle": "CAN_VIEW_SURVEILLANCE_LIST"
+        },
+        {
+          "id": 51,
+          "libelle": "CAN_VIEW_PARTENAIRE_MENU"
+        },
+        {
+          "id": 52,
+          "libelle": "CAN_VIEW_PARTENAIRE_LIST"
+        },
+        {
+          "id": 53,
+          "libelle": "CAN_VIEW_PARTENAIRE_INFO"
+        },
+        {
+          "id": 54,
+          "libelle": "CAN_VIEW_STATISTIQUE_MENU"
+        },
+        {
+          "id": 55,
+          "libelle": "CAN_VIEW_STATISTIQUE_LIST"
+        },
+        {
+          "id": 56,
+          "libelle": "CAN_VIEW_QUESTION_MENU"
+        },
+        {
+          "id": 57,
+          "libelle": "CAN_VIEW_QUESTION_LIST"
+        },
+        {
+          "id": 58,
+          "libelle": "CAN_VIEW_VICTIME_MENU"
+        },
+        {
+          "id": 59,
+          "libelle": "CAN_VIEW_VICTIME_INFO"
+        },
+        {
+          "id": 60,
+          "libelle": "CAN_VIEW_VICTIME_LIST"
+        }
+      ]
+    },
+    "localite": {
+      "id": 4,
+      "idRegion": 1,
+      "idPrefecture": 1,
+      "idCommune": 4,
+      "idQuartier": null,
+      "idSecteur": null
+    }
+  },
+  {
+    "id": 6,
+    "nom": "Surveillant Almamya",
+    "prenom": "Surveillant",
+    "telephone": "664955782",
+    "email": "surveillant.almamya@surveillant.com",
+    "username": "surveillant.almamya@surveillant.com",
+    "password": "1234",
+    "statut": "Activated",
+    "fonction": "USER",
+    "role": {
+      "id": 3,
+      "nom": "ROLE_SURVEILLANT",
+      "description": "Role surveillant d'un secteur ou village",
+      "permissions": [
+
+        {
+          "id": 13,
+          "libelle": "CAN_VIEW_CAS_MENU"
+        },
+        {
+          "id": 14,
+          "libelle": "CAN_VIEW_CAS_LIST"
+        },
+        {
+          "id": 15,
+          "libelle": "CAN_VIEW_CAS_INFO"
+        },
+        {
+          "id": 16,
+          "libelle": "CAN_ADD_CAS"
+        },
+        {
+          "id": 17,
+          "libelle": "CAN_UPDATE_CAS"
+        },
+        {
+          "id": 18,
+          "libelle": "CAN_VIEW_QUESTION_INFO"
+        },
+        {
+          "id": 19,
+          "libelle": "CAN_VIEW_ALERT_INFO"
+        },
+        {
+          "id": 20,
+          "libelle": "CAN_UPDATE_VICTIME"
+        },
+        {
+          "id": 22,
+          "libelle": "CAN_UPDATE_SURVEILLANCE"
+        },
+        {
+          "id": 23,
+          "libelle": "CAN_UPDATE_QUESTION"
+        },
+        {
+          "id": 24,
+          "libelle": "CAN_UPDATE_PARTENAIRE"
+        },
+        {
+          "id": 25,
+          "libelle": "CAN_UPDATE_CAS_STATUS"
+        },
+        {
+          "id": 26,
+          "libelle": "CAN_UPDATE_CAS_RESPONSE"
+        },
+        {
+          "id": 27,
+          "libelle": "CAN_UPDATE_ALERT"
+        },
+        {
+          "id": 28,
+          "libelle": "CAN_DELETE_VICTIME"
+        },
+        {
+          "id": 30,
+          "libelle": "CAN_DELETE_SURVEILLANCE"
+        },
+        {
+          "id": 31,
+          "libelle": "CAN_DELETE_QUESTION"
+        },
+        {
+          "id": 32,
+          "libelle": "CAN_DELETE_PARTENAIRE"
+        },
+        {
+          "id": 33,
+          "libelle": "CAN_DELETE_CAS_TRAITEMENT"
+        },
+        {
+          "id": 34,
+          "libelle": "CAN_DELETE_ALERTE"
+        },
+        {
+          "id": 35,
+          "libelle": "CAN_AFFECT_ALERTE_USER"
+        },
+        {
+          "id": 36,
+          "libelle": "CAN_ADD_VICTIME"
+        },
+        {
+          "id": 38,
+          "libelle": "CAN_ADD_SURVEILLANCE"
+        },
+        {
+          "id": 39,
+          "libelle": "CAN_ADD_QUESTION"
+        },
+        {
+          "id": 40,
+          "libelle": "CAN_ADD_PARTENAIRE"
+        },
+        {
+          "id": 41,
+          "libelle": "CAN_ADD_ALERT"
+        },
+        {
+          "id": 42,
+          "libelle": "CAN_VIEW_DASHBOARD"
+        },
+        {
+          "id": 43,
+          "libelle": "CAN_VIEW_ALERT_MENU"
+        },
+        {
+          "id": 44,
+          "libelle": "CAN_VIEW_ALERT_LIST"
+        },
+        {
+          "id": 46,
+          "libelle": "CAN_VIEW_TYPE_CAS_INFO"
+        },
+        {
+          "id": 48,
+          "libelle": "CAN_VIEW_SURVEILLANCE_MENU"
+        },
+        {
+          "id": 49,
+          "libelle": "CAN_VIEW_SURVEILLANCE_INFO"
+        },
+        {
+          "id": 50,
+          "libelle": "CAN_VIEW_SURVEILLANCE_LIST"
+        },
+        {
+          "id": 51,
+          "libelle": "CAN_VIEW_PARTENAIRE_MENU"
+        },
+        {
+          "id": 52,
+          "libelle": "CAN_VIEW_PARTENAIRE_LIST"
+        },
+        {
+          "id": 53,
+          "libelle": "CAN_VIEW_PARTENAIRE_INFO"
+        },
+        {
+          "id": 54,
+          "libelle": "CAN_VIEW_STATISTIQUE_MENU"
+        },
+        {
+          "id": 55,
+          "libelle": "CAN_VIEW_STATISTIQUE_LIST"
+        },
+        {
+          "id": 56,
+          "libelle": "CAN_VIEW_QUESTION_MENU"
+        },
+        {
+          "id": 57,
+          "libelle": "CAN_VIEW_QUESTION_LIST"
+        },
+        {
+          "id": 58,
+          "libelle": "CAN_VIEW_VICTIME_MENU"
+        },
+        {
+          "id": 59,
+          "libelle": "CAN_VIEW_VICTIME_INFO"
+        },
+        {
+          "id": 60,
+          "libelle": "CAN_VIEW_VICTIME_LIST"
+        }
+      ]
+    },
+    "localite": {
+      "id": 5,
+      "idRegion": 1,
+      "idPrefecture": 1,
+      "idCommune": 1,
+      "idQuartier": 2,
+      "idSecteur": 28
+    }
+  }
+]

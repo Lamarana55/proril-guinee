@@ -1,0 +1,34 @@
+<app-spinner [filterBy]="reponseUrl" [diameter]="20" #editRepSpinner></app-spinner>
+
+<div *ngIf="(oldReponse$ | async) as oldReponse">
+    <form [formGroup]="reponseForm">
+        <div class="row">
+          <div class="col-12 text-center">
+            <fieldset class="fieldset-border">
+                <legend class="fieldset-border">Service</legend>
+                <p>{{ oldReponse.service.libelle }}</p>
+                <mat-radio-group aria-label="Select an option" formControlName="reponse">
+                    <mat-radio-button [value]="true">Oui</mat-radio-button>
+                    <mat-radio-button [value]="false">Non</mat-radio-button>
+                </mat-radio-group>
+            </fieldset>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <mat-form-field>
+              <mat-label>Description</mat-label>
+              <textarea matInput formControlName="description"></textarea>
+            </mat-form-field>
+          </div>
+        </div>
+    
+        <div class="text-center">
+          <button type="button" [class.spinner]="editRepSpinner.loadingEvent$ | async" mat-raised-button color="primary" 
+            [disabled]="reponseForm.invalid || ((editRepSpinner.loadingEvent$ | async) === true)" 
+            (click)="onSubmit(oldReponse)">
+            Enregistrer
+          </button>
+        </div>
+    </form>
+</div>

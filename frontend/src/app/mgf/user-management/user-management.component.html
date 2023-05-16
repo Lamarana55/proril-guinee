@@ -1,0 +1,14 @@
+<div class="main-content">
+  <div class="text-center bg-dark-gray m-3">
+    <button *ngIf="permissions.can_view_user_list" mat-button routerLink="/users" routerLinkActive="active" 
+      [ngClass]="{'active': editUserActive.isActive || listUser.isActive || infoUserActive.isActive}">Utilisateurs</button>
+    <button *ngIf="permissions.can_view_role_list" mat-button routerLink="roles" routerLinkActive="active">Roles</button>
+    <!--  <button mat-button routerLink="permissions" routerLinkActive="active">Permissions</button> -->
+
+  <a routerLink="edit" routerLinkActive #editUserActive="routerLinkActive" [routerLinkActiveOptions]="{exact: true}" style="display: none;"></a>
+  <a routerLink="/users" routerLinkActive #listUser="routerLinkActive" [routerLinkActiveOptions]="{exact: true}" style="display: none;"></a>
+  <a routerLink="info" routerLinkActive #infoUserActive="routerLinkActive" style="display: none;"></a>
+  </div>
+  <!-- <hr/> -->
+  <router-outlet></router-outlet>
+</div>

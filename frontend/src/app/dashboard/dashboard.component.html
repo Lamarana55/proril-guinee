@@ -1,0 +1,218 @@
+<div class="main-content">
+  <!-- nombres d'alertes et de cas en attente-->
+  <div class="row">
+    <div class="col-12">
+      <form>
+        <div class="row recherche-stat">
+          <div class="col-3">
+            <div class="row">
+              <div class="col-md-6">
+                <input placeholder="Début" type="date" class="form-control form-control-static" name="debut" [(ngModel)]="debut" />
+              </div>
+
+              <div class="col-md-6">
+                  <input placeholder="Fin" type="date" class="form-control form-control-static" name="fin" [(ngModel)]="fin" />
+              </div>
+            </div>
+          </div>
+
+          <div class="col-2">
+            <button (click)="onRefresh()" class="btn btn-info ">
+              <span class="btn-label"><i class="nc-icon nc-refresh-69"></i></span> Rechercher 
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <div *ngIf="isRefresh" class="col-12">
+      <p>
+        {{ printDate }}
+        <button (click)="onRestaurer()" class="btn btn-warning">
+          <span class="btn-label"><i class="nc-icon nc-refresh-69"></i></span> Restaurer 
+        </button>
+      </p>
+    </div>
+
+  </div>
+
+  <div class="row">
+    <div class="col-md-3 col-sm-6">
+      <div class="card card-stats">
+        <div class="card-body ">
+          <div class="row">
+            <div class="col-5 col-md-4">
+              <div class="icon-big text-center icon-warning">
+                <i class="nc-icon nc-bell-55 text-warning"></i>
+              </div>
+            </div>
+            <div class="col-7 col-md-8">
+              <div class="numbers">
+                <p class="card-category">Alertes <i>(non traitée)</i></p>
+                <p class="card-title">{{ statsAlertes?.nonTraitre }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card-footer ">
+          <hr>
+          <div class="stats">
+            <!-- <a [routerLink]="['/gestion-cas/alertes', 'NON_TRAITE'] "><i class="fa fa-link"></i> Acceder</a> -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3 col-sm-6">
+      <div class="card card-stats">
+        <div class="card-body ">
+          <div class="row">
+            <div class="col-5 col-md-4">
+              <div class="icon-big text-center icon-success">
+                <i class="nc-icon nc-bell-55 text-success"></i>
+              </div>
+            </div>
+            <div class="col-7 col-md-8">
+              <div class="numbers">
+                <p class="card-category">Alertes <i>(traitée)</i></p>
+                <p class="card-title">{{ statsAlertes?.traite }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card-footer ">
+          <hr>
+          <div class="stats">
+            <!-- <a [routerLink]="['/gestion-cas/alertes', 'TRAITE'] "><i class="fa fa-link"></i> Acceder</a> -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3 col-sm-6">
+      <div class="card card-stats">
+        <div class="card-body ">
+          <div class="row">
+            <div class="col-5 col-md-4">
+              <div class="icon-big text-center icon-warning">
+                <i class="nc-icon nc-badge text-warning"></i>
+              </div>
+            </div>
+            <div class="col-7 col-md-8">
+              <div class="numbers">
+                <p class="card-category">Cas <i>(en attente)</i></p>
+                <p class="card-title">{{ statsCas?.enAttente }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card-footer ">
+          <hr>
+          <div class="stats">
+
+            <!-- <a [routerLink]="['/gestion-cas/cas', 'EN_ATTENTE'] "><i class="fa fa-link"></i>Acceder</a> -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3 col-sm-6">
+      <div class="card card-stats">
+        <div class="card-body ">
+          <div class="row">
+            <div class="col-5 col-md-4">
+              <div class="icon-big text-center icon-success">
+                <i class="nc-icon nc-badge text-success"></i>
+              </div>
+            </div>
+            <div class="col-7 col-md-8">
+              <div class="numbers">
+                <p class="card-category">Cas <i>(traité)</i></p>
+                <p class="card-title">{{ statsCas?.traite }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card-footer ">
+          <hr>
+          <div class="stats">
+            <!-- <a [routerLink]="['/gestion-cas/cas', 'TRAITE'] "><i class="fa fa-link"></i>Acceder</a> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Chart en fonction des statuts alertes et cas -->
+  <div class="row">
+    <div class="col-md-6 text-center">
+      <div class="card ">
+        <div class="card-header ">
+          <h5 class="card-title">Statistiques des alertes</h5>
+          <p class="card-category">Nombres d'alertes par statut</p>
+        </div>
+        <div class="card-body ">
+          <canvas id="chartAlerteByStatut"></canvas>
+        </div>
+        <div class="card-footer ">
+          <hr>
+          <div class="stats">
+            <i class="fa fa-calendar"></i> Nombre à date : {{ today | date : 'dd/MM/yyyy' }}
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 text-center">
+      <div class="card ">
+        <div class="card-header ">
+          <h5 class="card-title">Statistiques des alertes</h5>
+          <p class="card-category">Statistiques par regions</p>
+        </div>
+        <div class="card-body ">
+          <canvas id="chartAlerteByRegion"></canvas>
+        </div>
+        <div class="card-footer ">
+          <hr>
+          <div class="stats">
+            <i class="fa fa-calendar"></i> Nombre à date : {{ today | date : 'dd/MM/yyyy' }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Chart en fonction des region et prefectures alertes et cas -->
+  <div class="row">
+    <div class="col-md-6 text-center">
+      <div class="card ">
+        <div class="card-header ">
+          <h5 class="card-title">Statistiques des cas</h5>
+          <p class="card-category">Nombres de cas par statut</p>
+        </div>
+        <div class="card-body ">
+          <canvas id="chartCasByStatut"></canvas>
+        </div>
+        <div class="card-footer ">
+          <hr>
+          <div class="stats">
+            <i class="fa fa-calendar"></i> Nombre à date : {{ today | date : 'dd/MM/yyyy' }}
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 text-center">
+      <div class="card ">
+        <div class="card-header ">
+          <h5 class="card-title">Statistiques des cas</h5>
+          <p class="card-category">Statistiques par regions</p>
+        </div>
+        <div class="card-body ">
+          <canvas id="chartCasByPrefecture"></canvas>
+        </div>
+        <div class="card-footer ">
+          <hr>
+          <div class="stats">
+            <i class="fa fa-calendar"></i> Nombre à date : {{ today | date : 'dd/MM/yyyy' }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

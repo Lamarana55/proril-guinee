@@ -1,0 +1,5582 @@
+[
+  {
+    "id": 1,
+    "nom": "Boulbinet",
+    "code": "GN-C-01010101",
+    "longitude": null,
+    "latitude": null,
+    "description": "Quartier de Boulbinet",
+    "isView": true,
+    "commune": {
+      "id": 1,
+      "nom": "Kaloum",
+      "code": "GN-C-010101",
+      "longitude": null,
+      "latitude": null,
+      "description": "Commune de Kaloum",
+      "isView": true,
+      "prefecture": {
+        "id": 1,
+        "nom": "Conakry",
+        "code": "GN-C-0101",
+        "longitude": null,
+        "latitude": null,
+        "description": "Ville de Conakry",
+        "isView": true,
+        "region": {
+          "id": 1,
+          "nom": "Conakry",
+          "code": "GN-C-01",
+          "longitude": null,
+          "latitude": null,
+          "description": "Gouvernorat de Conakry",
+          "isView": true
+        }
+      }
+    }
+  },
+  {
+    "id": 2,
+    "nom": "Almamya",
+    "code": "GN-C-01010102",
+    "longitude": null,
+    "latitude": null,
+    "description": "Quartier de Almamya",
+    "isView": true,
+    "commune": {
+      "id": 1,
+      "nom": "Kaloum",
+      "code": "GN-C-010101",
+      "longitude": null,
+      "latitude": null,
+      "description": "Commune de Kaloum",
+      "isView": true,
+      "prefecture": {
+        "id": 1,
+        "nom": "Conakry",
+        "code": "GN-C-0101",
+        "longitude": null,
+        "latitude": null,
+        "description": "Ville de Conakry",
+        "isView": true,
+        "region": {
+          "id": 1,
+          "nom": "Conakry",
+          "code": "GN-C-01",
+          "longitude": null,
+          "latitude": null,
+          "description": "Gouvernorat de Conakry",
+          "isView": true
+        }
+      }
+    }
+  },
+  {
+    "id": 3,
+    "nom": "Coronthie",
+    "code": "GN-C-01010103",
+    "longitude": null,
+    "latitude": null,
+    "description": "Quartier de Coronthie",
+    "isView": true,
+    "commune": {
+      "id": 1,
+      "nom": "Kaloum",
+      "code": "GN-C-010101",
+      "longitude": null,
+      "latitude": null,
+      "description": "Commune de Kaloum",
+      "isView": true,
+      "prefecture": {
+        "id": 1,
+        "nom": "Conakry",
+        "code": "GN-C-0101",
+        "longitude": null,
+        "latitude": null,
+        "description": "Ville de Conakry",
+        "isView": true,
+        "region": {
+          "id": 1,
+          "nom": "Conakry",
+          "code": "GN-C-01",
+          "longitude": null,
+          "latitude": null,
+          "description": "Gouvernorat de Conakry",
+          "isView": true
+        }
+      }
+    }
+  },
+  {
+    "id": 4,
+    "nom": "Manquepas",
+    "code": "GN-C-01010104",
+    "longitude": null,
+    "latitude": null,
+    "description": "Quartier de Manquepas",
+    "isView": true,
+    "commune": {
+      "id": 1,
+      "nom": "Kaloum",
+      "code": "GN-C-010101",
+      "longitude": null,
+      "latitude": null,
+      "description": "Commune de Kaloum",
+      "isView": true,
+      "prefecture": {
+        "id": 1,
+        "nom": "Conakry",
+        "code": "GN-C-0101",
+        "longitude": null,
+        "latitude": null,
+        "description": "Ville de Conakry",
+        "isView": true,
+        "region": {
+          "id": 1,
+          "nom": "Conakry",
+          "code": "GN-C-01",
+          "longitude": null,
+          "latitude": null,
+          "description": "Gouvernorat de Conakry",
+          "isView": true
+        }
+      }
+    }
+  },
+  {
+    "id": 5,
+    "nom": "Kouléwondy",
+    "code": "GN-C-01010105",
+    "longitude": null,
+    "latitude": null,
+    "description": "Quartier de Kouléwondy",
+    "isView": true,
+    "commune": {
+      "id": 1,
+      "nom": "Kaloum",
+      "code": "GN-C-010101",
+      "longitude": null,
+      "latitude": null,
+      "description": "Commune de Kaloum",
+      "isView": true,
+      "prefecture": {
+        "id": 1,
+        "nom": "Conakry",
+        "code": "GN-C-0101",
+        "longitude": null,
+        "latitude": null,
+        "description": "Ville de Conakry",
+        "isView": true,
+        "region": {
+          "id": 1,
+          "nom": "Conakry",
+          "code": "GN-C-01",
+          "longitude": null,
+          "latitude": null,
+          "description": "Gouvernorat de Conakry",
+          "isView": true
+        }
+      }
+    }
+  },
+  {
+    "id": 6,
+    "nom": "Sandervalia",
+    "code": "GN-C-01010106",
+    "longitude": null,
+    "latitude": null,
+    "description": "Quartier de Sandervalia",
+    "isView": true,
+    "commune": {
+      "id": 1,
+      "nom": "Kaloum",
+      "code": "GN-C-010101",
+      "longitude": null,
+      "latitude": null,
+      "description": "Commune de Kaloum",
+      "isView": true,
+      "prefecture": {
+        "id": 1,
+        "nom": "Conakry",
+        "code": "GN-C-0101",
+        "longitude": null,
+        "latitude": null,
+        "description": "Ville de Conakry",
+        "isView": true,
+        "region": {
+          "id": 1,
+          "nom": "Conakry",
+          "code": "GN-C-01",
+          "longitude": null,
+          "latitude": null,
+          "description": "Gouvernorat de Conakry",
+          "isView": true
+        }
+      }
+    }
+  },
+  {
+    "id": 7,
+    "nom": "Témitaye",
+    "code": "GN-C-01010107",
+    "longitude": null,
+    "latitude": null,
+    "description": "Quartier de Témitaye",
+    "isView": true,
+    "commune": {
+      "id": 1,
+      "nom": "Kaloum",
+      "code": "GN-C-010101",
+      "longitude": null,
+      "latitude": null,
+      "description": "Commune de Kaloum",
+      "isView": true,
+      "prefecture": {
+        "id": 1,
+        "nom": "Conakry",
+        "code": "GN-C-0101",
+        "longitude": null,
+        "latitude": null,
+        "description": "Ville de Conakry",
+        "isView": true,
+        "region": {
+          "id": 1,
+          "nom": "Conakry",
+          "code": "GN-C-01",
+          "longitude": null,
+          "latitude": null,
+          "description": "Gouvernorat de Conakry",
+          "isView": true
+        }
+      }
+    }
+  },
+  {
+    "id": 8,
+    "nom": "Tombo",
+    "code": "GN-C-01010108",
+    "longitude": null,
+    "latitude": null,
+    "description": "Quartier de Tombo",
+    "isView": true,
+    "commune": {
+      "id": 1,
+      "nom": "Kaloum",
+      "code": "GN-C-010101",
+      "longitude": null,
+      "latitude": null,
+      "description": "Commune de Kaloum",
+      "isView": true,
+      "prefecture": {
+        "id": 1,
+        "nom": "Conakry",
+        "code": "GN-C-0101",
+        "longitude": null,
+        "latitude": null,
+        "description": "Ville de Conakry",
+        "isView": true,
+        "region": {
+          "id": 1,
+          "nom": "Conakry",
+          "code": "GN-C-01",
+          "longitude": null,
+          "latitude": null,
+          "description": "Gouvernorat de Conakry",
+          "isView": true
+        }
+      }
+    }
+  },
+  {
+    "id": 9,
+    "nom": "Sans-fil",
+    "code": "GN-C-01010109",
+    "longitude": null,
+    "latitude": null,
+    "description": "Quartier de Sans-fil",
+    "isView": true,
+    "commune": {
+      "id": 1,
+      "nom": "Kaloum",
+      "code": "GN-C-010101",
+      "longitude": null,
+      "latitude": null,
+      "description": "Commune de Kaloum",
+      "isView": true,
+      "prefecture": {
+        "id": 1,
+        "nom": "Conakry",
+        "code": "GN-C-0101",
+        "longitude": null,
+        "latitude": null,
+        "description": "Ville de Conakry",
+        "isView": true,
+        "region": {
+          "id": 1,
+          "nom": "Conakry",
+          "code": "GN-C-01",
+          "longitude": null,
+          "latitude": null,
+          "description": "Gouvernorat de Conakry",
+          "isView": true
+        }
+      }
+    }
+  },
+  {
+    "id": 10,
+    "nom": "Fotoba",
+    "code": "GN-C-01010110",
+    "longitude": null,
+    "latitude": null,
+    "description": "Quartier de Fotoba",
+    "isView": true,
+    "commune": {
+      "id": 1,
+      "nom": "Kaloum",
+      "code": "GN-C-010101",
+      "longitude": null,
+      "latitude": null,
+      "description": "Commune de Kaloum",
+      "isView": true,
+      "prefecture": {
+        "id": 1,
+        "nom": "Conakry",
+        "code": "GN-C-0101",
+        "longitude": null,
+        "latitude": null,
+        "description": "Ville de Conakry",
+        "isView": true,
+        "region": {
+          "id": 1,
+          "nom": "Conakry",
+          "code": "GN-C-01",
+          "longitude": null,
+          "latitude": null,
+          "description": "Gouvernorat de Conakry",
+          "isView": true
+        }
+      }
+    }
+  },
+  {
+    "id": 11,
+    "nom": "Kassa",
+    "code": "GN-C-01010111",
+    "longitude": null,
+    "latitude": null,
+    "description": "Quartier de Kassa",
+    "isView": true,
+    "commune": {
+      "id": 1,
+      "nom": "Kaloum",
+      "code": "GN-C-010101",
+      "longitude": null,
+      "latitude": null,
+      "description": "Commune de Kaloum",
+      "isView": true,
+      "prefecture": {
+        "id": 1,
+        "nom": "Conakry",
+        "code": "GN-C-0101",
+        "longitude": null,
+        "latitude": null,
+        "description": "Ville de Conakry",
+        "isView": true,
+        "region": {
+          "id": 1,
+          "nom": "Conakry",
+          "code": "GN-C-01",
+          "longitude": null,
+          "latitude": null,
+          "description": "Gouvernorat de Conakry",
+          "isView": true
+        }
+      }
+    }
+  },
+  {
+    "id": 12,
+    "nom": "Camayenne",
+    "code": "GN-C-01010201",
+    "longitude": null,
+    "latitude": null,
+    "description": "Quartier de Camayenne ",
+    "isView": true,
+    "commune": {
+      "id": 2,
+      "nom": "Dixinn",
+      "code": "GN-C-010102",
+      "longitude": null,
+      "latitude": null,
+      "description": "Commune de Dixinn",
+      "isView": true,
+      "prefecture": {
+        "id": 1,
+        "nom": "Conakry",
+        "code": "GN-C-0101",
+        "longitude": null,
+        "latitude": null,
+        "description": "Ville de Conakry",
+        "isView": true,
+        "region": {
+          "id": 1,
+          "nom": "Conakry",
+          "code": "GN-C-01",
+          "longitude": null,
+          "latitude": null,
+          "description": "Gouvernorat de Conakry",
+          "isView": true
+        }
+      }
+    }
+  },
+  {
+    "id": 13,
+    "nom": "Kipe ",
+    "code": "GN-C-01010401",
+    "longitude": null,
+    "latitude": null,
+    "description": "",
+    "isView": true,
+    "commune": {
+      "id": 4,
+      "nom": "Ratoma",
+      "code": "GN-C-010104",
+      "longitude": null,
+      "latitude": null,
+      "description": "Commune de Ratoma",
+      "isView": true,
+      "prefecture": {
+        "id": 1,
+        "nom": "Conakry",
+        "code": "GN-C-0101",
+        "longitude": null,
+        "latitude": null,
+        "description": "Ville de Conakry",
+        "isView": true,
+        "region": {
+          "id": 1,
+          "nom": "Conakry",
+          "code": "GN-C-01",
+          "longitude": null,
+          "latitude": null,
+          "description": "Gouvernorat de Conakry",
+          "isView": true
+        }
+      }
+    }
+  },
+  {
+    "id": 14,
+    "nom": "Boké Centre",
+    "code": "GN-B-02010101",
+    "longitude": null,
+    "latitude": null,
+    "description": "",
+    "isView": true,
+    "commune": {
+      "id": 6,
+      "nom": "Boké Centre",
+      "code": "GN-B-020101",
+      "longitude": null,
+      "latitude": null,
+      "description": "Sous préfecture de Boké Centre",
+      "isView": true,
+      "prefecture": {
+        "id": 2,
+        "nom": "Boké",
+        "code": "GN-B-0201",
+        "longitude": null,
+        "latitude": null,
+        "description": "Préfecture de Boké ",
+        "isView": true,
+        "region": {
+          "id": 2,
+          "nom": "Boké",
+          "code": "GN-B-02",
+          "longitude": null,
+          "latitude": null,
+          "description": "Région de Boké",
+          "isView": true
+        }
+      }
+    }
+  },
+  {
+    "id": 15,
+    "nom": "Boffa Centre",
+    "code": "GN-B-02020101",
+    "longitude": null,
+    "latitude": null,
+    "description": "",
+    "isView": true,
+    "commune": {
+      "id": 17,
+      "nom": "Colia",
+      "code": "GN-B-020202",
+      "longitude": null,
+      "latitude": null,
+      "description": "Sous préfecture de Colia",
+      "isView": true,
+      "prefecture": {
+        "id": 3,
+        "nom": "Boffa",
+        "code": "GN-B-0202",
+        "longitude": null,
+        "latitude": null,
+        "description": "Préfecture de Boffa ",
+        "isView": true,
+        "region": {
+          "id": 2,
+          "nom": "Boké",
+          "code": "GN-B-02",
+          "longitude": null,
+          "latitude": null,
+          "description": "Région de Boké",
+          "isView": true
+        }
+      }
+    }
+  },
+  {
+    "id": 16,
+    "nom": "Fria Centre ",
+    "code": "GN-B-02030101",
+    "longitude": null,
+    "latitude": null,
+    "description": "",
+    "isView": true,
+    "commune": {
+      "id": 25,
+      "nom": "Baguinet",
+      "code": "GN-B-020302",
+      "longitude": null,
+      "latitude": null,
+      "description": "Sous préfecture de Baguinet",
+      "isView": true,
+      "prefecture": {
+        "id": 4,
+        "nom": "Fria",
+        "code": "GN-B-0203",
+        "longitude": null,
+        "latitude": null,
+        "description": "Préfecture de Fria ",
+        "isView": true,
+        "region": {
+          "id": 2,
+          "nom": "Boké",
+          "code": "GN-B-02",
+          "longitude": null,
+          "latitude": null,
+          "description": "Région de Boké",
+          "isView": true
+        }
+      }
+    }
+  },
+  {
+    "id": 17,
+    "nom": "Fonfoyah",
+    "code": "GN-M-04020901",
+    "longitude": null,
+    "latitude": null,
+    "description": "",
+    "isView": true,
+    "commune": {
+      "id": 117,
+      "nom": "Maci",
+      "code": "GN-M-040307",
+      "longitude": null,
+      "latitude": null,
+      "description": "Sous préfecture de Maci",
+      "isView": true,
+      "prefecture": {
+        "id": 14,
+        "nom": "Pita",
+        "code": "GN-M-0403",
+        "longitude": null,
+        "latitude": null,
+        "description": "Préfecture de Pita",
+        "isView": true,
+        "region": {
+          "id": 4,
+          "nom": "Mamou",
+          "code": "GN-M-04",
+          "longitude": null,
+          "latitude": null,
+          "description": "Région de Mamou",
+          "isView": true
+        }
+      }
+    }
+  },
+  {
+    "id": 18,
+    "nom": "Bambéto",
+    "code": "GN-C-01010402",
+    "longitude": null,
+    "latitude": null,
+    "description": "",
+    "isView": true,
+    "commune": {
+      "id": 4,
+      "nom": "Ratoma",
+      "code": "GN-C-010104",
+      "longitude": null,
+      "latitude": null,
+      "description": "Commune de Ratoma",
+      "isView": true,
+      "prefecture": {
+        "id": 1,
+        "nom": "Conakry",
+        "code": "GN-C-0101",
+        "longitude": null,
+        "latitude": null,
+        "description": "Ville de Conakry",
+        "isView": true,
+        "region": {
+          "id": 1,
+          "nom": "Conakry",
+          "code": "GN-C-01",
+          "longitude": null,
+          "latitude": null,
+          "description": "Gouvernorat de Conakry",
+          "isView": true
+        }
+      }
+    }
+  },
+  {
+    "id": 19,
+    "nom": "Hamdallaye",
+    "code": "GN-C-01010403",
+    "longitude": null,
+    "latitude": null,
+    "description": "",
+    "isView": true,
+    "commune": {
+      "id": 4,
+      "nom": "Ratoma",
+      "code": "GN-C-010104",
+      "longitude": null,
+      "latitude": null,
+      "description": "Commune de Ratoma",
+      "isView": true,
+      "prefecture": {
+        "id": 1,
+        "nom": "Conakry",
+        "code": "GN-C-0101",
+        "longitude": null,
+        "latitude": null,
+        "description": "Ville de Conakry",
+        "isView": true,
+        "region": {
+          "id": 1,
+          "nom": "Conakry",
+          "code": "GN-C-01",
+          "longitude": null,
+          "latitude": null,
+          "description": "Gouvernorat de Conakry",
+          "isView": true
+        }
+      }
+    }
+  },
+  {
+    "id": 20,
+    "nom": "Tanerie",
+    "code": "GN-C-01010501",
+    "longitude": null,
+    "latitude": null,
+    "description": "En face de la station",
+    "isView": true,
+    "commune": {
+      "id": 5,
+      "nom": "Matoto",
+      "code": "GN-C-010105",
+      "longitude": null,
+      "latitude": null,
+      "description": "Commune de Matoto",
+      "isView": true,
+      "prefecture": {
+        "id": 1,
+        "nom": "Conakry",
+        "code": "GN-C-0101",
+        "longitude": null,
+        "latitude": null,
+        "description": "Ville de Conakry",
+        "isView": true,
+        "region": {
+          "id": 1,
+          "nom": "Conakry",
+          "code": "GN-C-01",
+          "longitude": null,
+          "latitude": null,
+          "description": "Gouvernorat de Conakry",
+          "isView": true
+        }
+      }
+    }
+  },
+  {
+    "id": 21,
+    "nom": "Nongo",
+    "code": "GN-C-01010404",
+    "longitude": null,
+    "latitude": null,
+    "description": "",
+    "isView": true,
+    "commune": {
+      "id": 4,
+      "nom": "Ratoma",
+      "code": "GN-C-010104",
+      "longitude": null,
+      "latitude": null,
+      "description": "Commune de Ratoma",
+      "isView": true,
+      "prefecture": {
+        "id": 1,
+        "nom": "Conakry",
+        "code": "GN-C-0101",
+        "longitude": null,
+        "latitude": null,
+        "description": "Ville de Conakry",
+        "isView": true,
+        "region": {
+          "id": 1,
+          "nom": "Conakry",
+          "code": "GN-C-01",
+          "longitude": null,
+          "latitude": null,
+          "description": "Gouvernorat de Conakry",
+          "isView": true
+        }
+      }
+    }
+  },
+  {
+    "id": 22,
+    "nom": "briquitterie",
+    "code": "GN-K-06010101",
+    "longitude": null,
+    "latitude": null,
+    "description": "",
+    "isView": true,
+    "commune": {
+      "id": 173,
+      "nom": "Moribayah",
+      "code": "GN-K-060110",
+      "longitude": null,
+      "latitude": null,
+      "description": "Sous préfecture de Moribayah",
+      "isView": true,
+      "prefecture": {
+        "id": 19,
+        "nom": "Kankan",
+        "code": "GN-K-0601",
+        "longitude": null,
+        "latitude": null,
+        "description": "Préfecture de Kankan",
+        "isView": true,
+        "region": {
+          "id": 6,
+          "nom": "Kankan",
+          "code": "GN-K-06",
+          "longitude": null,
+          "latitude": null,
+          "description": "Région de Kankan",
+          "isView": true
+        }
+      }
+    }
+  },
+  {
+    "id": 23,
+    "nom": "Niandankoro",
+    "code": "GN-K-06050901",
+    "longitude": null,
+    "latitude": null,
+    "description": " Niandankoro",
+    "isView": true,
+    "commune": {
+      "id": 217,
+      "nom": "Niandankoro",
+      "code": "GN-K-060509",
+      "longitude": null,
+      "latitude": null,
+      "description": "Sous préfecture de Niandankoro",
+      "isView": true,
+      "prefecture": {
+        "id": 23,
+        "nom": "Siguiri",
+        "code": "GN-K-0605",
+        "longitude": null,
+        "latitude": null,
+        "description": "Préfecture de Siguiri",
+        "isView": true,
+        "region": {
+          "id": 6,
+          "nom": "Kankan",
+          "code": "GN-K-06",
+          "longitude": null,
+          "latitude": null,
+          "description": "Région de Kankan",
+          "isView": true
+        }
+      }
+    }
+  },
+  {
+    "id": 24,
+    "nom": "Damaro Centre",
+    "code": "GN-K-06020201",
+    "longitude": null,
+    "latitude": null,
+    "description": "",
+    "isView": true,
+    "commune": {
+      "id": 178,
+      "nom": "Damaro",
+      "code": "GN-K-060202",
+      "longitude": null,
+      "latitude": null,
+      "description": "Sous préfecture de Damaro",
+      "isView": true,
+      "prefecture": {
+        "id": 20,
+        "nom": "Kérouané",
+        "code": "GN-K-0602",
+        "longitude": null,
+        "latitude": null,
+        "description": "Préfecture de Kérouané",
+        "isView": true,
+        "region": {
+          "id": 6,
+          "nom": "Kankan",
+          "code": "GN-K-06",
+          "longitude": null,
+          "latitude": null,
+          "description": "Région de Kankan",
+          "isView": true
+        }
+      }
+    }
+  },
+  {
+    "id": 25,
+    "nom": "Missidé",
+    "code": "GN-M-04010201",
+    "longitude": null,
+    "latitude": null,
+    "description": "",
+    "isView": true,
+    "commune": {
+      "id": 88,
+      "nom": "Bouliwel",
+      "code": "GN-M-040102",
+      "longitude": null,
+      "latitude": null,
+      "description": "Sous préfecture de Bouliwele",
+      "isView": true,
+      "prefecture": {
+        "id": 12,
+        "nom": "Mamou",
+        "code": "GN-M-0401",
+        "longitude": null,
+        "latitude": null,
+        "description": "Préfecture de Mamou",
+        "isView": true,
+        "region": {
+          "id": 4,
+          "nom": "Mamou",
+          "code": "GN-M-04",
+          "longitude": null,
+          "latitude": null,
+          "description": "Région de Mamou",
+          "isView": true
+        }
+      }
+    }
+  },
+  {
+    "id": 26,
+    "nom": "Cosa",
+    "code": "GN-C-01010405",
+    "longitude": null,
+    "latitude": null,
+    "description": "",
+    "isView": true,
+    "commune": {
+      "id": 4,
+      "nom": "Ratoma",
+      "code": "GN-C-010104",
+      "longitude": null,
+      "latitude": null,
+      "description": "Commune de Ratoma",
+      "isView": true,
+      "prefecture": {
+        "id": 1,
+        "nom": "Conakry",
+        "code": "GN-C-0101",
+        "longitude": null,
+        "latitude": null,
+        "description": "Ville de Conakry",
+        "isView": true,
+        "region": {
+          "id": 1,
+          "nom": "Conakry",
+          "code": "GN-C-01",
+          "longitude": null,
+          "latitude": null,
+          "description": "Gouvernorat de Conakry",
+          "isView": true
+        }
+      }
+    }
+  },
+  {
+    "id": 27,
+    "nom": "Belle-vue école",
+    "code": "GN-C-01010202",
+    "longitude": null,
+    "latitude": null,
+    "description": "",
+    "isView": true,
+    "commune": {
+      "id": 2,
+      "nom": "Dixinn",
+      "code": "GN-C-010102",
+      "longitude": null,
+      "latitude": null,
+      "description": "Commune de Dixinn",
+      "isView": true,
+      "prefecture": {
+        "id": 1,
+        "nom": "Conakry",
+        "code": "GN-C-0101",
+        "longitude": null,
+        "latitude": null,
+        "description": "Ville de Conakry",
+        "isView": true,
+        "region": {
+          "id": 1,
+          "nom": "Conakry",
+          "code": "GN-C-01",
+          "longitude": null,
+          "latitude": null,
+          "description": "Gouvernorat de Conakry",
+          "isView": true
+        }
+      }
+    }
+  },
+  {
+    "id": 28,
+    "nom": "Belle-vue-marché",
+    "code": "GN-C-01010203",
+    "longitude": null,
+    "latitude": null,
+    "description": "",
+    "isView": true,
+    "commune": {
+      "id": 2,
+      "nom": "Dixinn",
+      "code": "GN-C-010102",
+      "longitude": null,
+      "latitude": null,
+      "description": "Commune de Dixinn",
+      "isView": true,
+      "prefecture": {
+        "id": 1,
+        "nom": "Conakry",
+        "code": "GN-C-0101",
+        "longitude": null,
+        "latitude": null,
+        "description": "Ville de Conakry",
+        "isView": true,
+        "region": {
+          "id": 1,
+          "nom": "Conakry",
+          "code": "GN-C-01",
+          "longitude": null,
+          "latitude": null,
+          "description": "Gouvernorat de Conakry",
+          "isView": true
+        }
+      }
+    }
+  },
+  {
+    "id": 29,
+    "nom": "Cameroun",
+    "code": "GN-C-01010204",
+    "longitude": null,
+    "latitude": null,
+    "description": "",
+    "isView": true,
+    "commune": {
+      "id": 2,
+      "nom": "Dixinn",
+      "code": "GN-C-010102",
+      "longitude": null,
+      "latitude": null,
+      "description": "Commune de Dixinn",
+      "isView": true,
+      "prefecture": {
+        "id": 1,
+        "nom": "Conakry",
+        "code": "GN-C-0101",
+        "longitude": null,
+        "latitude": null,
+        "description": "Ville de Conakry",
+        "isView": true,
+        "region": {
+          "id": 1,
+          "nom": "Conakry",
+          "code": "GN-C-01",
+          "longitude": null,
+          "latitude": null,
+          "description": "Gouvernorat de Conakry",
+          "isView": true
+        }
+      }
+    }
+  },
+  {
+    "id": 30,
+    "nom": "Dixinn-cité1",
+    "code": "GN-C-01010205",
+    "longitude": null,
+    "latitude": null,
+    "description": "",
+    "isView": true,
+    "commune": {
+      "id": 2,
+      "nom": "Dixinn",
+      "code": "GN-C-010102",
+      "longitude": null,
+      "latitude": null,
+      "description": "Commune de Dixinn",
+      "isView": true,
+      "prefecture": {
+        "id": 1,
+        "nom": "Conakry",
+        "code": "GN-C-0101",
+        "longitude": null,
+        "latitude": null,
+        "description": "Ville de Conakry",
+        "isView": true,
+        "region": {
+          "id": 1,
+          "nom": "Conakry",
+          "code": "GN-C-01",
+          "longitude": null,
+          "latitude": null,
+          "description": "Gouvernorat de Conakry",
+          "isView": true
+        }
+      }
+    }
+  },
+  {
+    "id": 31,
+    "nom": "Dixinn-cité 2",
+    "code": "GN-C-01010206",
+    "longitude": null,
+    "latitude": null,
+    "description": "",
+    "isView": true,
+    "commune": {
+      "id": 2,
+      "nom": "Dixinn",
+      "code": "GN-C-010102",
+      "longitude": null,
+      "latitude": null,
+      "description": "Commune de Dixinn",
+      "isView": true,
+      "prefecture": {
+        "id": 1,
+        "nom": "Conakry",
+        "code": "GN-C-0101",
+        "longitude": null,
+        "latitude": null,
+        "description": "Ville de Conakry",
+        "isView": true,
+        "region": {
+          "id": 1,
+          "nom": "Conakry",
+          "code": "GN-C-01",
+          "longitude": null,
+          "latitude": null,
+          "description": "Gouvernorat de Conakry",
+          "isView": true
+        }
+      }
+    }
+  },
+  {
+    "id": 32,
+    "nom": "Dixinn-gare",
+    "code": "GN-C-01010207",
+    "longitude": null,
+    "latitude": null,
+    "description": "",
+    "isView": true,
+    "commune": {
+      "id": 2,
+      "nom": "Dixinn",
+      "code": "GN-C-010102",
+      "longitude": null,
+      "latitude": null,
+      "description": "Commune de Dixinn",
+      "isView": true,
+      "prefecture": {
+        "id": 1,
+        "nom": "Conakry",
+        "code": "GN-C-0101",
+        "longitude": null,
+        "latitude": null,
+        "description": "Ville de Conakry",
+        "isView": true,
+        "region": {
+          "id": 1,
+          "nom": "Conakry",
+          "code": "GN-C-01",
+          "longitude": null,
+          "latitude": null,
+          "description": "Gouvernorat de Conakry",
+          "isView": true
+        }
+      }
+    }
+  },
+  {
+    "id": 33,
+    "nom": "Dixinn-gare-rails",
+    "code": "GN-C-01010208",
+    "longitude": null,
+    "latitude": null,
+    "description": "",
+    "isView": true,
+    "commune": {
+      "id": 2,
+      "nom": "Dixinn",
+      "code": "GN-C-010102",
+      "longitude": null,
+      "latitude": null,
+      "description": "Commune de Dixinn",
+      "isView": true,
+      "prefecture": {
+        "id": 1,
+        "nom": "Conakry",
+        "code": "GN-C-0101",
+        "longitude": null,
+        "latitude": null,
+        "description": "Ville de Conakry",
+        "isView": true,
+        "region": {
+          "id": 1,
+          "nom": "Conakry",
+          "code": "GN-C-01",
+          "longitude": null,
+          "latitude": null,
+          "description": "Gouvernorat de Conakry",
+          "isView": true
+        }
+      }
+    }
+  },
+  {
+    "id": 34,
+    "nom": "Dixinn-mosquée",
+    "code": "GN-C-01010209",
+    "longitude": null,
+    "latitude": null,
+    "description": "",
+    "isView": true,
+    "commune": {
+      "id": 2,
+      "nom": "Dixinn",
+      "code": "GN-C-010102",
+      "longitude": null,
+      "latitude": null,
+      "description": "Commune de Dixinn",
+      "isView": true,
+      "prefecture": {
+        "id": 1,
+        "nom": "Conakry",
+        "code": "GN-C-0101",
+        "longitude": null,
+        "latitude": null,
+        "description": "Ville de Conakry",
+        "isView": true,
+        "region": {
+          "id": 1,
+          "nom": "Conakry",
+          "code": "GN-C-01",
+          "longitude": null,
+          "latitude": null,
+          "description": "Gouvernorat de Conakry",
+          "isView": true
+        }
+      }
+    }
+  },
+  {
+    "id": 35,
+    "nom": "Dixinn-port",
+    "code": "GN-C-01010210",
+    "longitude": null,
+    "latitude": null,
+    "description": "",
+    "isView": true,
+    "commune": {
+      "id": 2,
+      "nom": "Dixinn",
+      "code": "GN-C-010102",
+      "longitude": null,
+      "latitude": null,
+      "description": "Commune de Dixinn",
+      "isView": true,
+      "prefecture": {
+        "id": 1,
+        "nom": "Conakry",
+        "code": "GN-C-0101",
+        "longitude": null,
+        "latitude": null,
+        "description": "Ville de Conakry",
+        "isView": true,
+        "region": {
+          "id": 1,
+          "nom": "Conakry",
+          "code": "GN-C-01",
+          "longitude": null,
+          "latitude": null,
+          "description": "Gouvernorat de Conakry",
+          "isView": true
+        }
+      }
+    }
+  },
+  {
+    "id": 36,
+    "nom": "Hafia 1",
+    "code": "GN-C-01010211",
+    "longitude": null,
+    "latitude": null,
+    "description": "",
+    "isView": true,
+    "commune": {
+      "id": 2,
+      "nom": "Dixinn",
+      "code": "GN-C-010102",
+      "longitude": null,
+      "latitude": null,
+      "description": "Commune de Dixinn",
+      "isView": true,
+      "prefecture": {
+        "id": 1,
+        "nom": "Conakry",
+        "code": "GN-C-0101",
+        "longitude": null,
+        "latitude": null,
+        "description": "Ville de Conakry",
+        "isView": true,
+        "region": {
+          "id": 1,
+          "nom": "Conakry",
+          "code": "GN-C-01",
+          "longitude": null,
+          "latitude": null,
+          "description": "Gouvernorat de Conakry",
+          "isView": true
+        }
+      }
+    }
+  },
+  {
+    "id": 37,
+    "nom": "Hafia 2",
+    "code": "GN-C-01010212",
+    "longitude": null,
+    "latitude": null,
+    "description": "",
+    "isView": true,
+    "commune": {
+      "id": 2,
+      "nom": "Dixinn",
+      "code": "GN-C-010102",
+      "longitude": null,
+      "latitude": null,
+      "description": "Commune de Dixinn",
+      "isView": true,
+      "prefecture": {
+        "id": 1,
+        "nom": "Conakry",
+        "code": "GN-C-0101",
+        "longitude": null,
+        "latitude": null,
+        "description": "Ville de Conakry",
+        "isView": true,
+        "region": {
+          "id": 1,
+          "nom": "Conakry",
+          "code": "GN-C-01",
+          "longitude": null,
+          "latitude": null,
+          "description": "Gouvernorat de Conakry",
+          "isView": true
+        }
+      }
+    }
+  },
+  {
+    "id": 38,
+    "nom": "Hafia-minière",
+    "code": "GN-C-01010213",
+    "longitude": null,
+    "latitude": null,
+    "description": "",
+    "isView": true,
+    "commune": {
+      "id": 2,
+      "nom": "Dixinn",
+      "code": "GN-C-010102",
+      "longitude": null,
+      "latitude": null,
+      "description": "Commune de Dixinn",
+      "isView": true,
+      "prefecture": {
+        "id": 1,
+        "nom": "Conakry",
+        "code": "GN-C-0101",
+        "longitude": null,
+        "latitude": null,
+        "description": "Ville de Conakry",
+        "isView": true,
+        "region": {
+          "id": 1,
+          "nom": "Conakry",
+          "code": "GN-C-01",
+          "longitude": null,
+          "latitude": null,
+          "description": "Gouvernorat de Conakry",
+          "isView": true
+        }
+      }
+    }
+  },
+  {
+    "id": 39,
+    "nom": "Hafia-mosquée",
+    "code": "GN-C-01010214",
+    "longitude": null,
+    "latitude": null,
+    "description": "",
+    "isView": true,
+    "commune": {
+      "id": 2,
+      "nom": "Dixinn",
+      "code": "GN-C-010102",
+      "longitude": null,
+      "latitude": null,
+      "description": "Commune de Dixinn",
+      "isView": true,
+      "prefecture": {
+        "id": 1,
+        "nom": "Conakry",
+        "code": "GN-C-0101",
+        "longitude": null,
+        "latitude": null,
+        "description": "Ville de Conakry",
+        "isView": true,
+        "region": {
+          "id": 1,
+          "nom": "Conakry",
+          "code": "GN-C-01",
+          "longitude": null,
+          "latitude": null,
+          "description": "Gouvernorat de Conakry",
+          "isView": true
+        }
+      }
+    }
+  },
+  {
+    "id": 40,
+    "nom": "Kénien",
+    "code": "GN-C-01010215",
+    "longitude": null,
+    "latitude": null,
+    "description": "",
+    "isView": true,
+    "commune": {
+      "id": 2,
+      "nom": "Dixinn",
+      "code": "GN-C-010102",
+      "longitude": null,
+      "latitude": null,
+      "description": "Commune de Dixinn",
+      "isView": true,
+      "prefecture": {
+        "id": 1,
+        "nom": "Conakry",
+        "code": "GN-C-0101",
+        "longitude": null,
+        "latitude": null,
+        "description": "Ville de Conakry",
+        "isView": true,
+        "region": {
+          "id": 1,
+          "nom": "Conakry",
+          "code": "GN-C-01",
+          "longitude": null,
+          "latitude": null,
+          "description": "Gouvernorat de Conakry",
+          "isView": true
+        }
+      }
+    }
+  },
+  {
+    "id": 41,
+    "nom": "Landréah",
+    "code": "GN-C-01010216",
+    "longitude": null,
+    "latitude": null,
+    "description": "",
+    "isView": true,
+    "commune": {
+      "id": 2,
+      "nom": "Dixinn",
+      "code": "GN-C-010102",
+      "longitude": null,
+      "latitude": null,
+      "description": "Commune de Dixinn",
+      "isView": true,
+      "prefecture": {
+        "id": 1,
+        "nom": "Conakry",
+        "code": "GN-C-0101",
+        "longitude": null,
+        "latitude": null,
+        "description": "Ville de Conakry",
+        "isView": true,
+        "region": {
+          "id": 1,
+          "nom": "Conakry",
+          "code": "GN-C-01",
+          "longitude": null,
+          "latitude": null,
+          "description": "Gouvernorat de Conakry",
+          "isView": true
+        }
+      }
+    }
+  },
+  {
+    "id": 42,
+    "nom": "Minière-cité",
+    "code": "GN-C-01010217",
+    "longitude": null,
+    "latitude": null,
+    "description": "",
+    "isView": true,
+    "commune": {
+      "id": 2,
+      "nom": "Dixinn",
+      "code": "GN-C-010102",
+      "longitude": null,
+      "latitude": null,
+      "description": "Commune de Dixinn",
+      "isView": true,
+      "prefecture": {
+        "id": 1,
+        "nom": "Conakry",
+        "code": "GN-C-0101",
+        "longitude": null,
+        "latitude": null,
+        "description": "Ville de Conakry",
+        "isView": true,
+        "region": {
+          "id": 1,
+          "nom": "Conakry",
+          "code": "GN-C-01",
+          "longitude": null,
+          "latitude": null,
+          "description": "Gouvernorat de Conakry",
+          "isView": true
+        }
+      }
+    }
+  },
+  {
+    "id": 43,
+    "nom": "Boussoura",
+    "code": "GN-C-01010301",
+    "longitude": null,
+    "latitude": null,
+    "description": "",
+    "isView": true,
+    "commune": {
+      "id": 3,
+      "nom": "Matam",
+      "code": "GN-C-010103",
+      "longitude": null,
+      "latitude": null,
+      "description": "Commune de Matam",
+      "isView": true,
+      "prefecture": {
+        "id": 1,
+        "nom": "Conakry",
+        "code": "GN-C-0101",
+        "longitude": null,
+        "latitude": null,
+        "description": "Ville de Conakry",
+        "isView": true,
+        "region": {
+          "id": 1,
+          "nom": "Conakry",
+          "code": "GN-C-01",
+          "longitude": null,
+          "latitude": null,
+          "description": "Gouvernorat de Conakry",
+          "isView": true
+        }
+      }
+    }
+  },
+  {
+    "id": 44,
+    "nom": " Bonfi",
+    "code": "GN-C-01010302",
+    "longitude": null,
+    "latitude": null,
+    "description": "",
+    "isView": true,
+    "commune": {
+      "id": 3,
+      "nom": "Matam",
+      "code": "GN-C-010103",
+      "longitude": null,
+      "latitude": null,
+      "description": "Commune de Matam",
+      "isView": true,
+      "prefecture": {
+        "id": 1,
+        "nom": "Conakry",
+        "code": "GN-C-0101",
+        "longitude": null,
+        "latitude": null,
+        "description": "Ville de Conakry",
+        "isView": true,
+        "region": {
+          "id": 1,
+          "nom": "Conakry",
+          "code": "GN-C-01",
+          "longitude": null,
+          "latitude": null,
+          "description": "Gouvernorat de Conakry",
+          "isView": true
+        }
+      }
+    }
+  },
+  {
+    "id": 45,
+    "nom": "Bonfi-routière",
+    "code": "GN-C-01010303",
+    "longitude": null,
+    "latitude": null,
+    "description": "",
+    "isView": true,
+    "commune": {
+      "id": 3,
+      "nom": "Matam",
+      "code": "GN-C-010103",
+      "longitude": null,
+      "latitude": null,
+      "description": "Commune de Matam",
+      "isView": true,
+      "prefecture": {
+        "id": 1,
+        "nom": "Conakry",
+        "code": "GN-C-0101",
+        "longitude": null,
+        "latitude": null,
+        "description": "Ville de Conakry",
+        "isView": true,
+        "region": {
+          "id": 1,
+          "nom": "Conakry",
+          "code": "GN-C-01",
+          "longitude": null,
+          "latitude": null,
+          "description": "Gouvernorat de Conakry",
+          "isView": true
+        }
+      }
+    }
+  },
+  {
+    "id": 46,
+    "nom": "Bonfi-marché",
+    "code": "GN-C-01010304",
+    "longitude": null,
+    "latitude": null,
+    "description": "",
+    "isView": true,
+    "commune": {
+      "id": 3,
+      "nom": "Matam",
+      "code": "GN-C-010103",
+      "longitude": null,
+      "latitude": null,
+      "description": "Commune de Matam",
+      "isView": true,
+      "prefecture": {
+        "id": 1,
+        "nom": "Conakry",
+        "code": "GN-C-0101",
+        "longitude": null,
+        "latitude": null,
+        "description": "Ville de Conakry",
+        "isView": true,
+        "region": {
+          "id": 1,
+          "nom": "Conakry",
+          "code": "GN-C-01",
+          "longitude": null,
+          "latitude": null,
+          "description": "Gouvernorat de Conakry",
+          "isView": true
+        }
+      }
+    }
+  },
+  {
+    "id": 47,
+    "nom": "Carrière",
+    "code": "GN-C-01010305",
+    "longitude": null,
+    "latitude": null,
+    "description": "",
+    "isView": true,
+    "commune": {
+      "id": 3,
+      "nom": "Matam",
+      "code": "GN-C-010103",
+      "longitude": null,
+      "latitude": null,
+      "description": "Commune de Matam",
+      "isView": true,
+      "prefecture": {
+        "id": 1,
+        "nom": "Conakry",
+        "code": "GN-C-0101",
+        "longitude": null,
+        "latitude": null,
+        "description": "Ville de Conakry",
+        "isView": true,
+        "region": {
+          "id": 1,
+          "nom": "Conakry",
+          "code": "GN-C-01",
+          "longitude": null,
+          "latitude": null,
+          "description": "Gouvernorat de Conakry",
+          "isView": true
+        }
+      }
+    }
+  },
+  {
+    "id": 48,
+    "nom": "Coléah-centre",
+    "code": "GN-C-01010306",
+    "longitude": null,
+    "latitude": null,
+    "description": "",
+    "isView": true,
+    "commune": {
+      "id": 3,
+      "nom": "Matam",
+      "code": "GN-C-010103",
+      "longitude": null,
+      "latitude": null,
+      "description": "Commune de Matam",
+      "isView": true,
+      "prefecture": {
+        "id": 1,
+        "nom": "Conakry",
+        "code": "GN-C-0101",
+        "longitude": null,
+        "latitude": null,
+        "description": "Ville de Conakry",
+        "isView": true,
+        "region": {
+          "id": 1,
+          "nom": "Conakry",
+          "code": "GN-C-01",
+          "longitude": null,
+          "latitude": null,
+          "description": "Gouvernorat de Conakry",
+          "isView": true
+        }
+      }
+    }
+  },
+  {
+    "id": 49,
+    "nom": "Coléah-cité",
+    "code": "GN-C-01010307",
+    "longitude": null,
+    "latitude": null,
+    "description": "",
+    "isView": true,
+    "commune": {
+      "id": 3,
+      "nom": "Matam",
+      "code": "GN-C-010103",
+      "longitude": null,
+      "latitude": null,
+      "description": "Commune de Matam",
+      "isView": true,
+      "prefecture": {
+        "id": 1,
+        "nom": "Conakry",
+        "code": "GN-C-0101",
+        "longitude": null,
+        "latitude": null,
+        "description": "Ville de Conakry",
+        "isView": true,
+        "region": {
+          "id": 1,
+          "nom": "Conakry",
+          "code": "GN-C-01",
+          "longitude": null,
+          "latitude": null,
+          "description": "Gouvernorat de Conakry",
+          "isView": true
+        }
+      }
+    }
+  },
+  {
+    "id": 50,
+    "nom": "Domino",
+    "code": "GN-C-01010308",
+    "longitude": null,
+    "latitude": null,
+    "description": "",
+    "isView": true,
+    "commune": {
+      "id": 3,
+      "nom": "Matam",
+      "code": "GN-C-010103",
+      "longitude": null,
+      "latitude": null,
+      "description": "Commune de Matam",
+      "isView": true,
+      "prefecture": {
+        "id": 1,
+        "nom": "Conakry",
+        "code": "GN-C-0101",
+        "longitude": null,
+        "latitude": null,
+        "description": "Ville de Conakry",
+        "isView": true,
+        "region": {
+          "id": 1,
+          "nom": "Conakry",
+          "code": "GN-C-01",
+          "longitude": null,
+          "latitude": null,
+          "description": "Gouvernorat de Conakry",
+          "isView": true
+        }
+      }
+    }
+  },
+  {
+    "id": 51,
+    "nom": "Hermakönon",
+    "code": "GN-C-01010309",
+    "longitude": null,
+    "latitude": null,
+    "description": "",
+    "isView": true,
+    "commune": {
+      "id": 3,
+      "nom": "Matam",
+      "code": "GN-C-010103",
+      "longitude": null,
+      "latitude": null,
+      "description": "Commune de Matam",
+      "isView": true,
+      "prefecture": {
+        "id": 1,
+        "nom": "Conakry",
+        "code": "GN-C-0101",
+        "longitude": null,
+        "latitude": null,
+        "description": "Ville de Conakry",
+        "isView": true,
+        "region": {
+          "id": 1,
+          "nom": "Conakry",
+          "code": "GN-C-01",
+          "longitude": null,
+          "latitude": null,
+          "description": "Gouvernorat de Conakry",
+          "isView": true
+        }
+      }
+    }
+  },
+  {
+    "id": 52,
+    "nom": "Imprimerie",
+    "code": "GN-C-01010310",
+    "longitude": null,
+    "latitude": null,
+    "description": "",
+    "isView": true,
+    "commune": {
+      "id": 3,
+      "nom": "Matam",
+      "code": "GN-C-010103",
+      "longitude": null,
+      "latitude": null,
+      "description": "Commune de Matam",
+      "isView": true,
+      "prefecture": {
+        "id": 1,
+        "nom": "Conakry",
+        "code": "GN-C-0101",
+        "longitude": null,
+        "latitude": null,
+        "description": "Ville de Conakry",
+        "isView": true,
+        "region": {
+          "id": 1,
+          "nom": "Conakry",
+          "code": "GN-C-01",
+          "longitude": null,
+          "latitude": null,
+          "description": "Gouvernorat de Conakry",
+          "isView": true
+        }
+      }
+    }
+  },
+  {
+    "id": 53,
+    "nom": "Lanséboudji",
+    "code": "GN-C-01010311",
+    "longitude": null,
+    "latitude": null,
+    "description": "",
+    "isView": true,
+    "commune": {
+      "id": 3,
+      "nom": "Matam",
+      "code": "GN-C-010103",
+      "longitude": null,
+      "latitude": null,
+      "description": "Commune de Matam",
+      "isView": true,
+      "prefecture": {
+        "id": 1,
+        "nom": "Conakry",
+        "code": "GN-C-0101",
+        "longitude": null,
+        "latitude": null,
+        "description": "Ville de Conakry",
+        "isView": true,
+        "region": {
+          "id": 1,
+          "nom": "Conakry",
+          "code": "GN-C-01",
+          "longitude": null,
+          "latitude": null,
+          "description": "Gouvernorat de Conakry",
+          "isView": true
+        }
+      }
+    }
+  },
+  {
+    "id": 54,
+    "nom": " Madina-centre",
+    "code": "GN-C-01010312",
+    "longitude": null,
+    "latitude": null,
+    "description": "",
+    "isView": true,
+    "commune": {
+      "id": 3,
+      "nom": "Matam",
+      "code": "GN-C-010103",
+      "longitude": null,
+      "latitude": null,
+      "description": "Commune de Matam",
+      "isView": true,
+      "prefecture": {
+        "id": 1,
+        "nom": "Conakry",
+        "code": "GN-C-0101",
+        "longitude": null,
+        "latitude": null,
+        "description": "Ville de Conakry",
+        "isView": true,
+        "region": {
+          "id": 1,
+          "nom": "Conakry",
+          "code": "GN-C-01",
+          "longitude": null,
+          "latitude": null,
+          "description": "Gouvernorat de Conakry",
+          "isView": true
+        }
+      }
+    }
+  },
+  {
+    "id": 55,
+    "nom": "Madina-cité",
+    "code": "GN-C-01010313",
+    "longitude": null,
+    "latitude": null,
+    "description": "",
+    "isView": true,
+    "commune": {
+      "id": 3,
+      "nom": "Matam",
+      "code": "GN-C-010103",
+      "longitude": null,
+      "latitude": null,
+      "description": "Commune de Matam",
+      "isView": true,
+      "prefecture": {
+        "id": 1,
+        "nom": "Conakry",
+        "code": "GN-C-0101",
+        "longitude": null,
+        "latitude": null,
+        "description": "Ville de Conakry",
+        "isView": true,
+        "region": {
+          "id": 1,
+          "nom": "Conakry",
+          "code": "GN-C-01",
+          "longitude": null,
+          "latitude": null,
+          "description": "Gouvernorat de Conakry",
+          "isView": true
+        }
+      }
+    }
+  },
+  {
+    "id": 56,
+    "nom": "Madina-école",
+    "code": "GN-C-01010314",
+    "longitude": null,
+    "latitude": null,
+    "description": "",
+    "isView": true,
+    "commune": {
+      "id": 3,
+      "nom": "Matam",
+      "code": "GN-C-010103",
+      "longitude": null,
+      "latitude": null,
+      "description": "Commune de Matam",
+      "isView": true,
+      "prefecture": {
+        "id": 1,
+        "nom": "Conakry",
+        "code": "GN-C-0101",
+        "longitude": null,
+        "latitude": null,
+        "description": "Ville de Conakry",
+        "isView": true,
+        "region": {
+          "id": 1,
+          "nom": "Conakry",
+          "code": "GN-C-01",
+          "longitude": null,
+          "latitude": null,
+          "description": "Gouvernorat de Conakry",
+          "isView": true
+        }
+      }
+    }
+  },
+  {
+    "id": 57,
+    "nom": "Madina-marché",
+    "code": "GN-C-01010315",
+    "longitude": null,
+    "latitude": null,
+    "description": "",
+    "isView": true,
+    "commune": {
+      "id": 3,
+      "nom": "Matam",
+      "code": "GN-C-010103",
+      "longitude": null,
+      "latitude": null,
+      "description": "Commune de Matam",
+      "isView": true,
+      "prefecture": {
+        "id": 1,
+        "nom": "Conakry",
+        "code": "GN-C-0101",
+        "longitude": null,
+        "latitude": null,
+        "description": "Ville de Conakry",
+        "isView": true,
+        "region": {
+          "id": 1,
+          "nom": "Conakry",
+          "code": "GN-C-01",
+          "longitude": null,
+          "latitude": null,
+          "description": "Gouvernorat de Conakry",
+          "isView": true
+        }
+      }
+    }
+  },
+  {
+    "id": 58,
+    "nom": "Madina-mosquée",
+    "code": "GN-C-01010316",
+    "longitude": null,
+    "latitude": null,
+    "description": "",
+    "isView": true,
+    "commune": {
+      "id": 3,
+      "nom": "Matam",
+      "code": "GN-C-010103",
+      "longitude": null,
+      "latitude": null,
+      "description": "Commune de Matam",
+      "isView": true,
+      "prefecture": {
+        "id": 1,
+        "nom": "Conakry",
+        "code": "GN-C-0101",
+        "longitude": null,
+        "latitude": null,
+        "description": "Ville de Conakry",
+        "isView": true,
+        "region": {
+          "id": 1,
+          "nom": "Conakry",
+          "code": "GN-C-01",
+          "longitude": null,
+          "latitude": null,
+          "description": "Gouvernorat de Conakry",
+          "isView": true
+        }
+      }
+    }
+  },
+  {
+    "id": 59,
+    "nom": "Mafanco",
+    "code": "GN-C-01010317",
+    "longitude": null,
+    "latitude": null,
+    "description": "",
+    "isView": true,
+    "commune": {
+      "id": 3,
+      "nom": "Matam",
+      "code": "GN-C-010103",
+      "longitude": null,
+      "latitude": null,
+      "description": "Commune de Matam",
+      "isView": true,
+      "prefecture": {
+        "id": 1,
+        "nom": "Conakry",
+        "code": "GN-C-0101",
+        "longitude": null,
+        "latitude": null,
+        "description": "Ville de Conakry",
+        "isView": true,
+        "region": {
+          "id": 1,
+          "nom": "Conakry",
+          "code": "GN-C-01",
+          "longitude": null,
+          "latitude": null,
+          "description": "Gouvernorat de Conakry",
+          "isView": true
+        }
+      }
+    }
+  },
+  {
+    "id": 60,
+    "nom": "Mafonco-centre",
+    "code": "GN-C-01010318",
+    "longitude": null,
+    "latitude": null,
+    "description": "",
+    "isView": true,
+    "commune": {
+      "id": 3,
+      "nom": "Matam",
+      "code": "GN-C-010103",
+      "longitude": null,
+      "latitude": null,
+      "description": "Commune de Matam",
+      "isView": true,
+      "prefecture": {
+        "id": 1,
+        "nom": "Conakry",
+        "code": "GN-C-0101",
+        "longitude": null,
+        "latitude": null,
+        "description": "Ville de Conakry",
+        "isView": true,
+        "region": {
+          "id": 1,
+          "nom": "Conakry",
+          "code": "GN-C-01",
+          "longitude": null,
+          "latitude": null,
+          "description": "Gouvernorat de Conakry",
+          "isView": true
+        }
+      }
+    }
+  },
+  {
+    "id": 61,
+    "nom": "Matam",
+    "code": "GN-C-01010319",
+    "longitude": null,
+    "latitude": null,
+    "description": "",
+    "isView": true,
+    "commune": {
+      "id": 3,
+      "nom": "Matam",
+      "code": "GN-C-010103",
+      "longitude": null,
+      "latitude": null,
+      "description": "Commune de Matam",
+      "isView": true,
+      "prefecture": {
+        "id": 1,
+        "nom": "Conakry",
+        "code": "GN-C-0101",
+        "longitude": null,
+        "latitude": null,
+        "description": "Ville de Conakry",
+        "isView": true,
+        "region": {
+          "id": 1,
+          "nom": "Conakry",
+          "code": "GN-C-01",
+          "longitude": null,
+          "latitude": null,
+          "description": "Gouvernorat de Conakry",
+          "isView": true
+        }
+      }
+    }
+  },
+  {
+    "id": 62,
+    "nom": "Matam-lido",
+    "code": "GN-C-01010320",
+    "longitude": null,
+    "latitude": null,
+    "description": "",
+    "isView": true,
+    "commune": {
+      "id": 3,
+      "nom": "Matam",
+      "code": "GN-C-010103",
+      "longitude": null,
+      "latitude": null,
+      "description": "Commune de Matam",
+      "isView": true,
+      "prefecture": {
+        "id": 1,
+        "nom": "Conakry",
+        "code": "GN-C-0101",
+        "longitude": null,
+        "latitude": null,
+        "description": "Ville de Conakry",
+        "isView": true,
+        "region": {
+          "id": 1,
+          "nom": "Conakry",
+          "code": "GN-C-01",
+          "longitude": null,
+          "latitude": null,
+          "description": "Gouvernorat de Conakry",
+          "isView": true
+        }
+      }
+    }
+  },
+  {
+    "id": 63,
+    "nom": "Touguiwondy",
+    "code": "GN-C-01010321",
+    "longitude": null,
+    "latitude": null,
+    "description": "",
+    "isView": true,
+    "commune": {
+      "id": 3,
+      "nom": "Matam",
+      "code": "GN-C-010103",
+      "longitude": null,
+      "latitude": null,
+      "description": "Commune de Matam",
+      "isView": true,
+      "prefecture": {
+        "id": 1,
+        "nom": "Conakry",
+        "code": "GN-C-0101",
+        "longitude": null,
+        "latitude": null,
+        "description": "Ville de Conakry",
+        "isView": true,
+        "region": {
+          "id": 1,
+          "nom": "Conakry",
+          "code": "GN-C-01",
+          "longitude": null,
+          "latitude": null,
+          "description": "Gouvernorat de Conakry",
+          "isView": true
+        }
+      }
+    }
+  },
+  {
+    "id": 64,
+    "nom": "Cobaya",
+    "code": "GN-C-01010406",
+    "longitude": null,
+    "latitude": null,
+    "description": "",
+    "isView": true,
+    "commune": {
+      "id": 4,
+      "nom": "Ratoma",
+      "code": "GN-C-010104",
+      "longitude": null,
+      "latitude": null,
+      "description": "Commune de Ratoma",
+      "isView": true,
+      "prefecture": {
+        "id": 1,
+        "nom": "Conakry",
+        "code": "GN-C-0101",
+        "longitude": null,
+        "latitude": null,
+        "description": "Ville de Conakry",
+        "isView": true,
+        "region": {
+          "id": 1,
+          "nom": "Conakry",
+          "code": "GN-C-01",
+          "longitude": null,
+          "latitude": null,
+          "description": "Gouvernorat de Conakry",
+          "isView": true
+        }
+      }
+    }
+  },
+  {
+    "id": 65,
+    "nom": " Dar-es-salam",
+    "code": "GN-C-01010407",
+    "longitude": null,
+    "latitude": null,
+    "description": "",
+    "isView": true,
+    "commune": {
+      "id": 4,
+      "nom": "Ratoma",
+      "code": "GN-C-010104",
+      "longitude": null,
+      "latitude": null,
+      "description": "Commune de Ratoma",
+      "isView": true,
+      "prefecture": {
+        "id": 1,
+        "nom": "Conakry",
+        "code": "GN-C-0101",
+        "longitude": null,
+        "latitude": null,
+        "description": "Ville de Conakry",
+        "isView": true,
+        "region": {
+          "id": 1,
+          "nom": "Conakry",
+          "code": "GN-C-01",
+          "longitude": null,
+          "latitude": null,
+          "description": "Gouvernorat de Conakry",
+          "isView": true
+        }
+      }
+    }
+  },
+  {
+    "id": 66,
+    "nom": " Hamdalaye 2",
+    "code": "GN-C-01010408",
+    "longitude": null,
+    "latitude": null,
+    "description": "",
+    "isView": true,
+    "commune": {
+      "id": 4,
+      "nom": "Ratoma",
+      "code": "GN-C-010104",
+      "longitude": null,
+      "latitude": null,
+      "description": "Commune de Ratoma",
+      "isView": true,
+      "prefecture": {
+        "id": 1,
+        "nom": "Conakry",
+        "code": "GN-C-0101",
+        "longitude": null,
+        "latitude": null,
+        "description": "Ville de Conakry",
+        "isView": true,
+        "region": {
+          "id": 1,
+          "nom": "Conakry",
+          "code": "GN-C-01",
+          "longitude": null,
+          "latitude": null,
+          "description": "Gouvernorat de Conakry",
+          "isView": true
+        }
+      }
+    }
+  },
+  {
+    "id": 67,
+    "nom": "Hamdalaye-mosquée",
+    "code": "GN-C-01010409",
+    "longitude": null,
+    "latitude": null,
+    "description": "",
+    "isView": true,
+    "commune": {
+      "id": 4,
+      "nom": "Ratoma",
+      "code": "GN-C-010104",
+      "longitude": null,
+      "latitude": null,
+      "description": "Commune de Ratoma",
+      "isView": true,
+      "prefecture": {
+        "id": 1,
+        "nom": "Conakry",
+        "code": "GN-C-0101",
+        "longitude": null,
+        "latitude": null,
+        "description": "Ville de Conakry",
+        "isView": true,
+        "region": {
+          "id": 1,
+          "nom": "Conakry",
+          "code": "GN-C-01",
+          "longitude": null,
+          "latitude": null,
+          "description": "Gouvernorat de Conakry",
+          "isView": true
+        }
+      }
+    }
+  },
+  {
+    "id": 68,
+    "nom": "Kaporo-centre",
+    "code": "GN-C-01010410",
+    "longitude": null,
+    "latitude": null,
+    "description": "",
+    "isView": true,
+    "commune": {
+      "id": 4,
+      "nom": "Ratoma",
+      "code": "GN-C-010104",
+      "longitude": null,
+      "latitude": null,
+      "description": "Commune de Ratoma",
+      "isView": true,
+      "prefecture": {
+        "id": 1,
+        "nom": "Conakry",
+        "code": "GN-C-0101",
+        "longitude": null,
+        "latitude": null,
+        "description": "Ville de Conakry",
+        "isView": true,
+        "region": {
+          "id": 1,
+          "nom": "Conakry",
+          "code": "GN-C-01",
+          "longitude": null,
+          "latitude": null,
+          "description": "Gouvernorat de Conakry",
+          "isView": true
+        }
+      }
+    }
+  },
+  {
+    "id": 69,
+    "nom": "Kaporo-rails",
+    "code": "GN-C-01010411",
+    "longitude": null,
+    "latitude": null,
+    "description": "",
+    "isView": true,
+    "commune": {
+      "id": 4,
+      "nom": "Ratoma",
+      "code": "GN-C-010104",
+      "longitude": null,
+      "latitude": null,
+      "description": "Commune de Ratoma",
+      "isView": true,
+      "prefecture": {
+        "id": 1,
+        "nom": "Conakry",
+        "code": "GN-C-0101",
+        "longitude": null,
+        "latitude": null,
+        "description": "Ville de Conakry",
+        "isView": true,
+        "region": {
+          "id": 1,
+          "nom": "Conakry",
+          "code": "GN-C-01",
+          "longitude": null,
+          "latitude": null,
+          "description": "Gouvernorat de Conakry",
+          "isView": true
+        }
+      }
+    }
+  },
+  {
+    "id": 70,
+    "nom": "Koloma 1",
+    "code": "GN-C-01010412",
+    "longitude": null,
+    "latitude": null,
+    "description": "",
+    "isView": true,
+    "commune": {
+      "id": 4,
+      "nom": "Ratoma",
+      "code": "GN-C-010104",
+      "longitude": null,
+      "latitude": null,
+      "description": "Commune de Ratoma",
+      "isView": true,
+      "prefecture": {
+        "id": 1,
+        "nom": "Conakry",
+        "code": "GN-C-0101",
+        "longitude": null,
+        "latitude": null,
+        "description": "Ville de Conakry",
+        "isView": true,
+        "region": {
+          "id": 1,
+          "nom": "Conakry",
+          "code": "GN-C-01",
+          "longitude": null,
+          "latitude": null,
+          "description": "Gouvernorat de Conakry",
+          "isView": true
+        }
+      }
+    }
+  },
+  {
+    "id": 71,
+    "nom": "Koloma 2",
+    "code": "GN-C-01010413",
+    "longitude": null,
+    "latitude": null,
+    "description": "",
+    "isView": true,
+    "commune": {
+      "id": 4,
+      "nom": "Ratoma",
+      "code": "GN-C-010104",
+      "longitude": null,
+      "latitude": null,
+      "description": "Commune de Ratoma",
+      "isView": true,
+      "prefecture": {
+        "id": 1,
+        "nom": "Conakry",
+        "code": "GN-C-0101",
+        "longitude": null,
+        "latitude": null,
+        "description": "Ville de Conakry",
+        "isView": true,
+        "region": {
+          "id": 1,
+          "nom": "Conakry",
+          "code": "GN-C-01",
+          "longitude": null,
+          "latitude": null,
+          "description": "Gouvernorat de Conakry",
+          "isView": true
+        }
+      }
+    }
+  },
+  {
+    "id": 72,
+    "nom": "Lambadji",
+    "code": "GN-C-01010414",
+    "longitude": null,
+    "latitude": null,
+    "description": "",
+    "isView": true,
+    "commune": {
+      "id": 4,
+      "nom": "Ratoma",
+      "code": "GN-C-010104",
+      "longitude": null,
+      "latitude": null,
+      "description": "Commune de Ratoma",
+      "isView": true,
+      "prefecture": {
+        "id": 1,
+        "nom": "Conakry",
+        "code": "GN-C-0101",
+        "longitude": null,
+        "latitude": null,
+        "description": "Ville de Conakry",
+        "isView": true,
+        "region": {
+          "id": 1,
+          "nom": "Conakry",
+          "code": "GN-C-01",
+          "longitude": null,
+          "latitude": null,
+          "description": "Gouvernorat de Conakry",
+          "isView": true
+        }
+      }
+    }
+  },
+  {
+    "id": 73,
+    "nom": "Ratoma-centre",
+    "code": "GN-C-01010415",
+    "longitude": null,
+    "latitude": null,
+    "description": "",
+    "isView": true,
+    "commune": {
+      "id": 4,
+      "nom": "Ratoma",
+      "code": "GN-C-010104",
+      "longitude": null,
+      "latitude": null,
+      "description": "Commune de Ratoma",
+      "isView": true,
+      "prefecture": {
+        "id": 1,
+        "nom": "Conakry",
+        "code": "GN-C-0101",
+        "longitude": null,
+        "latitude": null,
+        "description": "Ville de Conakry",
+        "isView": true,
+        "region": {
+          "id": 1,
+          "nom": "Conakry",
+          "code": "GN-C-01",
+          "longitude": null,
+          "latitude": null,
+          "description": "Gouvernorat de Conakry",
+          "isView": true
+        }
+      }
+    }
+  },
+  {
+    "id": 74,
+    "nom": "Ratoma-dispensaire",
+    "code": "GN-C-01010416",
+    "longitude": null,
+    "latitude": null,
+    "description": "",
+    "isView": true,
+    "commune": {
+      "id": 4,
+      "nom": "Ratoma",
+      "code": "GN-C-010104",
+      "longitude": null,
+      "latitude": null,
+      "description": "Commune de Ratoma",
+      "isView": true,
+      "prefecture": {
+        "id": 1,
+        "nom": "Conakry",
+        "code": "GN-C-0101",
+        "longitude": null,
+        "latitude": null,
+        "description": "Ville de Conakry",
+        "isView": true,
+        "region": {
+          "id": 1,
+          "nom": "Conakry",
+          "code": "GN-C-01",
+          "longitude": null,
+          "latitude": null,
+          "description": "Gouvernorat de Conakry",
+          "isView": true
+        }
+      }
+    }
+  },
+  {
+    "id": 75,
+    "nom": "demoudoulaye",
+    "code": "GN-C-01010417",
+    "longitude": null,
+    "latitude": null,
+    "description": "",
+    "isView": true,
+    "commune": {
+      "id": 4,
+      "nom": "Ratoma",
+      "code": "GN-C-010104",
+      "longitude": null,
+      "latitude": null,
+      "description": "Commune de Ratoma",
+      "isView": true,
+      "prefecture": {
+        "id": 1,
+        "nom": "Conakry",
+        "code": "GN-C-0101",
+        "longitude": null,
+        "latitude": null,
+        "description": "Ville de Conakry",
+        "isView": true,
+        "region": {
+          "id": 1,
+          "nom": "Conakry",
+          "code": "GN-C-01",
+          "longitude": null,
+          "latitude": null,
+          "description": "Gouvernorat de Conakry",
+          "isView": true
+        }
+      }
+    }
+  },
+  {
+    "id": 76,
+    "nom": "Simbaya-gare",
+    "code": "GN-C-01010418",
+    "longitude": null,
+    "latitude": null,
+    "description": "",
+    "isView": true,
+    "commune": {
+      "id": 4,
+      "nom": "Ratoma",
+      "code": "GN-C-010104",
+      "longitude": null,
+      "latitude": null,
+      "description": "Commune de Ratoma",
+      "isView": true,
+      "prefecture": {
+        "id": 1,
+        "nom": "Conakry",
+        "code": "GN-C-0101",
+        "longitude": null,
+        "latitude": null,
+        "description": "Ville de Conakry",
+        "isView": true,
+        "region": {
+          "id": 1,
+          "nom": "Conakry",
+          "code": "GN-C-01",
+          "longitude": null,
+          "latitude": null,
+          "description": "Gouvernorat de Conakry",
+          "isView": true
+        }
+      }
+    }
+  },
+  {
+    "id": 77,
+    "nom": "Sonfonia-gare",
+    "code": "GN-C-01010419",
+    "longitude": null,
+    "latitude": null,
+    "description": "",
+    "isView": true,
+    "commune": {
+      "id": 4,
+      "nom": "Ratoma",
+      "code": "GN-C-010104",
+      "longitude": null,
+      "latitude": null,
+      "description": "Commune de Ratoma",
+      "isView": true,
+      "prefecture": {
+        "id": 1,
+        "nom": "Conakry",
+        "code": "GN-C-0101",
+        "longitude": null,
+        "latitude": null,
+        "description": "Ville de Conakry",
+        "isView": true,
+        "region": {
+          "id": 1,
+          "nom": "Conakry",
+          "code": "GN-C-01",
+          "longitude": null,
+          "latitude": null,
+          "description": "Gouvernorat de Conakry",
+          "isView": true
+        }
+      }
+    }
+  },
+  {
+    "id": 78,
+    "nom": "Taouyah",
+    "code": "GN-C-01010420",
+    "longitude": null,
+    "latitude": null,
+    "description": "",
+    "isView": true,
+    "commune": {
+      "id": 4,
+      "nom": "Ratoma",
+      "code": "GN-C-010104",
+      "longitude": null,
+      "latitude": null,
+      "description": "Commune de Ratoma",
+      "isView": true,
+      "prefecture": {
+        "id": 1,
+        "nom": "Conakry",
+        "code": "GN-C-0101",
+        "longitude": null,
+        "latitude": null,
+        "description": "Ville de Conakry",
+        "isView": true,
+        "region": {
+          "id": 1,
+          "nom": "Conakry",
+          "code": "GN-C-01",
+          "longitude": null,
+          "latitude": null,
+          "description": "Gouvernorat de Conakry",
+          "isView": true
+        }
+      }
+    }
+  },
+  {
+    "id": 79,
+    "nom": "Wanindara",
+    "code": "GN-C-01010421",
+    "longitude": null,
+    "latitude": null,
+    "description": "",
+    "isView": true,
+    "commune": {
+      "id": 4,
+      "nom": "Ratoma",
+      "code": "GN-C-010104",
+      "longitude": null,
+      "latitude": null,
+      "description": "Commune de Ratoma",
+      "isView": true,
+      "prefecture": {
+        "id": 1,
+        "nom": "Conakry",
+        "code": "GN-C-0101",
+        "longitude": null,
+        "latitude": null,
+        "description": "Ville de Conakry",
+        "isView": true,
+        "region": {
+          "id": 1,
+          "nom": "Conakry",
+          "code": "GN-C-01",
+          "longitude": null,
+          "latitude": null,
+          "description": "Gouvernorat de Conakry",
+          "isView": true
+        }
+      }
+    }
+  },
+  {
+    "id": 80,
+    "nom": "Yattayah",
+    "code": "GN-C-01010422",
+    "longitude": null,
+    "latitude": null,
+    "description": "",
+    "isView": true,
+    "commune": {
+      "id": 4,
+      "nom": "Ratoma",
+      "code": "GN-C-010104",
+      "longitude": null,
+      "latitude": null,
+      "description": "Commune de Ratoma",
+      "isView": true,
+      "prefecture": {
+        "id": 1,
+        "nom": "Conakry",
+        "code": "GN-C-0101",
+        "longitude": null,
+        "latitude": null,
+        "description": "Ville de Conakry",
+        "isView": true,
+        "region": {
+          "id": 1,
+          "nom": "Conakry",
+          "code": "GN-C-01",
+          "longitude": null,
+          "latitude": null,
+          "description": "Gouvernorat de Conakry",
+          "isView": true
+        }
+      }
+    }
+  },
+  {
+    "id": 81,
+    "nom": "Béanzin",
+    "code": "GN-C-01010502",
+    "longitude": null,
+    "latitude": null,
+    "description": "",
+    "isView": true,
+    "commune": {
+      "id": 5,
+      "nom": "Matoto",
+      "code": "GN-C-010105",
+      "longitude": null,
+      "latitude": null,
+      "description": "Commune de Matoto",
+      "isView": true,
+      "prefecture": {
+        "id": 1,
+        "nom": "Conakry",
+        "code": "GN-C-0101",
+        "longitude": null,
+        "latitude": null,
+        "description": "Ville de Conakry",
+        "isView": true,
+        "region": {
+          "id": 1,
+          "nom": "Conakry",
+          "code": "GN-C-01",
+          "longitude": null,
+          "latitude": null,
+          "description": "Gouvernorat de Conakry",
+          "isView": true
+        }
+      }
+    }
+  },
+  {
+    "id": 82,
+    "nom": "Camp Alpha Yaya Diallo",
+    "code": "GN-C-01010503",
+    "longitude": null,
+    "latitude": null,
+    "description": "",
+    "isView": true,
+    "commune": {
+      "id": 5,
+      "nom": "Matoto",
+      "code": "GN-C-010105",
+      "longitude": null,
+      "latitude": null,
+      "description": "Commune de Matoto",
+      "isView": true,
+      "prefecture": {
+        "id": 1,
+        "nom": "Conakry",
+        "code": "GN-C-0101",
+        "longitude": null,
+        "latitude": null,
+        "description": "Ville de Conakry",
+        "isView": true,
+        "region": {
+          "id": 1,
+          "nom": "Conakry",
+          "code": "GN-C-01",
+          "longitude": null,
+          "latitude": null,
+          "description": "Gouvernorat de Conakry",
+          "isView": true
+        }
+      }
+    }
+  },
+  {
+    "id": 83,
+    "nom": "Cité de l'air",
+    "code": "GN-C-01010504",
+    "longitude": null,
+    "latitude": null,
+    "description": "",
+    "isView": true,
+    "commune": {
+      "id": 5,
+      "nom": "Matoto",
+      "code": "GN-C-010105",
+      "longitude": null,
+      "latitude": null,
+      "description": "Commune de Matoto",
+      "isView": true,
+      "prefecture": {
+        "id": 1,
+        "nom": "Conakry",
+        "code": "GN-C-0101",
+        "longitude": null,
+        "latitude": null,
+        "description": "Ville de Conakry",
+        "isView": true,
+        "region": {
+          "id": 1,
+          "nom": "Conakry",
+          "code": "GN-C-01",
+          "longitude": null,
+          "latitude": null,
+          "description": "Gouvernorat de Conakry",
+          "isView": true
+        }
+      }
+    }
+  },
+  {
+    "id": 84,
+    "nom": "Dabompa",
+    "code": "GN-C-01010505",
+    "longitude": null,
+    "latitude": null,
+    "description": "",
+    "isView": true,
+    "commune": {
+      "id": 5,
+      "nom": "Matoto",
+      "code": "GN-C-010105",
+      "longitude": null,
+      "latitude": null,
+      "description": "Commune de Matoto",
+      "isView": true,
+      "prefecture": {
+        "id": 1,
+        "nom": "Conakry",
+        "code": "GN-C-0101",
+        "longitude": null,
+        "latitude": null,
+        "description": "Ville de Conakry",
+        "isView": true,
+        "region": {
+          "id": 1,
+          "nom": "Conakry",
+          "code": "GN-C-01",
+          "longitude": null,
+          "latitude": null,
+          "description": "Gouvernorat de Conakry",
+          "isView": true
+        }
+      }
+    }
+  },
+  {
+    "id": 85,
+    "nom": "Dabondy 1",
+    "code": "GN-C-01010506",
+    "longitude": null,
+    "latitude": null,
+    "description": "",
+    "isView": true,
+    "commune": {
+      "id": 5,
+      "nom": "Matoto",
+      "code": "GN-C-010105",
+      "longitude": null,
+      "latitude": null,
+      "description": "Commune de Matoto",
+      "isView": true,
+      "prefecture": {
+        "id": 1,
+        "nom": "Conakry",
+        "code": "GN-C-0101",
+        "longitude": null,
+        "latitude": null,
+        "description": "Ville de Conakry",
+        "isView": true,
+        "region": {
+          "id": 1,
+          "nom": "Conakry",
+          "code": "GN-C-01",
+          "longitude": null,
+          "latitude": null,
+          "description": "Gouvernorat de Conakry",
+          "isView": true
+        }
+      }
+    }
+  },
+  {
+    "id": 86,
+    "nom": "Dabondy 2",
+    "code": "GN-C-01010507",
+    "longitude": null,
+    "latitude": null,
+    "description": "",
+    "isView": true,
+    "commune": {
+      "id": 5,
+      "nom": "Matoto",
+      "code": "GN-C-010105",
+      "longitude": null,
+      "latitude": null,
+      "description": "Commune de Matoto",
+      "isView": true,
+      "prefecture": {
+        "id": 1,
+        "nom": "Conakry",
+        "code": "GN-C-0101",
+        "longitude": null,
+        "latitude": null,
+        "description": "Ville de Conakry",
+        "isView": true,
+        "region": {
+          "id": 1,
+          "nom": "Conakry",
+          "code": "GN-C-01",
+          "longitude": null,
+          "latitude": null,
+          "description": "Gouvernorat de Conakry",
+          "isView": true
+        }
+      }
+    }
+  },
+  {
+    "id": 87,
+    "nom": "Dabondy 3",
+    "code": "GN-C-01010508",
+    "longitude": null,
+    "latitude": null,
+    "description": "",
+    "isView": true,
+    "commune": {
+      "id": 5,
+      "nom": "Matoto",
+      "code": "GN-C-010105",
+      "longitude": null,
+      "latitude": null,
+      "description": "Commune de Matoto",
+      "isView": true,
+      "prefecture": {
+        "id": 1,
+        "nom": "Conakry",
+        "code": "GN-C-0101",
+        "longitude": null,
+        "latitude": null,
+        "description": "Ville de Conakry",
+        "isView": true,
+        "region": {
+          "id": 1,
+          "nom": "Conakry",
+          "code": "GN-C-01",
+          "longitude": null,
+          "latitude": null,
+          "description": "Gouvernorat de Conakry",
+          "isView": true
+        }
+      }
+    }
+  },
+  {
+    "id": 88,
+    "nom": "Dabondyécole",
+    "code": "GN-C-01010509",
+    "longitude": null,
+    "latitude": null,
+    "description": "",
+    "isView": true,
+    "commune": {
+      "id": 5,
+      "nom": "Matoto",
+      "code": "GN-C-010105",
+      "longitude": null,
+      "latitude": null,
+      "description": "Commune de Matoto",
+      "isView": true,
+      "prefecture": {
+        "id": 1,
+        "nom": "Conakry",
+        "code": "GN-C-0101",
+        "longitude": null,
+        "latitude": null,
+        "description": "Ville de Conakry",
+        "isView": true,
+        "region": {
+          "id": 1,
+          "nom": "Conakry",
+          "code": "GN-C-01",
+          "longitude": null,
+          "latitude": null,
+          "description": "Gouvernorat de Conakry",
+          "isView": true
+        }
+      }
+    }
+  },
+  {
+    "id": 89,
+    "nom": "Dabondy-rails",
+    "code": "GN-C-01010510",
+    "longitude": null,
+    "latitude": null,
+    "description": "",
+    "isView": true,
+    "commune": {
+      "id": 5,
+      "nom": "Matoto",
+      "code": "GN-C-010105",
+      "longitude": null,
+      "latitude": null,
+      "description": "Commune de Matoto",
+      "isView": true,
+      "prefecture": {
+        "id": 1,
+        "nom": "Conakry",
+        "code": "GN-C-0101",
+        "longitude": null,
+        "latitude": null,
+        "description": "Ville de Conakry",
+        "isView": true,
+        "region": {
+          "id": 1,
+          "nom": "Conakry",
+          "code": "GN-C-01",
+          "longitude": null,
+          "latitude": null,
+          "description": "Gouvernorat de Conakry",
+          "isView": true
+        }
+      }
+    }
+  },
+  {
+    "id": 90,
+    "nom": "Dar-es-salam",
+    "code": "GN-C-01010511",
+    "longitude": null,
+    "latitude": null,
+    "description": "",
+    "isView": true,
+    "commune": {
+      "id": 5,
+      "nom": "Matoto",
+      "code": "GN-C-010105",
+      "longitude": null,
+      "latitude": null,
+      "description": "Commune de Matoto",
+      "isView": true,
+      "prefecture": {
+        "id": 1,
+        "nom": "Conakry",
+        "code": "GN-C-0101",
+        "longitude": null,
+        "latitude": null,
+        "description": "Ville de Conakry",
+        "isView": true,
+        "region": {
+          "id": 1,
+          "nom": "Conakry",
+          "code": "GN-C-01",
+          "longitude": null,
+          "latitude": null,
+          "description": "Gouvernorat de Conakry",
+          "isView": true
+        }
+      }
+    }
+  },
+  {
+    "id": 91,
+    "nom": "Gbéssia-centre",
+    "code": "GN-C-01010512",
+    "longitude": null,
+    "latitude": null,
+    "description": "",
+    "isView": true,
+    "commune": {
+      "id": 5,
+      "nom": "Matoto",
+      "code": "GN-C-010105",
+      "longitude": null,
+      "latitude": null,
+      "description": "Commune de Matoto",
+      "isView": true,
+      "prefecture": {
+        "id": 1,
+        "nom": "Conakry",
+        "code": "GN-C-0101",
+        "longitude": null,
+        "latitude": null,
+        "description": "Ville de Conakry",
+        "isView": true,
+        "region": {
+          "id": 1,
+          "nom": "Conakry",
+          "code": "GN-C-01",
+          "longitude": null,
+          "latitude": null,
+          "description": "Gouvernorat de Conakry",
+          "isView": true
+        }
+      }
+    }
+  },
+  {
+    "id": 92,
+    "nom": "Gbéssia-cité 1",
+    "code": "GN-C-01010513",
+    "longitude": null,
+    "latitude": null,
+    "description": "",
+    "isView": true,
+    "commune": {
+      "id": 5,
+      "nom": "Matoto",
+      "code": "GN-C-010105",
+      "longitude": null,
+      "latitude": null,
+      "description": "Commune de Matoto",
+      "isView": true,
+      "prefecture": {
+        "id": 1,
+        "nom": "Conakry",
+        "code": "GN-C-0101",
+        "longitude": null,
+        "latitude": null,
+        "description": "Ville de Conakry",
+        "isView": true,
+        "region": {
+          "id": 1,
+          "nom": "Conakry",
+          "code": "GN-C-01",
+          "longitude": null,
+          "latitude": null,
+          "description": "Gouvernorat de Conakry",
+          "isView": true
+        }
+      }
+    }
+  },
+  {
+    "id": 93,
+    "nom": "Gbessia-cité 2",
+    "code": "GN-C-01010514",
+    "longitude": null,
+    "latitude": null,
+    "description": "",
+    "isView": true,
+    "commune": {
+      "id": 5,
+      "nom": "Matoto",
+      "code": "GN-C-010105",
+      "longitude": null,
+      "latitude": null,
+      "description": "Commune de Matoto",
+      "isView": true,
+      "prefecture": {
+        "id": 1,
+        "nom": "Conakry",
+        "code": "GN-C-0101",
+        "longitude": null,
+        "latitude": null,
+        "description": "Ville de Conakry",
+        "isView": true,
+        "region": {
+          "id": 1,
+          "nom": "Conakry",
+          "code": "GN-C-01",
+          "longitude": null,
+          "latitude": null,
+          "description": "Gouvernorat de Conakry",
+          "isView": true
+        }
+      }
+    }
+  },
+  {
+    "id": 94,
+    "nom": "Gbessia-cité 3",
+    "code": "GN-C-01010515",
+    "longitude": null,
+    "latitude": null,
+    "description": "",
+    "isView": true,
+    "commune": {
+      "id": 5,
+      "nom": "Matoto",
+      "code": "GN-C-010105",
+      "longitude": null,
+      "latitude": null,
+      "description": "Commune de Matoto",
+      "isView": true,
+      "prefecture": {
+        "id": 1,
+        "nom": "Conakry",
+        "code": "GN-C-0101",
+        "longitude": null,
+        "latitude": null,
+        "description": "Ville de Conakry",
+        "isView": true,
+        "region": {
+          "id": 1,
+          "nom": "Conakry",
+          "code": "GN-C-01",
+          "longitude": null,
+          "latitude": null,
+          "description": "Gouvernorat de Conakry",
+          "isView": true
+        }
+      }
+    }
+  },
+  {
+    "id": 95,
+    "nom": "Gbéssia-école",
+    "code": "GN-C-01010516",
+    "longitude": null,
+    "latitude": null,
+    "description": "",
+    "isView": true,
+    "commune": {
+      "id": 5,
+      "nom": "Matoto",
+      "code": "GN-C-010105",
+      "longitude": null,
+      "latitude": null,
+      "description": "Commune de Matoto",
+      "isView": true,
+      "prefecture": {
+        "id": 1,
+        "nom": "Conakry",
+        "code": "GN-C-0101",
+        "longitude": null,
+        "latitude": null,
+        "description": "Ville de Conakry",
+        "isView": true,
+        "region": {
+          "id": 1,
+          "nom": "Conakry",
+          "code": "GN-C-01",
+          "longitude": null,
+          "latitude": null,
+          "description": "Gouvernorat de Conakry",
+          "isView": true
+        }
+      }
+    }
+  },
+  {
+    "id": 96,
+    "nom": "Gbéssia-port 1",
+    "code": "GN-C-01010517",
+    "longitude": null,
+    "latitude": null,
+    "description": "",
+    "isView": true,
+    "commune": {
+      "id": 5,
+      "nom": "Matoto",
+      "code": "GN-C-010105",
+      "longitude": null,
+      "latitude": null,
+      "description": "Commune de Matoto",
+      "isView": true,
+      "prefecture": {
+        "id": 1,
+        "nom": "Conakry",
+        "code": "GN-C-0101",
+        "longitude": null,
+        "latitude": null,
+        "description": "Ville de Conakry",
+        "isView": true,
+        "region": {
+          "id": 1,
+          "nom": "Conakry",
+          "code": "GN-C-01",
+          "longitude": null,
+          "latitude": null,
+          "description": "Gouvernorat de Conakry",
+          "isView": true
+        }
+      }
+    }
+  },
+  {
+    "id": 97,
+    "nom": "Gbéssia-port 2",
+    "code": "GN-C-01010518",
+    "longitude": null,
+    "latitude": null,
+    "description": "",
+    "isView": true,
+    "commune": {
+      "id": 5,
+      "nom": "Matoto",
+      "code": "GN-C-010105",
+      "longitude": null,
+      "latitude": null,
+      "description": "Commune de Matoto",
+      "isView": true,
+      "prefecture": {
+        "id": 1,
+        "nom": "Conakry",
+        "code": "GN-C-0101",
+        "longitude": null,
+        "latitude": null,
+        "description": "Ville de Conakry",
+        "isView": true,
+        "region": {
+          "id": 1,
+          "nom": "Conakry",
+          "code": "GN-C-01",
+          "longitude": null,
+          "latitude": null,
+          "description": "Gouvernorat de Conakry",
+          "isView": true
+        }
+      }
+    }
+  },
+  {
+    "id": 98,
+    "nom": "Kissosso",
+    "code": "GN-C-01010519",
+    "longitude": null,
+    "latitude": null,
+    "description": "",
+    "isView": true,
+    "commune": {
+      "id": 5,
+      "nom": "Matoto",
+      "code": "GN-C-010105",
+      "longitude": null,
+      "latitude": null,
+      "description": "Commune de Matoto",
+      "isView": true,
+      "prefecture": {
+        "id": 1,
+        "nom": "Conakry",
+        "code": "GN-C-0101",
+        "longitude": null,
+        "latitude": null,
+        "description": "Ville de Conakry",
+        "isView": true,
+        "region": {
+          "id": 1,
+          "nom": "Conakry",
+          "code": "GN-C-01",
+          "longitude": null,
+          "latitude": null,
+          "description": "Gouvernorat de Conakry",
+          "isView": true
+        }
+      }
+    }
+  },
+  {
+    "id": 99,
+    "nom": "Matoto-centre",
+    "code": "GN-C-01010520",
+    "longitude": null,
+    "latitude": null,
+    "description": "",
+    "isView": true,
+    "commune": {
+      "id": 5,
+      "nom": "Matoto",
+      "code": "GN-C-010105",
+      "longitude": null,
+      "latitude": null,
+      "description": "Commune de Matoto",
+      "isView": true,
+      "prefecture": {
+        "id": 1,
+        "nom": "Conakry",
+        "code": "GN-C-0101",
+        "longitude": null,
+        "latitude": null,
+        "description": "Ville de Conakry",
+        "isView": true,
+        "region": {
+          "id": 1,
+          "nom": "Conakry",
+          "code": "GN-C-01",
+          "longitude": null,
+          "latitude": null,
+          "description": "Gouvernorat de Conakry",
+          "isView": true
+        }
+      }
+    }
+  },
+  {
+    "id": 100,
+    "nom": "Matoto-marché",
+    "code": "GN-C-01010521",
+    "longitude": null,
+    "latitude": null,
+    "description": "",
+    "isView": true,
+    "commune": {
+      "id": 5,
+      "nom": "Matoto",
+      "code": "GN-C-010105",
+      "longitude": null,
+      "latitude": null,
+      "description": "Commune de Matoto",
+      "isView": true,
+      "prefecture": {
+        "id": 1,
+        "nom": "Conakry",
+        "code": "GN-C-0101",
+        "longitude": null,
+        "latitude": null,
+        "description": "Ville de Conakry",
+        "isView": true,
+        "region": {
+          "id": 1,
+          "nom": "Conakry",
+          "code": "GN-C-01",
+          "longitude": null,
+          "latitude": null,
+          "description": "Gouvernorat de Conakry",
+          "isView": true
+        }
+      }
+    }
+  },
+  {
+    "id": 101,
+    "nom": "Sangoya-mosquée",
+    "code": "GN-C-01010522",
+    "longitude": null,
+    "latitude": null,
+    "description": "",
+    "isView": true,
+    "commune": {
+      "id": 5,
+      "nom": "Matoto",
+      "code": "GN-C-010105",
+      "longitude": null,
+      "latitude": null,
+      "description": "Commune de Matoto",
+      "isView": true,
+      "prefecture": {
+        "id": 1,
+        "nom": "Conakry",
+        "code": "GN-C-0101",
+        "longitude": null,
+        "latitude": null,
+        "description": "Ville de Conakry",
+        "isView": true,
+        "region": {
+          "id": 1,
+          "nom": "Conakry",
+          "code": "GN-C-01",
+          "longitude": null,
+          "latitude": null,
+          "description": "Gouvernorat de Conakry",
+          "isView": true
+        }
+      }
+    }
+  },
+  {
+    "id": 102,
+    "nom": "Simbaya 1",
+    "code": "GN-C-01010523",
+    "longitude": null,
+    "latitude": null,
+    "description": "",
+    "isView": true,
+    "commune": {
+      "id": 5,
+      "nom": "Matoto",
+      "code": "GN-C-010105",
+      "longitude": null,
+      "latitude": null,
+      "description": "Commune de Matoto",
+      "isView": true,
+      "prefecture": {
+        "id": 1,
+        "nom": "Conakry",
+        "code": "GN-C-0101",
+        "longitude": null,
+        "latitude": null,
+        "description": "Ville de Conakry",
+        "isView": true,
+        "region": {
+          "id": 1,
+          "nom": "Conakry",
+          "code": "GN-C-01",
+          "longitude": null,
+          "latitude": null,
+          "description": "Gouvernorat de Conakry",
+          "isView": true
+        }
+      }
+    }
+  },
+  {
+    "id": 103,
+    "nom": "Simbaya 2",
+    "code": "GN-C-01010524",
+    "longitude": null,
+    "latitude": null,
+    "description": "",
+    "isView": true,
+    "commune": {
+      "id": 5,
+      "nom": "Matoto",
+      "code": "GN-C-010105",
+      "longitude": null,
+      "latitude": null,
+      "description": "Commune de Matoto",
+      "isView": true,
+      "prefecture": {
+        "id": 1,
+        "nom": "Conakry",
+        "code": "GN-C-0101",
+        "longitude": null,
+        "latitude": null,
+        "description": "Ville de Conakry",
+        "isView": true,
+        "region": {
+          "id": 1,
+          "nom": "Conakry",
+          "code": "GN-C-01",
+          "longitude": null,
+          "latitude": null,
+          "description": "Gouvernorat de Conakry",
+          "isView": true
+        }
+      }
+    }
+  },
+  {
+    "id": 104,
+    "nom": "Tanéné-marché",
+    "code": "GN-C-01010525",
+    "longitude": null,
+    "latitude": null,
+    "description": "",
+    "isView": true,
+    "commune": {
+      "id": 5,
+      "nom": "Matoto",
+      "code": "GN-C-010105",
+      "longitude": null,
+      "latitude": null,
+      "description": "Commune de Matoto",
+      "isView": true,
+      "prefecture": {
+        "id": 1,
+        "nom": "Conakry",
+        "code": "GN-C-0101",
+        "longitude": null,
+        "latitude": null,
+        "description": "Ville de Conakry",
+        "isView": true,
+        "region": {
+          "id": 1,
+          "nom": "Conakry",
+          "code": "GN-C-01",
+          "longitude": null,
+          "latitude": null,
+          "description": "Gouvernorat de Conakry",
+          "isView": true
+        }
+      }
+    }
+  },
+  {
+    "id": 105,
+    "nom": "Tanéné-mosquée",
+    "code": "GN-C-01010526",
+    "longitude": null,
+    "latitude": null,
+    "description": "",
+    "isView": true,
+    "commune": {
+      "id": 5,
+      "nom": "Matoto",
+      "code": "GN-C-010105",
+      "longitude": null,
+      "latitude": null,
+      "description": "Commune de Matoto",
+      "isView": true,
+      "prefecture": {
+        "id": 1,
+        "nom": "Conakry",
+        "code": "GN-C-0101",
+        "longitude": null,
+        "latitude": null,
+        "description": "Ville de Conakry",
+        "isView": true,
+        "region": {
+          "id": 1,
+          "nom": "Conakry",
+          "code": "GN-C-01",
+          "longitude": null,
+          "latitude": null,
+          "description": "Gouvernorat de Conakry",
+          "isView": true
+        }
+      }
+    }
+  },
+  {
+    "id": 106,
+    "nom": "Tombolia",
+    "code": "GN-C-01010527",
+    "longitude": null,
+    "latitude": null,
+    "description": "",
+    "isView": true,
+    "commune": {
+      "id": 5,
+      "nom": "Matoto",
+      "code": "GN-C-010105",
+      "longitude": null,
+      "latitude": null,
+      "description": "Commune de Matoto",
+      "isView": true,
+      "prefecture": {
+        "id": 1,
+        "nom": "Conakry",
+        "code": "GN-C-0101",
+        "longitude": null,
+        "latitude": null,
+        "description": "Ville de Conakry",
+        "isView": true,
+        "region": {
+          "id": 1,
+          "nom": "Conakry",
+          "code": "GN-C-01",
+          "longitude": null,
+          "latitude": null,
+          "description": "Gouvernorat de Conakry",
+          "isView": true
+        }
+      }
+    }
+  },
+  {
+    "id": 107,
+    "nom": "Yimbaya-école",
+    "code": "GN-C-01010528",
+    "longitude": null,
+    "latitude": null,
+    "description": "",
+    "isView": true,
+    "commune": {
+      "id": 5,
+      "nom": "Matoto",
+      "code": "GN-C-010105",
+      "longitude": null,
+      "latitude": null,
+      "description": "Commune de Matoto",
+      "isView": true,
+      "prefecture": {
+        "id": 1,
+        "nom": "Conakry",
+        "code": "GN-C-0101",
+        "longitude": null,
+        "latitude": null,
+        "description": "Ville de Conakry",
+        "isView": true,
+        "region": {
+          "id": 1,
+          "nom": "Conakry",
+          "code": "GN-C-01",
+          "longitude": null,
+          "latitude": null,
+          "description": "Gouvernorat de Conakry",
+          "isView": true
+        }
+      }
+    }
+  },
+  {
+    "id": 108,
+    "nom": "Yimbaya-permanence",
+    "code": "GN-C-01010529",
+    "longitude": null,
+    "latitude": null,
+    "description": "",
+    "isView": true,
+    "commune": {
+      "id": 5,
+      "nom": "Matoto",
+      "code": "GN-C-010105",
+      "longitude": null,
+      "latitude": null,
+      "description": "Commune de Matoto",
+      "isView": true,
+      "prefecture": {
+        "id": 1,
+        "nom": "Conakry",
+        "code": "GN-C-0101",
+        "longitude": null,
+        "latitude": null,
+        "description": "Ville de Conakry",
+        "isView": true,
+        "region": {
+          "id": 1,
+          "nom": "Conakry",
+          "code": "GN-C-01",
+          "longitude": null,
+          "latitude": null,
+          "description": "Gouvernorat de Conakry",
+          "isView": true
+        }
+      }
+    }
+  },
+  {
+    "id": 109,
+    "nom": "Yimbaya-tannerie",
+    "code": "GN-C-01010530",
+    "longitude": null,
+    "latitude": null,
+    "description": "",
+    "isView": true,
+    "commune": {
+      "id": 5,
+      "nom": "Matoto",
+      "code": "GN-C-010105",
+      "longitude": null,
+      "latitude": null,
+      "description": "Commune de Matoto",
+      "isView": true,
+      "prefecture": {
+        "id": 1,
+        "nom": "Conakry",
+        "code": "GN-C-0101",
+        "longitude": null,
+        "latitude": null,
+        "description": "Ville de Conakry",
+        "isView": true,
+        "region": {
+          "id": 1,
+          "nom": "Conakry",
+          "code": "GN-C-01",
+          "longitude": null,
+          "latitude": null,
+          "description": "Gouvernorat de Conakry",
+          "isView": true
+        }
+      }
+    }
+  },
+  {
+    "id": 110,
+    "nom": "BOMA",
+    "code": "GN-N-08010101",
+    "longitude": null,
+    "latitude": null,
+    "description": "",
+    "isView": true,
+    "commune": {
+      "id": 274,
+      "nom": "Nzérékoré Centre",
+      "code": "GN-N-080101",
+      "longitude": null,
+      "latitude": null,
+      "description": "Sous préfecture de Nzérékoré Centre",
+      "isView": true,
+      "prefecture": {
+        "id": 29,
+        "nom": "Nzérékoré",
+        "code": "GN-N-0801",
+        "longitude": null,
+        "latitude": null,
+        "description": "Préfecture de Nzérékoré",
+        "isView": true,
+        "region": {
+          "id": 8,
+          "nom": "Nzérékoré",
+          "code": "GN-N-08",
+          "longitude": null,
+          "latitude": null,
+          "description": "Région de Nzérékoré",
+          "isView": true
+        }
+      }
+    }
+  },
+  {
+    "id": 111,
+    "nom": "Bangouyah",
+    "code": "GN-D-03010201",
+    "longitude": null,
+    "latitude": null,
+    "description": "",
+    "isView": true,
+    "commune": {
+      "id": 44,
+      "nom": "Bangouyah",
+      "code": "GN-D-030102",
+      "longitude": null,
+      "latitude": null,
+      "description": "Sous préfecture de Bangouyah",
+      "isView": true,
+      "prefecture": {
+        "id": 7,
+        "nom": "Kindia",
+        "code": "GN-D-0301",
+        "longitude": null,
+        "latitude": null,
+        "description": "Préfecture de Kindia ",
+        "isView": true,
+        "region": {
+          "id": 3,
+          "nom": "Kindia",
+          "code": "GN-D-03",
+          "longitude": null,
+          "latitude": null,
+          "description": "Région de Kindia",
+          "isView": true
+        }
+      }
+    }
+  },
+  {
+    "id": 112,
+    "nom": "Kindia centre",
+    "code": "GN-D-03010101",
+    "longitude": null,
+    "latitude": null,
+    "description": "",
+    "isView": true,
+    "commune": {
+      "id": 43,
+      "nom": "Kindia Centre",
+      "code": "GN-D-030101",
+      "longitude": null,
+      "latitude": null,
+      "description": "Sous préfecture de Kindia Centre",
+      "isView": true,
+      "prefecture": {
+        "id": 7,
+        "nom": "Kindia",
+        "code": "GN-D-0301",
+        "longitude": null,
+        "latitude": null,
+        "description": "Préfecture de Kindia ",
+        "isView": true,
+        "region": {
+          "id": 3,
+          "nom": "Kindia",
+          "code": "GN-D-03",
+          "longitude": null,
+          "latitude": null,
+          "description": "Région de Kindia",
+          "isView": true
+        }
+      }
+    }
+  },
+  {
+    "id": 113,
+    "nom": "Sangaredi",
+    "code": "GN-B-02010801",
+    "longitude": null,
+    "latitude": null,
+    "description": "",
+    "isView": true,
+    "commune": {
+      "id": 13,
+      "nom": "Sangaredi",
+      "code": "GN-B-020108",
+      "longitude": null,
+      "latitude": null,
+      "description": "Sous préfecture de Sangaredi",
+      "isView": true,
+      "prefecture": {
+        "id": 2,
+        "nom": "Boké",
+        "code": "GN-B-0201",
+        "longitude": null,
+        "latitude": null,
+        "description": "Préfecture de Boké ",
+        "isView": true,
+        "region": {
+          "id": 2,
+          "nom": "Boké",
+          "code": "GN-B-02",
+          "longitude": null,
+          "latitude": null,
+          "description": "Région de Boké",
+          "isView": true
+        }
+      }
+    }
+  },
+  {
+    "id": 114,
+    "nom": "Kamsar centre",
+    "code": "GN-B-02010401",
+    "longitude": null,
+    "latitude": null,
+    "description": "",
+    "isView": true,
+    "commune": {
+      "id": 9,
+      "nom": "Kamsar",
+      "code": "GN-B-020104",
+      "longitude": null,
+      "latitude": null,
+      "description": "Sous préfecture de Kamsar",
+      "isView": true,
+      "prefecture": {
+        "id": 2,
+        "nom": "Boké",
+        "code": "GN-B-0201",
+        "longitude": null,
+        "latitude": null,
+        "description": "Préfecture de Boké ",
+        "isView": true,
+        "region": {
+          "id": 2,
+          "nom": "Boké",
+          "code": "GN-B-02",
+          "longitude": null,
+          "latitude": null,
+          "description": "Région de Boké",
+          "isView": true
+        }
+      }
+    }
+  },
+  {
+    "id": 115,
+    "nom": "Koba centre",
+    "code": "GN-B-02020401",
+    "longitude": null,
+    "latitude": null,
+    "description": "",
+    "isView": true,
+    "commune": {
+      "id": 19,
+      "nom": "Koba-Tatema",
+      "code": "GN-B-020204",
+      "longitude": null,
+      "latitude": null,
+      "description": "Sous préfecture de Koba-Tatema",
+      "isView": true,
+      "prefecture": {
+        "id": 3,
+        "nom": "Boffa",
+        "code": "GN-B-0202",
+        "longitude": null,
+        "latitude": null,
+        "description": "Préfecture de Boffa ",
+        "isView": true,
+        "region": {
+          "id": 2,
+          "nom": "Boké",
+          "code": "GN-B-02",
+          "longitude": null,
+          "latitude": null,
+          "description": "Région de Boké",
+          "isView": true
+        }
+      }
+    }
+  },
+  {
+    "id": 116,
+    "nom": "Samaya centre",
+    "code": "GN-D-03010901",
+    "longitude": null,
+    "latitude": null,
+    "description": "",
+    "isView": true,
+    "commune": {
+      "id": 51,
+      "nom": "Samayah",
+      "code": "GN-D-030109",
+      "longitude": null,
+      "latitude": null,
+      "description": "Sous préfecture de Samayah",
+      "isView": true,
+      "prefecture": {
+        "id": 7,
+        "nom": "Kindia",
+        "code": "GN-D-0301",
+        "longitude": null,
+        "latitude": null,
+        "description": "Préfecture de Kindia ",
+        "isView": true,
+        "region": {
+          "id": 3,
+          "nom": "Kindia",
+          "code": "GN-D-03",
+          "longitude": null,
+          "latitude": null,
+          "description": "Région de Kindia",
+          "isView": true
+        }
+      }
+    }
+  },
+  {
+    "id": 117,
+    "nom": "Matoto",
+    "code": "GN-C-01010531",
+    "longitude": null,
+    "latitude": null,
+    "description": "",
+    "isView": true,
+    "commune": {
+      "id": 5,
+      "nom": "Matoto",
+      "code": "GN-C-010105",
+      "longitude": null,
+      "latitude": null,
+      "description": "Commune de Matoto",
+      "isView": true,
+      "prefecture": {
+        "id": 1,
+        "nom": "Conakry",
+        "code": "GN-C-0101",
+        "longitude": null,
+        "latitude": null,
+        "description": "Ville de Conakry",
+        "isView": true,
+        "region": {
+          "id": 1,
+          "nom": "Conakry",
+          "code": "GN-C-01",
+          "longitude": null,
+          "latitude": null,
+          "description": "Gouvernorat de Conakry",
+          "isView": true
+        }
+      }
+    }
+  },
+  {
+    "id": 118,
+    "nom": "Ratoma",
+    "code": "GN-C-01010423",
+    "longitude": null,
+    "latitude": null,
+    "description": "",
+    "isView": true,
+    "commune": {
+      "id": 4,
+      "nom": "Ratoma",
+      "code": "GN-C-010104",
+      "longitude": null,
+      "latitude": null,
+      "description": "Commune de Ratoma",
+      "isView": true,
+      "prefecture": {
+        "id": 1,
+        "nom": "Conakry",
+        "code": "GN-C-0101",
+        "longitude": null,
+        "latitude": null,
+        "description": "Ville de Conakry",
+        "isView": true,
+        "region": {
+          "id": 1,
+          "nom": "Conakry",
+          "code": "GN-C-01",
+          "longitude": null,
+          "latitude": null,
+          "description": "Gouvernorat de Conakry",
+          "isView": true
+        }
+      }
+    }
+  },
+  {
+    "id": 119,
+    "nom": "Matam",
+    "code": "GN-C-01010322",
+    "longitude": null,
+    "latitude": null,
+    "description": "",
+    "isView": true,
+    "commune": {
+      "id": 3,
+      "nom": "Matam",
+      "code": "GN-C-010103",
+      "longitude": null,
+      "latitude": null,
+      "description": "Commune de Matam",
+      "isView": true,
+      "prefecture": {
+        "id": 1,
+        "nom": "Conakry",
+        "code": "GN-C-0101",
+        "longitude": null,
+        "latitude": null,
+        "description": "Ville de Conakry",
+        "isView": true,
+        "region": {
+          "id": 1,
+          "nom": "Conakry",
+          "code": "GN-C-01",
+          "longitude": null,
+          "latitude": null,
+          "description": "Gouvernorat de Conakry",
+          "isView": true
+        }
+      }
+    }
+  },
+  {
+    "id": 120,
+    "nom": "Dixinn centre",
+    "code": "GN-C-01010218",
+    "longitude": null,
+    "latitude": null,
+    "description": "",
+    "isView": true,
+    "commune": {
+      "id": 2,
+      "nom": "Dixinn",
+      "code": "GN-C-010102",
+      "longitude": null,
+      "latitude": null,
+      "description": "Commune de Dixinn",
+      "isView": true,
+      "prefecture": {
+        "id": 1,
+        "nom": "Conakry",
+        "code": "GN-C-0101",
+        "longitude": null,
+        "latitude": null,
+        "description": "Ville de Conakry",
+        "isView": true,
+        "region": {
+          "id": 1,
+          "nom": "Conakry",
+          "code": "GN-C-01",
+          "longitude": null,
+          "latitude": null,
+          "description": "Gouvernorat de Conakry",
+          "isView": true
+        }
+      }
+    }
+  },
+  {
+    "id": 121,
+    "nom": "Kaloum centre",
+    "code": "GN-C-01010112",
+    "longitude": null,
+    "latitude": null,
+    "description": "",
+    "isView": true,
+    "commune": {
+      "id": 1,
+      "nom": "Kaloum",
+      "code": "GN-C-010101",
+      "longitude": null,
+      "latitude": null,
+      "description": "Commune de Kaloum",
+      "isView": true,
+      "prefecture": {
+        "id": 1,
+        "nom": "Conakry",
+        "code": "GN-C-0101",
+        "longitude": null,
+        "latitude": null,
+        "description": "Ville de Conakry",
+        "isView": true,
+        "region": {
+          "id": 1,
+          "nom": "Conakry",
+          "code": "GN-C-01",
+          "longitude": null,
+          "latitude": null,
+          "description": "Gouvernorat de Conakry",
+          "isView": true
+        }
+      }
+    }
+  },
+  {
+    "id": 122,
+    "nom": "Kaloum",
+    "code": "GN-C-01010113",
+    "longitude": null,
+    "latitude": null,
+    "description": "",
+    "isView": true,
+    "commune": {
+      "id": 1,
+      "nom": "Kaloum",
+      "code": "GN-C-010101",
+      "longitude": null,
+      "latitude": null,
+      "description": "Commune de Kaloum",
+      "isView": true,
+      "prefecture": {
+        "id": 1,
+        "nom": "Conakry",
+        "code": "GN-C-0101",
+        "longitude": null,
+        "latitude": null,
+        "description": "Ville de Conakry",
+        "isView": true,
+        "region": {
+          "id": 1,
+          "nom": "Conakry",
+          "code": "GN-C-01",
+          "longitude": null,
+          "latitude": null,
+          "description": "Gouvernorat de Conakry",
+          "isView": true
+        }
+      }
+    }
+  },
+  {
+    "id": 123,
+    "nom": "Kaloum",
+    "code": "GN-C-01010114",
+    "longitude": null,
+    "latitude": null,
+    "description": "",
+    "isView": true,
+    "commune": {
+      "id": 1,
+      "nom": "Kaloum",
+      "code": "GN-C-010101",
+      "longitude": null,
+      "latitude": null,
+      "description": "Commune de Kaloum",
+      "isView": true,
+      "prefecture": {
+        "id": 1,
+        "nom": "Conakry",
+        "code": "GN-C-0101",
+        "longitude": null,
+        "latitude": null,
+        "description": "Ville de Conakry",
+        "isView": true,
+        "region": {
+          "id": 1,
+          "nom": "Conakry",
+          "code": "GN-C-01",
+          "longitude": null,
+          "latitude": null,
+          "description": "Gouvernorat de Conakry",
+          "isView": true
+        }
+      }
+    }
+  },
+  {
+    "id": 124,
+    "nom": "Sannou centre",
+    "code": "GN-L-07011201",
+    "longitude": null,
+    "latitude": null,
+    "description": "",
+    "isView": true,
+    "commune": {
+      "id": 232,
+      "nom": "Sannou",
+      "code": "GN-L-070112",
+      "longitude": null,
+      "latitude": null,
+      "description": "Sous préfecture de Sannou",
+      "isView": true,
+      "prefecture": {
+        "id": 24,
+        "nom": "Labé",
+        "code": "GN-L-0701",
+        "longitude": null,
+        "latitude": null,
+        "description": "Préfecture de Labé",
+        "isView": true,
+        "region": {
+          "id": 7,
+          "nom": "Labé",
+          "code": "GN-L-07",
+          "longitude": null,
+          "latitude": null,
+          "description": "Région de Labé",
+          "isView": true
+        }
+      }
+    }
+  },
+  {
+    "id": 125,
+    "nom": "Sannou centre",
+    "code": "GN-L-07011202",
+    "longitude": null,
+    "latitude": null,
+    "description": "",
+    "isView": true,
+    "commune": {
+      "id": 232,
+      "nom": "Sannou",
+      "code": "GN-L-070112",
+      "longitude": null,
+      "latitude": null,
+      "description": "Sous préfecture de Sannou",
+      "isView": true,
+      "prefecture": {
+        "id": 24,
+        "nom": "Labé",
+        "code": "GN-L-0701",
+        "longitude": null,
+        "latitude": null,
+        "description": "Préfecture de Labé",
+        "isView": true,
+        "region": {
+          "id": 7,
+          "nom": "Labé",
+          "code": "GN-L-07",
+          "longitude": null,
+          "latitude": null,
+          "description": "Région de Labé",
+          "isView": true
+        }
+      }
+    }
+  },
+  {
+    "id": 126,
+    "nom": "tougue centre",
+    "code": "GN-L-07050101",
+    "longitude": null,
+    "latitude": null,
+    "description": "",
+    "isView": true,
+    "commune": {
+      "id": 264,
+      "nom": "Tougué Centre",
+      "code": "GN-L-070501",
+      "longitude": null,
+      "latitude": null,
+      "description": "Sous préfecture de  Tougué Centre",
+      "isView": true,
+      "prefecture": {
+        "id": 28,
+        "nom": "Tougué",
+        "code": "GN-L-0705",
+        "longitude": null,
+        "latitude": null,
+        "description": "Préfecture de Tougué",
+        "isView": true,
+        "region": {
+          "id": 7,
+          "nom": "Labé",
+          "code": "GN-L-07",
+          "longitude": null,
+          "latitude": null,
+          "description": "Région de Labé",
+          "isView": true
+        }
+      }
+    }
+  },
+  {
+    "id": 127,
+    "nom": "Daralabe centre",
+    "code": "GN-L-07010301",
+    "longitude": null,
+    "latitude": null,
+    "description": "",
+    "isView": true,
+    "commune": {
+      "id": 223,
+      "nom": "Daralabe",
+      "code": "GN-L-070103",
+      "longitude": null,
+      "latitude": null,
+      "description": "Sous préfecture de Daralabe",
+      "isView": true,
+      "prefecture": {
+        "id": 24,
+        "nom": "Labé",
+        "code": "GN-L-0701",
+        "longitude": null,
+        "latitude": null,
+        "description": "Préfecture de Labé",
+        "isView": true,
+        "region": {
+          "id": 7,
+          "nom": "Labé",
+          "code": "GN-L-07",
+          "longitude": null,
+          "latitude": null,
+          "description": "Région de Labé",
+          "isView": true
+        }
+      }
+    }
+  },
+  {
+    "id": 128,
+    "nom": "Dongora",
+    "code": "GN-L-07010101",
+    "longitude": null,
+    "latitude": null,
+    "description": "",
+    "isView": true,
+    "commune": {
+      "id": 221,
+      "nom": "Labé Centre",
+      "code": "GN-L-070101",
+      "longitude": null,
+      "latitude": null,
+      "description": "Sous préfecture de Labé Centre",
+      "isView": true,
+      "prefecture": {
+        "id": 24,
+        "nom": "Labé",
+        "code": "GN-L-0701",
+        "longitude": null,
+        "latitude": null,
+        "description": "Préfecture de Labé",
+        "isView": true,
+        "region": {
+          "id": 7,
+          "nom": "Labé",
+          "code": "GN-L-07",
+          "longitude": null,
+          "latitude": null,
+          "description": "Région de Labé",
+          "isView": true
+        }
+      }
+    }
+  },
+  {
+    "id": 129,
+    "nom": "Dongora",
+    "code": "GN-L-07010102",
+    "longitude": null,
+    "latitude": null,
+    "description": "",
+    "isView": true,
+    "commune": {
+      "id": 221,
+      "nom": "Labé Centre",
+      "code": "GN-L-070101",
+      "longitude": null,
+      "latitude": null,
+      "description": "Sous préfecture de Labé Centre",
+      "isView": true,
+      "prefecture": {
+        "id": 24,
+        "nom": "Labé",
+        "code": "GN-L-0701",
+        "longitude": null,
+        "latitude": null,
+        "description": "Préfecture de Labé",
+        "isView": true,
+        "region": {
+          "id": 7,
+          "nom": "Labé",
+          "code": "GN-L-07",
+          "longitude": null,
+          "latitude": null,
+          "description": "Région de Labé",
+          "isView": true
+        }
+      }
+    }
+  },
+  {
+    "id": 130,
+    "nom": "Balaki centre",
+    "code": "GN-L-07040201",
+    "longitude": null,
+    "latitude": null,
+    "description": "",
+    "isView": true,
+    "commune": {
+      "id": 252,
+      "nom": "Balaki",
+      "code": "GN-L-070402",
+      "longitude": null,
+      "latitude": null,
+      "description": "Sous préfecture de Balaki ",
+      "isView": true,
+      "prefecture": {
+        "id": 27,
+        "nom": "Mali",
+        "code": "GN-L-0704",
+        "longitude": null,
+        "latitude": null,
+        "description": "Préfecture de Mali",
+        "isView": true,
+        "region": {
+          "id": 7,
+          "nom": "Labé",
+          "code": "GN-L-07",
+          "longitude": null,
+          "latitude": null,
+          "description": "Région de Labé",
+          "isView": true
+        }
+      }
+    }
+  },
+  {
+    "id": 131,
+    "nom": "Djountou centre",
+    "code": "GN-L-07030301",
+    "longitude": null,
+    "latitude": null,
+    "description": "",
+    "isView": true,
+    "commune": {
+      "id": 243,
+      "nom": "Djountou",
+      "code": "GN-L-070303",
+      "longitude": null,
+      "latitude": null,
+      "description": "Sous préfecture de Djountou",
+      "isView": true,
+      "prefecture": {
+        "id": 26,
+        "nom": "Lélouma",
+        "code": "GN-L-0703",
+        "longitude": null,
+        "latitude": null,
+        "description": "Préfecture de Lélouma",
+        "isView": true,
+        "region": {
+          "id": 7,
+          "nom": "Labé",
+          "code": "GN-L-07",
+          "longitude": null,
+          "latitude": null,
+          "description": "Région de Labé",
+          "isView": true
+        }
+      }
+    }
+  },
+  {
+    "id": 132,
+    "nom": "pounthioun",
+    "code": "GN-L-07010103",
+    "longitude": null,
+    "latitude": null,
+    "description": "",
+    "isView": true,
+    "commune": {
+      "id": 221,
+      "nom": "Labé Centre",
+      "code": "GN-L-070101",
+      "longitude": null,
+      "latitude": null,
+      "description": "Sous préfecture de Labé Centre",
+      "isView": true,
+      "prefecture": {
+        "id": 24,
+        "nom": "Labé",
+        "code": "GN-L-0701",
+        "longitude": null,
+        "latitude": null,
+        "description": "Préfecture de Labé",
+        "isView": true,
+        "region": {
+          "id": 7,
+          "nom": "Labé",
+          "code": "GN-L-07",
+          "longitude": null,
+          "latitude": null,
+          "description": "Région de Labé",
+          "isView": true
+        }
+      }
+    }
+  },
+  {
+    "id": 133,
+    "nom": "Pounthioun",
+    "code": "GN-L-07010104",
+    "longitude": null,
+    "latitude": null,
+    "description": "",
+    "isView": true,
+    "commune": {
+      "id": 221,
+      "nom": "Labé Centre",
+      "code": "GN-L-070101",
+      "longitude": null,
+      "latitude": null,
+      "description": "Sous préfecture de Labé Centre",
+      "isView": true,
+      "prefecture": {
+        "id": 24,
+        "nom": "Labé",
+        "code": "GN-L-0701",
+        "longitude": null,
+        "latitude": null,
+        "description": "Préfecture de Labé",
+        "isView": true,
+        "region": {
+          "id": 7,
+          "nom": "Labé",
+          "code": "GN-L-07",
+          "longitude": null,
+          "latitude": null,
+          "description": "Région de Labé",
+          "isView": true
+        }
+      }
+    }
+  },
+  {
+    "id": 134,
+    "nom": "Pounthioun",
+    "code": "GN-L-07010105",
+    "longitude": null,
+    "latitude": null,
+    "description": "",
+    "isView": true,
+    "commune": {
+      "id": 221,
+      "nom": "Labé Centre",
+      "code": "GN-L-070101",
+      "longitude": null,
+      "latitude": null,
+      "description": "Sous préfecture de Labé Centre",
+      "isView": true,
+      "prefecture": {
+        "id": 24,
+        "nom": "Labé",
+        "code": "GN-L-0701",
+        "longitude": null,
+        "latitude": null,
+        "description": "Préfecture de Labé",
+        "isView": true,
+        "region": {
+          "id": 7,
+          "nom": "Labé",
+          "code": "GN-L-07",
+          "longitude": null,
+          "latitude": null,
+          "description": "Région de Labé",
+          "isView": true
+        }
+      }
+    }
+  },
+  {
+    "id": 135,
+    "nom": "Pounthioun centre",
+    "code": "GN-L-07010106",
+    "longitude": null,
+    "latitude": null,
+    "description": "",
+    "isView": true,
+    "commune": {
+      "id": 221,
+      "nom": "Labé Centre",
+      "code": "GN-L-070101",
+      "longitude": null,
+      "latitude": null,
+      "description": "Sous préfecture de Labé Centre",
+      "isView": true,
+      "prefecture": {
+        "id": 24,
+        "nom": "Labé",
+        "code": "GN-L-0701",
+        "longitude": null,
+        "latitude": null,
+        "description": "Préfecture de Labé",
+        "isView": true,
+        "region": {
+          "id": 7,
+          "nom": "Labé",
+          "code": "GN-L-07",
+          "longitude": null,
+          "latitude": null,
+          "description": "Région de Labé",
+          "isView": true
+        }
+      }
+    }
+  },
+  {
+    "id": 136,
+    "nom": "labe centre",
+    "code": "GN-L-07010107",
+    "longitude": null,
+    "latitude": null,
+    "description": "",
+    "isView": true,
+    "commune": {
+      "id": 221,
+      "nom": "Labé Centre",
+      "code": "GN-L-070101",
+      "longitude": null,
+      "latitude": null,
+      "description": "Sous préfecture de Labé Centre",
+      "isView": true,
+      "prefecture": {
+        "id": 24,
+        "nom": "Labé",
+        "code": "GN-L-0701",
+        "longitude": null,
+        "latitude": null,
+        "description": "Préfecture de Labé",
+        "isView": true,
+        "region": {
+          "id": 7,
+          "nom": "Labé",
+          "code": "GN-L-07",
+          "longitude": null,
+          "latitude": null,
+          "description": "Région de Labé",
+          "isView": true
+        }
+      }
+    }
+  },
+  {
+    "id": 137,
+    "nom": "Pounthioun Centre",
+    "code": "GN-L-07010108",
+    "longitude": null,
+    "latitude": null,
+    "description": "",
+    "isView": true,
+    "commune": {
+      "id": 221,
+      "nom": "Labé Centre",
+      "code": "GN-L-070101",
+      "longitude": null,
+      "latitude": null,
+      "description": "Sous préfecture de Labé Centre",
+      "isView": true,
+      "prefecture": {
+        "id": 24,
+        "nom": "Labé",
+        "code": "GN-L-0701",
+        "longitude": null,
+        "latitude": null,
+        "description": "Préfecture de Labé",
+        "isView": true,
+        "region": {
+          "id": 7,
+          "nom": "Labé",
+          "code": "GN-L-07",
+          "longitude": null,
+          "latitude": null,
+          "description": "Région de Labé",
+          "isView": true
+        }
+      }
+    }
+  },
+  {
+    "id": 138,
+    "nom": "Korontin ",
+    "code": "GN-C-01010115",
+    "longitude": null,
+    "latitude": null,
+    "description": "",
+    "isView": true,
+    "commune": {
+      "id": 1,
+      "nom": "Kaloum",
+      "code": "GN-C-010101",
+      "longitude": null,
+      "latitude": null,
+      "description": "Commune de Kaloum",
+      "isView": true,
+      "prefecture": {
+        "id": 1,
+        "nom": "Conakry",
+        "code": "GN-C-0101",
+        "longitude": null,
+        "latitude": null,
+        "description": "Ville de Conakry",
+        "isView": true,
+        "region": {
+          "id": 1,
+          "nom": "Conakry",
+          "code": "GN-C-01",
+          "longitude": null,
+          "latitude": null,
+          "description": "Gouvernorat de Conakry",
+          "isView": true
+        }
+      }
+    }
+  },
+  {
+    "id": 139,
+    "nom": "Djountou Centre",
+    "code": "GN-L-07030302",
+    "longitude": null,
+    "latitude": null,
+    "description": "",
+    "isView": true,
+    "commune": {
+      "id": 243,
+      "nom": "Djountou",
+      "code": "GN-L-070303",
+      "longitude": null,
+      "latitude": null,
+      "description": "Sous préfecture de Djountou",
+      "isView": true,
+      "prefecture": {
+        "id": 26,
+        "nom": "Lélouma",
+        "code": "GN-L-0703",
+        "longitude": null,
+        "latitude": null,
+        "description": "Préfecture de Lélouma",
+        "isView": true,
+        "region": {
+          "id": 7,
+          "nom": "Labé",
+          "code": "GN-L-07",
+          "longitude": null,
+          "latitude": null,
+          "description": "Région de Labé",
+          "isView": true
+        }
+      }
+    }
+  },
+  {
+    "id": 140,
+    "nom": "Matoto Centre",
+    "code": "GN-C-01010532",
+    "longitude": null,
+    "latitude": null,
+    "description": "",
+    "isView": true,
+    "commune": {
+      "id": 5,
+      "nom": "Matoto",
+      "code": "GN-C-010105",
+      "longitude": null,
+      "latitude": null,
+      "description": "Commune de Matoto",
+      "isView": true,
+      "prefecture": {
+        "id": 1,
+        "nom": "Conakry",
+        "code": "GN-C-0101",
+        "longitude": null,
+        "latitude": null,
+        "description": "Ville de Conakry",
+        "isView": true,
+        "region": {
+          "id": 1,
+          "nom": "Conakry",
+          "code": "GN-C-01",
+          "longitude": null,
+          "latitude": null,
+          "description": "Gouvernorat de Conakry",
+          "isView": true
+        }
+      }
+    }
+  },
+  {
+    "id": 141,
+    "nom": "Cadha Woundou",
+    "code": "GN-L-07020301",
+    "longitude": null,
+    "latitude": null,
+    "description": "",
+    "isView": true,
+    "commune": {
+      "id": 237,
+      "nom": "Gadha-Woundou",
+      "code": "GN-L-070203",
+      "longitude": null,
+      "latitude": null,
+      "description": "Sous préfecture de Gadha-Woundou",
+      "isView": true,
+      "prefecture": {
+        "id": 25,
+        "nom": "Koubia",
+        "code": "GN-L-0702",
+        "longitude": null,
+        "latitude": null,
+        "description": "Préfecture de Koubia",
+        "isView": true,
+        "region": {
+          "id": 7,
+          "nom": "Labé",
+          "code": "GN-L-07",
+          "longitude": null,
+          "latitude": null,
+          "description": "Région de Labé",
+          "isView": true
+        }
+      }
+    }
+  },
+  {
+    "id": 142,
+    "nom": "Enta Fassa",
+    "code": "GN-C-01010533",
+    "longitude": null,
+    "latitude": null,
+    "description": "",
+    "isView": true,
+    "commune": {
+      "id": 5,
+      "nom": "Matoto",
+      "code": "GN-C-010105",
+      "longitude": null,
+      "latitude": null,
+      "description": "Commune de Matoto",
+      "isView": true,
+      "prefecture": {
+        "id": 1,
+        "nom": "Conakry",
+        "code": "GN-C-0101",
+        "longitude": null,
+        "latitude": null,
+        "description": "Ville de Conakry",
+        "isView": true,
+        "region": {
+          "id": 1,
+          "nom": "Conakry",
+          "code": "GN-C-01",
+          "longitude": null,
+          "latitude": null,
+          "description": "Gouvernorat de Conakry",
+          "isView": true
+        }
+      }
+    }
+  },
+  {
+    "id": 143,
+    "nom": "Coyah Centre",
+    "code": "GN-D-03020101",
+    "longitude": null,
+    "latitude": null,
+    "description": "",
+    "isView": true,
+    "commune": {
+      "id": 53,
+      "nom": "Coyah",
+      "code": "GN-D-030201",
+      "longitude": null,
+      "latitude": null,
+      "description": "Sous préfecture de Coyah",
+      "isView": true,
+      "prefecture": {
+        "id": 8,
+        "nom": "Coyah",
+        "code": "GN-D-0302",
+        "longitude": null,
+        "latitude": null,
+        "description": "Préfecture de Coyah ",
+        "isView": true,
+        "region": {
+          "id": 3,
+          "nom": "Kindia",
+          "code": "GN-D-03",
+          "longitude": null,
+          "latitude": null,
+          "description": "Région de Kindia",
+          "isView": true
+        }
+      }
+    }
+  },
+  {
+    "id": 144,
+    "nom": "Mali centre",
+    "code": "GN-L-07040101",
+    "longitude": null,
+    "latitude": null,
+    "description": "",
+    "isView": true,
+    "commune": {
+      "id": 251,
+      "nom": "Mali Centre",
+      "code": "GN-L-070401",
+      "longitude": null,
+      "latitude": null,
+      "description": "Sous préfecture de Mali Centre ",
+      "isView": true,
+      "prefecture": {
+        "id": 27,
+        "nom": "Mali",
+        "code": "GN-L-0704",
+        "longitude": null,
+        "latitude": null,
+        "description": "Préfecture de Mali",
+        "isView": true,
+        "region": {
+          "id": 7,
+          "nom": "Labé",
+          "code": "GN-L-07",
+          "longitude": null,
+          "latitude": null,
+          "description": "Région de Labé",
+          "isView": true
+        }
+      }
+    }
+  },
+  {
+    "id": 145,
+    "nom": "Koubia centre",
+    "code": "GN-L-07020101",
+    "longitude": null,
+    "latitude": null,
+    "description": "",
+    "isView": true,
+    "commune": {
+      "id": 235,
+      "nom": "Koubia Centre",
+      "code": "GN-L-070201",
+      "longitude": null,
+      "latitude": null,
+      "description": "Sous préfecture de Koubia Centre",
+      "isView": true,
+      "prefecture": {
+        "id": 25,
+        "nom": "Koubia",
+        "code": "GN-L-0702",
+        "longitude": null,
+        "latitude": null,
+        "description": "Préfecture de Koubia",
+        "isView": true,
+        "region": {
+          "id": 7,
+          "nom": "Labé",
+          "code": "GN-L-07",
+          "longitude": null,
+          "latitude": null,
+          "description": "Région de Labé",
+          "isView": true
+        }
+      }
+    }
+  },
+  {
+    "id": 146,
+    "nom": "secteur 1",
+    "code": "GN-D-03010902",
+    "longitude": null,
+    "latitude": null,
+    "description": "",
+    "isView": true,
+    "commune": {
+      "id": 51,
+      "nom": "Samayah",
+      "code": "GN-D-030109",
+      "longitude": null,
+      "latitude": null,
+      "description": "Sous préfecture de Samayah",
+      "isView": true,
+      "prefecture": {
+        "id": 7,
+        "nom": "Kindia",
+        "code": "GN-D-0301",
+        "longitude": null,
+        "latitude": null,
+        "description": "Préfecture de Kindia ",
+        "isView": true,
+        "region": {
+          "id": 3,
+          "nom": "Kindia",
+          "code": "GN-D-03",
+          "longitude": null,
+          "latitude": null,
+          "description": "Région de Kindia",
+          "isView": true
+        }
+      }
+    }
+  },
+  {
+    "id": 147,
+    "nom": "Dantoumaya",
+    "code": "GN-D-03010903",
+    "longitude": null,
+    "latitude": null,
+    "description": "",
+    "isView": true,
+    "commune": {
+      "id": 51,
+      "nom": "Samayah",
+      "code": "GN-D-030109",
+      "longitude": null,
+      "latitude": null,
+      "description": "Sous préfecture de Samayah",
+      "isView": true,
+      "prefecture": {
+        "id": 7,
+        "nom": "Kindia",
+        "code": "GN-D-0301",
+        "longitude": null,
+        "latitude": null,
+        "description": "Préfecture de Kindia ",
+        "isView": true,
+        "region": {
+          "id": 3,
+          "nom": "Kindia",
+          "code": "GN-D-03",
+          "longitude": null,
+          "latitude": null,
+          "description": "Région de Kindia",
+          "isView": true
+        }
+      }
+    }
+  },
+  {
+    "id": 148,
+    "nom": "Donghol Centre",
+    "code": "GN-L-07040301",
+    "longitude": null,
+    "latitude": null,
+    "description": "",
+    "isView": true,
+    "commune": {
+      "id": 253,
+      "nom": "Donghol Sigon",
+      "code": "GN-L-070403",
+      "longitude": null,
+      "latitude": null,
+      "description": "Sous préfecture de Donghol Sigon ",
+      "isView": true,
+      "prefecture": {
+        "id": 27,
+        "nom": "Mali",
+        "code": "GN-L-0704",
+        "longitude": null,
+        "latitude": null,
+        "description": "Préfecture de Mali",
+        "isView": true,
+        "region": {
+          "id": 7,
+          "nom": "Labé",
+          "code": "GN-L-07",
+          "longitude": null,
+          "latitude": null,
+          "description": "Région de Labé",
+          "isView": true
+        }
+      }
+    }
+  },
+  {
+    "id": 149,
+    "nom": "Lelouma centre",
+    "code": "GN-L-07030101",
+    "longitude": null,
+    "latitude": null,
+    "description": "",
+    "isView": true,
+    "commune": {
+      "id": 241,
+      "nom": "Lélouma Centre",
+      "code": "GN-L-070301",
+      "longitude": null,
+      "latitude": null,
+      "description": "Sous préfecture de Lélouma Centre",
+      "isView": true,
+      "prefecture": {
+        "id": 26,
+        "nom": "Lélouma",
+        "code": "GN-L-0703",
+        "longitude": null,
+        "latitude": null,
+        "description": "Préfecture de Lélouma",
+        "isView": true,
+        "region": {
+          "id": 7,
+          "nom": "Labé",
+          "code": "GN-L-07",
+          "longitude": null,
+          "latitude": null,
+          "description": "Région de Labé",
+          "isView": true
+        }
+      }
+    }
+  },
+  {
+    "id": 150,
+    "nom": "Fafaya centre",
+    "code": "GN-L-07020201",
+    "longitude": null,
+    "latitude": null,
+    "description": "",
+    "isView": true,
+    "commune": {
+      "id": 236,
+      "nom": "Fafaya",
+      "code": "GN-L-070202",
+      "longitude": null,
+      "latitude": null,
+      "description": "Sous préfecture de Fafaya",
+      "isView": true,
+      "prefecture": {
+        "id": 25,
+        "nom": "Koubia",
+        "code": "GN-L-0702",
+        "longitude": null,
+        "latitude": null,
+        "description": "Préfecture de Koubia",
+        "isView": true,
+        "region": {
+          "id": 7,
+          "nom": "Labé",
+          "code": "GN-L-07",
+          "longitude": null,
+          "latitude": null,
+          "description": "Région de Labé",
+          "isView": true
+        }
+      }
+    }
+  },
+  {
+    "id": 151,
+    "nom": "Fello Kounda 1",
+    "code": "GN-L-07050301",
+    "longitude": null,
+    "latitude": null,
+    "description": "",
+    "isView": true,
+    "commune": {
+      "id": 266,
+      "nom": "Fello Koundoua",
+      "code": "GN-L-070503",
+      "longitude": null,
+      "latitude": null,
+      "description": "Sous préfecture de Fello Koundoua",
+      "isView": true,
+      "prefecture": {
+        "id": 28,
+        "nom": "Tougué",
+        "code": "GN-L-0705",
+        "longitude": null,
+        "latitude": null,
+        "description": "Préfecture de Tougué",
+        "isView": true,
+        "region": {
+          "id": 7,
+          "nom": "Labé",
+          "code": "GN-L-07",
+          "longitude": null,
+          "latitude": null,
+          "description": "Région de Labé",
+          "isView": true
+        }
+      }
+    }
+  },
+  {
+    "id": 152,
+    "nom": "Kollet centre",
+    "code": "GN-L-07050601",
+    "longitude": null,
+    "latitude": null,
+    "description": "",
+    "isView": true,
+    "commune": {
+      "id": 269,
+      "nom": "Kollet",
+      "code": "GN-L-070506",
+      "longitude": null,
+      "latitude": null,
+      "description": "Sous préfecture de Kollet",
+      "isView": true,
+      "prefecture": {
+        "id": 28,
+        "nom": "Tougué",
+        "code": "GN-L-0705",
+        "longitude": null,
+        "latitude": null,
+        "description": "Préfecture de Tougué",
+        "isView": true,
+        "region": {
+          "id": 7,
+          "nom": "Labé",
+          "code": "GN-L-07",
+          "longitude": null,
+          "latitude": null,
+          "description": "Région de Labé",
+          "isView": true
+        }
+      }
+    }
+  },
+  {
+    "id": 153,
+    "nom": "Parawol centre",
+    "code": "GN-L-07030801",
+    "longitude": null,
+    "latitude": null,
+    "description": "",
+    "isView": true,
+    "commune": {
+      "id": 248,
+      "nom": "Parawol",
+      "code": "GN-L-070308",
+      "longitude": null,
+      "latitude": null,
+      "description": "Sous préfecture de Parawol ",
+      "isView": true,
+      "prefecture": {
+        "id": 26,
+        "nom": "Lélouma",
+        "code": "GN-L-0703",
+        "longitude": null,
+        "latitude": null,
+        "description": "Préfecture de Lélouma",
+        "isView": true,
+        "region": {
+          "id": 7,
+          "nom": "Labé",
+          "code": "GN-L-07",
+          "longitude": null,
+          "latitude": null,
+          "description": "Région de Labé",
+          "isView": true
+        }
+      }
+    }
+  },
+  {
+    "id": 154,
+    "nom": "Secteur 1",
+    "code": "GN-D-03010301",
+    "longitude": null,
+    "latitude": null,
+    "description": "",
+    "isView": true,
+    "commune": {
+      "id": 45,
+      "nom": "Damankanyah",
+      "code": "GN-D-030103",
+      "longitude": null,
+      "latitude": null,
+      "description": "Sous préfecture de Damankanyah",
+      "isView": true,
+      "prefecture": {
+        "id": 7,
+        "nom": "Kindia",
+        "code": "GN-D-0301",
+        "longitude": null,
+        "latitude": null,
+        "description": "Préfecture de Kindia ",
+        "isView": true,
+        "region": {
+          "id": 3,
+          "nom": "Kindia",
+          "code": "GN-D-03",
+          "longitude": null,
+          "latitude": null,
+          "description": "Région de Kindia",
+          "isView": true
+        }
+      }
+    }
+  },
+  {
+    "id": 155,
+    "nom": "Diaguisa",
+    "code": "GN-M-04020101",
+    "longitude": null,
+    "latitude": null,
+    "description": "",
+    "isView": true,
+    "commune": {
+      "id": 101,
+      "nom": "Dalaba Centre",
+      "code": "GN-M-040201",
+      "longitude": null,
+      "latitude": null,
+      "description": "Sous préfecture de Dalaba Centre",
+      "isView": true,
+      "prefecture": {
+        "id": 13,
+        "nom": "Dalaba",
+        "code": "GN-M-0402",
+        "longitude": null,
+        "latitude": null,
+        "description": "Préfecture de Dalaba",
+        "isView": true,
+        "region": {
+          "id": 4,
+          "nom": "Mamou",
+          "code": "GN-M-04",
+          "longitude": null,
+          "latitude": null,
+          "description": "Région de Mamou",
+          "isView": true
+        }
+      }
+    }
+  }
+]

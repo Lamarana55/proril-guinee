@@ -1,0 +1,7 @@
+<div class="spinner-center" *ngIf="isLoading && display">
+    <mat-spinner [diameter]="diameter"></mat-spinner>
+</div>
+
+<div class="spinner-center text-danger font-italic" *ngIf="isError && display">
+    Une erreur est survenue lors du chargement, merci de réessayer plus tard!!!
+</div>

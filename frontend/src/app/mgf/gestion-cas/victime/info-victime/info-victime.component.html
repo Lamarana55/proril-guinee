@@ -1,0 +1,62 @@
+<span class="pull-right pos" *ngIf="permissions.can_edit">
+    <button mat-mini-fab color="info" title="Modifier" [routerLink]="['/gestion-cas/victimes/edit', {id: victimeId}]">
+        <mat-icon>edit</mat-icon>
+    </button>
+</span>
+
+<app-spinner [filterBy]="victimeUrl"></app-spinner>
+
+<div *ngIf="(victime$ | async) as victime">
+    <div class="row">
+        <div class="col-md-6">
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">
+                    <div class="row">
+                        <div class="col">Nom</div>
+                        <div class="col font-weight-bold">{{ victime.nom }}</div>
+                    </div>
+                </li>
+                <li class="list-group-item">
+                    <div class="row">
+                        <div class="col">Prenom</div>
+                        <div class="col font-weight-bold">{{ victime.prenom }}</div>
+                    </div>
+                </li>
+                <li class="list-group-item">
+                    <div class="row">
+                        <div class="col">Age</div>
+                        <div class="col font-weight-bold">{{ victime.age + ' ans' }}</div>
+                    </div>
+                </li>
+                <li class="list-group-item">
+                    <div class="row">
+                        <div class="col">Handicap</div>
+                        <div class="col font-weight-bold">{{ victime.handicap }}</div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="col-md-6">
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">
+                    <div class="row">
+                        <div class="col">Sexe</div>
+                        <div class="col font-weight-bold">{{ victime.sexe }}</div>
+                    </div>
+                </li>
+                <li class="list-group-item">
+                    <div class="row">
+                        <div class="col">Adresse</div>
+                        <div class="col font-weight-bold">{{ victime.adresse}}</div>
+                    </div>
+                </li>
+                <li class="list-group-item">
+                    <div class="row">
+                        <div class="col">Contact</div>
+                        <div class="col font-weight-bold">{{ victime.contactTuteur }}</div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,148 @@
+<div class="card">
+  <div class="card-header bg-default">
+    <div class="row">
+      <div class="col-sm-8">
+        <h2 class="card-title text-white">
+          <i class="nc-icon nc-single-02"></i>
+          Liste des utilisateurs
+        </h2>
+      </div>
+      <div class="col-sm-4 text-right mt-2">
+        <button *ngIf="permissions.can_add" mat-raised-button routerLink="edit" class="mr-1" color="info">
+          <mat-icon>add</mat-icon>
+        </button>
+        <button mat-raised-button color="primary" (click)="onRefresh()">
+          <mat-icon>refresh</mat-icon>
+        </button>
+
+      </div>
+    </div>
+  </div>
+  <app-search-local (onSearchEvent)="onSearch($event)"></app-search-local>
+  <div class="card-body">
+    <!--  -->
+    <!-- Spinner -->
+    <app-spinner [filterBy]="userUrl"></app-spinner>
+
+    <!-- <div *ngIf="(users$ | async) as users"> -->
+    <div *ngIf="(dataSource.data.length) as users">
+      <div *ngIf="dataSource.data.length > 0">
+
+
+        <div class="table-responsive mb-2" [hidden]="!dataSource || dataSource.data.length === 0">
+          <div class="mat-table-header">
+            <mat-form-field>
+              <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Rechercher">
+            </mat-form-field>
+          </div>
+          <mat-table [dataSource]="dataSource" matSort>
+            <!-- date Column -->
+            <ng-container matColumnDef="username">
+              <mat-header-cell *matHeaderCellDef mat-sort-header> <strong>USERNAME</strong> </mat-header-cell>
+              <mat-cell *matCellDef="let row">{{ row.username }}</mat-cell>
+            </ng-container>
+            <!-- code Column -->
+            <ng-container matColumnDef="email">
+              <mat-header-cell *matHeaderCellDef mat-sort-header><strong>EMAIL</strong> </mat-header-cell>
+              <mat-cell *matCellDef="let row">{{ row.email }}</mat-cell>
+            </ng-container>
+            <!-- TypeCas Column -->
+            <ng-container matColumnDef="nom_prenom">
+              <mat-header-cell *matHeaderCellDef mat-sort-header><strong>NOM et PRENOM</strong> </mat-header-cell>
+              <mat-cell *matCellDef="let row">{{ row.nom }} {{ row.prenom }}</mat-cell>
+            </ng-container>
+            <!-- victime Column -->
+            <ng-container matColumnDef="telephone">
+              <mat-header-cell *matHeaderCellDef mat-sort-header><strong>TELEPHONE</strong> </mat-header-cell>
+              <mat-cell *matCellDef="let row">{{ row.telephone }}</mat-cell>
+            </ng-container>
+
+            <!-- sexe Column -->
+            <ng-container matColumnDef="role">
+              <mat-header-cell *matHeaderCellDef mat-sort-header><strong>ROLE</strong></mat-header-cell>
+              <mat-cell *matCellDef="let row">{{ row.role['nom'] }}</mat-cell>
+            </ng-container>
+
+            <!-- Age Column -->
+            <ng-container matColumnDef="statut">
+              <mat-header-cell *matHeaderCellDef mat-sort-header><strong>STATUT</strong> </mat-header-cell>
+              <mat-cell *matCellDef="let row">
+                <mat-slide-toggle [checked]="row.statut === 'Activated'" (change)="onChangeStatus(row.id)"
+                  color="primary"></mat-slide-toggle>
+              </mat-cell>
+            </ng-container>
+            <!-- localite Column -->
+            <ng-container matColumnDef="option">
+                <mat-header-cell *matHeaderCellDef  mat-sort-header><strong>OPTIONS</strong></mat-header-cell>
+                <mat-cell *matCellDef="let row">
+                  <button *ngIf="permissions.can_view_info" mat-mini-fab color="own" [routerLink]="['info', row.id]">
+                    <mat-icon>visibility</mat-icon>
+                  </button>
+                  <button *ngIf="permissions.can_edit" mat-mini-fab color="info" [routerLink]="['edit', {id: row.id}]">
+                    <mat-icon>edit</mat-icon>
+                  </button>
+
+                  <button type="button" *ngIf="permissions.can_edit" mat-mini-fab color="warning" (click)="openModalReinitialisationPassword(reinitialisationPassword, row)">
+                    <mat-icon>autorenew</mat-icon>
+                  </button>
+                </mat-cell>
+            </ng-container>
+
+            <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+            <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+          </mat-table>
+          <mat-paginator #paginator (page)="pageChanged($event)" [length]="totalRows" [pageIndex]="currentPage"
+            [pageSize]="pageSize" [pageSizeOptions]="dataSource.data.length | tableOptions"></mat-paginator>
+          <!-- <mat-paginator [pageSize]="10" [pageSizeOptions]="dataSource.data.length | tableOptions"></mat-paginator> -->
+
+        </div>
+
+      </div>
+      <div *ngIf="dataSource.data.length === 0 && ((spinner.loadingEvent$ | async) === false)"
+        class="text-info text-center mt-2">
+        Aucun cas trouvé !!!
+      </div>
+    </div>
+  </div>
+</div>
+
+<ng-template  #reinitialisationPassword let-c="close" let-d="dismiss">
+  <div class="modal-header bg-default">
+    <span class="modal-title h4 text-white">Réinitialisation mot de passe</span>
+    <button type="button" class="close" aria-label="Close" (click)="c('Close click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <form [formGroup]="reinitialisationForm">
+      <div class="row">
+        <div class="col-12">
+          <mat-form-field>
+            <mat-label>Option</mat-label>
+            <mat-select formControlName="mode">
+              <mat-option value="SMS">SMS</mat-option>
+              <mat-option value="EMAIL">EMAIL</mat-option>
+            </mat-select>
+            
+            <mat-error>L'option d'envoi est obligatoire</mat-error>
+          </mat-form-field>
+        </div>
+      </div>
+
+      <div class="text-center">
+        <p class="text text-warning" style="font-weight: bold">{{ messageAttente }}</p>
+        <button type="button"
+          (click)="onCloseModal()" color="danger" class="btn btn-danger"
+        >
+          Annuler
+        </button>
+
+        <button style="margin-left: 10px;" type="button" (click)="onReinitialisationPassword()"
+          [disabled]="reinitialisationForm.invalid" mat-raised-button color="primary"
+        >
+          Réinitialiser
+        </button>
+      </div>
+    </form>
+  </div>
+</ng-template>

@@ -1,0 +1,1262 @@
+[
+  {
+    "id": 1,
+    "nom": "Ciré Diallo",
+    "code": "GN-C-0101040801",
+    "longitude": null,
+    "latitude": null,
+    "description": "",
+    "isView": true,
+    "quartier": {
+      "id": 66,
+      "nom": " Hamdalaye 2",
+      "code": "GN-C-01010408",
+      "longitude": null,
+      "latitude": null,
+      "description": "",
+      "isView": true,
+      "commune": {
+        "id": 4,
+        "nom": "Ratoma",
+        "code": "GN-C-010104",
+        "longitude": null,
+        "latitude": null,
+        "description": "Commune de Ratoma",
+        "isView": true,
+        "prefecture": {
+          "id": 1,
+          "nom": "Conakry",
+          "code": "GN-C-0101",
+          "longitude": null,
+          "latitude": null,
+          "description": "Ville de Conakry",
+          "isView": true,
+          "region": {
+            "id": 1,
+            "nom": "Conakry",
+            "code": "GN-C-01",
+            "longitude": null,
+            "latitude": null,
+            "description": "Gouvernorat de Conakry",
+            "isView": true
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": 2,
+    "nom": "Fossidet",
+    "code": "GN-C-0101042201",
+    "longitude": null,
+    "latitude": null,
+    "description": "",
+    "isView": true,
+    "quartier": {
+      "id": 80,
+      "nom": "Yattayah",
+      "code": "GN-C-01010422",
+      "longitude": null,
+      "latitude": null,
+      "description": "",
+      "isView": true,
+      "commune": {
+        "id": 4,
+        "nom": "Ratoma",
+        "code": "GN-C-010104",
+        "longitude": null,
+        "latitude": null,
+        "description": "Commune de Ratoma",
+        "isView": true,
+        "prefecture": {
+          "id": 1,
+          "nom": "Conakry",
+          "code": "GN-C-0101",
+          "longitude": null,
+          "latitude": null,
+          "description": "Ville de Conakry",
+          "isView": true,
+          "region": {
+            "id": 1,
+            "nom": "Conakry",
+            "code": "GN-C-01",
+            "longitude": null,
+            "latitude": null,
+            "description": "Gouvernorat de Conakry",
+            "isView": true
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": 3,
+    "nom": "Cité 1",
+    "code": "GN-C-0101020501",
+    "longitude": null,
+    "latitude": null,
+    "description": "",
+    "isView": true,
+    "quartier": {
+      "id": 30,
+      "nom": "Dixinn-cité1",
+      "code": "GN-C-01010205",
+      "longitude": null,
+      "latitude": null,
+      "description": "",
+      "isView": true,
+      "commune": {
+        "id": 2,
+        "nom": "Dixinn",
+        "code": "GN-C-010102",
+        "longitude": null,
+        "latitude": null,
+        "description": "Commune de Dixinn",
+        "isView": true,
+        "prefecture": {
+          "id": 1,
+          "nom": "Conakry",
+          "code": "GN-C-0101",
+          "longitude": null,
+          "latitude": null,
+          "description": "Ville de Conakry",
+          "isView": true,
+          "region": {
+            "id": 1,
+            "nom": "Conakry",
+            "code": "GN-C-01",
+            "longitude": null,
+            "latitude": null,
+            "description": "Gouvernorat de Conakry",
+            "isView": true
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": 4,
+    "nom": "Koba Centre 1",
+    "code": "GN-B-0202040101",
+    "longitude": null,
+    "latitude": null,
+    "description": "",
+    "isView": true,
+    "quartier": {
+      "id": 115,
+      "nom": "Koba centre",
+      "code": "GN-B-02020401",
+      "longitude": null,
+      "latitude": null,
+      "description": "",
+      "isView": true,
+      "commune": {
+        "id": 19,
+        "nom": "Koba-Tatema",
+        "code": "GN-B-020204",
+        "longitude": null,
+        "latitude": null,
+        "description": "Sous préfecture de Koba-Tatema",
+        "isView": true,
+        "prefecture": {
+          "id": 3,
+          "nom": "Boffa",
+          "code": "GN-B-0202",
+          "longitude": null,
+          "latitude": null,
+          "description": "Préfecture de Boffa ",
+          "isView": true,
+          "region": {
+            "id": 2,
+            "nom": "Boké",
+            "code": "GN-B-02",
+            "longitude": null,
+            "latitude": null,
+            "description": "Région de Boké",
+            "isView": true
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": 5,
+    "nom": "Sannou Centre 1",
+    "code": "GN-L-0701120101",
+    "longitude": null,
+    "latitude": null,
+    "description": "",
+    "isView": true,
+    "quartier": {
+      "id": 124,
+      "nom": "Sannou centre",
+      "code": "GN-L-07011201",
+      "longitude": null,
+      "latitude": null,
+      "description": "",
+      "isView": true,
+      "commune": {
+        "id": 232,
+        "nom": "Sannou",
+        "code": "GN-L-070112",
+        "longitude": null,
+        "latitude": null,
+        "description": "Sous préfecture de Sannou",
+        "isView": true,
+        "prefecture": {
+          "id": 24,
+          "nom": "Labé",
+          "code": "GN-L-0701",
+          "longitude": null,
+          "latitude": null,
+          "description": "Préfecture de Labé",
+          "isView": true,
+          "region": {
+            "id": 7,
+            "nom": "Labé",
+            "code": "GN-L-07",
+            "longitude": null,
+            "latitude": null,
+            "description": "Région de Labé",
+            "isView": true
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": 6,
+    "nom": "Belle-vue 1",
+    "code": "GN-C-0101020301",
+    "longitude": null,
+    "latitude": null,
+    "description": "",
+    "isView": true,
+    "quartier": {
+      "id": 28,
+      "nom": "Belle-vue-marché",
+      "code": "GN-C-01010203",
+      "longitude": null,
+      "latitude": null,
+      "description": "",
+      "isView": true,
+      "commune": {
+        "id": 2,
+        "nom": "Dixinn",
+        "code": "GN-C-010102",
+        "longitude": null,
+        "latitude": null,
+        "description": "Commune de Dixinn",
+        "isView": true,
+        "prefecture": {
+          "id": 1,
+          "nom": "Conakry",
+          "code": "GN-C-0101",
+          "longitude": null,
+          "latitude": null,
+          "description": "Ville de Conakry",
+          "isView": true,
+          "region": {
+            "id": 1,
+            "nom": "Conakry",
+            "code": "GN-C-01",
+            "longitude": null,
+            "latitude": null,
+            "description": "Gouvernorat de Conakry",
+            "isView": true
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": 7,
+    "nom": "Bambeto Centre",
+    "code": "GN-C-0101040201",
+    "longitude": null,
+    "latitude": null,
+    "description": "",
+    "isView": true,
+    "quartier": {
+      "id": 18,
+      "nom": "Bambéto",
+      "code": "GN-C-01010402",
+      "longitude": null,
+      "latitude": null,
+      "description": "",
+      "isView": true,
+      "commune": {
+        "id": 4,
+        "nom": "Ratoma",
+        "code": "GN-C-010104",
+        "longitude": null,
+        "latitude": null,
+        "description": "Commune de Ratoma",
+        "isView": true,
+        "prefecture": {
+          "id": 1,
+          "nom": "Conakry",
+          "code": "GN-C-0101",
+          "longitude": null,
+          "latitude": null,
+          "description": "Ville de Conakry",
+          "isView": true,
+          "region": {
+            "id": 1,
+            "nom": "Conakry",
+            "code": "GN-C-01",
+            "longitude": null,
+            "latitude": null,
+            "description": "Gouvernorat de Conakry",
+            "isView": true
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": 8,
+    "nom": "Matoto 1",
+    "code": "GN-C-0101050301",
+    "longitude": null,
+    "latitude": null,
+    "description": "",
+    "isView": true,
+    "quartier": {
+      "id": 82,
+      "nom": "Camp Alpha Yaya Diallo",
+      "code": "GN-C-01010503",
+      "longitude": null,
+      "latitude": null,
+      "description": "",
+      "isView": true,
+      "commune": {
+        "id": 5,
+        "nom": "Matoto",
+        "code": "GN-C-010105",
+        "longitude": null,
+        "latitude": null,
+        "description": "Commune de Matoto",
+        "isView": true,
+        "prefecture": {
+          "id": 1,
+          "nom": "Conakry",
+          "code": "GN-C-0101",
+          "longitude": null,
+          "latitude": null,
+          "description": "Ville de Conakry",
+          "isView": true,
+          "region": {
+            "id": 1,
+            "nom": "Conakry",
+            "code": "GN-C-01",
+            "longitude": null,
+            "latitude": null,
+            "description": "Gouvernorat de Conakry",
+            "isView": true
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": 9,
+    "nom": "Coronthie 1",
+    "code": "GN-C-0101010301",
+    "longitude": null,
+    "latitude": null,
+    "description": "",
+    "isView": true,
+    "quartier": {
+      "id": 3,
+      "nom": "Coronthie",
+      "code": "GN-C-01010103",
+      "longitude": null,
+      "latitude": null,
+      "description": "Quartier de Coronthie",
+      "isView": true,
+      "commune": {
+        "id": 1,
+        "nom": "Kaloum",
+        "code": "GN-C-010101",
+        "longitude": null,
+        "latitude": null,
+        "description": "Commune de Kaloum",
+        "isView": true,
+        "prefecture": {
+          "id": 1,
+          "nom": "Conakry",
+          "code": "GN-C-0101",
+          "longitude": null,
+          "latitude": null,
+          "description": "Ville de Conakry",
+          "isView": true,
+          "region": {
+            "id": 1,
+            "nom": "Conakry",
+            "code": "GN-C-01",
+            "longitude": null,
+            "latitude": null,
+            "description": "Gouvernorat de Conakry",
+            "isView": true
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": 10,
+    "nom": "Dongora 1",
+    "code": "GN-L-0701010101",
+    "longitude": null,
+    "latitude": null,
+    "description": "",
+    "isView": true,
+    "quartier": {
+      "id": 128,
+      "nom": "Dongora",
+      "code": "GN-L-07010101",
+      "longitude": null,
+      "latitude": null,
+      "description": "",
+      "isView": true,
+      "commune": {
+        "id": 221,
+        "nom": "Labé Centre",
+        "code": "GN-L-070101",
+        "longitude": null,
+        "latitude": null,
+        "description": "Sous préfecture de Labé Centre",
+        "isView": true,
+        "prefecture": {
+          "id": 24,
+          "nom": "Labé",
+          "code": "GN-L-0701",
+          "longitude": null,
+          "latitude": null,
+          "description": "Préfecture de Labé",
+          "isView": true,
+          "region": {
+            "id": 7,
+            "nom": "Labé",
+            "code": "GN-L-07",
+            "longitude": null,
+            "latitude": null,
+            "description": "Région de Labé",
+            "isView": true
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": 11,
+    "nom": "Tombo Secteur 1",
+    "code": "GN-C-0101010801",
+    "longitude": null,
+    "latitude": null,
+    "description": "",
+    "isView": true,
+    "quartier": {
+      "id": 8,
+      "nom": "Tombo",
+      "code": "GN-C-01010108",
+      "longitude": null,
+      "latitude": null,
+      "description": "Quartier de Tombo",
+      "isView": true,
+      "commune": {
+        "id": 1,
+        "nom": "Kaloum",
+        "code": "GN-C-010101",
+        "longitude": null,
+        "latitude": null,
+        "description": "Commune de Kaloum",
+        "isView": true,
+        "prefecture": {
+          "id": 1,
+          "nom": "Conakry",
+          "code": "GN-C-0101",
+          "longitude": null,
+          "latitude": null,
+          "description": "Ville de Conakry",
+          "isView": true,
+          "region": {
+            "id": 1,
+            "nom": "Conakry",
+            "code": "GN-C-01",
+            "longitude": null,
+            "latitude": null,
+            "description": "Gouvernorat de Conakry",
+            "isView": true
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": 12,
+    "nom": "Secteur 1",
+    "code": "GN-D-0302010101",
+    "longitude": null,
+    "latitude": null,
+    "description": "",
+    "isView": true,
+    "quartier": {
+      "id": 143,
+      "nom": "Coyah Centre",
+      "code": "GN-D-03020101",
+      "longitude": null,
+      "latitude": null,
+      "description": "",
+      "isView": true,
+      "commune": {
+        "id": 53,
+        "nom": "Coyah",
+        "code": "GN-D-030201",
+        "longitude": null,
+        "latitude": null,
+        "description": "Sous préfecture de Coyah",
+        "isView": true,
+        "prefecture": {
+          "id": 8,
+          "nom": "Coyah",
+          "code": "GN-D-0302",
+          "longitude": null,
+          "latitude": null,
+          "description": "Préfecture de Coyah ",
+          "isView": true,
+          "region": {
+            "id": 3,
+            "nom": "Kindia",
+            "code": "GN-D-03",
+            "longitude": null,
+            "latitude": null,
+            "description": "Région de Kindia",
+            "isView": true
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": 13,
+    "nom": "Secteur 1",
+    "code": "GN-C-0101030201",
+    "longitude": null,
+    "latitude": null,
+    "description": "",
+    "isView": true,
+    "quartier": {
+      "id": 44,
+      "nom": " Bonfi",
+      "code": "GN-C-01010302",
+      "longitude": null,
+      "latitude": null,
+      "description": "",
+      "isView": true,
+      "commune": {
+        "id": 3,
+        "nom": "Matam",
+        "code": "GN-C-010103",
+        "longitude": null,
+        "latitude": null,
+        "description": "Commune de Matam",
+        "isView": true,
+        "prefecture": {
+          "id": 1,
+          "nom": "Conakry",
+          "code": "GN-C-0101",
+          "longitude": null,
+          "latitude": null,
+          "description": "Ville de Conakry",
+          "isView": true,
+          "region": {
+            "id": 1,
+            "nom": "Conakry",
+            "code": "GN-C-01",
+            "longitude": null,
+            "latitude": null,
+            "description": "Gouvernorat de Conakry",
+            "isView": true
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": 14,
+    "nom": "Secteur 1",
+    "code": "GN-L-0704010101",
+    "longitude": null,
+    "latitude": null,
+    "description": "",
+    "isView": true,
+    "quartier": {
+      "id": 144,
+      "nom": "Mali centre",
+      "code": "GN-L-07040101",
+      "longitude": null,
+      "latitude": null,
+      "description": "",
+      "isView": true,
+      "commune": {
+        "id": 251,
+        "nom": "Mali Centre",
+        "code": "GN-L-070401",
+        "longitude": null,
+        "latitude": null,
+        "description": "Sous préfecture de Mali Centre ",
+        "isView": true,
+        "prefecture": {
+          "id": 27,
+          "nom": "Mali",
+          "code": "GN-L-0704",
+          "longitude": null,
+          "latitude": null,
+          "description": "Préfecture de Mali",
+          "isView": true,
+          "region": {
+            "id": 7,
+            "nom": "Labé",
+            "code": "GN-L-07",
+            "longitude": null,
+            "latitude": null,
+            "description": "Région de Labé",
+            "isView": true
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": 15,
+    "nom": "Secteur 1",
+    "code": "GN-L-0702010101",
+    "longitude": null,
+    "latitude": null,
+    "description": "",
+    "isView": true,
+    "quartier": {
+      "id": 145,
+      "nom": "Koubia centre",
+      "code": "GN-L-07020101",
+      "longitude": null,
+      "latitude": null,
+      "description": "",
+      "isView": true,
+      "commune": {
+        "id": 235,
+        "nom": "Koubia Centre",
+        "code": "GN-L-070201",
+        "longitude": null,
+        "latitude": null,
+        "description": "Sous préfecture de Koubia Centre",
+        "isView": true,
+        "prefecture": {
+          "id": 25,
+          "nom": "Koubia",
+          "code": "GN-L-0702",
+          "longitude": null,
+          "latitude": null,
+          "description": "Préfecture de Koubia",
+          "isView": true,
+          "region": {
+            "id": 7,
+            "nom": "Labé",
+            "code": "GN-L-07",
+            "longitude": null,
+            "latitude": null,
+            "description": "Région de Labé",
+            "isView": true
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": 16,
+    "nom": "Secteur 1",
+    "code": "GN-D-0301010101",
+    "longitude": null,
+    "latitude": null,
+    "description": "",
+    "isView": true,
+    "quartier": {
+      "id": 112,
+      "nom": "Kindia centre",
+      "code": "GN-D-03010101",
+      "longitude": null,
+      "latitude": null,
+      "description": "",
+      "isView": true,
+      "commune": {
+        "id": 43,
+        "nom": "Kindia Centre",
+        "code": "GN-D-030101",
+        "longitude": null,
+        "latitude": null,
+        "description": "Sous préfecture de Kindia Centre",
+        "isView": true,
+        "prefecture": {
+          "id": 7,
+          "nom": "Kindia",
+          "code": "GN-D-0301",
+          "longitude": null,
+          "latitude": null,
+          "description": "Préfecture de Kindia ",
+          "isView": true,
+          "region": {
+            "id": 3,
+            "nom": "Kindia",
+            "code": "GN-D-03",
+            "longitude": null,
+            "latitude": null,
+            "description": "Région de Kindia",
+            "isView": true
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": 17,
+    "nom": "Secteur 1",
+    "code": "GN-D-0301020101",
+    "longitude": null,
+    "latitude": null,
+    "description": "",
+    "isView": true,
+    "quartier": {
+      "id": 111,
+      "nom": "Bangouyah",
+      "code": "GN-D-03010201",
+      "longitude": null,
+      "latitude": null,
+      "description": "",
+      "isView": true,
+      "commune": {
+        "id": 44,
+        "nom": "Bangouyah",
+        "code": "GN-D-030102",
+        "longitude": null,
+        "latitude": null,
+        "description": "Sous préfecture de Bangouyah",
+        "isView": true,
+        "prefecture": {
+          "id": 7,
+          "nom": "Kindia",
+          "code": "GN-D-0301",
+          "longitude": null,
+          "latitude": null,
+          "description": "Préfecture de Kindia ",
+          "isView": true,
+          "region": {
+            "id": 3,
+            "nom": "Kindia",
+            "code": "GN-D-03",
+            "longitude": null,
+            "latitude": null,
+            "description": "Région de Kindia",
+            "isView": true
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": 18,
+    "nom": "secteur 1",
+    "code": "GN-D-0301090301",
+    "longitude": null,
+    "latitude": null,
+    "description": "",
+    "isView": true,
+    "quartier": {
+      "id": 147,
+      "nom": "Dantoumaya",
+      "code": "GN-D-03010903",
+      "longitude": null,
+      "latitude": null,
+      "description": "",
+      "isView": true,
+      "commune": {
+        "id": 51,
+        "nom": "Samayah",
+        "code": "GN-D-030109",
+        "longitude": null,
+        "latitude": null,
+        "description": "Sous préfecture de Samayah",
+        "isView": true,
+        "prefecture": {
+          "id": 7,
+          "nom": "Kindia",
+          "code": "GN-D-0301",
+          "longitude": null,
+          "latitude": null,
+          "description": "Préfecture de Kindia ",
+          "isView": true,
+          "region": {
+            "id": 3,
+            "nom": "Kindia",
+            "code": "GN-D-03",
+            "longitude": null,
+            "latitude": null,
+            "description": "Région de Kindia",
+            "isView": true
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": 19,
+    "nom": "secteur 1",
+    "code": "GN-L-0705010101",
+    "longitude": null,
+    "latitude": null,
+    "description": "",
+    "isView": true,
+    "quartier": {
+      "id": 126,
+      "nom": "tougue centre",
+      "code": "GN-L-07050101",
+      "longitude": null,
+      "latitude": null,
+      "description": "",
+      "isView": true,
+      "commune": {
+        "id": 264,
+        "nom": "Tougué Centre",
+        "code": "GN-L-070501",
+        "longitude": null,
+        "latitude": null,
+        "description": "Sous préfecture de  Tougué Centre",
+        "isView": true,
+        "prefecture": {
+          "id": 28,
+          "nom": "Tougué",
+          "code": "GN-L-0705",
+          "longitude": null,
+          "latitude": null,
+          "description": "Préfecture de Tougué",
+          "isView": true,
+          "region": {
+            "id": 7,
+            "nom": "Labé",
+            "code": "GN-L-07",
+            "longitude": null,
+            "latitude": null,
+            "description": "Région de Labé",
+            "isView": true
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": 20,
+    "nom": "Secteur 1",
+    "code": "GN-L-0704030101",
+    "longitude": null,
+    "latitude": null,
+    "description": "",
+    "isView": true,
+    "quartier": {
+      "id": 148,
+      "nom": "Donghol Centre",
+      "code": "GN-L-07040301",
+      "longitude": null,
+      "latitude": null,
+      "description": "",
+      "isView": true,
+      "commune": {
+        "id": 253,
+        "nom": "Donghol Sigon",
+        "code": "GN-L-070403",
+        "longitude": null,
+        "latitude": null,
+        "description": "Sous préfecture de Donghol Sigon ",
+        "isView": true,
+        "prefecture": {
+          "id": 27,
+          "nom": "Mali",
+          "code": "GN-L-0704",
+          "longitude": null,
+          "latitude": null,
+          "description": "Préfecture de Mali",
+          "isView": true,
+          "region": {
+            "id": 7,
+            "nom": "Labé",
+            "code": "GN-L-07",
+            "longitude": null,
+            "latitude": null,
+            "description": "Région de Labé",
+            "isView": true
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": 21,
+    "nom": "Secteur 1",
+    "code": "GN-L-0703030101",
+    "longitude": null,
+    "latitude": null,
+    "description": "",
+    "isView": true,
+    "quartier": {
+      "id": 131,
+      "nom": "Djountou centre",
+      "code": "GN-L-07030301",
+      "longitude": null,
+      "latitude": null,
+      "description": "",
+      "isView": true,
+      "commune": {
+        "id": 243,
+        "nom": "Djountou",
+        "code": "GN-L-070303",
+        "longitude": null,
+        "latitude": null,
+        "description": "Sous préfecture de Djountou",
+        "isView": true,
+        "prefecture": {
+          "id": 26,
+          "nom": "Lélouma",
+          "code": "GN-L-0703",
+          "longitude": null,
+          "latitude": null,
+          "description": "Préfecture de Lélouma",
+          "isView": true,
+          "region": {
+            "id": 7,
+            "nom": "Labé",
+            "code": "GN-L-07",
+            "longitude": null,
+            "latitude": null,
+            "description": "Région de Labé",
+            "isView": true
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": 22,
+    "nom": "Secteur 1",
+    "code": "GN-L-0703010101",
+    "longitude": null,
+    "latitude": null,
+    "description": "",
+    "isView": true,
+    "quartier": {
+      "id": 149,
+      "nom": "Lelouma centre",
+      "code": "GN-L-07030101",
+      "longitude": null,
+      "latitude": null,
+      "description": "",
+      "isView": true,
+      "commune": {
+        "id": 241,
+        "nom": "Lélouma Centre",
+        "code": "GN-L-070301",
+        "longitude": null,
+        "latitude": null,
+        "description": "Sous préfecture de Lélouma Centre",
+        "isView": true,
+        "prefecture": {
+          "id": 26,
+          "nom": "Lélouma",
+          "code": "GN-L-0703",
+          "longitude": null,
+          "latitude": null,
+          "description": "Préfecture de Lélouma",
+          "isView": true,
+          "region": {
+            "id": 7,
+            "nom": "Labé",
+            "code": "GN-L-07",
+            "longitude": null,
+            "latitude": null,
+            "description": "Région de Labé",
+            "isView": true
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": 23,
+    "nom": "Secteur 1",
+    "code": "GN-L-0702020101",
+    "longitude": null,
+    "latitude": null,
+    "description": "",
+    "isView": true,
+    "quartier": {
+      "id": 150,
+      "nom": "Fafaya centre",
+      "code": "GN-L-07020201",
+      "longitude": null,
+      "latitude": null,
+      "description": "",
+      "isView": true,
+      "commune": {
+        "id": 236,
+        "nom": "Fafaya",
+        "code": "GN-L-070202",
+        "longitude": null,
+        "latitude": null,
+        "description": "Sous préfecture de Fafaya",
+        "isView": true,
+        "prefecture": {
+          "id": 25,
+          "nom": "Koubia",
+          "code": "GN-L-0702",
+          "longitude": null,
+          "latitude": null,
+          "description": "Préfecture de Koubia",
+          "isView": true,
+          "region": {
+            "id": 7,
+            "nom": "Labé",
+            "code": "GN-L-07",
+            "longitude": null,
+            "latitude": null,
+            "description": "Région de Labé",
+            "isView": true
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": 24,
+    "nom": "Secteur 1",
+    "code": "GN-L-0705030101",
+    "longitude": null,
+    "latitude": null,
+    "description": "",
+    "isView": true,
+    "quartier": {
+      "id": 151,
+      "nom": "Fello Kounda 1",
+      "code": "GN-L-07050301",
+      "longitude": null,
+      "latitude": null,
+      "description": "",
+      "isView": true,
+      "commune": {
+        "id": 266,
+        "nom": "Fello Koundoua",
+        "code": "GN-L-070503",
+        "longitude": null,
+        "latitude": null,
+        "description": "Sous préfecture de Fello Koundoua",
+        "isView": true,
+        "prefecture": {
+          "id": 28,
+          "nom": "Tougué",
+          "code": "GN-L-0705",
+          "longitude": null,
+          "latitude": null,
+          "description": "Préfecture de Tougué",
+          "isView": true,
+          "region": {
+            "id": 7,
+            "nom": "Labé",
+            "code": "GN-L-07",
+            "longitude": null,
+            "latitude": null,
+            "description": "Région de Labé",
+            "isView": true
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": 25,
+    "nom": "Secteur 1",
+    "code": "GN-L-0701030101",
+    "longitude": null,
+    "latitude": null,
+    "description": "",
+    "isView": true,
+    "quartier": {
+      "id": 127,
+      "nom": "Daralabe centre",
+      "code": "GN-L-07010301",
+      "longitude": null,
+      "latitude": null,
+      "description": "",
+      "isView": true,
+      "commune": {
+        "id": 223,
+        "nom": "Daralabe",
+        "code": "GN-L-070103",
+        "longitude": null,
+        "latitude": null,
+        "description": "Sous préfecture de Daralabe",
+        "isView": true,
+        "prefecture": {
+          "id": 24,
+          "nom": "Labé",
+          "code": "GN-L-0701",
+          "longitude": null,
+          "latitude": null,
+          "description": "Préfecture de Labé",
+          "isView": true,
+          "region": {
+            "id": 7,
+            "nom": "Labé",
+            "code": "GN-L-07",
+            "longitude": null,
+            "latitude": null,
+            "description": "Région de Labé",
+            "isView": true
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": 26,
+    "nom": "Damankanyah 1",
+    "code": "GN-D-0301030101",
+    "longitude": null,
+    "latitude": null,
+    "description": "",
+    "isView": true,
+    "quartier": {
+      "id": 154,
+      "nom": "Secteur 1",
+      "code": "GN-D-03010301",
+      "longitude": null,
+      "latitude": null,
+      "description": "",
+      "isView": true,
+      "commune": {
+        "id": 45,
+        "nom": "Damankanyah",
+        "code": "GN-D-030103",
+        "longitude": null,
+        "latitude": null,
+        "description": "Sous préfecture de Damankanyah",
+        "isView": true,
+        "prefecture": {
+          "id": 7,
+          "nom": "Kindia",
+          "code": "GN-D-0301",
+          "longitude": null,
+          "latitude": null,
+          "description": "Préfecture de Kindia ",
+          "isView": true,
+          "region": {
+            "id": 3,
+            "nom": "Kindia",
+            "code": "GN-D-03",
+            "longitude": null,
+            "latitude": null,
+            "description": "Région de Kindia",
+            "isView": true
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": 27,
+    "nom": "Centre",
+    "code": "GN-M-0402010101",
+    "longitude": null,
+    "latitude": null,
+    "description": "",
+    "isView": true,
+    "quartier": {
+      "id": 155,
+      "nom": "Diaguisa",
+      "code": "GN-M-04020101",
+      "longitude": null,
+      "latitude": null,
+      "description": "",
+      "isView": true,
+      "commune": {
+        "id": 101,
+        "nom": "Dalaba Centre",
+        "code": "GN-M-040201",
+        "longitude": null,
+        "latitude": null,
+        "description": "Sous préfecture de Dalaba Centre",
+        "isView": true,
+        "prefecture": {
+          "id": 13,
+          "nom": "Dalaba",
+          "code": "GN-M-0402",
+          "longitude": null,
+          "latitude": null,
+          "description": "Préfecture de Dalaba",
+          "isView": true,
+          "region": {
+            "id": 4,
+            "nom": "Mamou",
+            "code": "GN-M-04",
+            "longitude": null,
+            "latitude": null,
+            "description": "Région de Mamou",
+            "isView": true
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": 28,
+    "nom": "Mosquée",
+    "code": "GN-C-0101010201",
+    "longitude": null,
+    "latitude": null,
+    "description": "",
+    "isView": true,
+    "quartier": {
+      "id": 2,
+      "nom": "Almamya",
+      "code": "GN-C-01010102",
+      "longitude": null,
+      "latitude": null,
+      "description": "Quartier de Almamya",
+      "isView": true,
+      "commune": {
+        "id": 1,
+        "nom": "Kaloum",
+        "code": "GN-C-010101",
+        "longitude": null,
+        "latitude": null,
+        "description": "Commune de Kaloum",
+        "isView": true,
+        "prefecture": {
+          "id": 1,
+          "nom": "Conakry",
+          "code": "GN-C-0101",
+          "longitude": null,
+          "latitude": null,
+          "description": "Ville de Conakry",
+          "isView": true,
+          "region": {
+            "id": 1,
+            "nom": "Conakry",
+            "code": "GN-C-01",
+            "longitude": null,
+            "latitude": null,
+            "description": "Gouvernorat de Conakry",
+            "isView": true
+          }
+        }
+      }
+    }
+  }
+]

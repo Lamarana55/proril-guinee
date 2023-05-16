@@ -1,0 +1,96 @@
+<div class="card">
+  <div class="card-header bg-default">
+    <div class="row">
+      <div class="col-sm-8">
+        <h2 class="card-title text-white">
+          <i class="nc-icon nc-single-02"></i>
+          Liste des roles
+        </h2>
+      </div>
+      <div class="col-sm-4 text-right mt-2">
+        <button *ngIf="permissions.can_add" mat-raised-button routerLink="edit" class="mr-1" color="info">
+          <mat-icon>add</mat-icon>
+        </button>
+        <button mat-raised-button color="primary" (click)="onRefresh()">
+          <mat-icon>refresh</mat-icon>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="card-body">
+    <!-- Spinner -->
+    <app-spinner [filterBy]="roleUrl"></app-spinner>
+
+    <div *ngIf="(roles$ | async) as roles">
+      <div *ngIf="roles.length > 0; else noData">
+        <div class="row">
+          <div class="col-md-2 col-sm-6 mb-3">
+            <label class="col-form-label" for="taille">Taille</label>
+            <select class="custom-select" id="taille" name="taille" [(ngModel)]="pageSize">
+              <option value="5">5</option>
+              <option value="10">10</option>
+              <option value="50">50</option>
+              <option value="100">100</option>
+              <option [value]="roles.length">Tout</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="table-responsive mb-2">
+          <table class="table table-striped table-bordered">
+            <thead class="text-center">
+              <th>#</th><th>ROLES</th><th>DESCRIPTION</th><th style="width: 20px;">PERMISSIONS</th>
+              <th *ngIf="permissions.can_edit || permissions.can_delete">OPTIONS</th>
+            </thead>
+            <tbody class="text-center">
+              <tr *ngFor="let role of roles | slice : (page-1) * pageSize : (page-1) * pageSize + pageSize; index as i ">
+                <th scope="row">{{ (((page-1)*pageSize)+1)+i }}</th>
+                <td>{{ role.nom }}</td>
+                <td>{{ role.description }}</td>
+                <td>
+                  <button mat-mini-fab color="info" container="body"  [ngbPopover]="permissionsMessage" placement="left" popoverTitle="Permissions">
+                    <mat-icon>visibility</mat-icon>
+                  </button>
+                  <ng-template #permissionsMessage>
+                    <div class="permissions">
+                      <ul class="list-group list-group flush">
+                        <li class="list-group-item" *ngFor="let perm of role.permissions">
+                          {{ perm.libelle }}
+                        </li>
+                      </ul>
+                    </div>
+                  </ng-template>
+                </td>
+                <td *ngIf="permissions.can_edit || permissions.can_delete">
+                  <button *ngIf="permissions.can_edit" mat-mini-fab color="info" [routerLink]="['edit', {id: role.id}]">
+                    <mat-icon>edit</mat-icon>
+                  </button>
+                  <button *ngIf="permissions.can_delete" mat-mini-fab color="accent" (click)="onDelete(role.id)">
+                    <mat-icon>delete</mat-icon>
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <ngb-pagination
+        [(page)]="page"
+        [pageSize]="pageSize"
+        [collectionSize]="roles.length"
+        [rotate]="true"
+        [ellipses]="false"
+        [boundaryLinks]="true"
+        [maxSize]="5"
+        class="d-flex justify-content-center"></ngb-pagination>
+
+      </div>
+
+      <ng-template #noData>
+        <div class="text-center text-info">
+          Aucun role trouvé !!!
+        </div>
+      </ng-template>
+    </div>
+  </div>
+</div>

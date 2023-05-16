@@ -1,0 +1,45 @@
+<div class="card">
+    <div class="card-header bg-default">
+      <div class="row">
+        <div class="col-sm-12 form-inline">
+          <button type="button" mat-mini-fab color="info" [routerLink]="returnUrl">
+            <mat-icon>reply</mat-icon>
+          </button>
+          <h2 class="card-title ml-1 text-white">
+            Type d'appui - {{ isNew ? 'Enregistrement' : 'Modification' }}
+          </h2>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="row">
+        <div class="col-md-8 offset-md-2">
+            <form [formGroup]="typeAppuiForm">
+                <div class="row">
+                  <div class="col-12">
+                    <mat-form-field>
+                      <mat-label>Type d'appui</mat-label>
+                      <input type="text" matInput formControlName="libelle">
+                      <mat-error>Le type d'appui est obligatoire</mat-error>
+                    </mat-form-field>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-12">
+                    <mat-form-field>
+                      <mat-label>Description</mat-label>
+                      <textarea matInput formControlName="description"></textarea>
+                    </mat-form-field>
+                  </div>
+                </div>
+            
+                <div class="text-center">
+                  <button type="button" [class.spinner]="isLoading" mat-raised-button color="primary" [disabled]="typeAppuiForm.invalid || isLoading" (click)="onSubmit()">
+                    Enregistrer
+                  </button>
+                </div>
+              </form>
+        </div>
+      </div>
+    </div>
+</div>

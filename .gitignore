@@ -1,0 +1,9 @@
+.vscode
+idea/*
+!.idea
+node_modules
+yarn.lock
+package-lock.json
+./.data/db
+# volumes:
+backend/.data/db/

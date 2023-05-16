@@ -1,0 +1,24 @@
+[
+  {
+    "id": 86,
+    "libelle": "MUTILATION GENITALE ",
+    "rapport": true
+  },
+  {
+    "id": 87,
+    "libelle": "VIOL",
+    "rapport": true
+  },
+  {
+    "id": 88,
+    "libelle": "MARIAGE D ENFANT",
+    "rapport": true
+  },
+  {
+    "id": 89,
+    "libelle": "AGRESSION",
+    "description": "",
+    "statut": "Activated",
+    "rapport": false
+  }
+]
