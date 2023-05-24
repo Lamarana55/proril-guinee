@@ -24,7 +24,9 @@ interface UserRepository : JpaRepository<User, Long> {
     fun findByStatut(status: Statut): List<User>
     fun findByUsernameOrEmail(username: String, email: String): Optional<User>
     fun findByUsernameAndStatut(username: String, statut: Statut): User?
+    fun findByTelephoneAndStatut(telephone: String, statut: Statut): User?
     fun findByIsDelete(isDetete: Delete): List<User>
+    fun findByTelephoneAndIsDelete(telephone: String, isDelete: Delete): User?
     fun findByUsernameAndIsDelete(username: String, isDelete: Delete): User?
     fun findByCode(code: String): Optional<User>
 

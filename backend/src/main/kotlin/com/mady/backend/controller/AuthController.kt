@@ -3,8 +3,6 @@ package com.mady.backend.controller
 
 import com.mady.backend.repository.UserRepository
 import com.mady.backend.security.JwtProvider
-import com.mady.backend.services.ApiService
-import com.mady.backend.services.OrangeSMS
 import com.mady.backend.services.SendMailService
 import com.mady.backend.services.UserConnected
 import com.mady.backend.utils.*
@@ -47,12 +45,6 @@ class AuthController {
     @Autowired
     lateinit var userConnected: UserConnected
 
-    @Autowired
-    lateinit var apiService: ApiService
-
-    @Autowired
-    lateinit var orangeSMS: OrangeSMS
-
     @Value("\${ws.app.frontend.url}")
     private val link: String? = null
 
@@ -62,21 +54,22 @@ class AuthController {
     @PostMapping("/signin")
     fun login(@RequestBody loginInfo: LoginInfo): ResponseEntity<Any> {
 
-        userRepository.findByUsernameAndIsDelete(loginInfo.username, Delete.No)
-                ?: return  ResponseEntity(ResponseException("le compte ${loginInfo.username} n'existe pas dans base veillez contacter l'administrateur "), HttpStatus.FORBIDDEN)
+        userRepository.findByTelephoneAndIsDelete(loginInfo.telephone, Delete.No)
+                ?: return  ResponseEntity(ResponseException("le compte ${loginInfo.telephone} n'existe pas dans la base, veillez contacter l'administrateur "), HttpStatus.FORBIDDEN)
 
-        userRepository.findByUsernameAndStatut(loginInfo.username, Statut.Activated)
-                ?: return ResponseEntity(ResponseException("le compte ${loginInfo.username} est bloqué veillez contacter l'administrateur"), HttpStatus.FORBIDDEN)
+        val user = userRepository.findByTelephoneAndStatut(loginInfo.telephone, Statut.Activated)
+                ?: return ResponseEntity(ResponseException("le compte ${loginInfo.telephone} est bloqué, veillez contacter l'administrateur"), HttpStatus.FORBIDDEN)
+
 
         val authentication: Authentication = authenticationManager.authenticate(
-                UsernamePasswordAuthenticationToken(loginInfo.username, loginInfo.password))
+                UsernamePasswordAuthenticationToken(user.username, loginInfo.password))
 
         SecurityContextHolder.getContext().authentication = authentication
 
         val jwt = jwtProvider.generateJwtToken(authentication)
         val userDetails = authentication. principal as UserDetails
 
-        return ResponseEntity.ok().body(JwtResponse(loginInfo.username, "success", jwt, userDetails.authorities))
+        return ResponseEntity.ok().body(JwtResponse(user.username, "success", jwt, userDetails.authorities))
 
     }
 
@@ -113,6 +106,6 @@ class AuthController {
 }
 
 data class ResetPassword(val token: String, val password: String)
-data class LoginInfo(val username: String, val password: String)
+data class LoginInfo(val telephone: String, val password: String)
 data class JwtResponse(val username: String, val status: String, val token: String? = null, val authorities: Collection<GrantedAuthority>? = null)
 

@@ -1,0 +1,44 @@
+version: "3.3"
+
+services:
+  postgres:
+    image: postgres:14.5-alpine
+    container_name: postgres
+    ports:
+      - 5432:5432
+    volumes:
+      - ./backend/.data/db:/var/lib/postgresql/data
+    environment:
+      POSTGRES_USER: proril
+      POSTGRES_PASSWORD: proril
+      POSTGRES_DB: proril
+    networks:
+      - app
+  api:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: api
+    depends_on:
+      - postgres
+    links:
+      - postgres
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://postgres:5432/proril
+      - SPRING_DATASOURCE_USERNAME=proril
+      - SPRING_DATASOURCE_PASSWORD=proril
+      - SPRING_JPA_HIBERNATE_DDL_AUTO=update
+    command: mvn spring-boot:run
+    ports:
+      - 8081:8081
+    volumes:
+      - ./backend:/backend/
+    networks:
+      - app
+      
+networks:
+  app:
+    driver: bridge
+
+# volumes:
+  # postgres:

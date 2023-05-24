@@ -9,7 +9,9 @@ declare const $: any;
 @Component({
     moduleId: module.id,
     selector: 'login-cmp',
-    templateUrl: './login.component.html'
+    templateUrl: './login.component.html',
+    styleUrls: ["./login.component.css"],
+
 })
 
 export class LoginComponent implements OnInit, AfterViewInit, OnDestroy {
@@ -88,7 +90,7 @@ export class LoginComponent implements OnInit, AfterViewInit, OnDestroy {
 
     initForm() {
         this.loginForm = this.fb.group({
-          username: ['', [Validators.required, Validators.minLength(4)]],
+          telephone: ['', [Validators.required, Validators.minLength(4)]],
           password: ['', [Validators.required, Validators.minLength(4)]]
         })
     }
@@ -101,7 +103,7 @@ export class LoginComponent implements OnInit, AfterViewInit, OnDestroy {
             return;
         }
 
-        const request = this.loginForm.value as {username: string, password: string};
+        const request = this.loginForm.value as {telephone: string, password: string};
         this.isLoading = true;
         this.auth.login(request).subscribe(
             data => {

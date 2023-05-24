@@ -1,5 +1,5 @@
 import { PERMISSIONS } from 'app/config/app.data';
-import { AuthService } from 'app/mgf/auth/services/auth.service';
+import { AuthService } from 'app/project/auth/services/auth.service';
 import { Component, OnInit, AfterViewInit, AfterViewChecked, AfterContentInit } from '@angular/core';
 import { NgbModal, NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
 
@@ -26,24 +26,13 @@ export interface ChildrenItems {
 // Menu Items
 export const ROUTES: RouteInfo[] = [{
         path: '/dashboard',
-        title: 'Dashboard',
+        title: 'Tableau de bord',
         type: 'link',
         icontype: 'nc-icon nc-bank',
         permission: PERMISSIONS.CAN_VIEW_DASHBORD
-    }, {
-        path: '/gestion-cas',
-        title: 'Gestion des cas',
-        type: 'sub',
-        collapse: 'gestion-cas',
-        icontype: 'nc-icon nc-layout-11',
-        children: [
-            {path: 'alertes', title: 'Alertes', ab: 'A', permission: PERMISSIONS.CAN_VIEW_ALERT_MENU},
-            {path: 'cas', title: 'Cas', ab: 'C', permission: PERMISSIONS.CAN_VIEW_CAS_MENU},
-            {path: 'surveillances', title: 'Surveillance', ab: 'S', permission: PERMISSIONS.CAN_VIEW_SURVEILLANCE_MENU},
-            {path: 'statistiques', title: 'Statistiques', ab: 'ST', permission: PERMISSIONS.CAN_VIEW_STATISTIQUE_MENU},
-            {path: 'victimes', title: 'Survivant.es', ab: 'S', permission: PERMISSIONS.CAN_VIEW_VICTIME_MENU}
-        ]
-    },
+    }, 
+    
+    /*
     {
         path: "/articles",
         title: "Articles",
@@ -64,17 +53,18 @@ export const ROUTES: RouteInfo[] = [{
             permission: PERMISSIONS.CAN_VIEW_CATEGORIE_ARTICLE_MENU,
           },
         ],
-      }, {
+    }, */
+    {
         path: '/parametrages',
         title: 'Parametrages',
         type: 'sub',
         collapse: 'parametrages',
         icontype: 'nc-icon nc-settings', 
         children: [
-            {path: 'services', title: 'Services', ab: 'S', permission: PERMISSIONS.CAN_VIEW_QUESTION_MENU},
-            {path: 'type-cas', title: 'Type de Cas', ab: 'TC', permission: PERMISSIONS.CAN_VIEW_TYPE_CAS_MENU},
+            {path: 'categories', title: 'Categorie', ab: 'C', permission: PERMISSIONS.CAN_VIEW_CATEGORIE_MENU},
+            {path: 'groupements', title: 'Groupement', ab: 'G', permission: PERMISSIONS.CAN_VIEW_GROUPEMENT_MENU},
+            {path: 'marques', title: 'Marque Produit', ab: 'MP', permission: PERMISSIONS.CAN_VIEW_MARQUE_MENU},
             {path: 'partenaires', title: 'Partenaires', ab: 'P', permission: PERMISSIONS.CAN_VIEW_PARTENAIRE_MENU},
-            /* {path: 'type-appuis', title: 'Type d\'appui', ab: 'TA', permission: PERMISSIONS.CAN_VIEW_TYPE_APPUI_MENU} */
         ]
     }, {
         path: '/users',

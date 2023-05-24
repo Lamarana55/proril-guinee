@@ -1,0 +1,626 @@
+[
+  {
+    "id": 1,
+    "nom": "ROLE_ADMIN",
+    "description": "Role administrateur du système",
+    "permissions": [
+      {
+        "id": 1,
+        "libelle": "CAN_VIEW_DASHBOARD"
+      },
+      {
+        "id": 2,
+        "libelle": "CAN_VIEW_USER_MENU"
+      },
+      {
+        "id": 3,
+        "libelle": "CAN_VIEW_USER_INFO"
+      },
+      {
+        "id": 4,
+        "libelle": "CAN_VIEW_USER_LIST"
+      },
+      {
+        "id": 5,
+        "libelle": "CAN_ADD_USER"
+      },
+      {
+        "id": 6,
+        "libelle": "CAN_UPDATE_USER"
+      },
+      {
+        "id": 7,
+        "libelle": "CAN_DELETE_USER"
+      },
+      {
+        "id": 8,
+        "libelle": "CAN_VIEW_ROLE_MENU"
+      },
+      {
+        "id": 9,
+        "libelle": "CAN_VIEW_ROLE_LIST"
+      },
+      {
+        "id": 10,
+        "libelle": "CAN_VIEW_ROLE_INFO"
+      },
+      {
+        "id": 11,
+        "libelle": "CAN_ADD_ROLE"
+      },
+      {
+        "id": 12,
+        "libelle": "CAN_UPDATE_ROLE"
+      },
+      {
+        "id": 13,
+        "libelle": "CAN_DELETE_ROLE"
+      },
+      {
+        "id": 14,
+        "libelle": "CAN_VIEW_PRODUIT_MENU"
+      },
+      {
+        "id": 15,
+        "libelle": "CAN_VIEW_PRODUIT_LIST"
+      },
+      {
+        "id": 16,
+        "libelle": "CAN_VIEW_PRODUIT_INFO"
+      },
+      {
+        "id": 17,
+        "libelle": "CAN_ADD_PRODUIT"
+      },
+      {
+        "id": 18,
+        "libelle": "CAN_UPDATE_PRODUIT"
+      },
+      {
+        "id": 19,
+        "libelle": "CAN_DELETE_PRODUIT"
+      },
+      {
+        "id": 20,
+        "libelle": "CAN_VIEW_CATEGORIE_MENU"
+      },
+      {
+        "id": 21,
+        "libelle": "CAN_VIEW_CATEGORIE_LIST"
+      },
+      {
+        "id": 22,
+        "libelle": "CAN_VIEW_CATEGORIE_INFO"
+      },
+      {
+        "id": 23,
+        "libelle": "CAN_ADD_CATEGORIE"
+      },
+      {
+        "id": 24,
+        "libelle": "CAN_UPDATE_CATEGORIE"
+      },
+      {
+        "id": 25,
+        "libelle": "CAN_DELETE_CATEGORIE"
+      },
+      {
+        "id": 26,
+        "libelle": "CAN_VIEW_GROUPEMENT_MENU"
+      },
+      {
+        "id": 27,
+        "libelle": "CAN_VIEW_GROUPEMENT_LIST"
+      },
+      {
+        "id": 28,
+        "libelle": "CAN_VIEW_GROUPEMENT_INFO"
+      },
+      {
+        "id": 29,
+        "libelle": "CAN_ADD_GROUPEMENT"
+      },
+      {
+        "id": 30,
+        "libelle": "CAN_UPDATE_GROUPEMENT"
+      },
+      {
+        "id": 31,
+        "libelle": "CAN_DELETE_GROUPEMENT"
+      },
+      {
+        "id": 32,
+        "libelle": "CAN_VIEW_COMMANDE_MENU"
+      },
+      {
+        "id": 33,
+        "libelle": "CAN_VIEW_COMMANDE_LIST"
+      },
+      {
+        "id": 34,
+        "libelle": "CAN_VIEW_COMMANDE_INFO"
+      },
+      {
+        "id": 35,
+        "libelle": "CAN_ADD_COMMANDE"
+      },
+      {
+        "id": 36,
+        "libelle": "CAN_UPDATE_COMMANDE"
+      },
+      {
+        "id": 37,
+        "libelle": "CAN_DELETE_COMMANDE"
+      }
+
+    ]
+  },
+  {
+    "id": 2,
+    "nom": "ROLE_GROSSISTE",
+    "description": "Role grossiste",
+    "permissions": [
+      {
+        "id": 1,
+        "libelle": "CAN_VIEW_DASHBOARD"
+      },
+      {
+        "id": 2,
+        "libelle": "CAN_VIEW_USER_MENU"
+      },
+      {
+        "id": 3,
+        "libelle": "CAN_VIEW_USER_INFO"
+      },
+      {
+        "id": 4,
+        "libelle": "CAN_VIEW_USER_LIST"
+      },
+      {
+        "id": 5,
+        "libelle": "CAN_ADD_USER"
+      },
+      {
+        "id": 6,
+        "libelle": "CAN_UPDATE_USER"
+      },
+      {
+        "id": 7,
+        "libelle": "CAN_DELETE_USER"
+      },
+      {
+        "id": 8,
+        "libelle": "CAN_VIEW_ROLE_MENU"
+      },
+      {
+        "id": 9,
+        "libelle": "CAN_VIEW_ROLE_LIST"
+      },
+      {
+        "id": 10,
+        "libelle": "CAN_VIEW_ROLE_INFO"
+      },
+      {
+        "id": 11,
+        "libelle": "CAN_ADD_ROLE"
+      },
+      {
+        "id": 12,
+        "libelle": "CAN_UPDATE_ROLE"
+      },
+      {
+        "id": 13,
+        "libelle": "CAN_DELETE_ROLE"
+      },
+      {
+        "id": 14,
+        "libelle": "CAN_VIEW_PRODUIT_MENU"
+      },
+      {
+        "id": 15,
+        "libelle": "CAN_VIEW_PRODUIT_LIST"
+      },
+      {
+        "id": 16,
+        "libelle": "CAN_VIEW_PRODUIT_INFO"
+      },
+      {
+        "id": 17,
+        "libelle": "CAN_ADD_PRODUIT"
+      },
+      {
+        "id": 18,
+        "libelle": "CAN_UPDATE_PRODUIT"
+      },
+      {
+        "id": 19,
+        "libelle": "CAN_DELETE_PRODUIT"
+      },
+      {
+        "id": 20,
+        "libelle": "CAN_VIEW_CATEGORIE_MENU"
+      },
+      {
+        "id": 21,
+        "libelle": "CAN_VIEW_CATEGORIE_LIST"
+      },
+      {
+        "id": 22,
+        "libelle": "CAN_VIEW_CATEGORIE_INFO"
+      },
+      {
+        "id": 23,
+        "libelle": "CAN_ADD_CATEGORIE"
+      },
+      {
+        "id": 24,
+        "libelle": "CAN_UPDATE_CATEGORIE"
+      },
+      {
+        "id": 25,
+        "libelle": "CAN_DELETE_CATEGORIE"
+      },
+      {
+        "id": 26,
+        "libelle": "CAN_VIEW_GROUPEMENT_MENU"
+      },
+      {
+        "id": 27,
+        "libelle": "CAN_VIEW_GROUPEMENT_LIST"
+      },
+      {
+        "id": 28,
+        "libelle": "CAN_VIEW_GROUPEMENT_INFO"
+      },
+      {
+        "id": 29,
+        "libelle": "CAN_ADD_GROUPEMENT"
+      },
+      {
+        "id": 30,
+        "libelle": "CAN_UPDATE_GROUPEMENT"
+      },
+      {
+        "id": 31,
+        "libelle": "CAN_DELETE_GROUPEMENT"
+      },
+      {
+        "id": 32,
+        "libelle": "CAN_VIEW_COMMANDE_MENU"
+      },
+      {
+        "id": 33,
+        "libelle": "CAN_VIEW_COMMANDE_LIST"
+      },
+      {
+        "id": 34,
+        "libelle": "CAN_VIEW_COMMANDE_INFO"
+      },
+      {
+        "id": 35,
+        "libelle": "CAN_ADD_COMMANDE"
+      },
+      {
+        "id": 36,
+        "libelle": "CAN_UPDATE_COMMANDE"
+      },
+      {
+        "id": 37,
+        "libelle": "CAN_DELETE_COMMANDE"
+      }
+
+    ]
+  },
+  {
+    "id": 3,
+    "nom": "ROLE_ASSISTANT_ADMIN",
+    "description": "Assistant administrateur",
+    "permissions": [
+      {
+        "id": 1,
+        "libelle": "CAN_VIEW_DASHBOARD"
+      },
+      {
+        "id": 2,
+        "libelle": "CAN_VIEW_USER_MENU"
+      },
+      {
+        "id": 3,
+        "libelle": "CAN_VIEW_USER_INFO"
+      },
+      {
+        "id": 4,
+        "libelle": "CAN_VIEW_USER_LIST"
+      },
+      {
+        "id": 5,
+        "libelle": "CAN_ADD_USER"
+      },
+      {
+        "id": 6,
+        "libelle": "CAN_UPDATE_USER"
+      },
+      {
+        "id": 7,
+        "libelle": "CAN_DELETE_USER"
+      },
+      {
+        "id": 8,
+        "libelle": "CAN_VIEW_ROLE_MENU"
+      },
+      {
+        "id": 9,
+        "libelle": "CAN_VIEW_ROLE_LIST"
+      },
+      {
+        "id": 10,
+        "libelle": "CAN_VIEW_ROLE_INFO"
+      },
+      {
+        "id": 11,
+        "libelle": "CAN_ADD_ROLE"
+      },
+      {
+        "id": 12,
+        "libelle": "CAN_UPDATE_ROLE"
+      },
+      {
+        "id": 13,
+        "libelle": "CAN_DELETE_ROLE"
+      },
+      {
+        "id": 14,
+        "libelle": "CAN_VIEW_PRODUIT_MENU"
+      },
+      {
+        "id": 15,
+        "libelle": "CAN_VIEW_PRODUIT_LIST"
+      },
+      {
+        "id": 16,
+        "libelle": "CAN_VIEW_PRODUIT_INFO"
+      },
+      {
+        "id": 17,
+        "libelle": "CAN_ADD_PRODUIT"
+      },
+      {
+        "id": 18,
+        "libelle": "CAN_UPDATE_PRODUIT"
+      },
+      {
+        "id": 19,
+        "libelle": "CAN_DELETE_PRODUIT"
+      },
+      {
+        "id": 20,
+        "libelle": "CAN_VIEW_CATEGORIE_MENU"
+      },
+      {
+        "id": 21,
+        "libelle": "CAN_VIEW_CATEGORIE_LIST"
+      },
+      {
+        "id": 22,
+        "libelle": "CAN_VIEW_CATEGORIE_INFO"
+      },
+      {
+        "id": 23,
+        "libelle": "CAN_ADD_CATEGORIE"
+      },
+      {
+        "id": 24,
+        "libelle": "CAN_UPDATE_CATEGORIE"
+      },
+      {
+        "id": 25,
+        "libelle": "CAN_DELETE_CATEGORIE"
+      },
+      {
+        "id": 26,
+        "libelle": "CAN_VIEW_GROUPEMENT_MENU"
+      },
+      {
+        "id": 27,
+        "libelle": "CAN_VIEW_GROUPEMENT_LIST"
+      },
+      {
+        "id": 28,
+        "libelle": "CAN_VIEW_GROUPEMENT_INFO"
+      },
+      {
+        "id": 29,
+        "libelle": "CAN_ADD_GROUPEMENT"
+      },
+      {
+        "id": 30,
+        "libelle": "CAN_UPDATE_GROUPEMENT"
+      },
+      {
+        "id": 31,
+        "libelle": "CAN_DELETE_GROUPEMENT"
+      },
+      {
+        "id": 32,
+        "libelle": "CAN_VIEW_COMMANDE_MENU"
+      },
+      {
+        "id": 33,
+        "libelle": "CAN_VIEW_COMMANDE_LIST"
+      },
+      {
+        "id": 34,
+        "libelle": "CAN_VIEW_COMMANDE_INFO"
+      },
+      {
+        "id": 35,
+        "libelle": "CAN_ADD_COMMANDE"
+      },
+      {
+        "id": 36,
+        "libelle": "CAN_UPDATE_COMMANDE"
+      },
+      {
+        "id": 37,
+        "libelle": "CAN_DELETE_COMMANDE"
+      }
+
+    ]
+  },
+  {
+    "id": 4,
+    "nom": "ROLE_CONSULTANT",
+    "description": "Role consultant ",
+    "permissions": [
+      {
+        "id": 1,
+        "libelle": "CAN_VIEW_DASHBOARD"
+      },
+      {
+        "id": 2,
+        "libelle": "CAN_VIEW_USER_MENU"
+      },
+      {
+        "id": 3,
+        "libelle": "CAN_VIEW_USER_INFO"
+      },
+      {
+        "id": 4,
+        "libelle": "CAN_VIEW_USER_LIST"
+      },
+      {
+        "id": 5,
+        "libelle": "CAN_ADD_USER"
+      },
+      {
+        "id": 6,
+        "libelle": "CAN_UPDATE_USER"
+      },
+      {
+        "id": 7,
+        "libelle": "CAN_DELETE_USER"
+      },
+      {
+        "id": 8,
+        "libelle": "CAN_VIEW_ROLE_MENU"
+      },
+      {
+        "id": 9,
+        "libelle": "CAN_VIEW_ROLE_LIST"
+      },
+      {
+        "id": 10,
+        "libelle": "CAN_VIEW_ROLE_INFO"
+      },
+      {
+        "id": 11,
+        "libelle": "CAN_ADD_ROLE"
+      },
+      {
+        "id": 12,
+        "libelle": "CAN_UPDATE_ROLE"
+      },
+      {
+        "id": 13,
+        "libelle": "CAN_DELETE_ROLE"
+      },
+      {
+        "id": 14,
+        "libelle": "CAN_VIEW_PRODUIT_MENU"
+      },
+      {
+        "id": 15,
+        "libelle": "CAN_VIEW_PRODUIT_LIST"
+      },
+      {
+        "id": 16,
+        "libelle": "CAN_VIEW_PRODUIT_INFO"
+      },
+      {
+        "id": 17,
+        "libelle": "CAN_ADD_PRODUIT"
+      },
+      {
+        "id": 18,
+        "libelle": "CAN_UPDATE_PRODUIT"
+      },
+      {
+        "id": 19,
+        "libelle": "CAN_DELETE_PRODUIT"
+      },
+      {
+        "id": 20,
+        "libelle": "CAN_VIEW_CATEGORIE_MENU"
+      },
+      {
+        "id": 21,
+        "libelle": "CAN_VIEW_CATEGORIE_LIST"
+      },
+      {
+        "id": 22,
+        "libelle": "CAN_VIEW_CATEGORIE_INFO"
+      },
+      {
+        "id": 23,
+        "libelle": "CAN_ADD_CATEGORIE"
+      },
+      {
+        "id": 24,
+        "libelle": "CAN_UPDATE_CATEGORIE"
+      },
+      {
+        "id": 25,
+        "libelle": "CAN_DELETE_CATEGORIE"
+      },
+      {
+        "id": 26,
+        "libelle": "CAN_VIEW_GROUPEMENT_MENU"
+      },
+      {
+        "id": 27,
+        "libelle": "CAN_VIEW_GROUPEMENT_LIST"
+      },
+      {
+        "id": 28,
+        "libelle": "CAN_VIEW_GROUPEMENT_INFO"
+      },
+      {
+        "id": 29,
+        "libelle": "CAN_ADD_GROUPEMENT"
+      },
+      {
+        "id": 30,
+        "libelle": "CAN_UPDATE_GROUPEMENT"
+      },
+      {
+        "id": 31,
+        "libelle": "CAN_DELETE_GROUPEMENT"
+      },
+      {
+        "id": 32,
+        "libelle": "CAN_VIEW_COMMANDE_MENU"
+      },
+      {
+        "id": 33,
+        "libelle": "CAN_VIEW_COMMANDE_LIST"
+      },
+      {
+        "id": 34,
+        "libelle": "CAN_VIEW_COMMANDE_INFO"
+      },
+      {
+        "id": 35,
+        "libelle": "CAN_ADD_COMMANDE"
+      },
+      {
+        "id": 36,
+        "libelle": "CAN_UPDATE_COMMANDE"
+      },
+      {
+        "id": 37,
+        "libelle": "CAN_DELETE_COMMANDE"
+      }
+
+    ]
+  }
+]

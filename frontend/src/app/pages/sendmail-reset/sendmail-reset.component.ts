@@ -107,7 +107,7 @@ export class SendmailResetComponent implements OnInit {
       (err: {status: number, error: {message: string}}) => {
         Object.keys(controls).forEach(key => controls[key].setErrors({'incorrect': true}));
         this.serverError = true;
-        this.serverMessage = err.status !== 404 ? 'l\'email n\'existe pas dans la base de données,  veillez contacter l\'administrateur morykeith88@gmail.com' : err.error.message;
+        this.serverMessage = err.status !== 404 ? 'l\'email n\'existe pas dans la base de données,  veillez contacter l\'administrateur du site ' : err.error.message;
         this.isLoading = false;
         }
     );

@@ -8,13 +8,12 @@ import org.springframework.stereotype.Component
 
 @Component
 class DataLoader : CommandLineRunner {
-    private val logger = LoggerFactory.getLogger(DataLoader::class.java)
 
     @Autowired
     private lateinit var loadDataddService: LoadDataService
 
     override fun run(vararg args: String?) {
-//       loadDataddService.init()
+       loadDataddService.init()
     }
 
 

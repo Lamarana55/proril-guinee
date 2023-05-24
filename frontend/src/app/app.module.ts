@@ -1,4 +1,4 @@
-import { AuthInterceptor } from './mgf/auth/services/auth-interceptor.service';
+import { AuthInterceptor } from './project/auth/services/auth-interceptor.service';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PreloadAllModules, RouterModule } from '@angular/router';

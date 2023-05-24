@@ -5,8 +5,8 @@
 
 export const environment = {
   production: false,
- apiUrl: 'https://ws.alerte-vbg-guinee.com/api/', 
-//  apiUrl: 'http://localhost:8081/api/', 
+//  apiUrl: 'https://ws.alerte-vbg-guinee.com/api/', 
+ apiUrl: 'http://localhost:8081/api/', 
   userConnectedKey: 'key_of_user_bbgOTVpdfhdgfhgeu'
 };
   
