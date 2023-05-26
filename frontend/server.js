@@ -10,10 +10,10 @@ const express = require('express');
 const app = express();
 
 app.use(requireHTTPS);
-app.use(express.static('./dist/mgf-front'));
+app.use(express.static('./dist/project'));
 
 app.get('/*', (req, res) =>
-    res.sendFile('index.html', {root: 'dist/mgf-front/'}),
+    res.sendFile('index.html', {root: 'dist/project/'}),
 );
 
 app.listen(process.env.PORT || 8080);

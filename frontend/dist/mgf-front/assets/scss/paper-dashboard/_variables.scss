@@ -59,9 +59,12 @@ $transparent-bg:             transparent !default;
 
 $placeholder-gray:           rgba(210, 210, 210, 1)  !default;
 
-$default-color:              #66615B !default;
-$default-bg:                 #66615B !default;
-$default-states-color:       #403D39 !default;
+$default-color:              #006d5b !default;
+// $default-color:              #66615B !default;
+// $default-bg:                 #66615B !default;
+$default-bg:                 #006d5b !default;
+// $default-states-color:       #403D39 !default;
+$default-states-color:       #006d5b !default;
 
 $smoke-bg:                   #F5F5F5 !default;
 $pale-bg:                    #FFFCF5 !default;
@@ -75,6 +78,7 @@ $success-color:              #6bd098 !default;
 $success-states-color:       darken($success-color, 10%) !default;
 
 $info-color:                 #51bcda !default;
+$info-color:                 #006d5b !default;
 $info-states-color:          darken($info-color, 10%) !default;
 
 $warning-color:              #fbc658 !default;

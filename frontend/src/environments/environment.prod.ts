@@ -1,5 +1,5 @@
 export const environment = {
   production: true,
-  apiUrl: 'https://ws.alerte-vbg-guinee.com/api/', //'https://ws.alerte-vbg-guinee.com:8080/mgf/api/', // 'https://mgf-backend.herokuapp.com/api/',
+  apiUrl: "http://localhost:8081/api/", // 'https://ws.proril-guinee.com/api/', 
   userConnectedKey: 'key_of_user_bbgOTVpdfhdgfhgeu'
 };

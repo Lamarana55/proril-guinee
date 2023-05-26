@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { GestionProduitRoutingModule } from './gestion-produit-routing.module';
 import { ListProduitComponent } from './produit/list-produit/list-produit.component';
@@ -13,13 +14,15 @@ import { CoreModule } from '../core/core.module';
 import { MaterialModule } from '../material/material.module';
 import { InfoProduitComponent } from './produit/info-produit/info-produit.component';
 import { StatistiqueProduitComponent } from './statistique-produit/statistique-produit/statistique-produit.component';
+import { GestionProduitComponent } from './gestion-produit.component';
 
 
 @NgModule({
-  declarations: [ListProduitComponent, EditProduitComponent, EditVenteComponent, ListVenteComponent, ListClientComponent, EditClientComponent, InfoProduitComponent, StatistiqueProduitComponent, ],
+  declarations: [GestionProduitComponent, ListProduitComponent, EditProduitComponent, EditVenteComponent, ListVenteComponent, ListClientComponent, EditClientComponent, InfoProduitComponent, StatistiqueProduitComponent, ],
   imports: [
     CommonModule,
     GestionProduitRoutingModule,
+    NgbModule,
     FormsModule,
     CoreModule,
     MaterialModule,
