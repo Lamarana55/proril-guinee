@@ -1,9 +1,9 @@
 version: "3.3"
 
 services:
-  postgres:
+  db_postgres:
     image: postgres:14.5-alpine
-    container_name: postgres
+    container_name: db_postgres
     ports:
       - 5432:5432
     volumes:
@@ -18,13 +18,13 @@ services:
     build:
       context: ./backend
       dockerfile: Dockerfile
-    container_name: api
+    container_name: api_proril
     depends_on:
-      - postgres
+      - db_postgres
     links:
-      - postgres
+      - db_postgres
     environment:
-      - SPRING_DATASOURCE_URL=jdbc:postgresql://postgres:5432/proril
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://db_postgres:5432/proril
       - SPRING_DATASOURCE_USERNAME=proril
       - SPRING_DATASOURCE_PASSWORD=proril
       - SPRING_JPA_HIBERNATE_DDL_AUTO=update

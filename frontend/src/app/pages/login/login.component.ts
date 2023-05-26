@@ -2,7 +2,7 @@ import { Component, OnInit, ElementRef, OnDestroy, AfterViewInit } from '@angula
 import { Router, ActivatedRoute } from '@angular/router';
 import { Location, LocationStrategy, PathLocationStrategy } from '@angular/common';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { AuthService } from 'app/mgf/auth/services/auth.service';
+import { AuthService } from 'app/project/auth/services/auth.service';
 
 declare const $: any;
 

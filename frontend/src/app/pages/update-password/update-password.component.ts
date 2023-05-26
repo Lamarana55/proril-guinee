@@ -3,10 +3,10 @@ import { Component, ElementRef, OnInit } from "@angular/core";
 import { FormBuilder, FormGroup, Validators } from "@angular/forms";
 import { MatSnackBar } from "@angular/material/snack-bar";
 import { ActivatedRoute, Router } from "@angular/router";
-import { ResetPassword } from "app/mgf/auth/models/reset-passwor.model";
-import { AuthService } from "app/mgf/auth/services/auth.service";
-import { passwordConfirmationValidator } from "app/mgf/core/directives/confirmation-validators.directive";
-import { UtilService } from "app/mgf/core/services/util.service";
+import { ResetPassword } from "app/project/auth/models/reset-passwor.model";
+import { AuthService } from "app/project/auth/services/auth.service";
+import { passwordConfirmationValidator } from "app/project/core/directives/confirmation-validators.directive";
+import { UtilService } from "app/project/core/services/util.service";
 import Swal from 'sweetalert2';
 
 declare var $: any;

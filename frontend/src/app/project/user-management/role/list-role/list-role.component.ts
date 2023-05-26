@@ -1,13 +1,13 @@
-import { UtilService } from 'app/mgf/core/services/util.service';
+import { UtilService } from 'app/project/core/services/util.service';
 import { ROLE_URL } from './../../services/user.service';
 import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { PERMISSIONS } from 'app/config/app.data';
-import { AuthService } from 'app/mgf/auth/services/auth.service';
+import { AuthService } from 'app/project/auth/services/auth.service';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { switchMap } from 'rxjs/operators';
 import { Role } from '../../models/role.model';
 import { UserService } from '../../services/user.service';
-import { Confirmable } from 'app/mgf/core/decorators/confirmable.decorator';
+import { Confirmable } from 'app/project/core/decorators/confirmable.decorator';
 
 declare var $: any;
 

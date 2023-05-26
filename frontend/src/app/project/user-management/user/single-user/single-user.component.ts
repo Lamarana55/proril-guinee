@@ -40,7 +40,6 @@ export class SingleUserComponent implements OnInit, OnDestroy {
     this.user$ = !isNaN(this.userId) ? this.subject.asObservable().pipe(
       switchMap(() => this.userService.getOne(this.userId).pipe(
         tap(user => {
-          this.localite = user.localite;
           this.role = user.role;
         })
       ))

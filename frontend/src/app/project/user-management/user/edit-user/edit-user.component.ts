@@ -12,11 +12,11 @@ import { UserService } from '../../services/user.service';
 import { TEL_PATTERN, SELECT_NUMBER_PATTERN } from 'app/config/app.data';
 import { NgbModal, NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import { Region } from 'app/mgf/core/models/region.model';
-import { Prefecture } from 'app/mgf/core/models/prefecture.model';
-import { Commune } from 'app/mgf/core/models/commune.model';
-import { Quartier } from 'app/mgf/core/models/quartier.model';
-import { Secteur } from 'app/mgf/core/models/secteur.model';
+import { Region } from 'app/project/core/models/region.model';
+import { Prefecture } from 'app/project/core/models/prefecture.model';
+import { Commune } from 'app/project/core/models/commune.model';
+import { Quartier } from 'app/project/core/models/quartier.model';
+import { Secteur } from 'app/project/core/models/secteur.model';
 
 @Component({
   selector: 'app-edit-user',
@@ -92,7 +92,6 @@ export class EditUserComponent implements OnInit {
     if (!this.userForm.invalid) {
       const user = this.userForm.value as Partial<User>;
       user.role = await this.userService.getOneRole(user.role.id).toPromise();
-      user.fonction = 'USER';
       const userActions$ = this.isNew ? this.userService.add(user) : this.userService.update(this.userId, user);
       userActions$.subscribe(
         () => {
@@ -151,8 +150,7 @@ export class EditUserComponent implements OnInit {
       prenom: user.prenom,
       username: user.username,
       email: user.email,
-      localite: user.localite,
-      telephone: user.telephone,
+      telephone: user.telephone, 
       role: { id: user.role.id }
     })
   }

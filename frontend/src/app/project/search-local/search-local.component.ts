@@ -1,6 +1,5 @@
-import { DatePipe } from '@angular/common';
-import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
-import { DATE_FORMAT, LOCALITE } from 'app/config/app.data';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { LOCALITE } from 'app/config/app.data';
 //import { EventEmitter } from 'protractor';
 import { Observable } from 'rxjs';
 import { Commune } from '../core/models/commune.model';
@@ -10,7 +9,6 @@ import { Region } from '../core/models/region.model';
 import { RequestCasParam } from '../core/models/request-cas-param';
 import { Secteur } from '../core/models/secteur.model';
 import { LocaliteService } from '../core/services/localite.service';
-import { Role } from '../user-management/models/role.model';
 import { UserService } from '../user-management/services/user.service';
 
 @Component({

@@ -17,7 +17,7 @@
           </div>
 
           <div class="col-2">
-            <button (click)="onRefresh()" class="btn btn-info ">
+            <button (click)="onRefresh()" class="btn btn-success ">
               <span class="btn-label"><i class="nc-icon nc-refresh-69"></i></span> Rechercher 
             </button>
           </div>
@@ -28,7 +28,7 @@
     <div *ngIf="isRefresh" class="col-12">
       <p>
         {{ printDate }}
-        <button (click)="onRestaurer()" class="btn btn-warning">
+        <button (click)="onRestaurer()" class="btn btn-success">
           <span class="btn-label"><i class="nc-icon nc-refresh-69"></i></span> Restaurer 
         </button>
       </p>
@@ -42,14 +42,14 @@
         <div class="card-body ">
           <div class="row">
             <div class="col-5 col-md-4">
-              <div class="icon-big text-center icon-warning">
-                <i class="nc-icon nc-bell-55 text-warning"></i>
+              <div class="icon-big text-center icon-success">
+                <i class="nc-icon nc-delivery-fast text-success"></i>
               </div>
             </div>
             <div class="col-7 col-md-8">
               <div class="numbers">
-                <p class="card-category">Alertes <i>(non traitée)</i></p>
-                <p class="card-title">{{ statsAlertes?.nonTraitre }}</p>
+                <p class="card-category">Nombre de Grossiste</p> <br>
+                <p class="card-title">100</p>
               </div>
             </div>
           </div>
@@ -68,13 +68,13 @@
           <div class="row">
             <div class="col-5 col-md-4">
               <div class="icon-big text-center icon-success">
-                <i class="nc-icon nc-bell-55 text-success"></i>
+                <i class="nc-icon nc-box text-success"></i>
               </div>
             </div>
             <div class="col-7 col-md-8">
               <div class="numbers">
-                <p class="card-category">Alertes <i>(traitée)</i></p>
-                <p class="card-title">{{ statsAlertes?.traite }}</p>
+                <p class="card-category">Nombre de Produit</p><br>
+                <p class="card-title">100</p>
               </div>
             </div>
           </div>
@@ -92,14 +92,14 @@
         <div class="card-body ">
           <div class="row">
             <div class="col-5 col-md-4">
-              <div class="icon-big text-center icon-warning">
-                <i class="nc-icon nc-badge text-warning"></i>
+              <div class="icon-big text-center icon-success">
+                <i class="nc-icon nc-badge text-success"></i>
               </div>
             </div>
             <div class="col-7 col-md-8">
               <div class="numbers">
-                <p class="card-category">Cas <i>(en attente)</i></p>
-                <p class="card-title">{{ statsCas?.enAttente }}</p>
+                <p class="card-category">Ventes</p><br>
+                <p class="card-title">100</p>
               </div>
             </div>
           </div>
@@ -124,8 +124,8 @@
             </div>
             <div class="col-7 col-md-8">
               <div class="numbers">
-                <p class="card-category">Cas <i>(traité)</i></p>
-                <p class="card-title">{{ statsCas?.traite }}</p>
+                <p class="card-category">Livrés</p> <br>
+                <p class="card-title">100</p>
               </div>
             </div>
           </div>
@@ -142,11 +142,11 @@
 
   <!-- Chart en fonction des statuts alertes et cas -->
   <div class="row">
-    <div class="col-md-6 text-center">
-      <div class="card ">
+    <div class="col-md-6 text-center ">
+      <div class="card custom-card">
         <div class="card-header ">
-          <h5 class="card-title">Statistiques des alertes</h5>
-          <p class="card-category">Nombres d'alertes par statut</p>
+          <h5 class="card-title">Statistiques des produits </h5>
+          <p class="card-category">Nombres de produits par statut</p>
         </div>
         <div class="card-body ">
           <canvas id="chartAlerteByStatut"></canvas>
@@ -160,10 +160,10 @@
       </div>
     </div>
     <div class="col-md-6 text-center">
-      <div class="card ">
+      <div class="card custom-card">
         <div class="card-header ">
-          <h5 class="card-title">Statistiques des alertes</h5>
-          <p class="card-category">Statistiques par regions</p>
+          <h5 class="card-title">Statistiques des Ventes</h5>
+          <p class="card-category">Statistiques des ventes par mois</p>
         </div>
         <div class="card-body ">
           <canvas id="chartAlerteByRegion"></canvas>
@@ -179,7 +179,8 @@
   </div>
 
   <!-- Chart en fonction des region et prefectures alertes et cas -->
-  <div class="row">
+ 
+ <!--  <div class="row">
     <div class="col-md-6 text-center">
       <div class="card ">
         <div class="card-header ">
@@ -214,5 +215,5 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
 </div>

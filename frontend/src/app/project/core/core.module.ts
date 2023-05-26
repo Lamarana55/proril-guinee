@@ -8,7 +8,6 @@ import { UpdatePasswordComponent } from './shared/update-password/update-passwor
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MaterialModule } from '../material/material.module';
 import { PipeFunctionPipe } from './pipes/pipe-function.pipe';
-import { FindQuestionPipe } from './pipes/find-question.pipe';
 import { DisplayLocaliteComponent } from './shared/display-localite/display-localite.component';
 import { StatusCasFormatPipe } from './pipes/status-cas-format.pipe';
 import { StatusAlerteFormatPipe } from './pipes/status-alerte-format.pipe';
@@ -24,7 +23,6 @@ import { SpinnerComponent } from './shared/spinner/spinner.component';
     SecteurComponent,
     UpdatePasswordComponent,
     PipeFunctionPipe,
-    FindQuestionPipe,
     DisplayLocaliteComponent,
     StatusCasFormatPipe,
     StatusAlerteFormatPipe,
@@ -43,7 +41,6 @@ import { SpinnerComponent } from './shared/spinner/spinner.component';
     FindLocalitePipe,
     TableOptionsPipe,
     PipeFunctionPipe,
-    FindQuestionPipe,
     DisplayLocaliteComponent,
     StatusCasFormatPipe,
     StatusAlerteFormatPipe,

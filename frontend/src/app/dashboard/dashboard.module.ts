@@ -1,5 +1,5 @@
-import { StatusAlerteFormatPipe } from './../mgf/core/pipes/status-alerte-format.pipe';
-import { StatusCasFormatPipe } from './../mgf/core/pipes/status-cas-format.pipe';
+import { StatusAlerteFormatPipe } from './../project/core/pipes/status-alerte-format.pipe';
+import { StatusCasFormatPipe } from './../project/core/pipes/status-cas-format.pipe';
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';

@@ -5,9 +5,9 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { User } from '../models/user.model';
-import { UpdatePassword } from 'app/mgf/core/models/update-password.model';
-import { RequestCasParam } from 'app/mgf/core/models/request-cas-param';
-import { Pagination } from 'app/mgf/utils/pagination';
+import { UpdatePassword } from 'app/project/core/models/update-password.model';
+import { RequestCasParam } from 'app/project/core/models/request-cas-param';
+import { Pagination } from 'app/project/utils/pagination';
 
 export const USER_URL = 'users';
 export const ROLE_URL = 'roles';

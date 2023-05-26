@@ -1,5 +1,9 @@
+import { Region } from 'app/project/core/models/region.model';
 import { Localite } from './../../core/models/localite.model';
 import { Role } from './role.model';
+import { Prefecture } from 'app/project/core/models/prefecture.model';
+import { Commune } from 'app/project/core/models/commune.model';
+import { Quartier } from 'app/project/core/models/quartier.model';
 export class User {
   id: number
   nom: string
@@ -10,5 +14,8 @@ export class User {
   password: string
   statut: string
   role = new Role()
-  fonction?: string
+  region? = new Region()
+  prefecture? = new Prefecture()
+  commune? = new Commune()
+  quartier? = new Quartier()
 }

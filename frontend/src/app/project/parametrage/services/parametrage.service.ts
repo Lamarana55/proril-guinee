@@ -1,14 +1,11 @@
 
-import { environment } from './../../../../environments/environment';
-import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Question } from '../models/question.model';
-import { TypeCas } from '../models/type-cas.model';
-import { TypeAppui } from '../models/type-appui.model';
-import { Categorie } from '../models/categorie.model';
+import { Observable } from 'rxjs';
 import { Groupement } from '../models/Groupement.model';
+import { Categorie } from '../models/categorie.model';
 import { Marque } from '../models/marque.model';
+import { environment } from './../../../../environments/environment';
 
 const API_URL = environment.apiUrl;
 
@@ -24,50 +21,6 @@ export const MARQUE_URL =  'marques';
 export class ParametrageService {
 
   constructor(private http: HttpClient) { }
-
-  // =============================== Questionnaires =============================== //
-
-  getAllQuestions(): Observable<Question[]> {
-    return this.http.get<Question[]>(API_URL + SERVICE_URL);
-  }
-
-  getOneQuestion(id: number): Observable<Question> {
-    return this.http.get<Question>(API_URL + SERVICE_URL + '/' + id);
-  }
-
-  addQuestion(question: Partial<Question>): Observable<Question> {
-    return this.http.post<Question>(API_URL + SERVICE_URL, question);
-  }
-
-  updateQuestion(id: number, question: Partial<Question>): Observable<Question> {
-    return this.http.put<Question>(API_URL + SERVICE_URL + '/' + id, question);
-  }
-
-  deleteQuestion(id: number): Observable<any> {
-    return this.http.delete(API_URL + SERVICE_URL + '/' + id)
-  }
-
-  // =============================== Type Cas =============================== //
-
-  getAllTypeCas(): Observable<TypeCas[]> {
-    return this.http.get<TypeCas[]>(API_URL + TYPE_CAS_URL);
-  }
-
-  getOneTypeCas(id: number): Observable<TypeCas> {
-    return this.http.get<TypeCas>(API_URL + TYPE_CAS_URL + '/' + id);
-  } 
-
-  addTypeCas(typeCas: Partial<TypeCas>): Observable<TypeCas> {
-    return this.http.post<TypeCas>(API_URL + TYPE_CAS_URL, typeCas);
-  }
-
-  updateTypeCas(id: number, typeCas: Partial<TypeCas>): Observable<TypeCas> {
-    return this.http.put<TypeCas>(API_URL + TYPE_CAS_URL + '/' + id, typeCas);
-  }
-
-  deleteTypeCas(id: number): Observable<any> {
-    return this.http.delete(API_URL + TYPE_CAS_URL + '/' + id)
-  }
 
   // =============================== Categorie =============================== //
 

@@ -4,8 +4,8 @@ import { Component, OnInit, AfterViewInit, EventEmitter, Output } from '@angular
 import Swal from 'sweetalert2';
 import { passwordConfirmationValidator } from '../../directives/confirmation-validators.directive';
 import { UpdatePassword } from '../../models/update-password.model';
-import { UserService } from 'app/mgf/user-management/services/user.service';
-import { AuthService } from 'app/mgf/auth/services/auth.service';
+import { UserService } from 'app/project/user-management/services/user.service';
+import { AuthService } from 'app/project/auth/services/auth.service';
 
 declare var $: any;
 

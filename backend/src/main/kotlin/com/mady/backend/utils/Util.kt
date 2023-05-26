@@ -84,23 +84,6 @@ class Permissions{
         const val CAN_UPDATE_ROLE = "CAN_UPDATE_ROLE"
         const val CAN_DELETE_ROLE = "CAN_DELETE_ROLE"
 
-        const val CAN_VIEW_CAS_MENU = "CAN_VIEW_CAS_MENU"
-        const val CAN_VIEW_CAS_LIST = "CAN_VIEW_CAS_LIST"
-        const val CAN_VIEW_CAS_INFO = "CAN_VIEW_CAS_INFO"
-        const val CAN_ADD_CAS = "CAN_ADD_CAS"
-        const val CAN_UPDATE_CAS = "CAN_UPDATE_CAS"
-        const val CAN_DELETE_CAS = "CAN_DELETE_CAS"
-
-
-        const val CAN_VIEW_ALERT_MENU = "CAN_VIEW_ALERT_MENU"
-        const val CAN_VIEW_ALERT_LIST = "CAN_VIEW_ALERT_LIST"
-        const val CAN_VIEW_ALERT_INFO = "CAN_VIEW_ALERT_INFO"
-        const val CAN_ADD_ALERT = "CAN_ADD_ALERT"
-        const val CAN_UPDATE_ALERT = "CAN_UPDATE_ALERT"
-        const val CAN_DELETE_ALERT = "CAN_DELETE_ALERT"
-
-        const val CAN_AFFECT_ALERTE_USER = "CAN_AFFECT_ALERTE_USER"
-
         const val CAN_VIEW_ARTICLE_MENU = "CAN_VIEW_ARTICLE_MENU"
         const val CAN_VIEW_ARTICLE_LIST = "CAN_VIEW_ARTICLE_LIST"
         const val CAN_VIEW_ARTICLE_INFO = "CAN_VIEW_ARTICLE_INFO"

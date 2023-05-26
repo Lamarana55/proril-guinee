@@ -1,8 +1,8 @@
-import { StatusAlerteFormatPipe } from './../mgf/core/pipes/status-alerte-format.pipe';
-import { StatusCasFormatPipe } from './../mgf/core/pipes/status-cas-format.pipe';
+import { StatusAlerteFormatPipe } from './../project/core/pipes/status-alerte-format.pipe';
+import { StatusCasFormatPipe } from './../project/core/pipes/status-cas-format.pipe';
 import { STATUT_ALERTE, STATUT_CAS } from 'app/config/app.data';
 import { Component, OnInit } from '@angular/core';
-import { StatService } from 'app/mgf/core/services/stat.service';
+import { StatService } from 'app/project/core/services/stat.service';
 import Chart from 'chart.js';
 import { forkJoin } from 'rxjs';
 import { map } from 'rxjs/operators';
@@ -18,7 +18,8 @@ declare interface StatData {
 
 @Component({
   selector: 'app-dashboard',
-  templateUrl: './dashboard.component.html'
+  templateUrl: './dashboard.component.html',
+  styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
 

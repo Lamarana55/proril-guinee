@@ -1,7 +1,7 @@
+import { AfterViewInit, Component, OnInit } from '@angular/core';
+import { NgbModal, NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
 import { PERMISSIONS } from 'app/config/app.data';
 import { AuthService } from 'app/project/auth/services/auth.service';
-import { Component, OnInit, AfterViewInit, AfterViewChecked, AfterContentInit } from '@angular/core';
-import { NgbModal, NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
 
 // Metadata
 export interface RouteInfo {
@@ -31,6 +31,27 @@ export const ROUTES: RouteInfo[] = [{
         icontype: 'nc-icon nc-bank',
         permission: PERMISSIONS.CAN_VIEW_DASHBORD
     }, 
+    {
+        path: "/articles",
+        title: "Articles",
+        type: "sub",
+        collapse: "articles",
+        icontype: "nc-icon nc-bullet-list-67",
+        children: [
+          {
+            path: "list-article",
+            title: "Articles",
+            ab: "A",
+            permission: PERMISSIONS.CAN_VIEW_ARTICLE_MENU,
+          },
+          {
+            path: "categorie-articles",
+            title: "Categorie Article",
+            ab: "CA",
+            permission: PERMISSIONS.CAN_VIEW_CATEGORIE_ARTICLE_MENU,
+          },
+        ],
+    },
     
     /*
     {

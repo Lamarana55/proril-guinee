@@ -1,4 +1,4 @@
-import { UtilService } from './mgf/core/services/util.service';
+import { UtilService } from './project/core/services/util.service';
 import { Component, OnInit } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
 import { filter } from 'rxjs/operators';
