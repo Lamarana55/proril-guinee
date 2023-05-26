@@ -32,7 +32,7 @@ const routes: Routes = [
             path: 'edit',
             component: EditCategorieComponent,
             canActivate: [RoleGuard],
-            data: { permissions: PERMISSIONS.CAN_ADD_TYPE_CAS }
+            data: { permissions: PERMISSIONS.CAN_ADD_CATEGORIE }
           }
         ]
       }, 

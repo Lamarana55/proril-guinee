@@ -151,6 +151,78 @@
       {
         "id": 37,
         "libelle": "CAN_DELETE_COMMANDE"
+      },
+      {
+        "id": 38,
+        "libelle": "CAN_VIEW_GROSSISTE_MENU"
+      },
+      {
+        "id": 39,
+        "libelle": "CAN_VIEW_GROSSISTE_LIST"
+      },
+      {
+        "id": 40,
+        "libelle": "CAN_VIEW_GROSSISTE_INFO"
+      },
+      {
+        "id": 41,
+        "libelle": "CAN_ADD_GROSSISTE"
+      },
+      {
+        "id": 42,
+        "libelle": "CAN_UPDATE_GROSSISTE"
+      },
+      {
+        "id": 43,
+        "libelle": "CAN_DELETE_GROSSISTE"
+      },
+      {
+        "id": 44,
+        "libelle": "CAN_VIEW_VENTE_MENU"
+      },
+      {
+        "id": 45,
+        "libelle": "CAN_VIEW_VENTE_LIST"
+      },
+      {
+        "id": 46,
+        "libelle": "CAN_VIEW_VENTE_INFO"
+      },
+      {
+        "id": 47,
+        "libelle": "CAN_ADD_VENTE"
+      },
+      {
+        "id": 48,
+        "libelle": "CAN_UPDATE_VENTE"
+      },
+      {
+        "id": 49,
+        "libelle": "CAN_DELETE_VENTE"
+      },
+      {
+        "id": 50,
+        "libelle": "CAN_VIEW_CLIENT_MENU"
+      },
+      {
+        "id": 51,
+        "libelle": "CAN_VIEW_CLIENT_LIST"
+      },
+      {
+        "id": 52,
+        "libelle": "CAN_VIEW_CLIENT_INFO"
+      },
+      {
+        "id": 53,
+        "libelle": "CAN_ADD_CLIENT"
+      },
+      {
+        "id": 54,
+        "libelle": "CAN_UPDATE_CLIENT"
+      },
+      {
+        "id": 55,
+        "libelle": "CAN_DELETE_CLIENT"
       }
 
     ]
@@ -307,6 +379,78 @@
       {
         "id": 37,
         "libelle": "CAN_DELETE_COMMANDE"
+      },
+      {
+        "id": 38,
+        "libelle": "CAN_VIEW_GROSSISTE_MENU"
+      },
+      {
+        "id": 39,
+        "libelle": "CAN_VIEW_GROSSISTE_LIST"
+      },
+      {
+        "id": 40,
+        "libelle": "CAN_VIEW_GROSSISTE_INFO"
+      },
+      {
+        "id": 41,
+        "libelle": "CAN_ADD_GROSSISTE"
+      },
+      {
+        "id": 42,
+        "libelle": "CAN_UPDATE_GROSSISTE"
+      },
+      {
+        "id": 43,
+        "libelle": "CAN_DELETE_GROSSISTE"
+      },
+      {
+        "id": 44,
+        "libelle": "CAN_VIEW_VENTE_MENU"
+      },
+      {
+        "id": 45,
+        "libelle": "CAN_VIEW_VENTE_LIST"
+      },
+      {
+        "id": 46,
+        "libelle": "CAN_VIEW_VENTE_INFO"
+      },
+      {
+        "id": 47,
+        "libelle": "CAN_ADD_VENTE"
+      },
+      {
+        "id": 48,
+        "libelle": "CAN_UPDATE_VENTE"
+      },
+      {
+        "id": 49,
+        "libelle": "CAN_DELETE_VENTE"
+      },
+      {
+        "id": 50,
+        "libelle": "CAN_VIEW_CLIENT_MENU"
+      },
+      {
+        "id": 51,
+        "libelle": "CAN_VIEW_CLIENT_LIST"
+      },
+      {
+        "id": 52,
+        "libelle": "CAN_VIEW_CLIENT_INFO"
+      },
+      {
+        "id": 53,
+        "libelle": "CAN_ADD_CLIENT"
+      },
+      {
+        "id": 54,
+        "libelle": "CAN_UPDATE_CLIENT"
+      },
+      {
+        "id": 55,
+        "libelle": "CAN_DELETE_CLIENT"
       }
 
     ]
@@ -463,6 +607,78 @@
       {
         "id": 37,
         "libelle": "CAN_DELETE_COMMANDE"
+      },
+      {
+        "id": 38,
+        "libelle": "CAN_VIEW_GROSSISTE_MENU"
+      },
+      {
+        "id": 39,
+        "libelle": "CAN_VIEW_GROSSISTE_LIST"
+      },
+      {
+        "id": 40,
+        "libelle": "CAN_VIEW_GROSSISTE_INFO"
+      },
+      {
+        "id": 41,
+        "libelle": "CAN_ADD_GROSSISTE"
+      },
+      {
+        "id": 42,
+        "libelle": "CAN_UPDATE_GROSSISTE"
+      },
+      {
+        "id": 43,
+        "libelle": "CAN_DELETE_GROSSISTE"
+      },
+      {
+        "id": 44,
+        "libelle": "CAN_VIEW_VENTE_MENU"
+      },
+      {
+        "id": 45,
+        "libelle": "CAN_VIEW_VENTE_LIST"
+      },
+      {
+        "id": 46,
+        "libelle": "CAN_VIEW_VENTE_INFO"
+      },
+      {
+        "id": 47,
+        "libelle": "CAN_ADD_VENTE"
+      },
+      {
+        "id": 48,
+        "libelle": "CAN_UPDATE_VENTE"
+      },
+      {
+        "id": 49,
+        "libelle": "CAN_DELETE_VENTE"
+      },
+      {
+        "id": 50,
+        "libelle": "CAN_VIEW_CLIENT_MENU"
+      },
+      {
+        "id": 51,
+        "libelle": "CAN_VIEW_CLIENT_LIST"
+      },
+      {
+        "id": 52,
+        "libelle": "CAN_VIEW_CLIENT_INFO"
+      },
+      {
+        "id": 53,
+        "libelle": "CAN_ADD_CLIENT"
+      },
+      {
+        "id": 54,
+        "libelle": "CAN_UPDATE_CLIENT"
+      },
+      {
+        "id": 55,
+        "libelle": "CAN_DELETE_CLIENT"
       }
 
     ]
@@ -619,6 +835,78 @@
       {
         "id": 37,
         "libelle": "CAN_DELETE_COMMANDE"
+      },
+      {
+        "id": 38,
+        "libelle": "CAN_VIEW_GROSSISTE_MENU"
+      },
+      {
+        "id": 39,
+        "libelle": "CAN_VIEW_GROSSISTE_LIST"
+      },
+      {
+        "id": 40,
+        "libelle": "CAN_VIEW_GROSSISTE_INFO"
+      },
+      {
+        "id": 41,
+        "libelle": "CAN_ADD_GROSSISTE"
+      },
+      {
+        "id": 42,
+        "libelle": "CAN_UPDATE_GROSSISTE"
+      },
+      {
+        "id": 43,
+        "libelle": "CAN_DELETE_GROSSISTE"
+      },
+      {
+        "id": 44,
+        "libelle": "CAN_VIEW_VENTE_MENU"
+      },
+      {
+        "id": 45,
+        "libelle": "CAN_VIEW_VENTE_LIST"
+      },
+      {
+        "id": 46,
+        "libelle": "CAN_VIEW_VENTE_INFO"
+      },
+      {
+        "id": 47,
+        "libelle": "CAN_ADD_VENTE"
+      },
+      {
+        "id": 48,
+        "libelle": "CAN_UPDATE_VENTE"
+      },
+      {
+        "id": 49,
+        "libelle": "CAN_DELETE_VENTE"
+      },
+      {
+        "id": 50,
+        "libelle": "CAN_VIEW_CLIENT_MENU"
+      },
+      {
+        "id": 51,
+        "libelle": "CAN_VIEW_CLIENT_LIST"
+      },
+      {
+        "id": 52,
+        "libelle": "CAN_VIEW_CLIENT_INFO"
+      },
+      {
+        "id": 53,
+        "libelle": "CAN_ADD_CLIENT"
+      },
+      {
+        "id": 54,
+        "libelle": "CAN_UPDATE_CLIENT"
+      },
+      {
+        "id": 55,
+        "libelle": "CAN_DELETE_CLIENT"
       }
 
     ]

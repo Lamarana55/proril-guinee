@@ -3,6 +3,11 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { RoleGuard } from '../auth/services/role-guard.service';
 import { GestionGrossisteComponent } from './gestion-grossiste.component';
+import { ListGrossisteComponent } from './grossiste/list-grossiste/list-grossiste.component';
+import { PERMISSIONS } from 'app/config/app.data';
+import { EditGrossisteComponent } from './grossiste/edit-grossiste/edit-grossiste.component';
+import { InfoGrossisteComponent } from './grossiste/info-grossiste/info-grossiste.component';
+import { ListProduitComponent } from './produit/list-produit/list-produit.component';
 
 const routes: Routes = [
   {
@@ -18,78 +23,33 @@ const routes: Routes = [
         children: [
           {
             path: '',
-            component: ,
+            component: ListGrossisteComponent,
             canActivate: [RoleGuard],
-            data: { permissions: PERMISSIONS.CAN_VIEW_CAS_LIST}
+            data: { permissions: PERMISSIONS.CAN_VIEW_GROSSISTE_LIST}
           }, {
             path: 'edit',
-            component: EditCasComponent,
+            component: EditGrossisteComponent,
             canActivate: [RoleGuard],
-            data: { permissions: PERMISSIONS.CAN_ADD_CAS}
+            data: { permissions: PERMISSIONS.CAN_ADD_GROSSISTE}
           }, {
             path: 'info/:id',
-            component: InfoCasComponent,
+            component: InfoGrossisteComponent,
             canActivate: [RoleGuard],
-            data: { permissions: PERMISSIONS.CAN_VIEW_CAS_INFO}
-          }, {
-            path: ':option',
-            component: ListCasComponent,
-            canActivate: [RoleGuard],
-            data: { permissions: PERMISSIONS.CAN_VIEW_CAS_LIST}
+            data: { permissions: PERMISSIONS.CAN_VIEW_GROSSISTE_INFO}
           }
         ]
-      }, {
-        path: 'alertes',
+      }, 
+      {
+        path: 'produits',
         children: [
           {
             path: '',
-            component: ListAlerteComponent,
+            component: ListProduitComponent,
             canActivate: [RoleGuard],
-            data: { permissions: PERMISSIONS.CAN_VIEW_ALERT_LIST}
-          },
-          {
-            path: ':option',
-            component: ListAlerteComponent,
-            canActivate: [RoleGuard],
-            data: { permissions: PERMISSIONS.CAN_VIEW_ALERT_LIST}
+            data: { permissions: PERMISSIONS.CAN_VIEW_PRODUIT_LIST}
           }
         ]
-      }, {
-        path: 'surveillances',
-        children: [
-          {
-            path: '',
-            component: SurveillanceComponent,
-            canActivate: [RoleGuard],
-            data: { permissions: PERMISSIONS.CAN_VIEW_SURVEILLANCE_LIST}
-          }
-        ]
-      }, {
-        path: 'statistiques',
-        children: [
-          {
-            path: '',
-            component: StatistiqueCasComponent,
-            canActivate: [RoleGuard],
-            data: { permissions: PERMISSIONS.CAN_VIEW_STATISTIQUE_LIST}
-          }
-        ]
-      }, {
-        path: 'victimes',
-        children: [
-          {
-            path: '',
-            component: ListVictimeComponent,
-            canActivate: [RoleGuard],
-            data: { permissions: PERMISSIONS.CAN_VIEW_VICTIME_LIST }
-          }, {
-            path: 'edit',
-            component: EditVictimeComponent,
-            canActivate: [RoleGuard],
-            data: { permissions: PERMISSIONS.CAN_UPDATE_VICTIME }
-          }
-        ]
-      }
+      }, 
     ]
   }
 ];

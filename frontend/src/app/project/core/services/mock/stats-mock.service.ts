@@ -64,7 +64,6 @@ export class StatsMockService {
     return new Observable(observer => {
       observer.next(new HttpResponse<Array<Stats>>({
         body: [
-          {nombre: 5, statut: STATUT_CAS.EN_ATTENTE},
           {nombre: 4, statut: STATUT_CAS.EN_COURS},
           {nombre: 3, statut: STATUT_CAS.TRAITE},
           {nombre: 1, statut: STATUT_CAS.ANNULE}

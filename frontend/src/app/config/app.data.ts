@@ -141,6 +141,19 @@ export const SELECT_EMAIL_PATTERN = "^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$"
 
 export const NUMBER_ONLY_PATTERN = /^[0-9]*$/;
 
+
+export enum STATUT_ALERTE {
+    TRAITE = 'TRAITE',
+    NON_TRAITE = 'NON_TRAITE'
+}
+
+export enum STATUT_CAS {
+    EN_ATTENTE = 'EN_ATTENTE',
+    EN_COURS = 'EN_COURS',
+    TRAITE = 'TRAITE',
+    ANNULE = 'ANNULE' 
+}
+
 export enum STATUT_PRODUITE {
     TRAITE = 'TRAITE',
     NON_TRAITE = 'NON_TRAITE'

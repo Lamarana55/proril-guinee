@@ -8,9 +8,10 @@ import { ListGrossisteComponent } from './grossiste/list-grossiste/list-grossist
 import { EditGrossisteComponent } from './grossiste/edit-grossiste/edit-grossiste.component';
 import { ListProduitComponent } from './produit/list-produit/list-produit.component';
 import { GestionGrossisteRoutingModule } from "./gestion-grossiste.routing";
+import { InfoGrossisteComponent } from './grossiste/info-grossiste/info-grossiste.component';
 
 @NgModule({
-  declarations: [GestionGrossisteComponent, ListGrossisteComponent, EditGrossisteComponent, ListProduitComponent,],
+  declarations: [GestionGrossisteComponent, ListGrossisteComponent, EditGrossisteComponent, ListProduitComponent, InfoGrossisteComponent,],
   imports: [
     CommonModule,
     GestionGrossisteRoutingModule,
