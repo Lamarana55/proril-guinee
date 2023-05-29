@@ -23,7 +23,6 @@ import javax.validation.Valid
 @Api(description = "Controlleur de l'entité commande ")
 class CommandeController {
 
-
     private val logger = LoggerFactory.getLogger(CommandeController::class.java)
 
     @Autowired

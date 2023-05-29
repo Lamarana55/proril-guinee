@@ -22,11 +22,22 @@ export const AppRoutes: Routes = [{
                         permissions: PERMISSIONS.CAN_VIEW_DASHBORD
                     }
                 },
-                {
+                /* {
                     path: 'articles',
                     loadChildren: () => import('app/project/article/article.module').then(m => m.ArticleModule),
                     canActivate: [AuthGuard]
-                }, {
+                } */
+                {
+                    path: 'gestion-grossistes',
+                    loadChildren: () => import('app/project/gestion-grossiste/gestion-grossiste.module').then(m => m.GestionGrossisteModule),
+                    canActivate: [AuthGuard]
+                }
+                ,{
+                    path: 'gestion-produits',
+                    loadChildren: () => import('app/project/gestion-produit/gestion-produit.module').then(m => m.GestionProduitModule),
+                    canActivate: [AuthGuard]
+                }
+                ,{
                     path: 'parametrages',
                     loadChildren: () => import('app/project/parametrage/parametrage.module').then(m => m.ParametrageModule),
                     canActivate: [AuthGuard]

@@ -66,7 +66,7 @@
                     <mat-form-field>
                       <mat-label>Region</mat-label>
                       <mat-select formControlName="idRegion">
-                        <mat-option *ngFor="let region of regions$ | async" [value]="region.id">{{ region.code + " - " + region.nom}}</mat-option>
+                        <mat-option *ngFor="let region of regions$ | async" [value]="region">{{ region.code + " - " + region.nom}}</mat-option>
                       </mat-select>
                       <mat-error>La region est obligatoire</mat-error>
                     </mat-form-field>

@@ -33,25 +33,27 @@ export const ROUTES: RouteInfo[] = [
     permission: PERMISSIONS.CAN_VIEW_DASHBORD,
   },
   {
-    path: "/articles",
-    title: "Articles",
+    path: "/gestion-grossistes",
+    title: "Gestion Grossistes",
     type: "sub",
-    collapse: "articles",
+    collapse: "gestion-grossistes",
     icontype: "nc-icon nc-bullet-list-67",
     children: [
-      {
-        path: "list-article",
-        title: "Articles",
-        ab: "A",
-        permission: PERMISSIONS.CAN_VIEW_ARTICLE_MENU,
-      },
-      {
-        path: "categorie-articles",
-        title: "Categorie Article",
-        ab: "CA",
-        permission: PERMISSIONS.CAN_VIEW_CATEGORIE_ARTICLE_MENU,
-      },
-    ],
+      {path: 'grossistes', title: 'Grossites', ab: 'G', permission: PERMISSIONS.CAN_VIEW_GROSSISTE_MENU},
+      {path: 'produits', title: 'Produits', ab: 'P', permission: PERMISSIONS.CAN_VIEW_PRODUIT_MENU}
+  ],
+  },
+  {
+    path: "/gestion-produits",
+    title: "Gestion Produits",
+    type: "sub",
+    collapse: "gestion-produits",
+    icontype: "nc-icon nc-bullet-list-67",
+    children: [
+      {path: 'produits', title: 'Produits', ab: 'P', permission: PERMISSIONS.CAN_VIEW_PRODUIT_MENU},
+      {path: 'clients', title: 'Clients', ab: 'C', permission: PERMISSIONS.CAN_VIEW_CLIENT_MENU},
+      {path: 'statistiques', title: 'Statistiques', ab: 'ST', permission: PERMISSIONS.CAN_VIEW_STATISTIQUE_MENU},
+  ],
   },
 
   /*
@@ -85,13 +87,13 @@ export const ROUTES: RouteInfo[] = [
     children: [
       {
         path: "categories",
-        title: "Categorie",
+        title: "Categories",
         ab: "C",
         permission: PERMISSIONS.CAN_VIEW_CATEGORIE_MENU,
       },
       {
         path: "groupements",
-        title: "Groupement",
+        title: "Groupements",
         ab: "G",
         permission: PERMISSIONS.CAN_VIEW_GROUPEMENT_MENU,
       },

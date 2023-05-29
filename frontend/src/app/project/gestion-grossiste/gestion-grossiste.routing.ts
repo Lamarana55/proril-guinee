@@ -8,6 +8,7 @@ import { PERMISSIONS } from 'app/config/app.data';
 import { EditGrossisteComponent } from './grossiste/edit-grossiste/edit-grossiste.component';
 import { InfoGrossisteComponent } from './grossiste/info-grossiste/info-grossiste.component';
 import { ListProduitComponent } from './produit/list-produit/list-produit.component';
+import { EditProduitComponent } from '../gestion-produit/produit/edit-produit/edit-produit.component';
 
 const routes: Routes = [
   {
@@ -44,7 +45,7 @@ const routes: Routes = [
         children: [
           {
             path: '',
-            component: ListProduitComponent,
+            component: EditProduitComponent,
             canActivate: [RoleGuard],
             data: { permissions: PERMISSIONS.CAN_VIEW_PRODUIT_LIST}
           }

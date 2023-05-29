@@ -1,5 +1,117 @@
 package com.mady.backend.controller
 
+import com.mady.backend.entities.Groupement
+import com.mady.backend.repository.GroupementRepository
+import com.mady.backend.services.UserConnected
+import com.mady.backend.utils.CROSS_ORIGIN
+import com.mady.backend.utils.Delete
+import com.mady.backend.utils.MessageResponse
+import com.mady.backend.utils.Permissions
+import io.swagger.annotations.Api
+import io.swagger.annotations.ApiOperation
+import org.slf4j.LoggerFactory
+import org.springframework.beans.factory.annotation.Autowired
+import org.springframework.http.HttpStatus
+import org.springframework.http.ResponseEntity
+import org.springframework.web.bind.annotation.*
+import java.time.Instant
+import javax.validation.Valid
+
+@RestController
+@CrossOrigin(CROSS_ORIGIN)
+@RequestMapping("/api/groupements")
+@Api(description = "Controlleur de l'entité groupement ")
 class GroupementController {
+
+    private val logger = LoggerFactory.getLogger(GroupementController::class.java)
+
+    @Autowired
+    private lateinit var groupementRepository: GroupementRepository
+
+
+    @Autowired
+    lateinit var userConnected: UserConnected
+
+
+    @GetMapping
+    @ApiOperation("Recuperation de la liste des groupements")
+    fun index(): ResponseEntity<Any> {
+        return when {
+//            true -> {
+            userConnected.getAutorisation(Permissions.CAN_VIEW_GROUPEMENT_LIST) ->{
+                ResponseEntity.ok(groupementRepository.findAll().filter { groupement -> groupement.isDelete == Delete.No })
+            }
+            else -> ResponseEntity(MessageResponse("le user n'est pas autorisé "), HttpStatus.UNAUTHORIZED)
+        }
+    }
+
+    @GetMapping("{id}")
+    @ApiOperation("Recuperation d'une groupement")
+    fun show(@PathVariable id: Long): ResponseEntity<Any> {
+        return when {
+//            true -> {
+            userConnected.getAutorisation(Permissions.CAN_VIEW_CATEGORIE_INFO) ->{
+                ResponseEntity(groupementRepository.findById(id).filter { groupement -> groupement.isDelete == Delete.No }, HttpStatus.OK)
+            }
+            else -> ResponseEntity(MessageResponse("le user n'est pas autorisé "), HttpStatus.UNAUTHORIZED)
+        }
+    }
+
+    @PostMapping
+    @ApiOperation("Méthode qui permet l'enregistrement d'une groupement ")
+    fun save(@Valid @RequestBody groupement: Groupement): ResponseEntity<Any> {
+        return when {
+//            true -> {
+            userConnected.getAutorisation(Permissions.CAN_ADD_CATEGORIE) -> {
+                ResponseEntity.ok().body(groupementRepository.save(groupement))
+            }
+            else -> ResponseEntity(MessageResponse("le user n'est pas autorisé "), HttpStatus.UNAUTHORIZED)
+        }
+
+    }
+
+    @PostMapping("/all")
+    @ApiOperation("Méthode qui permet l'enregistrement d'une liste de Groupement ")
+    fun saveAll(@Valid @RequestBody list: List<Groupement>) =
+            ResponseEntity.ok().body(groupementRepository.saveAll(list))
+
+    @PutMapping("{id}")
+    @ApiOperation("Méthode qui permet la mise à jour  d'un Groupement")
+    fun update(@PathVariable id: Long, @Valid @RequestBody groupement: Groupement): ResponseEntity<Groupement> {
+        return groupementRepository.findById(id).map { existType ->
+            val newType = existType.copy(
+                    nom = groupement.nom,
+                    telephone = groupement.telephone,
+                    email = groupement.email,
+                    description = groupement.description,
+                    region = groupement.region,
+                    prefecture = groupement.prefecture,
+                    commune = groupement.commune,
+                    quartier = groupement.quartier,
+                    updatedAt = Instant.now()
+            )
+            ResponseEntity.ok().body(groupementRepository.save(newType))
+        }.orElse(ResponseEntity.notFound().build())
+
+    }
+
+    @DeleteMapping("{id}")
+    @ApiOperation("Méthode qui permet de supprimer une groupement ")
+    fun delete(@PathVariable id: Long): ResponseEntity<Groupement> {
+        return groupementRepository.findById(id).map { existCategorie ->
+            val newType = existCategorie.copy(
+                    isDelete = userConnected.updateDelete(existCategorie.isDelete),
+                    updatedAt = Instant.now()
+            )
+            ResponseEntity.ok().body(groupementRepository.save(newType))
+        }.orElse(ResponseEntity.notFound().build())
+
+    }
+
+    @GetMapping("findByNom")
+    @ApiOperation("Récuperation d'une groupement en fonction du nom ")
+    fun findByNom(@RequestParam nom: String) = groupementRepository.findByNom(nom).filter { groupement -> groupement.isDelete == Delete.No }
+
+
 
 }

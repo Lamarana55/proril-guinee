@@ -198,7 +198,7 @@
   {
   "id": 50,
   "libelle": "CAN_VIEW_CLIENT_MENU"
-},
+  },
   {
     "id": 51,
     "libelle": "CAN_VIEW_CLIENT_LIST"
@@ -218,6 +218,30 @@
   {
     "id": 55,
     "libelle": "CAN_DELETE_CLIENT"
+  },
+  {
+    "id": 56,
+    "libelle": "CAN_VIEW_MARQUE_MENU"
+  },
+  {
+    "id": 57,
+    "libelle": "CAN_VIEW_MARQUE_LIST"
+  },
+  {
+    "id": 58,
+    "libelle": "CAN_VIEW_MARQUE_INFO"
+  },
+  {
+    "id": 59,
+    "libelle": "CAN_ADD_MARQUE"
+  },
+  {
+    "id": 60,
+    "libelle": "CAN_UPDATE_MARQUE"
+  },
+  {
+    "id": 61,
+    "libelle": "CAN_DELETE_MARQUE"
   }
 
 ]

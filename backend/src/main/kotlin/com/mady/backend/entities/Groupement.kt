@@ -14,7 +14,6 @@ data class Groupement(
         val nom: String,
         val telephone: String? = null,
         val email: String? = null,
-        val marqueGroupement: String? = null,
 
         @Column(columnDefinition = "text")
         val description: String? = null,

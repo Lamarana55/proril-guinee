@@ -23,7 +23,7 @@ public class SwaggerConfig {
     public Docket api(){
         return  new Docket(DocumentationType.SWAGGER_2)
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("com.anien.mgfbackend"))
+                .apis(RequestHandlerSelectors.basePackage("com.mady.backend"))
                 .paths(PathSelectors.any())
                 .build();
     }

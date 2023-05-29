@@ -10,16 +10,18 @@ import javax.persistence.*
 data class Marque(
         @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
         val id: Long,
-        @Column(nullable = false)
+        @Column(nullable = false, unique = true)
         val libelle: String,
         @Column(columnDefinition = "text")
         val description: String? = null,
-        val groupementAt: String? = null,
+
         val isDelete: Delete = Delete.No,
 
         @ManyToOne(fetch = FetchType.LAZY)
         @JoinColumn(nullable = false)
         val groupement: Groupement? = null,
+
+        val groupementAt: String? = groupement?.nom,
 
         @CreatedDate
         @Column(name = "created_at", updatable = false)

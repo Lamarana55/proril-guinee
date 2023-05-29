@@ -81,7 +81,7 @@ class LoadDataService {
         try {
             val permissions = mapper.readValue(inputStream, typeReference)
             for (permission in permissions) {
-                if (!permissionRepository.findById(permission.id).isPresent) {
+                if (!permissionRepository.findById(permission.id).isPresent || !permissionRepository.findByLibelle(permission.libelle).isPresent) {
                     val myPersion = Permission(id = permission.id, libelle = permission.libelle)
                     permissionRepository.save(myPersion)
                     count++
@@ -265,7 +265,7 @@ class LoadDataService {
         try {
             val roles = mapper.readValue(inputStream, typeReference)
             for (r in roles) {
-                if (!roleRepository.findById(r.id).isPresent) {
+                if (!roleRepository.findById(r.id).isPresent || !roleRepository.findByNom(r.nom).isPresent) {
                     val myRole = Role(id = r.id, nom = r.nom, permissions = r.permissions, description = r.description)
                     roleRepository.save(myRole)
                     count++
