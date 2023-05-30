@@ -12,7 +12,7 @@ export class UserManagementComponent implements OnInit {
   permissions = {
     can_view_user_list: false,
     can_view_role_list: false
-  }
+  } 
 
   constructor(private auth: AuthService) { }
 

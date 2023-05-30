@@ -15,6 +15,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CoreModule } from '../core/core.module';
 import { MaterialModule } from '../material/material.module';
 import { SearchLocalComponent } from '../search-local/search-local.component';
+import { RoleNameFormatPipe } from '../core/pipes/role-name-format.pipe';
 
 
 @NgModule({
@@ -37,6 +38,7 @@ import { SearchLocalComponent } from '../search-local/search-local.component';
     FormsModule,
     CoreModule,
     NgbModule
-  ]
+  ],
+  providers: [RoleNameFormatPipe]
 })
 export class UserManagementModule { }

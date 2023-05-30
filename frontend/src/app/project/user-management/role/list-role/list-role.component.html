@@ -11,7 +11,7 @@
         <button *ngIf="permissions.can_add" mat-raised-button routerLink="edit" class="mr-1" color="info">
           <mat-icon>add</mat-icon>
         </button>
-        <button mat-raised-button color="primary" (click)="onRefresh()">
+        <button mat-raised-button color="info" (click)="onRefresh()">
           <mat-icon>refresh</mat-icon>
         </button>
       </div>
@@ -45,7 +45,7 @@
             <tbody class="text-center">
               <tr *ngFor="let role of roles | slice : (page-1) * pageSize : (page-1) * pageSize + pageSize; index as i ">
                 <th scope="row">{{ (((page-1)*pageSize)+1)+i }}</th>
-                <td>{{ role.nom }}</td>
+                <td>{{ role.nom | roleNameFormat: role.nom}}</td>
                 <td>{{ role.description }}</td>
                 <td>
                   <button mat-mini-fab color="info" container="body"  [ngbPopover]="permissionsMessage" placement="left" popoverTitle="Permissions">

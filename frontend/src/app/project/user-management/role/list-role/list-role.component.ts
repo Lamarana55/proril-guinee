@@ -8,6 +8,7 @@ import { switchMap } from 'rxjs/operators';
 import { Role } from '../../models/role.model';
 import { UserService } from '../../services/user.service';
 import { Confirmable } from 'app/project/core/decorators/confirmable.decorator';
+import { RoleNameFormatPipe } from 'app/project/core/pipes/role-name-format.pipe';
 
 declare var $: any;
 

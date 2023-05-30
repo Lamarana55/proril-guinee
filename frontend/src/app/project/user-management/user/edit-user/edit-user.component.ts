@@ -65,15 +65,12 @@ export class EditUserComponent implements OnInit {
     this.userForm = this.fb.group({
       nom: ['', [Validators.required, Validators.minLength(2)]],
       prenom: ['', [Validators.required, Validators.minLength(2)]],
-      username: ['', [Validators.required, Validators.minLength(4)]],
       email: ['', [Validators.required, Validators.email]],
-      localite: this.fb.group({
-        idRegion: [null, [Validators.required, Validators.pattern(SELECT_NUMBER_PATTERN)]],
-        idPrefecture: [null, [Validators.required, Validators.pattern(SELECT_NUMBER_PATTERN)]],
-        idCommune: [null, Validators.pattern(SELECT_NUMBER_PATTERN)],
-        idQuartier: [null, Validators.pattern(SELECT_NUMBER_PATTERN)],
-        idSecteur: null
-      }),
+      region: this.fb.group({id: [null, [Validators.required, Validators.pattern(SELECT_NUMBER_PATTERN)]]}),
+      prefecture: this.fb.group({id: [null, [Validators.required, Validators.pattern(SELECT_NUMBER_PATTERN)]]}),
+      Commune: this.fb.group({id: [null, [Validators.required, Validators.pattern(SELECT_NUMBER_PATTERN)]]}),
+      quartier: this.fb.group({id: [null, [Validators.required, Validators.pattern(SELECT_NUMBER_PATTERN)]]}),
+      secteur: this.fb.group({id: [null, [Validators.required, Validators.pattern(SELECT_NUMBER_PATTERN)]]}),
       telephone: ['', [Validators.required, Validators.pattern(TEL_PATTERN)]],
       role: this.fb.group({
         id: [null, [Validators.required, Validators.pattern(SELECT_NUMBER_PATTERN)]]
@@ -125,19 +122,19 @@ export class EditUserComponent implements OnInit {
 
   // Actualisation des champs de la localite en fonction des informations selectionnees
   onChangeSelectLocalite() {
-    this.userForm.get('localite.idRegion').valueChanges.subscribe(idRegion => {
-      this.localiteService.subjectPrefecture.next(idRegion);
+    this.userForm.get('region').valueChanges.subscribe(id => {
+      this.localiteService.subjectPrefecture.next(id);
     });
 
-    this.userForm.get('localite.idPrefecture').valueChanges.subscribe(idPrefecture => {
+    this.userForm.get('prefecture').valueChanges.subscribe(idPrefecture => {
       this.localiteService.subjectCommune.next(idPrefecture);
     });
 
-    this.userForm.get('localite.idCommune').valueChanges.subscribe(idCommune => {
+    this.userForm.get('commune').valueChanges.subscribe(idCommune => {
       this.localiteService.subjectQuartier.next(idCommune);
     });
 
-    this.userForm.get('localite.idQuartier').valueChanges.subscribe(idQuartier => {
+    this.userForm.get('quartier').valueChanges.subscribe(idQuartier => {
       this.localiteService.subjectSecteur.next(idQuartier);
     });
   }
@@ -148,7 +145,6 @@ export class EditUserComponent implements OnInit {
     this.userForm.patchValue({
       nom: user.nom,
       prenom: user.prenom,
-      username: user.username,
       email: user.email,
       telephone: user.telephone, 
       role: { id: user.role.id }
@@ -165,7 +161,7 @@ export class EditUserComponent implements OnInit {
   onNewQuartier(isDone: {done: boolean, id: number}) {
     if (isDone.done) {
       this.localiteService.subjectQuartier.next(this.communeId);
-      this.userForm.get('localite.idQuartier').setValue(isDone.id);
+      this.userForm.get('quartier').setValue(isDone.id);
       this.modalReference.close();
     }
   }
@@ -174,7 +170,7 @@ export class EditUserComponent implements OnInit {
   onNewSecteur(isDone: {done: boolean, id: number}) {
     if (isDone.done) {
       this.localiteService.subjectSecteur.next(this.quartierId);
-      this.userForm.get('localite.idSecteur').setValue(isDone.id);
+      this.userForm.get('secteur').setValue(isDone.id);
       this.modalReference.close();
     }
   }

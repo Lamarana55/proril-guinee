@@ -14,6 +14,7 @@ import { MatSort } from '@angular/material/sort';
 import { RequestCasParam } from 'app/project/core/models/request-cas-param';
 import { NgbModal, NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { RoleNameFormatPipe } from 'app/project/core/pipes/role-name-format.pipe';
 
 @Component({
   selector: 'app-list-user',
@@ -42,7 +43,7 @@ export class ListUserComponent implements OnInit {
   userId: number = 0;
   messageAttente: string = "";
 
-  displayedColumns = ['username', 'email', 'nom_prenom', 'telephone', 'role','statut',  'option'];
+  displayedColumns = [ 'nom_prenom', 'email', 'telephone', 'role','statut',  'option'];
   dataSource: MatTableDataSource<User> = new MatTableDataSource([]);
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
@@ -63,8 +64,7 @@ export class ListUserComponent implements OnInit {
   this.userService.getAll(params).subscribe( data => {
     const displayData = data.data.map(dd => {
       this.totalRows = data.totalItem;
-    //this.totalRows = data.
-    
+      
       return {
         id: dd.id,
         nom: dd.nom,
@@ -128,7 +128,7 @@ ngAfterContentChecked() {
   onDelete(id: number) {
     this.userService.delete(id).subscribe(
       () => {
-        this.utils.showNotif('Utilisateur supprimé avec succès', 'success');
+        this.utils.showNotif('Utilisateur supprimé avec succès ', 'success');
         this.onRefresh();
       },
       err => {

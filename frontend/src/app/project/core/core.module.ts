@@ -12,6 +12,7 @@ import { DisplayLocaliteComponent } from './shared/display-localite/display-loca
 import { StatusCasFormatPipe } from './pipes/status-cas-format.pipe';
 import { StatusAlerteFormatPipe } from './pipes/status-alerte-format.pipe';
 import { SpinnerComponent } from './shared/spinner/spinner.component';
+import { RoleNameFormatPipe } from './pipes/role-name-format.pipe';
 
 
 
@@ -25,6 +26,7 @@ import { SpinnerComponent } from './shared/spinner/spinner.component';
     PipeFunctionPipe,
     DisplayLocaliteComponent,
     StatusCasFormatPipe,
+    RoleNameFormatPipe,
     StatusAlerteFormatPipe,
     SpinnerComponent
   ],
@@ -44,6 +46,7 @@ import { SpinnerComponent } from './shared/spinner/spinner.component';
     DisplayLocaliteComponent,
     StatusCasFormatPipe,
     StatusAlerteFormatPipe,
+    RoleNameFormatPipe,
     SpinnerComponent
   ]
 })

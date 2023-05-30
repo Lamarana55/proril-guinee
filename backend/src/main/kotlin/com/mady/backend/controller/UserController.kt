@@ -150,7 +150,7 @@ class UserController {
                     false -> {
                         var password = userConnected.getRandomString(10)
 
-                        var userSave = userRepository.save(user.copy(password = encoder.encode(password), code = userConnected.getCodeUser()))
+                        var userSave = userRepository.save(user.copy(password = encoder.encode(password), code = userConnected.getCodeUser(), username = user.telephone!!))
                         var message = "Bonjour ${userSave.prenom}, Votre login:${userSave.username} password: $password , lien: $link "
                         if (orangeSMS.sendMessage(userSave.telephone, message)) {
                             print("sms send")

@@ -37,10 +37,10 @@
           </div>
           <mat-table [dataSource]="dataSource" matSort>
             <!-- date Column -->
-            <ng-container matColumnDef="username">
+           <!--  <ng-container matColumnDef="username">
               <mat-header-cell *matHeaderCellDef mat-sort-header> <strong>USERNAME</strong> </mat-header-cell>
               <mat-cell *matCellDef="let row">{{ row.username }}</mat-cell>
-            </ng-container>
+            </ng-container> -->
             <!-- code Column -->
             <ng-container matColumnDef="email">
               <mat-header-cell *matHeaderCellDef mat-sort-header><strong>EMAIL</strong> </mat-header-cell>
@@ -60,7 +60,7 @@
             <!-- sexe Column -->
             <ng-container matColumnDef="role">
               <mat-header-cell *matHeaderCellDef mat-sort-header><strong>ROLE</strong></mat-header-cell>
-              <mat-cell *matCellDef="let row">{{ row.role['nom'] }}</mat-cell>
+              <mat-cell *matCellDef="let row">{{ row.role['nom'] | roleNameFormat:row.role['nom']}}</mat-cell>
             </ng-container>
 
             <!-- Age Column -->

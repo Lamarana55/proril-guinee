@@ -12,7 +12,7 @@ export class RoleNameFormatPipe implements PipeTransform {
         return 'Administrateur';
       case ROLE_NAME.ROLE_ASSISTANT_ADMIN:
         return 'Assistant Administrateur';
-      case ROLE_NAME.ROLE_CONSULTANT:
+      case ROLE_NAME.ROLE_CONSULTANT: 
         return 'Consultant';
       case ROLE_NAME.ROLE_GROSSISTE:
         return 'Grossiste';

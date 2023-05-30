@@ -10,7 +10,7 @@ export class User {
   prenom: string
   email: string
   telephone: string
-  username: string
+  username?: string
   password: string
   statut: string
   role = new Role()
