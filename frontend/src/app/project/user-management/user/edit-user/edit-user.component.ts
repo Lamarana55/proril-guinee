@@ -68,7 +68,7 @@ export class EditUserComponent implements OnInit {
       email: ['', [Validators.required, Validators.email]],
       region: this.fb.group({id: [null, [Validators.required, Validators.pattern(SELECT_NUMBER_PATTERN)]]}),
       prefecture: this.fb.group({id: [null, [Validators.required, Validators.pattern(SELECT_NUMBER_PATTERN)]]}),
-      Commune: this.fb.group({id: [null, [Validators.required, Validators.pattern(SELECT_NUMBER_PATTERN)]]}),
+      commune: this.fb.group({id: [null, [Validators.required, Validators.pattern(SELECT_NUMBER_PATTERN)]]}),
       quartier: this.fb.group({id: [null, [Validators.required, Validators.pattern(SELECT_NUMBER_PATTERN)]]}),
       secteur: this.fb.group({id: [null, [Validators.required, Validators.pattern(SELECT_NUMBER_PATTERN)]]}),
       telephone: ['', [Validators.required, Validators.pattern(TEL_PATTERN)]],
