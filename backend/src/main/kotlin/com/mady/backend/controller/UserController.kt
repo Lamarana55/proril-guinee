@@ -177,7 +177,7 @@ class UserController {
                         .copy(code = existUser.get().code,
                                 nom = user.nom,
                                 prenom = user.prenom,
-                                username = user.username,
+                                username = user.telephone,
                                 statut = user.statut,
                                 telephone = user.telephone,
                                 email = user.email,

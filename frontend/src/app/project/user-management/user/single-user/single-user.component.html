@@ -79,10 +79,57 @@
 </div>
 
 <!-- Localité -->
-<div class="card card-body" *ngIf="localite">
-    <h2>Localité</h2>
-    <app-display-localite [localite]="localite"></app-display-localite>
+<div class="card card-body " *ngIf="(user$ | async) as user">
+    <h2 *ngIf="(user.region)" >Localité</h2>
+    <!-- <app-display-localite [localite]="localite"></app-display-localite> -->
+    <div class="row">
+        <div class="col">
+          <ul class="list-group list-group-flush">
+              <li class="list-group-item" *ngIf="(user.region) as region">
+                <div class="row">
+                  <div class="col">Region</div>
+                  <div class="col font-weight-bold">{{ region.nom }}</div>
+                </div>
+                <!-- <span class="mr-2">Region :</span> {{ region.nom }} -->
+              </li>
+              <li class="list-group-item" *ngIf="(user.prefecture) as prefecture">
+                <div class="row">
+                  <div class="col">Prefecture</div>
+                  <div class="col font-weight-bold">{{ prefecture.nom }}</div>
+                </div>
+              </li>
+              <li class="list-group-item" *ngIf="(user.commune) as commune">
+                <div class="row">
+                  <div class="col">Sous-Prefecture/Commune</div>
+                  <div class="col font-weight-bold">{{ commune.nom }}</div>
+                </div>
+                <!-- <span class="mr-2">Sous-Prefecture/Commune :</span> {{ commune.nom }} -->
+              </li>
+            </ul>
+        </div>
+    
+        <div class="col">
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item" *ngIf="(user.quartier) as quartier">
+                    <div class="row">
+                      <div class="col">Quartier</div>
+                      <div class="col font-weight-bold">{{ quartier.nom }}</div>
+                    </div>
+                    <!-- <span class="mr-2">Quartier :</span> {{ quartier.nom }} -->
+                </li>
+                <li class="list-group-item" *ngIf="(user.secteur) as secteur">
+                    <div class="row">
+                      <div class="col">Secteur</div>
+                      <div class="col font-weight-bold">{{ secteur.nom }}</div>
+                    </div>
+                    <!-- <span class="mr-2">Secteur :</span> {{ secteur.nom }} -->
+                </li>
+            </ul>
+        </div>
+    </div>
 </div>
+
+
 
 <!-- Permissions -->
 <div class="card card-body" *ngIf="role">

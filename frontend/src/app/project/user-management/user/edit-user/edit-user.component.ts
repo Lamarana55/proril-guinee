@@ -5,7 +5,6 @@ import { Observable } from 'rxjs';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
-import Swal from 'sweetalert2';
 import { Role } from '../../models/role.model';
 import { User } from '../../models/user.model';
 import { UserService } from '../../services/user.service';
@@ -17,7 +16,6 @@ import { Prefecture } from 'app/project/core/models/prefecture.model';
 import { Commune } from 'app/project/core/models/commune.model';
 import { Quartier } from 'app/project/core/models/quartier.model';
 import { Secteur } from 'app/project/core/models/secteur.model';
-import { HttpErrorResponse } from '@angular/common/http';
 
 @Component({
   selector: 'app-edit-user',
@@ -98,11 +96,11 @@ export class EditUserComponent implements OnInit {
     if (!this.userForm.invalid) {
       const user = this.userForm.value as Partial<User>;
       user.role = await this.userService.getOneRole(user.role.id).toPromise();
-      user.region = user.region.id ? await this.localiteService.getOneRegion(user.region.id).toPromise() : null;
-      user.prefecture = user.prefecture.id ? await this.localiteService.getOnePrefecture(user.prefecture.id).toPromise(): null;
-      user.commune = user.commune.id ? await this.localiteService.getOnecommune(user.commune.id).toPromise() : null;
-      user.quartier =  user.quartier.id ? await this.localiteService.getOneQuartier(user.quartier.id).toPromise() : null;
-      user.secteur = user.secteur.id ? await this.localiteService.getOneSecteur(user.secteur.id).toPromise() : null;
+      user.region = user.region ? await this.localiteService.getOneRegion(user.region.id).toPromise() : null;
+      user.prefecture = user.prefecture ? await this.localiteService.getOnePrefecture(user.prefecture.id).toPromise(): null;
+      user.commune = user.commune ? await this.localiteService.getOnecommune(user.commune.id).toPromise() : null;
+      user.quartier =  user.quartier ? await this.localiteService.getOneQuartier(user.quartier.id).toPromise() : null;
+      user.secteur = user.secteur ? await this.localiteService.getOneSecteur(user.secteur.id).toPromise() : null;
 
       const userActions$ = this.isNew ? this.userService.add(user) : this.userService.update(this.userId, user);
       userActions$.subscribe(
@@ -156,18 +154,27 @@ export class EditUserComponent implements OnInit {
 
   async mapUser() {
     const user = await this.userService.getOne(this.userId).toPromise();
-
     this.userForm.patchValue({
       nom: user.nom,
       prenom: user.prenom,
       email: user.email,
       telephone: user.telephone, 
       role: { id: user.role.id },
-      /* region: user.region.id ? { id: user.region.id } : null,
-      prefecture: user.prefecture.id ? {id: user.prefecture.id} : null,
-      commune: user.commune.id ? {id: user.commune.id} : null,
-      quartier: user.quartier.id ? {id: user.quartier.id} : null,
-      secteur:  user.secteur.id ? {id: user.secteur.id}: null */
+      region:  user.region ? {id: user.region.id} : this.fb.group({
+        id: [null, [Validators.pattern(SELECT_NUMBER_PATTERN)]]
+      }),
+      prefecture: user.prefecture ? {id: user.prefecture.id} : this.fb.group({
+        id: [null, [Validators.pattern(SELECT_NUMBER_PATTERN)]]
+      }),
+      commune: user.commune ? {id: user.commune.id} : this.fb.group({
+        id: [null, [Validators.pattern(SELECT_NUMBER_PATTERN)]]
+      }),
+      quartier: user.quartier ? {id: user.quartier.id} : this.fb.group({
+        id: [null, [Validators.pattern(SELECT_NUMBER_PATTERN)]]
+      }),
+      secteur:  user.secteur ? {id: user.secteur.id}: this.fb.group({
+        id: [null, [Validators.pattern(SELECT_NUMBER_PATTERN)]]
+      })
     })
   }
 
