@@ -69,7 +69,7 @@ class AuthController {
         val jwt = jwtProvider.generateJwtToken(authentication)
         val userDetails = authentication. principal as UserDetails
 
-        return ResponseEntity.ok().body(JwtResponse(user.username, "success", jwt, userDetails.authorities))
+        return ResponseEntity.ok().body(JwtResponse(user.username!!, "success", jwt, userDetails.authorities))
 
     }
 

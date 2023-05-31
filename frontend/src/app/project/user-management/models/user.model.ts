@@ -4,6 +4,7 @@ import { Role } from './role.model';
 import { Prefecture } from 'app/project/core/models/prefecture.model';
 import { Commune } from 'app/project/core/models/commune.model';
 import { Quartier } from 'app/project/core/models/quartier.model';
+import { Secteur } from 'app/project/core/models/secteur.model';
 export class User {
   id: number
   nom: string
@@ -18,4 +19,5 @@ export class User {
   prefecture? = new Prefecture()
   commune? = new Commune()
   quartier? = new Quartier()
+  secteur? = new Secteur()
 }

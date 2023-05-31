@@ -145,7 +145,8 @@ class UserController {
         when {
             true -> {
 //            userConnected.getAutorisation(Permissions.CAN_ADD_USER) -> {
-                val myUser = userRepository.findByUsernameOrEmail(user.username, user.email).filter { user -> user.isDelete == Delete.No }
+                val myUser = userRepository.findByTelephoneOrEmail(user.telephone!!, user.email).filter { user -> user.isDelete == Delete.No }
+
                 when (myUser.isPresent) {
                     false -> {
                         var password = userConnected.getRandomString(10)
@@ -155,7 +156,7 @@ class UserController {
                         if (orangeSMS.sendMessage(userSave.telephone, message)) {
                             print("sms send")
                         }
-                        sendMailService.sendEmailHtml("${userSave.nom}  ${userSave.prenom}", userSave.email, userSave.username, password, link!!)
+                        sendMailService.sendEmailHtml("${userSave.nom}  ${userSave.prenom}", userSave.email, userSave.username!!, password, link!!)
                         return ResponseEntity(userSave, HttpStatus.OK)
                     }
                     true -> return ResponseEntity(MessageResponse("l'utilisateur existe déjà ", "Echec"), HttpStatus.CONFLICT)
@@ -289,7 +290,7 @@ class UserController {
                 val password = userConnected.getRandomPassword()
                 var updateUser = userRepository.save(user.get().copy(password = encoder.encode(password)))
                 if (regenerate.option == OptionSender.EMAIL.value) {
-                    sendMailService.sendEmailHtmlPasswordGenerate("${updateUser.nom}  ${updateUser.prenom}", updateUser.email, updateUser.username, password, link!!)
+                    sendMailService.sendEmailHtmlPasswordGenerate("${updateUser.nom}  ${updateUser.prenom}", updateUser.email, updateUser.username!!, password, link!!)
                 } else {
                     val message = "Bonjour votre nouveau mots de passe est : $password "
                     orangeSMS.sendMessage(updateUser.telephone, message)

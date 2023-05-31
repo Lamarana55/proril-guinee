@@ -22,7 +22,7 @@ data class User(
         @Column(unique = true, nullable = false)
         val email: String,
         @Column(unique = true, nullable = false)
-        var username: String,
+        var username: String? = null,
 
         @Column(nullable = false)
         var password: String? = null,

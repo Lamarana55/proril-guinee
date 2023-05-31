@@ -70,79 +70,91 @@
             <fieldset class="fieldset-border">
               <legend class="fieldset-border">Localité</legend>
               <div >
-                <div class="row">
-                  <div class="col-12">
-                    <mat-form-field>
-                      <mat-label>Region</mat-label>
-                      <mat-select formControlName="region">
-                        <mat-option *ngFor="let region of regions$ | async" [value]="region.id">{{ region.nom }}</mat-option>
-                      </mat-select>
-                      <mat-error>La region est obligatoire</mat-error>
-                    </mat-form-field>
+                <div formGroupName="region">
+                  <div class="row">
+                    <div class="col-12">
+                      <mat-form-field>
+                        <mat-label>Region</mat-label>
+                        <mat-select formControlName="id">
+                          <mat-option *ngFor="let region of regions$ | async" [value]="region.id">{{ region.nom }}</mat-option>
+                        </mat-select>
+                        <mat-error>La region est obligatoire</mat-error>
+                      </mat-form-field>
+                    </div>
                   </div>
                 </div>
-                <div class="row">
-                  <div class="col-12">
-                    <mat-form-field>
-                      <mat-label>Prefecture</mat-label>
-                      <mat-select formControlName="prefecture">
-                        <mat-option *ngFor="let prefecture of prefectures$ | async" [value]="prefecture.id">{{ prefecture.nom}}</mat-option>
-                      </mat-select>
-                      <mat-error>La prefecture est obligatoire</mat-error>
-                    </mat-form-field>
+                <div formGroupName="prefecture">
+                  <div class="row">
+                    <div class="col-12">
+                      <mat-form-field>
+                        <mat-label>Prefecture</mat-label>
+                        <mat-select formControlName="id">
+                          <mat-option *ngFor="let prefecture of prefectures$ | async" [value]="prefecture.id">{{ prefecture.nom}}</mat-option>
+                        </mat-select>
+                        <mat-error>La prefecture est obligatoire</mat-error>
+                      </mat-form-field>
+                    </div>
                   </div>
                 </div>
-                <div class="row">
-                  <div class="col-12">
-                    <mat-form-field>
-                      <mat-label>Commune/Sous-prefecture</mat-label>
-                      <mat-select formControlName="commune">
-                        <mat-option *ngFor="let commune of communes$ | async" [value]="commune.id">{{ commune.nom }}</mat-option>
-                      </mat-select>
-                      <mat-error>La commune ou sous-prefecture est obligatoire</mat-error>
-                    </mat-form-field>
+
+                <div formGroupName="commune">
+                  <div class="row">
+                    <div class="col-12">
+                      <mat-form-field>
+                        <mat-label>Commune/Sous-prefecture</mat-label>
+                        <mat-select formControlName="id">
+                          <mat-option *ngFor="let commune of communes$ | async" [value]="commune.id">{{ commune.nom }}</mat-option>
+                        </mat-select>
+                        <mat-error>La commune ou sous-prefecture est obligatoire</mat-error>
+                      </mat-form-field>
+                    </div>
                   </div>
                 </div>
-                <div class="row">
-                  <div class="col-10">
-                    <mat-form-field>
-                      <mat-label>Quartier/Districte</mat-label>
-                      <mat-select formControlName="quartier">
-                        <mat-option *ngFor="let quartier of quartiers$ | async" [value]="quartier.id">{{ quartier.nom}}</mat-option>
-                      </mat-select>
-                    </mat-form-field>
-                  </div>
-                  <div class="col-2 form-inline">
-                    <button type="button" mat-mini-fab color="info"
-                      (click)="onOpenModal(contentQuartier)"><mat-icon>add</mat-icon></button>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-10">
-                    <mat-form-field>
-                      <mat-label>Secteur</mat-label>
-                      <mat-select formControlName="secteur">
-                        <mat-option *ngFor="let secteur of secteurs$ | async" [value]="secteur.id">{{secteur.nom}}</mat-option>
-                      </mat-select>
-                    </mat-form-field>
-                  </div>
-                  <div class="col-2 form-inline">
-                    <button type="button" mat-mini-fab color="info"
-                      (click)="onOpenModal(contentSecteur, true)"><mat-icon>add</mat-icon></button>
+                <div formGroupName="quartier">
+                  <div class="row">
+                    <div class="col-10">
+                      <mat-form-field>
+                        <mat-label>Quartier/Districte</mat-label>
+                        <mat-select formControlName="id">
+                          <mat-option *ngFor="let quartier of quartiers$ | async" [value]="quartier.id">{{ quartier.nom}}</mat-option>
+                        </mat-select>
+                      </mat-form-field>
+                    </div>
+                    <div class="col-2 form-inline">
+                      <button type="button" mat-mini-fab color="info"
+                        (click)="onOpenModal(contentQuartier)"><mat-icon>add</mat-icon></button>
+                    </div>
                   </div>
                 </div>
+                <div formGroupName="secteur">
+                  <div class="row">
+                    <div class="col-10">
+                      <mat-form-field>
+                        <mat-label>Secteur</mat-label>
+                        <mat-select formControlName="id">
+                          <mat-option *ngFor="let secteur of secteurs$ | async" [value]="secteur.id">{{secteur.nom}}</mat-option>
+                        </mat-select>
+                      </mat-form-field>
+                    </div>
+                    <div class="col-2 form-inline">
+                      <button type="button" mat-mini-fab color="info"
+                        (click)="onOpenModal(contentSecteur, true)"><mat-icon>add</mat-icon></button>
+                    </div>
+                  </div>
+                </div>
+
               </div>
             </fieldset>
             <!-- ==========================================================================-->
 
 
-            <div formGroupName="role">
+            <div formGroupName="role" >
               <div class="row">
                 <div class="col-12">
                   <mat-form-field>
                     <mat-label>Role</mat-label>
                     <mat-select formControlName="id">
-                      <mat-option *ngFor="let role of roles$ | async" [value]="role.id">{{ role.nom }}</mat-option>
+                      <mat-option *ngFor="let role of roles$ | async" [value]="role.id">{{ role.nom | roleNameFormat: role.nom }}</mat-option>
                     </mat-select>
                     <mat-error>Le role est obligatoire</mat-error>
                   </mat-form-field>
