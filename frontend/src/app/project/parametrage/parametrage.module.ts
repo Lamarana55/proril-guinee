@@ -5,25 +5,25 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CoreModule } from './../core/core.module';
 import { MaterialModule } from './../material/material.module';
 
-import { CategorieComponent } from './categorie/categorie/categorie.component';
 import { EditCategorieComponent } from './categorie/edit-categorie/edit-categorie.component';
 import { EditGroupementComponent } from './groupement/edit-groupement/edit-groupement.component';
-import { GroupementComponent } from './groupement/groupement/groupement.component';
 import { EditMarqueComponent } from './marque/edit-marque/edit-marque.component';
-import { MarqueComponent } from './marque/marque/marque.component';
 import { ParametrageRoutingModule } from './parametrage-routing.module';
 import { ParametrageComponent } from './parametrage.component';
+import { ListGroupementComponent } from './groupement/list-groupement/list-groupement.component';
+import { ListCategorieComponent } from './categorie/list-categorie/list-categorie.component';
+import { ListMarqueComponent } from './marque/list-marque/list-marque.component';
 
 
 @NgModule({
   declarations: [
     ParametrageComponent,
-    CategorieComponent,
     EditCategorieComponent,
-    GroupementComponent,
     EditGroupementComponent,
     EditMarqueComponent,
-    MarqueComponent
+    ListGroupementComponent,
+    ListCategorieComponent,
+    ListMarqueComponent
   ],
   imports: [
     CommonModule,

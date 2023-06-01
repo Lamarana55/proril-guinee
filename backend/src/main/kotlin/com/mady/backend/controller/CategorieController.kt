@@ -91,6 +91,16 @@ class CategorieController {
     }
 
     @DeleteMapping("{id}")
+    @ApiOperation("Méthode qui permet de supprimer un secteur ")
+    fun delete(@PathVariable id: Long): MessageResponse {
+        return categorieRepository.findById(id).map {
+            categorieRepository.deleteById(id)
+            MessageResponse("L'element qui a pour $id a été supprimer ", "success")
+        }.orElse(MessageResponse("Echec de la suppression ", "Echec"))
+    }
+
+
+    /*@DeleteMapping("{id}")
     @ApiOperation("Méthode qui permet de supprimer une categorie ")
     fun delete(@PathVariable id: Long): ResponseEntity<Categorie> {
         return categorieRepository.findById(id).map { existCategorie ->
@@ -101,7 +111,7 @@ class CategorieController {
             ResponseEntity.ok().body(categorieRepository.save(newType))
         }.orElse(ResponseEntity.notFound().build())
 
-    }
+    }*/
 
     @GetMapping("findByLibelle")
     @ApiOperation("Récuperation d'une categorie en fonction du nom ")

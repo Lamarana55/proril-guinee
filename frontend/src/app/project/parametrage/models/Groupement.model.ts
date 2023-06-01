@@ -5,11 +5,9 @@ import { Region } from "app/project/core/models/region.model"
 
 export class Groupement{
     id: number
-    libelle: string
     nom: string
     telephone?: string
     email?: string
-    marqueGroupement?: string
     description?: string
     region?: Region
     prefecture?: Prefecture

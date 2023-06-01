@@ -3,12 +3,12 @@ import { RouterModule, Routes } from '@angular/router';
 import { PERMISSIONS } from 'app/config/app.data';
 import { RoleGuard } from '../auth/services/role-guard.service';
 import { ParametrageComponent } from './parametrage.component';
-import { CategorieComponent } from './categorie/categorie/categorie.component';
 import { EditCategorieComponent } from './categorie/edit-categorie/edit-categorie.component';
-import { GroupementComponent } from './groupement/groupement/groupement.component';
 import { EditGroupementComponent } from './groupement/edit-groupement/edit-groupement.component';
-import { MarqueComponent } from './marque/marque/marque.component';
 import { EditMarqueComponent } from './marque/edit-marque/edit-marque.component';
+import { ListGroupementComponent } from './groupement/list-groupement/list-groupement.component';
+import { ListMarqueComponent } from './marque/list-marque/list-marque.component';
+import { ListCategorieComponent } from './categorie/list-categorie/list-categorie.component';
 
 const routes: Routes = [
   {
@@ -25,7 +25,7 @@ const routes: Routes = [
         children: [
           {
             path: '',
-            component: CategorieComponent,
+            component: ListCategorieComponent,
             canActivate: [RoleGuard],
             data: { permissions: PERMISSIONS.CAN_VIEW_CATEGORIE_LIST }
           }, {
@@ -41,7 +41,7 @@ const routes: Routes = [
         children: [
           {
             path: '',
-            component: GroupementComponent,
+            component: ListGroupementComponent,
             canActivate: [RoleGuard],
             data: { permissions: PERMISSIONS.CAN_VIEW_GROUPEMENT_LIST }
           }, {
@@ -57,7 +57,7 @@ const routes: Routes = [
         children: [
           {
             path: '',
-            component: MarqueComponent,
+            component: ListMarqueComponent,
             canActivate: [RoleGuard],
             data: { permissions: PERMISSIONS.CAN_VIEW_MARQUE_LIST }
           }, {

@@ -10,7 +10,9 @@ export function Confirmable(options?: SweetAlertOptions) {
             showCancelButton: true,
             confirmButtonText: 'OUI',
             cancelButtonText: 'NON',
-            icon: 'question'
+            icon: 'question',
+            confirmButtonColor: '#F15F6B',
+            cancelButtonColor: '#006d5b'
         };
 
         // Redefinir les options
