@@ -1,18 +1,18 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
-import { MatTableDataSource } from '@angular/material/table';
-import { MatPaginator } from '@angular/material/paginator';
+import { ChangeDetectorRef, Component, OnInit, ViewChild } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
+import { MatPaginator, PageEvent } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
-import { Router } from '@angular/router';
-import { GROUPEMENT_URL, ParametrageService } from '../../services/parametrage.service';
+import { MatTableDataSource } from '@angular/material/table';
+import { NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
 import { PERMISSIONS } from 'app/config/app.data';
-import { Confirmable } from 'app/project/core/decorators/confirmable.decorator';
 import { AuthService } from 'app/project/auth/services/auth.service';
+import { Confirmable } from 'app/project/core/decorators/confirmable.decorator';
+import { RequestGroupementParam } from 'app/project/core/models/request-groupement.model';
 import { UtilService } from 'app/project/core/services/util.service';
-import { Groupement } from '../../models/Groupement.model';
 import { BehaviorSubject } from 'rxjs';
 import { Observable } from 'rxjs-compat';
-import { NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
-import { FormGroup } from '@angular/forms';
+import { Groupement } from '../../models/Groupement.model';
+import { GROUPEMENT_URL, ParametrageService } from '../../services/parametrage.service';
 
 @Component({
   selector: 'app-list-groupement',
@@ -48,44 +48,41 @@ export class ListGroupementComponent implements OnInit {
   @ViewChild(MatSort) sort: MatSort;
 
 
-  constructor(private groupementService: groupementService,
+  constructor(private parametrageService: ParametrageService,
               private auth: AuthService,
               private utils: UtilService,
               private fb: FormBuilder,
-              private modalService: NgbModal,
               private cdrf: ChangeDetectorRef) { }
 
 /* ======================================== */
 
- async getElement(params: RequestCasParam= { page: this.currentPage, size: this.pageSize }){
+ async getElement(params: RequestGroupementParam = { page: this.currentPage, size: this.pageSize }){
 
-  this.groupementService.getAll(params).subscribe( data => {
-    const displayData = data.data.map(dd => {
+  this.parametrageService.getAllGroupements(params).subscribe( data => {
+    const displayData = data.data.map(groupement => {
       this.totalRows = data.totalItem;
       
       return {
-        id: dd.id,
-        nom: dd.nom,
-        prenom: dd.prenom,
-        email: dd.email,
-        localite: dd.localite,
-        telephone: dd.telephone,
-        groupementname: dd.groupementname,
-        password: dd.password,
-        statut: dd.statut,
-        role: dd.role,
-        fonction: dd.fonction 
-      } as groupement
+        id: groupement.id,
+        nom: groupement.nom,
+        telephone: groupement.telephone,
+        email: groupement.email,
+        description: groupement.description,
+        region: groupement.region,
+        prefecture: groupement.prefecture,
+        commune: groupement.commune,
+        quartier: groupement.quartier
+      } as Groupement
 
     
     }, error => {
       console.log("error: ", error)
     })
     this.dataSource.data = displayData
-    setTimeout(() => {
+   /*  setTimeout(() => {
       this.paginator.pageIndex = this.currentPage;
       this.paginator.length = this.totalRows;
-    });
+    }); */
     // this.dataSource.data.push.apply(this.dataSource.data, displayData);
     this.dataSource._updateChangeSubscription();
     this.dataSource.paginator = this.paginator;
@@ -107,10 +104,6 @@ ngAfterContentChecked() {
   ngOnInit(): void {
     this.setPermissions()
     this.getElement()
-
-    this.reinitialisationForm = this.fb.group({
-      mode: ['', [Validators.required]],
-    });
   }
  
   onRefresh() {
@@ -124,9 +117,9 @@ ngAfterContentChecked() {
     icon: 'warning'
   })
   onDelete(id: number) {
-    this.groupementService.delete(id).subscribe(
+    this.parametrageService.deleteGroupement(id).subscribe(
       () => {
-        this.utils.showNotif('Utilisateur supprimé avec succès ', 'success');
+        this.utils.showNotif('Groupement supprimé avec succès ', 'success');
         this.onRefresh();
       },
       err => {
@@ -138,42 +131,13 @@ ngAfterContentChecked() {
   setPermissions() {
     const authPermissions = this.auth.getPermissions();
     this.permissions = {
-      can_add: authPermissions.includes(PERMISSIONS.CAN_ADD_groupement),
-      can_edit: authPermissions.includes(PERMISSIONS.CAN_UPDATE_groupement),
-      can_delete: authPermissions.includes(PERMISSIONS.CAN_DELETE_groupement),
-      can_view_info: authPermissions.includes(PERMISSIONS.CAN_DELETE_groupement)
+      can_add: authPermissions.includes(PERMISSIONS.CAN_ADD_GROUPEMENT),
+      can_edit: authPermissions.includes(PERMISSIONS.CAN_UPDATE_GROUPEMENT),
+      can_delete: authPermissions.includes(PERMISSIONS.CAN_DELETE_GROUPEMENT),
+      can_view_info: authPermissions.includes(PERMISSIONS.CAN_DELETE_GROUPEMENT)
     }
   }
 
-  onChangeStatus(idgroupement: number) {
-    this.groupementService.changeStatus(idgroupement).subscribe(() => this.subject.next(0));
-  }
-
-  openModalReinitialisationPassword(content: any, groupement: groupement) {
-    this.groupementId = groupement.id;
-    this.modalRef = this.modalService.open(content, {backdrop: 'static'})
-  }
-
-  async onReinitialisationPassword() {
-    this.messageAttente = "Veillez patienter pendant la génération du nouveau mot de passe";
-    var data = {
-      idgroupement: this.groupementId,
-      option: this.reinitialisationForm.value.mode
-    }
-    
-    this.groupementService.reinitialisationPassword(data).subscribe((reponse) => {
-      this.messageAttente = "";
-      this.onCloseModal();
-      var statut = reponse.status;
-      return Swal.fire({
-        title: "Réinitialisation mot de passe",
-        icon: statut ? 'success' : 'error',
-        text: statut ? "Le mot de passe a été réinitialié avec succès" : "Une erreur s'est produite",
-        showConfirmButton: true
-      })
-    })
-
-  }
 
   onCloseModal() {
     this.modalRef.close();
@@ -186,7 +150,7 @@ ngAfterContentChecked() {
     // console.log(this.dataSource.data)
   }
   
-  onSearch(params: RequestCasParam) {
+  onSearch(params: RequestGroupementParam) {
     
     if (params) {
       // this.dataSource.data = [];
@@ -197,13 +161,7 @@ ngAfterContentChecked() {
       this.getElement(params);
     }
   }
-  async iniData(params: RequestCasParam = { page: this.currentPage, size: this.pageSize }) {
-    /* const data = await this.groupementService.getAll(params).pipe(
-      tap((groupement) => (this.totalRows = groupement.totalItem)),
-      map((groupement) => groupement.data.map(mapper))
-    ).toPromise(); */
-    // this.dataSource.data = data;
-  }
+  
 
   pageChanged(event: PageEvent) {
     console.log({ event });

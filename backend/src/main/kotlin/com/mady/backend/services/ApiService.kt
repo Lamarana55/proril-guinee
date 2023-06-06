@@ -2,9 +2,7 @@ package com.mady.backend.services
 
 import com.byteowls.jopencage.JOpenCageGeocoder
 import com.byteowls.jopencage.model.JOpenCageReverseRequest
-import com.mady.backend.entities.Region
-import com.mady.backend.entities.User
-import com.mady.backend.entities.ValidationCode
+import com.mady.backend.entities.*
 import com.mady.backend.repository.*
 import com.mady.backend.utils.Delete
 import com.mady.backend.utils.Pagination
@@ -49,6 +47,18 @@ class ApiService {
 
 
     fun myTreeUsers(page: Page<User>): Pagination{
+        return pagination(page.totalPages, page.size, page.map { it })
+    }
+
+    fun myTreeGroupement(page: Page<Groupement>): Pagination{
+        return pagination(page.totalPages, page.size, page.map { it })
+    }
+
+    fun myTreeMarque(page: Page<Marque>): Pagination{
+        return pagination(page.totalPages, page.size, page.map { it })
+    }
+
+    fun myTreeProduit(page: Page<Produit>): Pagination{
         return pagination(page.totalPages, page.size, page.map { it })
     }
 

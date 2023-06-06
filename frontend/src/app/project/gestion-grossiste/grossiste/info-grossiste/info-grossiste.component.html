@@ -1,1 +1,144 @@
-<p>info-grossiste works!</p>
+<div class="card">
+    <div class="card-header bg-default">
+        <div class="row">
+          <div class="col-sm-8 form-inline">
+            <button mat-mini-fab color="info" [routerLink]="returnUrl">
+              <mat-icon>reply</mat-icon>
+            </button>
+            <h2 class="card-title ml-1 text-white">
+              Utilisateur
+            </h2>
+          </div>
+         <!--  <div class="col-sm-4 text-right">
+            <button mat-mini-fab color="info" [routerLink]="['/users/edit', {id: userId}]">
+                <mat-icon>edit</mat-icon>
+            </button>
+            <button mat-mini-fab color="warn" (click)="onDelete(userId)">
+                <mat-icon>delete</mat-icon>
+            </button>
+          </div> -->
+        </div>
+    </div>
+
+    <div class="card-body">
+        <!-- Spinner -->
+        <app-spinner [filterBy]="userUrl"></app-spinner>
+
+        <div *ngIf="(user$ | async) as user">
+            <div class="row">
+                <div class="col-md-6">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            <div class="row">
+                                <div class="col">Nom d'utilisateur</div>
+                                <div class="col font-weight-bold font-italic">{{ user.username }}</div>
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            <div class="row">
+                                <div class="col">Nom</div>
+                                <div class="col font-weight-bold">{{ user.nom }}</div>
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            <div class="row">
+                                <div class="col">Prenom</div>
+                                <div class="col font-weight-bold">{{ user.prenom }}</div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            <div class="row">
+                                <div class="col">Email</div>
+                                <div class="col font-weight-bold">{{ user.email }}</div>
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            <div class="row">
+                                <div class="col">Telephone</div>
+                                <div class="col font-weight-bold">{{ user.telephone }}</div>
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            <div class="row">
+                                <div class="col">Statut</div>
+                                <div class="col font-weight-bold">
+                                    <mat-slide-toggle [checked]="user.statut === 'Activated'" [disabled]="true"  color="primary">
+                                    </mat-slide-toggle>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Localité -->
+<div class="card card-body " *ngIf="(user$ | async) as user">
+    <h2 *ngIf="(user.region)" >Localité</h2>
+    <!-- <app-display-localite [localite]="localite"></app-display-localite> -->
+    <div class="row">
+        <div class="col">
+          <ul class="list-group list-group-flush">
+              <li class="list-group-item" *ngIf="(user.region) as region">
+                <div class="row">
+                  <div class="col">Region</div>
+                  <div class="col font-weight-bold">{{ region.nom }}</div>
+                </div>
+                <!-- <span class="mr-2">Region :</span> {{ region.nom }} -->
+              </li>
+              <li class="list-group-item" *ngIf="(user.prefecture) as prefecture">
+                <div class="row">
+                  <div class="col">Prefecture</div>
+                  <div class="col font-weight-bold">{{ prefecture.nom }}</div>
+                </div>
+              </li>
+              <li class="list-group-item" *ngIf="(user.commune) as commune">
+                <div class="row">
+                  <div class="col">Sous-Prefecture/Commune</div>
+                  <div class="col font-weight-bold">{{ commune.nom }}</div>
+                </div>
+                <!-- <span class="mr-2">Sous-Prefecture/Commune :</span> {{ commune.nom }} -->
+              </li>
+            </ul>
+        </div>
+    
+        <div class="col">
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item" *ngIf="(user.quartier) as quartier">
+                    <div class="row">
+                      <div class="col">Quartier</div>
+                      <div class="col font-weight-bold">{{ quartier.nom }}</div>
+                    </div>
+                    <!-- <span class="mr-2">Quartier :</span> {{ quartier.nom }} -->
+                </li>
+                <li class="list-group-item" *ngIf="(user.secteur) as secteur">
+                    <div class="row">
+                      <div class="col">Secteur</div>
+                      <div class="col font-weight-bold">{{ secteur.nom }}</div>
+                    </div>
+                    <!-- <span class="mr-2">Secteur :</span> {{ secteur.nom }} -->
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- Permissions -->
+<div class="card card-body" *ngIf="role">
+    <div class="row">
+        <div class="col">
+            <fieldset class="fieldset-border">
+                <legend class="fieldset-border">{{ role.nom }}</legend>
+                <button mat-button color="info-default" *ngFor="let perm of role.permissions" [title]="perm.description || ''">{{ perm.libelle}}</button>
+            </fieldset>
+        </div>
+    </div>
+</div>

@@ -61,7 +61,9 @@ class UserController {
               @RequestParam idQuartier: Long? = null,
               @RequestParam idSecteur: Long? = null): ResponseEntity<Any> {
 
-        val pageRequest = PageRequest.of(page, size)
+//        val pageRequest = PageRequest.of(page, size)
+
+        val pageRequest = PageRequest.of(page, size, Sort.by(Sort.Direction.DESC, "createdAt"))
 
 //        return if (true) {
          if (userConnected.getAutorisation(Permissions.CAN_VIEW_USER_LIST)) {

@@ -1,20 +1,18 @@
-import { UtilService } from 'app/project/core/services/util.service';
-import { ChangeDetectorRef, Component, Input, OnInit, ViewChild } from '@angular/core';
+import { ChangeDetectorRef, Component, OnInit, ViewChild } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { MatPaginator, PageEvent } from '@angular/material/paginator';
+import { MatSort } from '@angular/material/sort';
+import { MatTableDataSource } from '@angular/material/table';
+import { NgbModal, NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
 import { PERMISSIONS } from 'app/config/app.data';
 import { AuthService } from 'app/project/auth/services/auth.service';
 import { Confirmable } from 'app/project/core/decorators/confirmable.decorator';
+import { RequestCasParam } from 'app/project/core/models/request-cas-param';
+import { UtilService } from 'app/project/core/services/util.service';
 import { BehaviorSubject, Observable } from 'rxjs';
-import { switchMap, finalize, tap } from 'rxjs/operators';
 import Swal from 'sweetalert2';
 import { User } from '../../models/user.model';
-import { UserService, USER_URL } from '../../services/user.service';
-import { MatTableDataSource } from '@angular/material/table';
-import { MatPaginator, PageEvent } from '@angular/material/paginator';
-import { MatSort } from '@angular/material/sort';
-import { RequestCasParam } from 'app/project/core/models/request-cas-param';
-import { NgbModal, NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { RoleNameFormatPipe } from 'app/project/core/pipes/role-name-format.pipe';
+import { USER_URL, UserService } from '../../services/user.service';
 
 @Component({
   selector: 'app-list-user',

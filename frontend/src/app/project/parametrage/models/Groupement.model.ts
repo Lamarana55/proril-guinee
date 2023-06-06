@@ -10,8 +10,7 @@ export class Groupement{
     email?: string
     description?: string
     region?: Region
-    prefecture?: Prefecture
-    commune?: Commune
-    quartier?: Quartier
-
+    prefecture?: Prefecture | null = null;
+    commune?: Commune | null = null;
+    quartier?: Quartier| null = null;
 }

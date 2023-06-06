@@ -6,7 +6,7 @@
           <mat-icon>reply</mat-icon>
         </button>
         <h2 class="card-title ml-1 text-white">
-          {{ isNew ? 'Enregistrement d\'un utilisateur' : 'Modification d\'un utilisateur'}}
+          {{ isNew ? ' Enregistrement d\'un groupement' : 'Modification d\'un groupement'}}
         </h2>
       </div>
     </div>
@@ -14,16 +14,16 @@
   <div class="card-body">
 
     <!-- Spinner -->
-    <app-spinner [filterBy]="userUrl" [diameter]="30" #usrSpinner></app-spinner>
+    <app-spinner [filterBy]="groupementUrl" [diameter]="30" #usrSpinner></app-spinner>
 
     <div class="row">
       <div class="col-md-8 offset-md-2 col-sm-12">
         <div>
-          <form [formGroup]="userForm">
+          <form [formGroup]="groupementForm">
             <div class="row">
               <div class="col-12">
                 <mat-form-field>
-                  <mat-label>Nom</mat-label>
+                  <mat-label>Nom groupement</mat-label>
                   <input matInput type="text" formControlName="nom">
                   <mat-error>Le nom est obligatoire et contient au moins 3 caractères</mat-error>
                 </mat-form-field>
@@ -32,30 +32,13 @@
             <div class="row">
               <div class="col-12">
                 <mat-form-field>
-                  <mat-label>Prenom</mat-label>
-                  <input matInput type="text" formControlName="prenom">
-                  <mat-error>Le prenom est obligatoire et contient au moins 3 caractères</mat-error>
-                </mat-form-field>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-12">
-                <mat-form-field>
-                  <mat-label>Telephone</mat-label>
+                  <mat-label>Téléphone</mat-label>
                   <input matInput type="number" minlength="1" formControlName="telephone">
-                  <mat-error>le numero de telephone est incorrect</mat-error>
+                  <mat-error>le numero de téléphone est incorrect</mat-error>
                 </mat-form-field>
               </div>
             </div>
-            <!-- <div class="row">
-              <div class="col-12">
-                <mat-form-field>
-                  <mat-label>Nom d'utilisateur</mat-label>
-                  <input matInput type="text" formControlName="username">
-                  <mat-error>Le nom d'utilisateur est obligatoire et contient au moins 4 caractères</mat-error>
-                </mat-form-field>
-              </div>
-            </div> -->
+
             <div class="row">
               <div class="col-12">
                 <mat-form-field>
@@ -65,6 +48,16 @@
                 </mat-form-field>
               </div>
             </div>
+
+            <div class="row">
+              <div class="col-12">
+                <mat-form-field>
+                  <mat-label>Description</mat-label>
+                  <textarea matInput formControlName="description"></textarea>
+                </mat-form-field>
+              </div>
+            </div>
+
             <!-- ==========================================================================-->
             <!-- Localite -->
             <fieldset class="fieldset-border">
@@ -126,44 +119,13 @@
                     </div>
                   </div>
                 </div>
-                <div formGroupName="secteur">
-                  <div class="row">
-                    <div class="col-10">
-                      <mat-form-field>
-                        <mat-label>Secteur</mat-label>
-                        <mat-select formControlName="id">
-                          <mat-option *ngFor="let secteur of secteurs$ | async" [value]="secteur.id">{{secteur.nom}}</mat-option>
-                        </mat-select>
-                      </mat-form-field>
-                    </div>
-                    <div class="col-2 form-inline">
-                      <button type="button" mat-mini-fab color="info"
-                        (click)="onOpenModal(contentSecteur, true)"><mat-icon>add</mat-icon></button>
-                    </div>
-                  </div>
-                </div>
 
               </div>
             </fieldset>
             <!-- ==========================================================================-->
-
-
-            <div formGroupName="role" >
-              <div class="row">
-                <div class="col-12">
-                  <mat-form-field>
-                    <mat-label>Role</mat-label>
-                    <mat-select formControlName="id">
-                      <mat-option *ngFor="let role of roles$ | async" [value]="role.id">{{ role.nom | roleNameFormat: role.nom }}</mat-option>
-                    </mat-select>
-                    <mat-error>Le role est obligatoire</mat-error>
-                  </mat-form-field>
-                </div>
-              </div>
-            </div>
             <div class="text-center">
               <button type="button" (click)="onSubmit()" [class.spinner]="usrSpinner.loadingEvent$ | async"
-                mat-raised-button color="primary" [disabled]="userForm.invalid || (usrSpinner.loadingEvent$ | async)">
+                mat-raised-button color="primary" [disabled]="groupementForm.invalid || (usrSpinner.loadingEvent$ | async)">
                 Enregistrer
               </button>
             </div>
@@ -183,17 +145,5 @@
   </div>
   <div class="modal-body">
     <app-quartier [isNew]="true" [communeId]="communeId" (isDone)="onNewQuartier($event)"></app-quartier>
-  </div>
-</ng-template>
-
-<ng-template #contentSecteur let-c="close" let-d="dismiss">
-  <div class="modal-header">
-    <h4 class="modal-title">Secteur</h4>
-    <button type="button" class="close" aria-label="Close" (click)="c('Close click')">
-      <span aria-hidden="true">&times;</span>
-    </button>
-  </div>
-  <div class="modal-body">
-    <app-secteur [isNew]="true" [quartierId]="quartierId" (isDone)="onNewSecteur($event)"></app-secteur>
   </div>
 </ng-template>

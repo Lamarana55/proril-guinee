@@ -124,11 +124,24 @@ export class LocaliteService {
   // ================================= Gestion du quartier ============================== //
   // ==================================================================================== //
 
+  getQuartiers(): Observable<Quartier[]> {
+    if (isNotEmptyArray(this.quartiers)) {
+      return of(this.quartiers)
+    }
+    return this.http.get<Quartier[]>(apiUrl + communeUrl).pipe(
+      tap(quartiers => this.quartiers = quartiers)
+    );
+  }
+
   getAllQuartiers(): Observable<Quartier[]> {
     return this.http.get<Quartier[]>(apiUrl + quartierUrl);
   }
 
   getOneQuartier(id: number): Observable<Quartier> {
+    if (isNotEmptyArray(this.quartiers)) {
+      const quartier = this.quartiers.find(q => q.id === id);
+      return of(quartier)
+    }
     return this.http.get<Quartier>(apiUrl + quartierUrl + id);
   }
 

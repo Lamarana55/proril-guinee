@@ -12,10 +12,9 @@ data class Produit(
         val id: Long,
         @Column(nullable = false)
         val nom: String,
-        val poids: Float,
+        val poids: Float? = null,
+        val prixUnit: Double,
         val marqueAt: String? = null,
-        val groupementAt: String? = null,
-        val categorieAt: String? = null,
 
         @Column(columnDefinition = "text")
         val description: String? = null,
@@ -28,6 +27,9 @@ data class Produit(
         @ManyToOne(fetch = FetchType.LAZY)
         @JoinColumn(nullable = true)
         val groupement: Groupement? = null,
+
+
+        val groupementAt: String? = groupement?.nom,
 
         @CreatedDate
         @Column(name = "created_at", updatable = false)

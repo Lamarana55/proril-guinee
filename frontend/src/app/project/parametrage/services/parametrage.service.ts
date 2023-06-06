@@ -6,6 +6,9 @@ import { Groupement } from '../models/Groupement.model';
 import { Categorie } from '../models/categorie.model';
 import { Marque } from '../models/marque.model';
 import { environment } from './../../../../environments/environment';
+import { Pagination } from 'app/project/utils/pagination';
+import { RequestGroupementParam } from 'app/project/core/models/request-groupement.model';
+import { RequestMarqueParam } from 'app/project/core/models/request.marque.model';
 
 const API_URL = environment.apiUrl;
 
@@ -14,6 +17,19 @@ export const TYPE_CAS_URL = 'type-cas';
 export const CATEGORIE_URL = 'categories';
 export const GROUPEMENT_URL = 'groupements';
 export const MARQUE_URL =  'marques';
+
+
+
+const isValidNumber = (num: number) => (!!num && !isNaN(num));
+ 
+const makeParams = (requestParam: RequestGroupementParam) => {
+  let params = '';
+    params += isValidNumber(requestParam.idRegion) ? '&idRegion=' + requestParam.idRegion : '';
+    params += isValidNumber(requestParam.idPrefecture) ? '&idPrefecture=' + requestParam.idPrefecture : '';
+    params += isValidNumber(requestParam.idCommune) ? '&idCommune=' + requestParam.idCommune : '';
+    params += isValidNumber(requestParam.idQuartier) ? '&idQuartier=' + requestParam.idQuartier : '';
+    return params;
+}
 
 @Injectable({
   providedIn: 'root'
@@ -46,8 +62,21 @@ export class ParametrageService {
 
   // =============================== Groupement =============================== //
 
-  getAllGroupements(): Observable<Groupement[]> { 
+ /*  getAllGroupements(): Observable<Groupement[]> { 
     return this.http.get<Groupement[]>(API_URL + GROUPEMENT_URL);
+  } */
+
+  getAllGroupements(params?: RequestGroupementParam): Observable<Pagination> {
+    let request = API_URL + GROUPEMENT_URL + `?page=${params.page}&size=${params.size}`;
+    if (params) {
+      request += makeParams(params);
+    }
+    return this.http.get<Pagination>(request);
+    
+  }
+  
+  getGroupements(): Observable<Groupement[]> {
+    return this.http.get<Groupement[]>(API_URL + GROUPEMENT_URL + '/all');
   }
 
   getOneGroupement(id: number): Observable<Groupement> {
@@ -68,9 +97,19 @@ export class ParametrageService {
 
   // =============================== Marque =============================== //
 
-  getAllMarques(): Observable<Marque[]> {
-    return this.http.get<Marque[]>(API_URL + MARQUE_URL);
+  getAllMarques(params?: RequestMarqueParam): Observable<Pagination> {
+    let request = API_URL + MARQUE_URL + `?page=${params.page}&size=${params.size}`;
+    if (params) {
+      request += makeParams(params);
+    }
+    return this.http.get<Pagination>(request);
+    
   }
+
+  getMarques(): Observable<Marque[]> {
+    return this.http.get<Marque[]>(API_URL + MARQUE_URL + '/all');
+  }
+
 
   getOneMarque(id: number): Observable<Marque> {
     return this.http.get<Marque>(API_URL + MARQUE_URL + '/' + id);

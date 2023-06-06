@@ -2,6 +2,7 @@ package com.mady.backend.controller
 
 import com.mady.backend.entities.Marque
 import com.mady.backend.repository.MarqueRepository
+import com.mady.backend.services.ApiService
 import com.mady.backend.services.UserConnected
 import com.mady.backend.utils.CROSS_ORIGIN
 import com.mady.backend.utils.Delete
@@ -11,6 +12,8 @@ import io.swagger.annotations.Api
 import io.swagger.annotations.ApiOperation
 import org.slf4j.LoggerFactory
 import org.springframework.beans.factory.annotation.Autowired
+import org.springframework.data.domain.PageRequest
+import org.springframework.data.domain.Sort
 import org.springframework.http.HttpStatus
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.*
@@ -35,17 +38,29 @@ class MarqueController {
     lateinit var userConnected: UserConnected
 
 
+    @Autowired
+    lateinit var apiService: ApiService
+
     @GetMapping
-    @ApiOperation("Recuperation de la liste des marques")
-    fun index(): ResponseEntity<Any> {
-        return when {
-//            true -> {
-            userConnected.getAutorisation(Permissions.CAN_VIEW_MARQUE_LIST) ->{
-                ResponseEntity.ok(marqueRepository.findAll().filter { marque -> marque.isDelete == Delete.No })
+    @ApiOperation("Récuperation de la liste de tous les groupements ")
+    fun index(@RequestParam(defaultValue = "0") page: Int,
+              @RequestParam(defaultValue = "10") size: Int,
+              @RequestParam libelle: String? = null,
+              @RequestParam groupement: String? = null): ResponseEntity<Any> {
+        val pageRequest = PageRequest.of(page, size, Sort.by(Sort.Direction.DESC, "createdAt"))
+
+//        return if (true) {
+        when {
+            userConnected.getAutorisation(Permissions.CAN_VIEW_MARQUE_LIST) -> return when {
+                libelle != null -> ResponseEntity.ok().body(apiService.myTreeMarque(marqueRepository.findByLibelleAndIsDelete(libelle, Delete.No, pageRequest)))
+                groupement != null -> ResponseEntity.ok().body(apiService.myTreeMarque(marqueRepository.findByGroupementNomAndIsDelete(groupement,Delete.No, pageRequest)))
+                else -> ResponseEntity.ok().body(apiService.myTreeMarque(marqueRepository.findAllByIsDeleteOrderByLibelleAsc(Delete.No, pageRequest)))
+
             }
-            else -> ResponseEntity(MessageResponse("le user n'est pas autorisé "), HttpStatus.UNAUTHORIZED)
+            else -> return ResponseEntity(MessageResponse("le username n'est pas autorisé ", "Echec"), HttpStatus.FORBIDDEN)
         }
     }
+
 
     @GetMapping("{id}")
     @ApiOperation("Recuperation d'une marque")
@@ -109,5 +124,17 @@ class MarqueController {
     @GetMapping("findByLibelle")
     @ApiOperation("Récuperation d'une marque en fonction du nom ")
     fun findByLibelle(@RequestParam libelle: String) = marqueRepository.findByLibelle(libelle).filter { marque -> marque.isDelete == Delete.No }
+
+    @GetMapping("all")
+    @ApiOperation("Recuperation de la liste des marques")
+    fun index(): ResponseEntity<Any> {
+        return when {
+//            true -> {
+            userConnected.getAutorisation(Permissions.CAN_VIEW_MARQUE_LIST) ->{
+                ResponseEntity.ok(marqueRepository.findAll().filter { marque -> marque.isDelete == Delete.No })
+            }
+            else -> ResponseEntity(MessageResponse("le user n'est pas autorisé "), HttpStatus.UNAUTHORIZED)
+        }
+    }
 
 }

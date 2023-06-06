@@ -48,7 +48,6 @@ export class UserService {
 
   getAll(params?: RequestCasParam): Observable<Pagination> {
     //return this.http.get<User[]>(apirUrl + USER_URL);
-    console.log();
     
     let request = apirUrl + USER_URL + `?page=${params.page}&size=${params.size}`;
     if (params) {

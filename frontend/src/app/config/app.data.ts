@@ -137,9 +137,11 @@ export const TEL_PATTERN = /^[0-9]{9}$/;
 
 export const SELECT_NUMBER_PATTERN = /^[1-9][0-9]*$/;
 
-export const SELECT_EMAIL_PATTERN = "^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$"
+export const SELECT_EMAIL_PATTERN = "^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$";
 
 export const NUMBER_ONLY_PATTERN = /^[0-9]*$/;
+
+export const DESCRIPTION_MINIMUM_LENGTH = 4 ;
 
 
 export enum STATUT_ALERTE {

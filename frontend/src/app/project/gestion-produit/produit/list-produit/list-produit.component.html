@@ -1,1 +1,105 @@
-<p>list-produit works!</p>
+<div class="card">
+    <div class="card-header bg-default">
+      <div class="row">
+        <div class="col-sm-8">
+          <h2 class="card-title text-white">
+            <i class="nc-icon nc-single-02"></i>
+            Liste des produits
+          </h2>
+        </div>
+        <div class="col-sm-4 text-right mt-2">
+          <button *ngIf="permissions.can_add" mat-raised-button routerLink="edit" class="mr-1" color="info">
+            <mat-icon>add</mat-icon>
+          </button>
+          <button mat-raised-button color="info" (click)="onRefresh()">
+            <mat-icon>refresh</mat-icon>
+          </button>
+  
+        </div>
+      </div>
+    </div>
+    <!-- <app-search-local (onSearchEvent)="onSearch($event)"></app-search-local> -->
+    <div class="card-body">
+      <!--  -->
+      <!-- Spinner -->
+      <app-spinner [filterBy]="produitUrl"></app-spinner>
+  
+      <!-- <div *ngIf="(marques$ | async) as marques"> -->
+      <div *ngIf="(dataSource.data.length) as marques">
+        <div *ngIf="dataSource.data.length > 0">
+  
+  
+          <div class="table-responsive mb-2" [hidden]="!dataSource || dataSource.data.length === 0">
+            <div class="mat-table-header">
+              <mat-form-field>
+                <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Rechercher">
+              </mat-form-field>
+            </div>
+            <mat-table [dataSource]="dataSource" matSort>
+              <!-- code Column -->
+              <ng-container matColumnDef="nom">
+                <mat-header-cell *matHeaderCellDef mat-sort-header><strong>NOM PRODUIT</strong> </mat-header-cell>
+                <mat-cell *matCellDef="let row">{{ row.nom }}</mat-cell>
+              </ng-container>
+               <!-- code Column -->
+               <ng-container matColumnDef="prixUnit">
+                <mat-header-cell *matHeaderCellDef mat-sort-header><strong>PRIX UNITAIRE</strong> </mat-header-cell>
+                <mat-cell *matCellDef="let row">{{ row.prixUnit }}</mat-cell>
+              </ng-container>
+               <!-- code Column -->
+               <ng-container matColumnDef="poids">
+                <mat-header-cell *matHeaderCellDef mat-sort-header><strong>POIDS</strong> </mat-header-cell>
+                <mat-cell *matCellDef="let row">{{ row.poids }}</mat-cell>
+              </ng-container>
+
+              <!-- TypeCas Column -->
+              <ng-container matColumnDef="categorie">
+                <mat-header-cell *matHeaderCellDef mat-sort-header><strong>CATEGORIE</strong> </mat-header-cell>
+                <mat-cell *matCellDef="let row">{{ row.categorie.libelle }}</mat-cell>
+              </ng-container>
+
+              <!-- TypeCas Column -->
+              <ng-container matColumnDef="groupement">
+                <mat-header-cell *matHeaderCellDef mat-sort-header><strong>GROUPEMENT</strong> </mat-header-cell>
+                <mat-cell *matCellDef="let row">{{ row.groupement.nom }}</mat-cell>
+              </ng-container>
+              <!-- description Column -->
+              <ng-container matColumnDef="description">
+                <mat-header-cell *matHeaderCellDef mat-sort-header><strong>DESCRIPTION</strong> </mat-header-cell>
+                <mat-cell *matCellDef="let row">{{ row.description }}</mat-cell>
+              </ng-container>
+  
+              <ng-container matColumnDef="option">
+                <mat-header-cell *matHeaderCellDef mat-sort-header><strong>OPTIONS</strong></mat-header-cell>
+                <mat-cell *matCellDef="let row">
+                  <!-- <button *ngIf="permissions.can_view_info" mat-mini-fab color="own" [routerLink]="['info', row.id]">
+                      <mat-icon>visibility</mat-icon>
+                    </button> -->
+                  <button *ngIf="permissions.can_edit" mat-mini-fab color="info" [routerLink]="['edit', {id: row.id}]">
+                    <mat-icon>edit</mat-icon>
+                  </button>
+                  <button *ngIf="permissions.can_delete" mat-mini-fab color="accent" (click)="onDelete(row.id)"
+                    aria-label="Supprimer" title="Supprimer">
+                    <mat-icon>delete</mat-icon>
+                  </button>
+                </mat-cell>
+              </ng-container>
+  
+              <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+              <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+            </mat-table>
+            <mat-paginator #paginator (page)="pageChanged($event)" [length]="totalRows" [pageIndex]="currentPage"
+              [pageSize]="pageSize" [pageSizeOptions]="dataSource.data.length | tableOptions"></mat-paginator>
+            <!-- <mat-paginator [pageSize]="10" [pageSizeOptions]="dataSource.data.length | tableOptions"></mat-paginator> -->
+  
+          </div>
+  
+        </div>
+        <div *ngIf="dataSource.data.length === 0 && ((spinner.loadingEvent$ | async) === false)"
+          class="text-info text-center mt-2">
+          Aucun cas trouvé !!!
+        </div>
+      </div>
+    </div>
+  </div>
+  

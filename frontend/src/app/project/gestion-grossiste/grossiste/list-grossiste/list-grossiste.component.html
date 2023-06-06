@@ -1,1 +1,101 @@
-<p>list-grossiste works!</p>
+<div class="card">
+    <div class="card-header bg-default">
+      <div class="row">
+        <div class="col-sm-8">
+          <h2 class="card-title text-white">
+            <i class="nc-icon nc-single-02"></i>
+            Liste des grossistes
+          </h2>
+        </div>
+        <div class="col-sm-4 text-right mt-2">
+          <button mat-raised-button color="info" (click)="onRefresh()">
+            <mat-icon>refresh</mat-icon>
+          </button>
+  
+        </div>
+      </div>
+    </div>
+    <!-- <app-search-local (onSearchEvent)="onSearch($event)"></app-search-local> -->
+    <div class="card-body">
+      <!--  -->
+      <!-- Spinner -->
+      <app-spinner [filterBy]="userUrl"></app-spinner>
+  
+      <!-- <div *ngIf="(users$ | async) as users"> -->
+      <div *ngIf="(dataSource.data.length) as users">
+        <div *ngIf="dataSource.data.length > 0">
+  
+  
+          <div class="table-responsive mb-2" [hidden]="!dataSource || dataSource.data.length === 0">
+            <div class="mat-table-header">
+              <mat-form-field>
+                <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Rechercher">
+              </mat-form-field>
+            </div>
+            <mat-table [dataSource]="dataSource" matSort>
+              <!-- date Column -->
+             <!--  <ng-container matColumnDef="username">
+                <mat-header-cell *matHeaderCellDef mat-sort-header> <strong>USERNAME</strong> </mat-header-cell>
+                <mat-cell *matCellDef="let row">{{ row.username }}</mat-cell>
+              </ng-container> -->
+              <!-- code Column -->
+              <ng-container matColumnDef="email">
+                <mat-header-cell *matHeaderCellDef mat-sort-header><strong>EMAIL</strong> </mat-header-cell>
+                <mat-cell *matCellDef="let row">{{ row.email }}</mat-cell>
+              </ng-container>
+              <!-- TypeCas Column -->
+              <ng-container matColumnDef="nom_prenom">
+                <mat-header-cell *matHeaderCellDef mat-sort-header><strong>NOM et PRENOM</strong> </mat-header-cell>
+                <mat-cell *matCellDef="let row">{{ row.nom }} {{ row.prenom }}</mat-cell>
+              </ng-container>
+              <!-- victime Column -->
+              <ng-container matColumnDef="telephone">
+                <mat-header-cell *matHeaderCellDef mat-sort-header><strong>TELEPHONE</strong> </mat-header-cell>
+                <mat-cell *matCellDef="let row">{{ row.telephone }}</mat-cell>
+              </ng-container>
+
+              <!-- region Column -->
+              <ng-container matColumnDef="region">
+                <mat-header-cell *matHeaderCellDef mat-sort-header><strong>REGION</strong> </mat-header-cell>
+                <mat-cell *matCellDef="let row">{{ row.region?.nom }}</mat-cell>
+              </ng-container>
+
+              <!-- region Column -->
+              <ng-container matColumnDef="prefecture">
+                <mat-header-cell *matHeaderCellDef mat-sort-header><strong>PREFECTURE</strong> </mat-header-cell>
+                <mat-cell *matCellDef="let row">{{ row.prefecture?.nom }}</mat-cell>
+              </ng-container>
+
+              <!-- Commune Column -->
+              <ng-container matColumnDef="commune">
+                <mat-header-cell *matHeaderCellDef mat-sort-header><strong>PREFECTURE</strong> </mat-header-cell>
+                <mat-cell *matCellDef="let row">{{ row.commune?.nom }}</mat-cell>
+              </ng-container>
+
+              <!-- localite Column -->
+              <ng-container matColumnDef="option">
+                  <mat-header-cell *matHeaderCellDef  mat-sort-header><strong>DETAIL</strong></mat-header-cell>
+                  <mat-cell *matCellDef="let row">
+                    <button *ngIf="permissions.can_view_info" mat-mini-fab color="own" [routerLink]="['info', row.id]">
+                      <mat-icon>visibility</mat-icon>
+                    </button>
+                  </mat-cell>
+              </ng-container>
+  
+              <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+              <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+            </mat-table>
+            <mat-paginator #paginator (page)="pageChanged($event)" [length]="totalRows" [pageIndex]="currentPage"
+              [pageSize]="pageSize" [pageSizeOptions]="dataSource.data.length | tableOptions"></mat-paginator>
+            <!-- <mat-paginator [pageSize]="10" [pageSizeOptions]="dataSource.data.length | tableOptions"></mat-paginator> -->
+  
+          </div>
+  
+        </div>
+        <div *ngIf="dataSource.data.length === 0 && ((spinner.loadingEvent$ | async) === false)"
+          class="text-info text-center mt-2">
+          Aucun cas trouvé !!!
+        </div>
+      </div>
+    </div>
+  </div>

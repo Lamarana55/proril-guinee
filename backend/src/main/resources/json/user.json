@@ -5,7 +5,7 @@
     "prenom": "Administrateur ",
     "telephone": "628228638",
     "email": "ande.developper@gmail.com",
-    "username": "admin@admin.com",
+    "username": "Administrateur",
     "password": "1234",
     "statut": "Activated",
     "role": {
@@ -267,7 +267,7 @@
     "prenom": "Grossiste 1",
     "telephone": "621000000",
     "email": "grossiste@grossiste.com",
-    "username": "grossiste@grossiste.com",
+    "username": "Grossiste",
     "password": "1234",
     "statut": "Activated",
     "role": {

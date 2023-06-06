@@ -61,7 +61,7 @@ export class EditGroupementComponent implements OnInit {
       nom: ['', [Validators.required, Validators.minLength(2)]],
       telephone: ['', [Validators.required, Validators.pattern(TEL_PATTERN)]],
       email: ['', [Validators.required, Validators.email]],
-      description: ['', [Validators.required, Validators.minLength(10)]],
+      description: ['', [Validators.required, Validators.minLength(4)]],
       region: this.fb.group({id: [null, [Validators.pattern(SELECT_NUMBER_PATTERN)]]}),
       prefecture: this.fb.group({
         id: [null, [Validators.pattern(SELECT_NUMBER_PATTERN)]]
@@ -73,6 +73,7 @@ export class EditGroupementComponent implements OnInit {
         id: [null, [Validators.pattern(SELECT_NUMBER_PATTERN)]]
       }),
     });
+    
   }
 
   resetForm() {
@@ -85,17 +86,16 @@ export class EditGroupementComponent implements OnInit {
   async onSubmit() {
     if (!this.groupementForm.invalid) {
       const groupement = this.groupementForm.value as Partial<Groupement>;
-      groupement.region = groupement.region ? await this.localiteService.getOneRegion(groupement.region.id).toPromise() : null;
-      groupement.prefecture = groupement.prefecture ? await this.localiteService.getOnePrefecture(groupement.prefecture.id).toPromise(): null;
-      groupement.commune = groupement.commune ? await this.localiteService.getOnecommune(groupement.commune.id).toPromise() : null;
-      groupement.quartier =  groupement.quartier ? await this.localiteService.getOneQuartier(groupement.quartier.id).toPromise() : null;
-
+      groupement.region =  await this.localiteService.getOneRegion(groupement.region?.id).toPromise();
+      groupement.prefecture = await this.localiteService.getOnePrefecture(groupement.prefecture.id).toPromise();
+      groupement.commune = await this.localiteService.getOnecommune(groupement.commune.id).toPromise();
+      groupement.quartier =  await this.localiteService.getOneQuartier(groupement.quartier.id).toPromise();
       const groupementActions$ = this.isNew ? this.parametrageService.addGroupement(groupement) : this.parametrageService.updateGroupement(this.groupementId, groupement);
       groupementActions$.subscribe(
         () => {
           this.initLoc();
           this.utils.showNotif('Operation effectuée avec succès', 'success');
-          this.isNew ? this.resetForm() : this.router.navigate(['groupements'])
+          this.isNew ? this.resetForm() : this.router.navigate(['parametrages/groupements'])
         },
         (error) => {
             this.utils.showNotif(`Une erreur est survenue lors de l'opération `, 'danger')
@@ -142,20 +142,13 @@ export class EditGroupementComponent implements OnInit {
     const groupement = await this.parametrageService.getOneGroupement(this.groupementId).toPromise();
     this.groupementForm.patchValue({
       nom: groupement.nom,
-      email: groupement.email,
       telephone: groupement.telephone, 
-      region:  groupement.region ? {id: groupement.region.id} : this.fb.group({
-        id: [null, [Validators.pattern(SELECT_NUMBER_PATTERN)]]
-      }),
-      prefecture: groupement.prefecture ? {id: groupement.prefecture.id} : this.fb.group({
-        id: [null, [Validators.pattern(SELECT_NUMBER_PATTERN)]]
-      }),
-      commune: groupement.commune ? {id: groupement.commune.id} : this.fb.group({
-        id: [null, [Validators.pattern(SELECT_NUMBER_PATTERN)]]
-      }),
-      quartier: groupement.quartier ? {id: groupement.quartier.id} : this.fb.group({
-        id: [null, [Validators.pattern(SELECT_NUMBER_PATTERN)]]
-      })
+      email: groupement.email,
+      description: groupement.description,
+      region:  {id: groupement.region.id},
+      prefecture: {id: groupement.prefecture.id} ,
+      commune: {id: groupement.commune.id},
+      quartier: {id: groupement.quartier.id},
     })
   }
 
@@ -170,15 +163,6 @@ export class EditGroupementComponent implements OnInit {
     if (isDone.done) {
       this.localiteService.subjectQuartier.next(this.communeId);
       this.groupementForm.get('quartier.id').setValue(isDone.id);
-      this.modalReference.close();
-    }
-  }
-
-  // Apres enregistrement d'un nouveau secteur dans le modal, MAJ du champs
-  onNewSecteur(isDone: {done: boolean, id: number}) {
-    if (isDone.done) {
-      this.localiteService.subjectSecteur.next(this.quartierId);
-      this.groupementForm.get('secteur.id').setValue(isDone.id);
       this.modalReference.close();
     }
   }

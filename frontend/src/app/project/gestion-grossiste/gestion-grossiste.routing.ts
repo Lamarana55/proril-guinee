@@ -1,14 +1,12 @@
 
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
-import { RoleGuard } from '../auth/services/role-guard.service';
-import { GestionGrossisteComponent } from './gestion-grossiste.component';
-import { ListGrossisteComponent } from './grossiste/list-grossiste/list-grossiste.component';
+import { RouterModule, Routes } from '@angular/router';
 import { PERMISSIONS } from 'app/config/app.data';
-import { EditGrossisteComponent } from './grossiste/edit-grossiste/edit-grossiste.component';
-import { InfoGrossisteComponent } from './grossiste/info-grossiste/info-grossiste.component';
-import { ListProduitComponent } from './produit/list-produit/list-produit.component';
+import { RoleGuard } from '../auth/services/role-guard.service';
 import { EditProduitComponent } from '../gestion-produit/produit/edit-produit/edit-produit.component';
+import { GestionGrossisteComponent } from './gestion-grossiste.component';
+import { InfoGrossisteComponent } from './grossiste/info-grossiste/info-grossiste.component';
+import { ListGrossisteComponent } from './grossiste/list-grossiste/list-grossiste.component';
 
 const routes: Routes = [
   {
@@ -27,11 +25,6 @@ const routes: Routes = [
             component: ListGrossisteComponent,
             canActivate: [RoleGuard],
             data: { permissions: PERMISSIONS.CAN_VIEW_GROSSISTE_LIST}
-          }, {
-            path: 'edit',
-            component: EditGrossisteComponent,
-            canActivate: [RoleGuard],
-            data: { permissions: PERMISSIONS.CAN_ADD_GROSSISTE}
           }, {
             path: 'info/:id',
             component: InfoGrossisteComponent,

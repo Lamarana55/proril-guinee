@@ -5,13 +5,12 @@ import { CoreModule } from "../core/core.module";
 import { MaterialModule } from "../material/material.module";
 import { GestionGrossisteComponent } from "./gestion-grossiste.component";
 import { ListGrossisteComponent } from './grossiste/list-grossiste/list-grossiste.component';
-import { EditGrossisteComponent } from './grossiste/edit-grossiste/edit-grossiste.component';
 import { ListProduitComponent } from './produit/list-produit/list-produit.component';
 import { GestionGrossisteRoutingModule } from "./gestion-grossiste.routing";
 import { InfoGrossisteComponent } from './grossiste/info-grossiste/info-grossiste.component';
 
 @NgModule({
-  declarations: [GestionGrossisteComponent, ListGrossisteComponent, EditGrossisteComponent, ListProduitComponent, InfoGrossisteComponent,],
+  declarations: [GestionGrossisteComponent, ListGrossisteComponent, ListProduitComponent, InfoGrossisteComponent,],
   imports: [
     CommonModule,
     GestionGrossisteRoutingModule,

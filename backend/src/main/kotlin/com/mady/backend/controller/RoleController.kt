@@ -132,7 +132,7 @@ class RoleController {
         val permission = permissionRepository.findById(id).get()
         return try {
             ResponseEntity.ok().body(roleRepository.findByNomAndPermissions(nom, permission))
-        } catch (e: EmptyResultDataAccessException) {
+        } catch (e: Exception) {
             println("Resultat Exception: $e")
             ResponseEntity(ResponseException(""), HttpStatus.FORBIDDEN)
         }

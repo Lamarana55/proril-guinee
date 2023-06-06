@@ -1,1 +1,68 @@
-<p>edit-marque works!</p>
+<div class="card">
+    <div class="card-header bg-default">
+      <div class="row">
+        <div class="col-sm-12 form-inline">
+          <button mat-mini-fab color="info" routerLink="..">
+            <mat-icon>reply</mat-icon>
+          </button>
+          <h2 class="card-title ml-1 text-white">
+            {{ isNew ? 'Enregistrement d\'une marque' : 'Modification d\'un marque '}}
+          </h2>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+  
+      <!-- Spinner -->
+      <app-spinner [filterBy]="marqueUrl" [diameter]="30" #usrSpinner></app-spinner>
+  
+      <div class="row">
+        <div class="col-md-8 offset-md-2 col-sm-12">
+          <div>
+            <form [formGroup]="marqueForm">
+              <div class="row">
+                <div class="col-12">
+                  <mat-form-field>
+                    <mat-label>Marque *</mat-label>
+                    <input matInput type="text" formControlName="libelle">
+                    <mat-error>La  marque est obligatoire et contient au moins 3 caractères</mat-error>
+                  </mat-form-field>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12">
+                  <mat-form-field>
+                    <mat-label>Description *</mat-label>
+                    <textarea matInput formControlName="description"></textarea>
+                    <mat-error>La description est obligatoire et contient au moins {{description}} caractères</mat-error>
+                  </mat-form-field>
+                </div>
+              </div>
+
+              <!-- ==========================================================================-->
+  
+              <div formGroupName="groupement" >
+                <div class="row">
+                  <div class="col-12">
+                    <mat-form-field>
+                      <mat-label>Groupement *</mat-label>
+                      <mat-select formControlName="id">
+                        <mat-option *ngFor="let groupement of groupements$ | async" [value]="groupement.id">{{ groupement.nom }}</mat-option>
+                      </mat-select>
+                      <mat-error>Le groupement est obligatoire</mat-error>
+                    </mat-form-field>
+                  </div>
+                </div>
+              </div>
+              <div class="text-center">
+                <button type="button" (click)="onSubmit()" [class.spinner]="usrSpinner.loadingEvent$ | async"
+                  mat-raised-button color="primary" [disabled]="marqueForm.invalid || (usrSpinner.loadingEvent$ | async)">
+                  Enregistrer
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
