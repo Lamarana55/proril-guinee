@@ -212,4 +212,6 @@ ngAfterContentChecked() {
     this.totalRows = event.length;
     this.getElement({ page: this.currentPage, size: this.pageSize });
   }
+
+  
 }

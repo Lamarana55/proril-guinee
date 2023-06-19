@@ -21,7 +21,6 @@ interface ProduitRepository : JpaRepository<Produit, Long>{
 
 
 
-
     @Modifying
     @Transactional
     @Query(value = "UPDATE Produit P SET P.isDelete = :isDelete WHERE P.id= :id")

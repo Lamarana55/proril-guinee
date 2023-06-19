@@ -17,24 +17,24 @@
     <app-spinner [filterBy]="groupementUrl" [diameter]="30" #usrSpinner></app-spinner>
 
     <div class="row">
-      <div class="col-md-8 offset-md-2 col-sm-12">
+      <div class="col-md-8 offset-md-2 col-sm-6">
         <div>
           <form [formGroup]="groupementForm">
             <div class="row">
               <div class="col-12">
                 <mat-form-field>
-                  <mat-label>Nom groupement</mat-label>
+                  <mat-label>Nom du groupement *</mat-label>
                   <input matInput type="text" formControlName="nom">
-                  <mat-error>Le nom est obligatoire et contient au moins 3 caractères</mat-error>
+                  <mat-error>Le nom est obligatoire et contient au moins 2 caractères</mat-error>
                 </mat-form-field>
               </div>
             </div>
             <div class="row">
               <div class="col-12">
                 <mat-form-field>
-                  <mat-label>Téléphone</mat-label>
+                  <mat-label>Téléphone *</mat-label>
                   <input matInput type="number" minlength="1" formControlName="telephone">
-                  <mat-error>le numero de téléphone est incorrect</mat-error>
+                  <mat-error>le numero de téléphone est incorrect et obligatoire</mat-error>
                 </mat-form-field>
               </div>
             </div>
@@ -42,9 +42,9 @@
             <div class="row">
               <div class="col-12">
                 <mat-form-field>
-                  <mat-label>Email</mat-label>
-                  <input matInput type="email" formControlName="email">
-                  <mat-error>L'adresse email est obligatoire et doit respecter le bon format</mat-error>
+                  <mat-label>Marque *</mat-label>
+                  <input matInput type="marque" formControlName="marque">
+                  <mat-error>La marque est obligatoire et contient au moins 2 caractères</mat-error>
                 </mat-form-field>
               </div>
             </div>
@@ -52,8 +52,9 @@
             <div class="row">
               <div class="col-12">
                 <mat-form-field>
-                  <mat-label>Description</mat-label>
+                  <mat-label>Description *</mat-label>
                   <textarea matInput formControlName="description"></textarea>
+                  <mat-error>La desc est obligatoire et contient au moins 3 caractères</mat-error>
                 </mat-form-field>
               </div>
             </div>
@@ -107,7 +108,7 @@
                   <div class="row">
                     <div class="col-10">
                       <mat-form-field>
-                        <mat-label>Quartier/Districte</mat-label>
+                        <mat-label>Villages</mat-label>
                         <mat-select formControlName="id">
                           <mat-option *ngFor="let quartier of quartiers$ | async" [value]="quartier.id">{{ quartier.nom}}</mat-option>
                         </mat-select>

@@ -25,6 +25,7 @@ export class EditProduitComponent implements OnInit {
   produitId = 0;
   groupements$: Observable<Groupement[]>;
   categories$: Observable<Categorie[]>;
+  poids: number[] = [1, 2, 5, 10];
 
   produitForm: FormGroup
   produitUrl = PRODUIT_URL;
@@ -59,9 +60,6 @@ export class EditProduitComponent implements OnInit {
       description: ['', [Validators.required, Validators.minLength(DESCRIPTION_MINIMUM_LENGTH)]],
       groupement: this.fb.group({
         id: [null, [Validators.required, Validators.pattern(SELECT_NUMBER_PATTERN)]]
-      }),
-      categorie: this.fb.group({
-        id: [null, [Validators.required, Validators.pattern(SELECT_NUMBER_PATTERN)]]
       })
     });
   }
@@ -77,7 +75,7 @@ export class EditProduitComponent implements OnInit {
     if (!this.produitForm.invalid) {
       const produit = this.produitForm.value as Partial<Produit>;
       produit.groupement = await this.parametrageService.getOneGroupement(produit.groupement.id).toPromise();
-      produit.categorie = await this.parametrageService.getOneCategorie(produit.categorie.id).toPromise();
+      // produit.categorie = await this.parametrageService.getOneCategorie(produit.categorie.id).toPromise();
 
       const produitActions$ = this.isNew ? this.gestionProduitService.addProduit(produit) : this.gestionProduitService.updateProduit(this.produitId, produit);
       produitActions$.subscribe(
@@ -99,8 +97,7 @@ export class EditProduitComponent implements OnInit {
       poids: produit.poids,
       prixUnit: produit.prixUnit,
       description: produit.description,
-      groupement: { id: produit.groupement.id },
-      categorie: {id: produit.categorie.id}, 
+      groupement: { id: produit.groupement.id }
     })
   }
 

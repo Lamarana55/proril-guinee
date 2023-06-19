@@ -15,7 +15,6 @@ interface GroupementRepository : JpaRepository<Groupement, Long> {
 
     fun findByNom(nom: String): Optional<Groupement>
     fun findByTelephoneAndIsDelete(telephone: String,isDelete: Delete, pageable: Pageable): Page<Groupement>
-    fun findByEmailAndIsDelete(email: String, isDelete: Delete, pageable: Pageable): Page<Groupement>
     fun findAllByIsDeleteOrderByNomAsc(isDelete: Delete, pageable: Pageable): Page<Groupement>
 
 

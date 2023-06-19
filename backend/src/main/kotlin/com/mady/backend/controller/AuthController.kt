@@ -69,7 +69,7 @@ class AuthController {
         val jwt = jwtProvider.generateJwtToken(authentication)
         val userDetails = authentication. principal as UserDetails
 
-        return ResponseEntity.ok().body(JwtResponse(user.username!!, "success", jwt, userDetails.authorities))
+        return ResponseEntity.ok().body(JwtResponse(user.username!!, "success", jwt,user.role.nom, userDetails.authorities))
 
     }
 
@@ -107,5 +107,5 @@ class AuthController {
 
 data class ResetPassword(val token: String, val password: String)
 data class LoginInfo(val telephone: String, val password: String)
-data class JwtResponse(val username: String, val status: String, val token: String? = null, val authorities: Collection<GrantedAuthority>? = null)
+data class JwtResponse(val username: String, val status: String, val token: String? = null,val role: String? = null, val authorities: Collection<GrantedAuthority>? = null)
 

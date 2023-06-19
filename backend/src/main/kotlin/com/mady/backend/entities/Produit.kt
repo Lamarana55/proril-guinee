@@ -14,7 +14,7 @@ data class Produit(
         val nom: String,
         val poids: Float? = null,
         val prixUnit: Double,
-        val marqueAt: String? = null,
+        val quantite: Int,
 
         @Column(columnDefinition = "text")
         val description: String? = null,
@@ -22,14 +22,15 @@ data class Produit(
 
         @ManyToOne(fetch = FetchType.LAZY)
         @JoinColumn(nullable = true)
-        val categorie: Categorie? = null,
+        val groupement: Groupement? = null,
 
         @ManyToOne(fetch = FetchType.LAZY)
         @JoinColumn(nullable = true)
-        val groupement: Groupement? = null,
+        val user: User? = null,
 
 
         val groupementAt: String? = groupement?.nom,
+        val marqueAt: String? = groupement?.marque,
 
         @CreatedDate
         @Column(name = "created_at", updatable = false)

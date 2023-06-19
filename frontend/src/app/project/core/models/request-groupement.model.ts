@@ -1,7 +1,6 @@
 export interface RequestGroupementParam {
     nom?: string;
     telephone?: string;
-    email?: string;
     idRegion?: number;
     idPrefecture?: number;
     idCommune?: number;

@@ -12,7 +12,6 @@ import { Region } from 'app/project/core/models/region.model';
 import { Prefecture } from 'app/project/core/models/prefecture.model';
 import { Commune } from 'app/project/core/models/commune.model';
 import { Quartier } from 'app/project/core/models/quartier.model';
-import { Secteur } from 'app/project/core/models/secteur.model';
 import { GROUPEMENT_URL, ParametrageService } from '../../services/parametrage.service';
 import { Groupement } from '../../models/Groupement.model';
 
@@ -60,7 +59,7 @@ export class EditGroupementComponent implements OnInit {
     this.groupementForm = this.fb.group({
       nom: ['', [Validators.required, Validators.minLength(2)]],
       telephone: ['', [Validators.required, Validators.pattern(TEL_PATTERN)]],
-      email: ['', [Validators.required, Validators.email]],
+      marque: ['', [Validators.required, Validators.minLength(2)]],
       description: ['', [Validators.required, Validators.minLength(4)]],
       region: this.fb.group({id: [null, [Validators.pattern(SELECT_NUMBER_PATTERN)]]}),
       prefecture: this.fb.group({
@@ -86,10 +85,10 @@ export class EditGroupementComponent implements OnInit {
   async onSubmit() {
     if (!this.groupementForm.invalid) {
       const groupement = this.groupementForm.value as Partial<Groupement>;
-      groupement.region =  await this.localiteService.getOneRegion(groupement.region?.id).toPromise();
-      groupement.prefecture = await this.localiteService.getOnePrefecture(groupement.prefecture.id).toPromise();
-      groupement.commune = await this.localiteService.getOnecommune(groupement.commune.id).toPromise();
-      groupement.quartier =  await this.localiteService.getOneQuartier(groupement.quartier.id).toPromise();
+      groupement.region = groupement.region?.id ? await this.localiteService.getOneRegion(groupement.region?.id).toPromise(): null;
+      groupement.prefecture = groupement.prefecture?.id ? await this.localiteService.getOnePrefecture(groupement.prefecture.id).toPromise() : null;
+      groupement.commune = groupement.commune?.id ? await this.localiteService.getOnecommune(groupement.commune.id).toPromise() : null;
+      groupement.quartier = groupement.quartier?.id ? await this.localiteService.getOneQuartier(groupement.quartier.id).toPromise() : null;
       const groupementActions$ = this.isNew ? this.parametrageService.addGroupement(groupement) : this.parametrageService.updateGroupement(this.groupementId, groupement);
       groupementActions$.subscribe(
         () => {
@@ -140,15 +139,16 @@ export class EditGroupementComponent implements OnInit {
 
   async mapGroupement() {
     const groupement = await this.parametrageService.getOneGroupement(this.groupementId).toPromise();
+
     this.groupementForm.patchValue({
       nom: groupement.nom,
       telephone: groupement.telephone, 
-      email: groupement.email,
+      marque: groupement.marque,
       description: groupement.description,
-      region:  {id: groupement.region.id},
-      prefecture: {id: groupement.prefecture.id} ,
-      commune: {id: groupement.commune.id},
-      quartier: {id: groupement.quartier.id},
+      region: groupement.region.id ?  {id: groupement.region.id} : {id: null},
+      prefecture: groupement.prefecture.id ?  {id: groupement.prefecture.id} : {id: null},
+      commune: groupement.commune.id ?  {id: groupement.commune.id} : {id: null},
+      quartier: groupement.quartier.id ?  {id: groupement.quartier.id} : {id: null},
     })
   }
 

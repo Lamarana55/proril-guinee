@@ -45,7 +45,6 @@ class GroupementController {
               @RequestParam prenom : String? = null,
               @RequestParam role: String? = null,
               @RequestParam telephone: String? = null,
-              @RequestParam email: String? = null,
               @RequestParam idRegion: Long? = null,
               @RequestParam idPrefecture: Long? = null,
               @RequestParam idCommune: Long? = null,
@@ -56,9 +55,8 @@ class GroupementController {
 //        return if (true) {
         when {
             userConnected.getAutorisation(Permissions.CAN_VIEW_GROUPEMENT_LIST) -> return when {
-                telephone != null -> ResponseEntity.ok().body(apiService.myTreeGroupement(groupementRepository.findByTelephoneAndIsDelete(telephone, Delete.No, pageRequest)))
-                email != null -> ResponseEntity.ok().body(apiService.myTreeGroupement(groupementRepository.findByEmailAndIsDelete(email,Delete.No, pageRequest)))
-                else -> ResponseEntity.ok().body(apiService.myTreeGroupement(groupementRepository.findAllByIsDeleteOrderByNomAsc(Delete.No, pageRequest)))
+                telephone != null -> ResponseEntity.ok().body(apiService.myTreePage(groupementRepository.findByTelephoneAndIsDelete(telephone, Delete.No, pageRequest)))
+                else -> ResponseEntity.ok().body(apiService.myTreePage(groupementRepository.findAllByIsDeleteOrderByNomAsc(Delete.No, pageRequest)))
 
             }
             else -> return ResponseEntity(MessageResponse("le username n'est pas autorisé ", "Echec"), HttpStatus.FORBIDDEN)
@@ -72,7 +70,7 @@ class GroupementController {
     fun show(@PathVariable id: Long): ResponseEntity<Any> {
         return when {
 //            true -> {
-            userConnected.getAutorisation(Permissions.CAN_VIEW_CATEGORIE_INFO) ->{
+            userConnected.getAutorisation(Permissions.CAN_VIEW_GROUPEMENT_INFO) ->{
                 ResponseEntity(groupementRepository.findById(id).filter { groupement -> groupement.isDelete == Delete.No }, HttpStatus.OK)
             }
             else -> ResponseEntity(MessageResponse("le user n'est pas autorisé "), HttpStatus.UNAUTHORIZED)
@@ -84,7 +82,7 @@ class GroupementController {
     fun save(@Valid @RequestBody groupement: Groupement): ResponseEntity<Any> {
         return when {
 //            true -> {
-            userConnected.getAutorisation(Permissions.CAN_ADD_CATEGORIE) -> {
+            userConnected.getAutorisation(Permissions.CAN_ADD_GROUPEMENT) -> {
                 ResponseEntity.ok().body(groupementRepository.save(groupement))
             }
             else -> ResponseEntity(MessageResponse("le user n'est pas autorisé "), HttpStatus.UNAUTHORIZED)
@@ -104,7 +102,7 @@ class GroupementController {
             val newType = existType.copy(
                     nom = groupement.nom,
                     telephone = groupement.telephone,
-                    email = groupement.email,
+                    marque = groupement.marque,
                     description = groupement.description,
                     region = groupement.region,
                     prefecture = groupement.prefecture,

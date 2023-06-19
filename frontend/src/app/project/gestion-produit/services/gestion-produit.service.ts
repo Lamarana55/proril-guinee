@@ -32,9 +32,6 @@ export class GestionProduitService {
 
   // =============================== Produit =============================== //
 
- /*  getAllProduits(): Observable<Produit[]> { 
-    return this.http.get<produit[]>(API_URL + PRODUIT_URL);
-  } */
 
   getAllProduits(params?: RequestProduitParam): Observable<Pagination> {
     let request = API_URL + PRODUIT_URL + `?page=${params.page}&size=${params.size}`;
@@ -54,6 +51,7 @@ export class GestionProduitService {
   }
 
   addProduit(produit: Partial<Produit>): Observable<Produit> {
+    console.log(produit);
     return this.http.post<Produit>(API_URL + PRODUIT_URL, produit);
   }
 

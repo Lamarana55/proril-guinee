@@ -13,7 +13,7 @@ data class Groupement(
         @Column(nullable = false)
         val nom: String,
         val telephone: String? = null,
-        val email: String? = null,
+        val marque: String? = null,
 
         @Column(columnDefinition = "text")
         val description: String? = null,

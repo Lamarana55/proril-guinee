@@ -17,7 +17,6 @@ import { UserService } from '../user-management/services/user.service';
   styleUrls: ['./search-local.component.css']
 })
 export class SearchLocalComponent implements OnInit {
-
   
   @Input() isLoading = false;
   @Input() expanded = false;
@@ -46,6 +45,7 @@ export class SearchLocalComponent implements OnInit {
     } 
     this.loadLocaliteInfos();
   }
+  
   loadLocaliteInfos() {
     this.regions$ = this.localiteService.getRegions$();
     this.prefectures$ = this.localiteService.getPrefectures$();

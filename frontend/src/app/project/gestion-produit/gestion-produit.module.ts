@@ -15,10 +15,12 @@ import { MaterialModule } from '../material/material.module';
 import { InfoProduitComponent } from './produit/info-produit/info-produit.component';
 import { StatistiqueProduitComponent } from './statistique-produit/statistique-produit/statistique-produit.component';
 import { GestionProduitComponent } from './gestion-produit.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import { SearhClientComponent } from './client/searh-client/searh-client.component';
 
 
 @NgModule({
-  declarations: [GestionProduitComponent, ListProduitComponent, EditProduitComponent, EditVenteComponent, ListVenteComponent, ListClientComponent, EditClientComponent, InfoProduitComponent, StatistiqueProduitComponent, ],
+  declarations: [GestionProduitComponent, ListProduitComponent, EditProduitComponent, EditVenteComponent, ListVenteComponent, ListClientComponent, EditClientComponent, InfoProduitComponent, StatistiqueProduitComponent, SearhClientComponent, ],
   imports: [
     CommonModule,
     GestionProduitRoutingModule,
@@ -26,6 +28,7 @@ import { GestionProduitComponent } from './gestion-produit.component';
     FormsModule,
     CoreModule,
     MaterialModule,
+    MatDialogModule,
     ReactiveFormsModule,
   ]
 })

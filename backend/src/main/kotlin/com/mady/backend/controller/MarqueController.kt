@@ -52,9 +52,9 @@ class MarqueController {
 //        return if (true) {
         when {
             userConnected.getAutorisation(Permissions.CAN_VIEW_MARQUE_LIST) -> return when {
-                libelle != null -> ResponseEntity.ok().body(apiService.myTreeMarque(marqueRepository.findByLibelleAndIsDelete(libelle, Delete.No, pageRequest)))
-                groupement != null -> ResponseEntity.ok().body(apiService.myTreeMarque(marqueRepository.findByGroupementNomAndIsDelete(groupement,Delete.No, pageRequest)))
-                else -> ResponseEntity.ok().body(apiService.myTreeMarque(marqueRepository.findAllByIsDeleteOrderByLibelleAsc(Delete.No, pageRequest)))
+                libelle != null -> ResponseEntity.ok().body(apiService.myTreePage(marqueRepository.findByLibelleAndIsDelete(libelle, Delete.No, pageRequest)))
+                groupement != null -> ResponseEntity.ok().body(apiService.myTreePage(marqueRepository.findByGroupementNomAndIsDelete(groupement,Delete.No, pageRequest)))
+                else -> ResponseEntity.ok().body(apiService.myTreePage(marqueRepository.findAllByIsDeleteOrderByLibelleAsc(Delete.No, pageRequest)))
 
             }
             else -> return ResponseEntity(MessageResponse("le username n'est pas autorisé ", "Echec"), HttpStatus.FORBIDDEN)

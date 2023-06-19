@@ -53,9 +53,9 @@ class ProduitController {
 //        return if (true) {
         when {
             userConnected.getAutorisation(Permissions.CAN_VIEW_GROUPEMENT_LIST) -> return when {
-                nom != null -> ResponseEntity.ok().body(apiService.myTreeProduit(produitRepository.findByNomAndIsDelete(nom, Delete.No, pageRequest)))
-                groupement != null -> ResponseEntity.ok().body(apiService.myTreeProduit(produitRepository.findByGroupementNomAndIsDelete(groupement, Delete.No, pageRequest)))
-                else -> ResponseEntity.ok().body(apiService.myTreeProduit(produitRepository.findAllByIsDeleteOrderByNomAsc(Delete.No, pageRequest)))
+                nom != null -> ResponseEntity.ok().body(apiService.myTreePage(produitRepository.findByNomAndIsDelete(nom, Delete.No, pageRequest)))
+                groupement != null -> ResponseEntity.ok().body(apiService.myTreePage(produitRepository.findByGroupementNomAndIsDelete(groupement, Delete.No, pageRequest)))
+                else -> ResponseEntity.ok().body(apiService.myTreePage(produitRepository.findAllByIsDeleteOrderByNomAsc(Delete.No, pageRequest)))
 
             }
             else -> return ResponseEntity(MessageResponse("le username n'est pas autorisé ", "Echec"), HttpStatus.FORBIDDEN)
@@ -82,6 +82,7 @@ class ProduitController {
         return when {
 //            true -> {
             userConnected.getAutorisation(Permissions.CAN_ADD_CATEGORIE) -> {
+//                produit.marqueAt =
                 ResponseEntity.ok().body(produitRepository.save(produit))
             }
             else -> ResponseEntity(MessageResponse("le user n'est pas autorisé "), HttpStatus.UNAUTHORIZED)
@@ -104,7 +105,6 @@ class ProduitController {
                     prixUnit = produit.prixUnit,
                     description = produit.description,
                     groupement = produit.groupement,
-                    categorie = produit.categorie,
                     updatedAt = Instant.now()
             )
             ResponseEntity.ok().body(produitRepository.save(newType))

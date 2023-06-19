@@ -17,24 +17,8 @@ const routes: Routes = [
     children: [
       {
         path: '',
-        redirectTo: 'categories',
+        redirectTo: 'groupements',
         pathMatch: 'full'
-      }, 
-      {
-        path: 'categories',
-        children: [
-          {
-            path: '',
-            component: ListCategorieComponent,
-            canActivate: [RoleGuard],
-            data: { permissions: PERMISSIONS.CAN_VIEW_CATEGORIE_LIST }
-          }, {
-            path: 'edit',
-            component: EditCategorieComponent,
-            canActivate: [RoleGuard],
-            data: { permissions: PERMISSIONS.CAN_ADD_CATEGORIE }
-          }
-        ]
       }, 
       {
         path: 'groupements',
@@ -52,7 +36,23 @@ const routes: Routes = [
           }
         ]
       },
-      {
+     /*  {
+        path: 'categories',
+        children: [
+          {
+            path: '',
+            component: ListCategorieComponent,
+            canActivate: [RoleGuard],
+            data: { permissions: PERMISSIONS.CAN_VIEW_CATEGORIE_LIST }
+          }, {
+            path: 'edit',
+            component: EditCategorieComponent,
+            canActivate: [RoleGuard],
+            data: { permissions: PERMISSIONS.CAN_ADD_CATEGORIE }
+          }
+        ]
+      },  */
+      /* {
         path: 'marques',
         children: [
           {
@@ -67,7 +67,7 @@ const routes: Routes = [
             data: { permissions: PERMISSIONS.CAN_ADD_MARQUE }
           }
         ]
-      },
+      }, */
     ]
   }
 ];

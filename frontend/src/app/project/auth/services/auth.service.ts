@@ -39,6 +39,10 @@ export class AuthService {
   getPermissions(): string {
     return this.getAuth().authorities.map(role => role.authority).join(',');
   }
+
+  getRole(): string{
+    return this.getAuth().role;
+  }
   // =============================== Change password =============================== //
   // send mail for changing password 
 

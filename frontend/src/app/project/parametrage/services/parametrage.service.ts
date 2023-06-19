@@ -84,6 +84,7 @@ export class ParametrageService {
   }
 
   addGroupement(groupement: Partial<Groupement>): Observable<Groupement> {
+    console.log(groupement);
     return this.http.post<Groupement>(API_URL + GROUPEMENT_URL, groupement);
   }
 

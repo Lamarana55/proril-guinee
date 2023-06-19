@@ -1,1 +1,72 @@
-<p>edit-client works!</p>
+<div class="card">
+    <div class="card-header bg-default">
+      <div class="row">
+        <div class="col-sm-12 form-inline">
+          <button mat-mini-fab color="info" routerLink="..">
+            <mat-icon>reply</mat-icon>
+          </button>
+          <h2 class="card-title ml-1 text-white">
+            {{ isNew ? 'Enregistrement d\'un client' : 'Modification d\'un client '}}
+          </h2>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+  
+      <!-- Spinner -->
+      <app-spinner [filterBy]="clientUrl" [diameter]="30" #usrSpinner></app-spinner>
+  
+      <div class="row">
+        <div class="col-md-8 offset-md-2 col-sm-12">
+          <div>
+            <form [formGroup]="clientForm">
+              <div class="row">
+                <div class="col-12">
+                  <mat-form-field>
+                    <mat-label>Nom client *</mat-label>
+                    <input matInput type="text" formControlName="nom">
+                    <mat-error>La  client est obligatoire et contient au moins 2 caractères</mat-error>
+                  </mat-form-field>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12">
+                  <mat-form-field>
+                    <mat-label>Prenom client *</mat-label>
+                    <input matInput type="text" formControlName="prenom">
+                    <mat-error>Le prenom est obligatoire et contient au moins 2 caractères</mat-error>
+                  </mat-form-field>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12">
+                  <mat-form-field>
+                    <mat-label>Téléphone client *</mat-label>
+                    <input matInput type="number" minlength="1" formControlName="telephone">
+                    <mat-error>Le numéro de téléphone est obligatoire et contient au moins 3 caractères</mat-error>
+                  </mat-form-field>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12">
+                  <mat-form-field>
+                    <mat-label>Adresse </mat-label>
+                    <textarea matInput formControlName="adresse"></textarea>
+                  </mat-form-field>
+                </div>
+              </div>
+
+              <!-- ==========================================================================-->
+
+              <div class="text-center">
+                <button type="button" (click)="onSubmit()" [class.spinner]="usrSpinner.loadingEvent$ | async"
+                  mat-raised-button color="primary" [disabled]="clientForm.invalid || (usrSpinner.loadingEvent$ | async)">
+                  Enregistrer
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

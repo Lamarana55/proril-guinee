@@ -32,7 +32,7 @@ export const ROUTES: RouteInfo[] = [
     icontype: "nc-icon nc-bank",
     permission: PERMISSIONS.CAN_VIEW_DASHBORD,
   },
-  {
+  /* {
     path: "/gestion-grossistes",
     title: "Gestion Grossistes",
     type: "sub",
@@ -42,7 +42,7 @@ export const ROUTES: RouteInfo[] = [
       {path: 'grossistes', title: 'Grossites', ab: 'G', permission: PERMISSIONS.CAN_VIEW_GROSSISTE_MENU},
       {path: 'produits', title: 'Produits', ab: 'P', permission: PERMISSIONS.CAN_VIEW_PRODUIT_MENU}
   ],
-  },
+  } ,*/
   {
     path: "/gestion-produits",
     title: "Gestion Produits",
@@ -51,8 +51,9 @@ export const ROUTES: RouteInfo[] = [
     icontype: "nc-icon nc-bullet-list-67",
     children: [
       {path: 'produits', title: 'Produits', ab: 'P', permission: PERMISSIONS.CAN_VIEW_PRODUIT_MENU},
+      // {path: 'ventes', title: 'Ventes', ab: 'v', permission: PERMISSIONS.CAN_VIEW_VENTE_MENU},
       {path: 'clients', title: 'Clients', ab: 'C', permission: PERMISSIONS.CAN_VIEW_CLIENT_MENU},
-      {path: 'statistiques', title: 'Statistiques', ab: 'ST', permission: PERMISSIONS.CAN_VIEW_STATISTIQUE_MENU},
+      // {path: 'statistiques', title: 'Statistiques', ab: 'ST', permission: PERMISSIONS.CAN_VIEW_STATISTIQUE_MENU},
   ],
   },
 
@@ -86,23 +87,23 @@ export const ROUTES: RouteInfo[] = [
     icontype: "nc-icon nc-settings",
     children: [
       {
+        path: "groupements",
+        title: "Groupements",
+        ab: "G",
+        permission: PERMISSIONS.CAN_VIEW_GROUPEMENT_MENU,
+      },
+      /* {
         path: "categories",
         title: "Categories",
         ab: "C",
         permission: PERMISSIONS.CAN_VIEW_CATEGORIE_MENU,
       },
       {
-        path: "groupements",
-        title: "Groupements",
-        ab: "G",
-        permission: PERMISSIONS.CAN_VIEW_GROUPEMENT_MENU,
-      },
-      {
         path: "marques",
         title: "Marque Produit",
         ab: "MP",
         permission: PERMISSIONS.CAN_VIEW_MARQUE_MENU,
-      },
+      }, */
     ],
   },
   {

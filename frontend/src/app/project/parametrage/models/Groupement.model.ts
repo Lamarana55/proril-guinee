@@ -6,10 +6,10 @@ import { Region } from "app/project/core/models/region.model"
 export class Groupement{
     id: number
     nom: string
+    marque: string
     telephone?: string
-    email?: string
     description?: string
-    region?: Region
+    region?: Region | null = null;
     prefecture?: Prefecture | null = null;
     commune?: Commune | null = null;
     quartier?: Quartier| null = null;

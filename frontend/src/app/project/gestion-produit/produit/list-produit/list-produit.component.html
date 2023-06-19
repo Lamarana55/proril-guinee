@@ -46,6 +46,13 @@
                 <mat-header-cell *matHeaderCellDef mat-sort-header><strong>PRIX UNITAIRE</strong> </mat-header-cell>
                 <mat-cell *matCellDef="let row">{{ row.prixUnit }}</mat-cell>
               </ng-container>
+
+              <!-- Marque Column -->
+              <ng-container matColumnDef="marque">
+                <mat-header-cell *matHeaderCellDef mat-sort-header><strong>MARQUE</strong> </mat-header-cell>
+                <mat-cell *matCellDef="let row">{{ row.groupement.marque }}</mat-cell>
+              </ng-container>
+              
                <!-- code Column -->
                <ng-container matColumnDef="poids">
                 <mat-header-cell *matHeaderCellDef mat-sort-header><strong>POIDS</strong> </mat-header-cell>
@@ -53,10 +60,10 @@
               </ng-container>
 
               <!-- TypeCas Column -->
-              <ng-container matColumnDef="categorie">
+              <!-- <ng-container matColumnDef="categorie">
                 <mat-header-cell *matHeaderCellDef mat-sort-header><strong>CATEGORIE</strong> </mat-header-cell>
                 <mat-cell *matCellDef="let row">{{ row.categorie.libelle }}</mat-cell>
-              </ng-container>
+              </ng-container> -->
 
               <!-- TypeCas Column -->
               <ng-container matColumnDef="groupement">
@@ -66,7 +73,17 @@
               <!-- description Column -->
               <ng-container matColumnDef="description">
                 <mat-header-cell *matHeaderCellDef mat-sort-header><strong>DESCRIPTION</strong> </mat-header-cell>
-                <mat-cell *matCellDef="let row">{{ row.description }}</mat-cell>
+                <mat-cell *matCellDef="let row">
+                  <div *ngIf="row.description.lenght <= maxDescriptionLength">
+                    {{ row.description }} 
+                  </div>
+                  <div *ngIf="row.description.length > maxDescriptionLength">
+                    {{ row.description.substr(0, maxDescriptionLength) + '...' }}
+                    <button mat-button color="primary" (click)="openModalDescription(modalDescription, row.description)">
+                      Voir plus
+                    </button>
+                  </div>
+                </mat-cell>
               </ng-container>
   
               <ng-container matColumnDef="option">
@@ -101,5 +118,21 @@
         </div>
       </div>
     </div>
+</div>
+
+<ng-template  #modalDescription let-c="close" let-d="dismiss">
+  <div class="modal-header bg-default">
+    <span class="modal-title h4 text-white">Description</span>
+   <!--  <button type="button" class="close" aria-label="Close" (click)="c('Close click')">
+      <span aria-hidden="true">&times;</span>
+    </button> -->
   </div>
+  <div class="modal-body">
+    <p class="text-center font-italic">{{description}}</p>
+  </div>
+  <div class="text-center">
+    <button type="button" (click)="onCloseModal()" color="info" class="btn btn-danger"> Fermer </button>
+  </div>
+</ng-template>
+
   

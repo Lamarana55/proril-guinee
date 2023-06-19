@@ -28,7 +28,6 @@
       <div *ngIf="(dataSource.data.length) as users">
         <div *ngIf="dataSource.data.length > 0">
   
-  
           <div class="table-responsive mb-2" [hidden]="!dataSource || dataSource.data.length === 0">
             <div class="mat-table-header">
               <mat-form-field>
@@ -50,10 +49,10 @@
                 <mat-cell *matCellDef="let row">{{ row.telephone }}</mat-cell>
               </ng-container>
 
-              <!-- email Column -->
-              <ng-container matColumnDef="email">
-                <mat-header-cell *matHeaderCellDef mat-sort-header><strong>EMAIL</strong> </mat-header-cell>
-                <mat-cell *matCellDef="let row">{{ row.email }}</mat-cell>
+              <!-- marque Column -->
+              <ng-container matColumnDef="marque">
+                <mat-header-cell *matHeaderCellDef mat-sort-header><strong>MARQUE</strong> </mat-header-cell>
+                <mat-cell *matCellDef="let row">{{ row.marque }}</mat-cell>
               </ng-container>
 
                <!-- description Column -->
@@ -61,17 +60,11 @@
                 <mat-header-cell *matHeaderCellDef mat-sort-header><strong>DESCRIPTION</strong> </mat-header-cell>
                 <mat-cell *matCellDef="let row">{{ row.description }}</mat-cell>
               </ng-container>
-  
-              <!-- localite prefecture Column -->
-              <ng-container matColumnDef="prefecture">
-                <mat-header-cell *matHeaderCellDef mat-sort-header><strong>PREFECTURE</strong> </mat-header-cell>
-                <mat-cell *matCellDef="let row">{{ row.prefecture.nom }}</mat-cell>
-              </ng-container>
 
                <!-- localite commune Column -->
-               <ng-container matColumnDef="commune">
-                <mat-header-cell *matHeaderCellDef mat-sort-header><strong>COMMUNE</strong> </mat-header-cell>
-                <mat-cell *matCellDef="let row">{{ row.commune.nom }}</mat-cell>
+               <ng-container matColumnDef="quartier">
+                <mat-header-cell *matHeaderCellDef mat-sort-header><strong>VILLAGES</strong> </mat-header-cell>
+                <mat-cell *matCellDef="let row">{{ row.quartier?.nom }}</mat-cell>
               </ng-container>
 
 
@@ -101,8 +94,7 @@
           </div>
   
         </div>
-        <div *ngIf="dataSource.data.length === 0 && ((spinner.loadingEvent$ | async) === false)"
-          class="text-info text-center mt-2">
+        <div *ngIf="dataSource.data.length === 0 && ((spinner.loadingEvent$ | async) === false)" class="text-info text-center mt-2">
           Aucun cas trouvé !!!
         </div>
       </div>

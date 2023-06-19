@@ -41,7 +41,7 @@ export class ListGroupementComponent implements OnInit {
   groupementId: number = 0;
   messageAttente: string = "";
 
-  displayedColumns = [ 'nom','telephone', 'email', 'description', 'prefecture','commune', 'option'];
+  displayedColumns = [ 'nom','telephone','marque', 'description', 'quartier', 'option'];
   dataSource: MatTableDataSource<Groupement> = new MatTableDataSource([]);
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
@@ -65,8 +65,8 @@ export class ListGroupementComponent implements OnInit {
       return {
         id: groupement.id,
         nom: groupement.nom,
+        marque: groupement.marque,
         telephone: groupement.telephone,
-        email: groupement.email,
         description: groupement.description,
         region: groupement.region,
         prefecture: groupement.prefecture,

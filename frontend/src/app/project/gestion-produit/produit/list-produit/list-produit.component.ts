@@ -23,7 +23,6 @@ import { RequestProduitParam } from 'app/project/core/models/request.produit.mod
 })
 export class ListProduitComponent implements OnInit {
 
-
   produits$: Observable<Produit[]>;
   subject = new BehaviorSubject(0);
 
@@ -43,8 +42,11 @@ export class ListProduitComponent implements OnInit {
   reinitialisationForm: FormGroup;
   produitId: number = 0;
   messageAttente: string = "";
+  maxDescriptionLength: number = 40;
+  showFullDescription = false;
+  description = "";
 
-  displayedColumns = [ 'nom', 'prixUnit', 'poids', 'categorie','groupement', 'description',  'option'];
+  displayedColumns = [ 'nom', 'prixUnit','marque', 'poids','groupement', 'description',  'option'];
   dataSource: MatTableDataSource<Produit> = new MatTableDataSource([]);
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
@@ -66,13 +68,14 @@ export class ListProduitComponent implements OnInit {
   this.gestionProduitService.getAllProduits(params).subscribe( data => {
     const displayData = data.data.map(dd => {
       this.totalRows = data.totalItem;
+      const marque = this.gestionProduitService
       return {
         id: dd.id,
         nom: dd.nom,
         poids: dd.poids,
         prixUnit: dd.prixUnit,
         description: dd.description,
-        categorie: dd.categorie,
+        marque: dd.groupement.marque,
         groupement: dd.groupement,
       } as Produit
 
@@ -144,7 +147,14 @@ ngAfterContentChecked() {
     }
   }
 
- 
+  openModalDescription(content: any, description: string){
+    this.description = description;
+    this.modalRef = this.modalService.open(content, {backdrop: 'static'});
+  }
+
+  toggleDescription(): void {
+    this.showFullDescription = !this.showFullDescription;
+  }
 
   onCloseModal() {
     this.modalRef.close();
@@ -163,7 +173,6 @@ ngAfterContentChecked() {
       
       params.page = 0;
       params.size = 10;
-      console.log("Params ",params)
       this.getElement(params);
     }
   }

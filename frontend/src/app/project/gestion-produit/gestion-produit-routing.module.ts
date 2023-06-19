@@ -9,6 +9,9 @@ import { EditProduitComponent } from './produit/edit-produit/edit-produit.compon
 import { InfoProduitComponent } from './produit/info-produit/info-produit.component';
 import { ListClientComponent } from './client/list-client/list-client.component';
 import { StatistiqueProduitComponent } from './statistique-produit/statistique-produit/statistique-produit.component';
+import { ListVenteComponent } from './ventes/list-vente/list-vente.component';
+import { EditVenteComponent } from './ventes/edit-vente/edit-vente.component';
+import { EditClientComponent } from './client/edit-client/edit-client.component';
 
 const routes: Routes = [
   {
@@ -39,7 +42,25 @@ const routes: Routes = [
             data: { permissions: PERMISSIONS.CAN_VIEW_PRODUIT_INFO}
           }
         ]
-      }, {
+      },
+      {
+        path: 'ventes',
+        children: [
+          {
+            path: '',
+            component: ListVenteComponent,
+            canActivate: [RoleGuard],
+            data: { permissions: PERMISSIONS.CAN_VIEW_VENTE_LIST}
+          },
+          {
+            path: 'edit',
+            component: EditVenteComponent,
+            canActivate: [RoleGuard],
+            data: { permissions: PERMISSIONS.CAN_ADD_VENTE}
+          },
+        ]
+      },
+      {
         path: 'clients',
         children: [
           {
@@ -50,9 +71,9 @@ const routes: Routes = [
           },
           {
             path: 'edit',
-            component: EditProduitComponent,
+            component: EditClientComponent,
             canActivate: [RoleGuard],
-            data: { permissions: PERMISSIONS.CAN_ADD_PRODUIT}
+            data: { permissions: PERMISSIONS.CAN_ADD_CLIENT}
           },
         ]
       },{

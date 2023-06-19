@@ -1,7 +1,7 @@
 package com.mady.backend.services
-
+/*
 import com.byteowls.jopencage.JOpenCageGeocoder
-import com.byteowls.jopencage.model.JOpenCageReverseRequest
+import com.byteowls.jopencage.model.JOpenCageReverseRequest*/
 import com.mady.backend.entities.*
 import com.mady.backend.repository.*
 import com.mady.backend.utils.Delete
@@ -44,6 +44,10 @@ class ApiService {
     private lateinit var userConnected: UserConnected
 
 
+
+    fun <T> myTreePage(page: Page<T>): Pagination {
+        return pagination(page.totalPages, page.size, page.map { it })
+    }
 
 
     fun myTreeUsers(page: Page<User>): Pagination{
@@ -118,7 +122,7 @@ class ApiService {
         return Pagination(data = elements.content, totalItem = elements.totalElements, totalPage = elements.totalPages, lastPage = lastPage, currentPage = page, isLast = elements.isLast, isFirst = elements.isFirst, dataIsEmpty = elements.isEmpty)
     }
 
-
+/*
     fun getCommuneByLatitudeAndLongitude(latitude: Double, longitude: Double): List<DCommune> {
         try {
             val jOpenCageGeocoder = JOpenCageGeocoder(key)
@@ -211,6 +215,8 @@ class ApiService {
         }
 
     }
+    */
+
 
 }
 

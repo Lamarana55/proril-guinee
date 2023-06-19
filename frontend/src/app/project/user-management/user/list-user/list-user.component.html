@@ -30,11 +30,11 @@
 
 
         <div class="table-responsive mb-2" [hidden]="!dataSource || dataSource.data.length === 0">
-          <div class="mat-table-header">
+          <!-- <div class="mat-table-header">
             <mat-form-field>
               <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Rechercher">
             </mat-form-field>
-          </div>
+          </div> -->
           <mat-table [dataSource]="dataSource" matSort>
             <!-- date Column -->
            <!--  <ng-container matColumnDef="username">
@@ -132,14 +132,12 @@
       <div class="text-center">
         <p class="text text-warning" style="font-weight: bold">{{ messageAttente }}</p>
         <button type="button"
-          (click)="onCloseModal()" color="danger" class="btn btn-danger"
-        >
+          (click)="onCloseModal()" color="danger" class="btn btn-danger">
           Annuler
         </button>
 
         <button style="margin-left: 10px;" type="button" (click)="onReinitialisationPassword()"
-          [disabled]="reinitialisationForm.invalid" mat-raised-button color="primary"
-        >
+          [disabled]="reinitialisationForm.invalid" mat-raised-button color="primary">
           Réinitialiser
         </button>
       </div>

@@ -5,8 +5,7 @@ export class Client{
     nom: string
     prenom: string
     telephone?: string
-    email?: string
-    description?: string
-    grossiste? = new User()
+    adresse?: string
+    user? = new User()
 
 }
