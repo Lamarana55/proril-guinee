@@ -12,7 +12,7 @@ data class Quartier(
         val id: Long,
         @Column(nullable = false)
         val nom: String,
-        @Column(unique = true, nullable = false)
+        @Column(nullable = false)
         var code: String? = null,
         val longitude: Double? = null,
         val latitude: Double? = null,

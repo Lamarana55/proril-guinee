@@ -75,7 +75,7 @@ export class EditClientComponent implements OnInit {
       clientActions$.subscribe(
         () => {
           this.utils.showNotif('Operation effectuée avec succès', 'success');
-          this.isNew ? this.resetForm() : this.router.navigate(['gestio-produits/clients'])
+          this.isNew ? this.resetForm() : this.router.navigate(['gestion-produits/clients'])
         },
         (error) => {
             this.utils.showNotif(`Une erreur est survenue lors de l'opération `, 'danger')

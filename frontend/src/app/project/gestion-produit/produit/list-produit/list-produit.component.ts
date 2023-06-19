@@ -68,7 +68,7 @@ export class ListProduitComponent implements OnInit {
   this.gestionProduitService.getAllProduits(params).subscribe( data => {
     const displayData = data.data.map(dd => {
       this.totalRows = data.totalItem;
-      const marque = this.gestionProduitService
+
       return {
         id: dd.id,
         nom: dd.nom,
@@ -149,7 +149,7 @@ ngAfterContentChecked() {
 
   openModalDescription(content: any, description: string){
     this.description = description;
-    this.modalRef = this.modalService.open(content, {backdrop: 'static'});
+    this.modalRef = this.modalService.open(content, {backdrop: 'static', size: 'lg'});
   }
 
   toggleDescription(): void {

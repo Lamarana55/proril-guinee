@@ -11,7 +11,7 @@ data class Secteur(
         @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
         val id: Long,
         val nom: String,
-        @Column(unique = true, nullable = false)
+        @Column(nullable = false)
         var code: String? = null,
         val longitude: Double? = null,
         val latitude: Double? = null,
