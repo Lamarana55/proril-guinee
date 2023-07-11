@@ -143,11 +143,11 @@ class UserController {
 
     @PostMapping
     @ApiOperation(value = "Methode d'enregistrement d'un nouvel utilisateur, qui reçoit un objet de type User")
-    fun save(@Valid @RequestBody user: User): ResponseEntity<Any> {
+    fun save(@RequestBody user: User): ResponseEntity<Any> {
         when {
             true -> {
 //            userConnected.getAutorisation(Permissions.CAN_ADD_USER) -> {
-                val myUser = userRepository.findByTelephoneOrEmail(user.telephone!!, user.email).filter { user -> user.isDelete == Delete.No }
+                val myUser = userRepository.findByTelephone(user.telephone!!).filter { user -> user.isDelete == Delete.No }
 
                 when (myUser.isPresent) {
                     false -> {

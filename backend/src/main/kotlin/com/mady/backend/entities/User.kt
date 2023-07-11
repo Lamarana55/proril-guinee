@@ -19,7 +19,7 @@ data class User(
         val prenom: String? = null,
         val telephone: String? = null,
         @Email
-        @Column(unique = true, nullable = false)
+        @Column(nullable = true)
         val email: String,
         @Column(unique = true, nullable = false)
         var username: String? = null,

@@ -64,7 +64,7 @@ export class EditUserComponent implements OnInit {
     this.userForm = this.fb.group({
       nom: ['', [Validators.required, Validators.minLength(2)]],
       prenom: ['', [Validators.required, Validators.minLength(2)]],
-      email: ['', [Validators.required, Validators.email]],
+      email: ['', [Validators.email]],
       region: this.fb.group({id: [null, [Validators.pattern(SELECT_NUMBER_PATTERN)]]}),
       prefecture: this.fb.group({
         id: [null, [Validators.pattern(SELECT_NUMBER_PATTERN)]]
@@ -95,13 +95,14 @@ export class EditUserComponent implements OnInit {
   async onSubmit() {
     if (!this.userForm.invalid) {
       const user = this.userForm.value as Partial<User>;
-      user.role = await this.userService.getOneRole(user.role.id).toPromise();
+      /* user.role = await this.userService.getOneRole(user.role.id).toPromise();
       user.region = user.region ? await this.localiteService.getOneRegion(user.region.id).toPromise() : null;
       user.prefecture = user.prefecture ? await this.localiteService.getOnePrefecture(user.prefecture.id).toPromise(): null;
       user.commune = user.commune ? await this.localiteService.getOnecommune(user.commune.id).toPromise() : null;
       user.quartier =  user.quartier ? await this.localiteService.getOneQuartier(user.quartier.id).toPromise() : null;
       user.secteur = user.secteur ? await this.localiteService.getOneSecteur(user.secteur.id).toPromise() : null;
-
+ */
+      console.log(user)
       const userActions$ = this.isNew ? this.userService.add(user) : this.userService.update(this.userId, user);
       userActions$.subscribe(
         () => {
