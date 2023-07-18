@@ -1,6 +1,8 @@
 package com.mady.backend.utils
 
 import org.springframework.beans.factory.annotation.Value
+import java.util.regex.Pattern
+
 
 enum class Statut{Activated, Desactivated }
 
@@ -55,6 +57,20 @@ data class ImageReponse(
         val fileType: String,
         val isVedette: Boolean
 )
+
+val EMAIL_ADDRESS_REGEX = Regex(
+        "[a-zA-Z0-9\\+\\.\\_\\%\\-\\+]{1,256}" +
+                "\\@" +
+                "[a-zA-Z0-9][a-zA-Z0-9\\-]{0,64}" +
+                "(" +
+                "\\." +
+                "[a-zA-Z0-9][a-zA-Z0-9\\-]{0,25}" +
+                ")+"
+)
+
+fun isValidEmail(email: String): Boolean {
+    return !email.isNullOrEmpty() && EMAIL_ADDRESS_REGEX.matches(email)
+}
 
 /*class Role {
     companion object {

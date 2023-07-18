@@ -30,7 +30,8 @@
               "node_modules/perfect-scrollbar/css/perfect-scrollbar.css",
               "node_modules/sweetalert2/src/sweetalert2.scss",
               "src/assets/scss/paper-dashboard.scss",
-              "src/assets/css/demo.css"
+              "src/assets/css/demo.css",
+              "node_modules/intl-tel-input/build/css/intlTelInput.css"
             ],
             "scripts": [
               "node_modules/jquery/dist/jquery.js",
@@ -61,7 +62,8 @@
               "node_modules/@adactive/bootstrap-tagsinput/dist/bootstrap-tagsinput.js",
               "node_modules/jasny-bootstrap/dist/js/jasny-bootstrap.min.js",
               "node_modules/sweetalert2/dist/sweetalert2.js",
-              "src/assets/js/jquery.validate.min.js"
+              "src/assets/js/jquery.validate.min.js",
+              "node_modules/intl-tel-input/build/js/intlTelInput.js"
             ]
           },
           "configurations": {

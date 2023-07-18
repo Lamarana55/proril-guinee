@@ -60,7 +60,7 @@ private val password: String, private val authorities: Collection<GrantedAuthori
                     user.prenom!!,
                     user.telephone!!,
                     user.username!!,
-                    user.email,
+                    user.email!!,
                     user.password!!,
                     authorities
             )
