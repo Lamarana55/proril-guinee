@@ -3,7 +3,7 @@ import { UtilService } from './../../../core/services/util.service';
 import { LocaliteService } from './../../../core/services/localite.service';
 import { Observable } from 'rxjs';
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { TEL_PATTERN, SELECT_NUMBER_PATTERN } from 'app/config/app.data';
 import { NgbModal, NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
@@ -14,6 +14,8 @@ import { Commune } from 'app/project/core/models/commune.model';
 import { Quartier } from 'app/project/core/models/quartier.model';
 import { GROUPEMENT_URL, ParametrageService } from '../../services/parametrage.service';
 import { Groupement } from '../../models/Groupement.model';
+import intlTelInput from 'intl-tel-input';
+import { data } from 'jquery';
 
 @Component({
   selector: 'app-edit-groupement',
@@ -49,6 +51,7 @@ export class EditGroupementComponent implements OnInit {
   ngOnInit(): void {
     this.groupementId = this.route.snapshot.params['id'];
     this.isNew = isNaN(this.groupementId);
+    this.initPhone();
     this.initForm();
     this.onEdit();
     this.loadInfos();
@@ -56,39 +59,33 @@ export class EditGroupementComponent implements OnInit {
   }
 
   initForm() {
-    this.groupementForm = this.fb.group({
-      nom: ['', [Validators.required, Validators.minLength(2)]],
-      telephone: ['', [Validators.required, Validators.pattern(TEL_PATTERN)]],
-      marque: ['', [Validators.required, Validators.minLength(2)]],
-      description: ['', [Validators.required, Validators.minLength(4)]],
-      region: this.fb.group({id: [null, [Validators.pattern(SELECT_NUMBER_PATTERN)]]}),
-      prefecture: this.fb.group({
-        id: [null, [Validators.pattern(SELECT_NUMBER_PATTERN)]]
-      }),
-      commune: this.fb.group({
-        id: [null, [Validators.pattern(SELECT_NUMBER_PATTERN)]]
-      }),
-      quartier: this.fb.group({
-        id: [null, [Validators.pattern(SELECT_NUMBER_PATTERN)]]
-      }),
+    this.groupementForm = new FormGroup({
+      nom: new FormControl('', [Validators.required, Validators.minLength(2)]),
+      telephone: new FormControl('', [Validators.required, Validators.pattern(TEL_PATTERN)]),
+      marque: new FormControl('', [Validators.required, Validators.minLength(2)]),
+      description: new FormControl('', [Validators.required, Validators.minLength(4)]),
+      region: new FormControl(null),
+      prefecture: new FormControl(null),
+      commune: new FormControl(null),
+      quartier: new FormControl(null),
     });
     
   }
 
   resetForm() {
     this.initForm();
-    this.groupementForm.markAsPristine();
-    this.groupementForm.markAsUntouched();
-    this.groupementForm.updateValueAndValidity();
+    // this.groupementForm.markAsPristine();
+    // this.groupementForm.markAsUntouched();
+    // this.groupementForm.updateValueAndValidity();
   }
 
   async onSubmit() {
     if (!this.groupementForm.invalid) {
       const groupement = this.groupementForm.value as Partial<Groupement>;
-      groupement.region = groupement.region?.id ? await this.localiteService.getOneRegion(groupement.region?.id).toPromise(): null;
+      /* groupement.region = groupement.region?.id ? await this.localiteService.getOneRegion(groupement.region?.id).toPromise(): null;
       groupement.prefecture = groupement.prefecture?.id ? await this.localiteService.getOnePrefecture(groupement.prefecture.id).toPromise() : null;
       groupement.commune = groupement.commune?.id ? await this.localiteService.getOnecommune(groupement.commune.id).toPromise() : null;
-      groupement.quartier = groupement.quartier?.id ? await this.localiteService.getOneQuartier(groupement.quartier.id).toPromise() : null;
+      groupement.quartier = groupement.quartier?.id ? await this.localiteService.getOneQuartier(groupement.quartier.id).toPromise() : null; */
       const groupementActions$ = this.isNew ? this.parametrageService.addGroupement(groupement) : this.parametrageService.updateGroupement(this.groupementId, groupement);
       groupementActions$.subscribe(
         () => {
@@ -118,40 +115,46 @@ export class EditGroupementComponent implements OnInit {
     this.localiteService.subjectQuartier.next(0);
   }
 
+  
   // Actualisation des champs de la localite en fonction des informations selectionnees
  onChangeSelectLocalite() {
-    this.groupementForm.get('region.id').valueChanges.subscribe(id => {
-      this.localiteService.subjectPrefecture.next(id);
+    this.groupementForm.get('region').valueChanges.subscribe(region => {
+      this.localiteService.subjectPrefecture.next(region.id);
     });
 
-    this.groupementForm.get('prefecture.id').valueChanges.subscribe(idPrefecture => {
-      this.localiteService.subjectCommune.next(idPrefecture);
+    this.groupementForm.get('prefecture').valueChanges.subscribe(prefecture => {
+      this.localiteService.subjectCommune.next(prefecture.id);
     });
 
-    this.groupementForm.get('commune.id').valueChanges.subscribe(idCommune => {
-      this.localiteService.subjectQuartier.next(idCommune);
+    this.groupementForm.get('commune').valueChanges.subscribe(commune => {
+      this.localiteService.subjectQuartier.next(commune.id);
     });
 
-    this.groupementForm.get('quartier.id').valueChanges.subscribe(idQuartier => {
-      this.localiteService.subjectSecteur.next(idQuartier);
+    this.groupementForm.get('quartier').valueChanges.subscribe(quartier => {
+      this.localiteService.subjectSecteur.next(quartier.id);
     });
   } 
 
+
   async mapGroupement() {
     const groupement = await this.parametrageService.getOneGroupement(this.groupementId).toPromise();
-
     this.groupementForm.patchValue({
       nom: groupement.nom,
       telephone: groupement.telephone, 
       marque: groupement.marque,
       description: groupement.description,
-      region: groupement.region.id ?  {id: groupement.region.id} : {id: null},
-      prefecture: groupement.prefecture.id ?  {id: groupement.prefecture.id} : {id: null},
-      commune: groupement.commune.id ?  {id: groupement.commune.id} : {id: null},
-      quartier: groupement.quartier.id ?  {id: groupement.quartier.id} : {id: null},
+      region: groupement.region,
+      prefecture: groupement.prefecture,
+      commune: groupement.commune,
+      quartier: groupement.quartier,
     })
+    this.groupementForm.get('commune').setValue(groupement.commune);
+    
   }
 
+  compareObjects(object1: any, object2: any) {
+    return object1 && object2 && object1.id == object2.id;
+  }
   onEdit() {
     if (!this.isNew && this.groupementId > 0) {
       this.mapGroupement();
@@ -161,27 +164,59 @@ export class EditGroupementComponent implements OnInit {
   // Apres enregistrement d'un nouveau quartier dans le modal, MAJ du champs
   onNewQuartier(isDone: {done: boolean, id: number}) {
     if (isDone.done) {
-      this.localiteService.subjectQuartier.next(this.communeId);
-      this.groupementForm.get('quartier.id').setValue(isDone.id);
-      this.modalReference.close();
+      this.localiteService.getOneQuartier(isDone.id).subscribe((data) => {
+        this.localiteService.subjectQuartier.next(data.commune.id);
+        this.groupementForm.get('quartier').setValue(data);
+        this.modalReference.close();
+      },error => console.log(error))
     }
   }
 
   // Fonction permettant d'ouvrir un modal pour enregistrer un quartier ou un secteur
   onOpenModal(content: any, isSecteur= false) {
     if (isSecteur) {
-      this.quartierId = this.groupementForm.get('quartier.id').value;
+      this.quartierId = this.groupementForm.get('quartier').value;
       if (!this.quartierId) {
         this.snackBar.open('Selectionnez un quartier', '', {duration: 3000, verticalPosition: 'top', horizontalPosition: 'right', panelClass: ['my-snack-warning']})
         return;
       }
     } else {
-      this.communeId = this.groupementForm.get('commune.id').value;
+      this.communeId = this.groupementForm.get('commune').value;
       if (!this.communeId) {
         this.snackBar.open('Selectionnez une commune ou sous-prefecture', '', {duration: 3000, verticalPosition: 'top', horizontalPosition: 'right', panelClass: ['my-snack-warning']})
         return;
       }
     }
     this.modalReference = this.modalService.open(content, {backdrop: 'static', centered: true});
+  }
+
+
+  initPhone() {
+    const input = document.querySelector("#phone");
+    // Récupérer le champ nom et sa taille
+    const nomInput = document.querySelector("#nom");
+    const nomInputStyle = window.getComputedStyle(nomInput);
+    const nomInputWidth = nomInputStyle.getPropertyValue("width");
+    // Appliquer la taille au champ téléphone
+    if (input instanceof HTMLInputElement) {
+      input.style.width = nomInputWidth;
+    }
+
+    // Appliquer le gn au champ téléphone
+    if (input) {
+      const iti = intlTelInput(input, {
+        initialCountry: "gn",
+        separateDialCode: true,
+        autoPlaceholder: "polite",
+        nationalMode: false,
+        formatOnDisPROFESSIONplay: false,
+        customPlaceholder: function (
+          selectedCountryPlaceholder,
+          selectedCountryData
+        ) {
+          return "Ex: " + selectedCountryPlaceholder;
+        },
+      });
+    }
   }
 }

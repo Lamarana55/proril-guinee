@@ -10,8 +10,6 @@ import javax.persistence.*
 data class Vente(
         @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
         val id: Long,
-        @Column(nullable = false)
-        val libelle: String,
         val prixVente: Double,
         val quantite: Int,
         val produitAt: String? = null,
@@ -26,8 +24,8 @@ data class Vente(
         val produit: Produit,
 
         @ManyToOne(fetch = FetchType.LAZY)
-        @JoinColumn(nullable = false)
-        val commande: Commande,
+        @JoinColumn(nullable = true)
+        val commande: Commande? = null,
 
         @CreatedDate
         @Column(name = "created_at", updatable = false)

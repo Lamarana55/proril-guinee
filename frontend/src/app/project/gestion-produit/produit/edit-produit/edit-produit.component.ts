@@ -57,6 +57,7 @@ export class EditProduitComponent implements OnInit {
       nom: ['', [Validators.required, Validators.minLength(2)]],
       poids: ['', [Validators.required, Validators.pattern(SELECT_NUMBER_PATTERN)]],
       prixUnit: ['', [Validators.required, Validators.pattern(SELECT_NUMBER_PATTERN)]],
+      quantite: ['', [Validators.required, Validators.pattern(SELECT_NUMBER_PATTERN)]],
       description: ['', [Validators.required, Validators.minLength(DESCRIPTION_MINIMUM_LENGTH)]],
       groupement: this.fb.group({
         id: [null, [Validators.required, Validators.pattern(SELECT_NUMBER_PATTERN)]]
@@ -96,6 +97,7 @@ export class EditProduitComponent implements OnInit {
       nom: produit.nom,
       poids: produit.poids,
       prixUnit: produit.prixUnit,
+      quantite: produit.quantite,
       description: produit.description,
       groupement: { id: produit.groupement.id }
     })
@@ -106,4 +108,6 @@ export class EditProduitComponent implements OnInit {
       this.mapProduit();
     }
   }
+
+
 }

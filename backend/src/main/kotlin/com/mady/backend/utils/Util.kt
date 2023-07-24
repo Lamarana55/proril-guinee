@@ -1,6 +1,8 @@
 package com.mady.backend.utils
 
 import org.springframework.beans.factory.annotation.Value
+import java.util.regex.Pattern
+
 
 enum class Statut{Activated, Desactivated }
 
@@ -55,6 +57,20 @@ data class ImageReponse(
         val fileType: String,
         val isVedette: Boolean
 )
+
+val EMAIL_ADDRESS_REGEX = Regex(
+        "[a-zA-Z0-9\\+\\.\\_\\%\\-\\+]{1,256}" +
+                "\\@" +
+                "[a-zA-Z0-9][a-zA-Z0-9\\-]{0,64}" +
+                "(" +
+                "\\." +
+                "[a-zA-Z0-9][a-zA-Z0-9\\-]{0,25}" +
+                ")+"
+)
+
+fun isValidEmail(email: String): Boolean {
+    return !email.isNullOrEmpty() && EMAIL_ADDRESS_REGEX.matches(email)
+}
 
 /*class Role {
     companion object {
@@ -120,6 +136,14 @@ class Permissions{
         const val CAN_ADD_GROUPEMENT = "CAN_ADD_GROUPEMENT"
         const val CAN_UPDATE_GROUPEMENT = "CAN_UPDATE_GROUPEMENT"
         const val CAN_DELETE_GROUPEMENT = "CAN_DELETE_GROUPEMENT"
+
+
+        const val CAN_VIEW_PRODUIT_MENU = "CAN_VIEW_PRODUIT_MENU"
+        const val CAN_VIEW_PRODUIT_LIST = "CAN_VIEW_PRODUIT_LIST"
+        const val CAN_VIEW_PRODUIT_INFO = "CAN_VIEW_PRODUIT_INFO"
+        const val CAN_ADD_PRODUIT = "CAN_ADD_PRODUIT"
+        const val CAN_UPDATE_PRODUIT = "CAN_UPDATE_PRODUIT"
+        const val CAN_DELETE_PRODUIT = "CAN_DELETE_PRODUIT"
 
         const val CAN_VIEW_IMAGE_ARTICLE = "CAN_VIEW_IMAGE_ARTICLE"
         const val CAN_ADD_IMAGE_ARTICLE = "CAN_ADD_IMAGE_ARTICLE"

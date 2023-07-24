@@ -290,7 +290,7 @@ class LoadDataService {
         try {
             val users = mapper.readValue(inputStream, typeReference)
             for (user in users) {
-                if(!userRepository.findById(user.id).isPresent || !userRepository.findByEmail(user.email).isPresent){
+                if(!userRepository.findById(user.id).isPresent || !userRepository.findByEmail(user.email!!).isPresent){
                     /*val localite = when{
                         user.localite?.id != null -> localiteRepository.findById(user.localite.id)
                         else ->  null

@@ -3,7 +3,7 @@ import { UtilService } from './../../../core/services/util.service';
 import { LocaliteService } from './../../../core/services/localite.service';
 import { Observable } from 'rxjs';
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Role } from '../../models/role.model';
 import { User } from '../../models/user.model';
@@ -16,6 +16,7 @@ import { Prefecture } from 'app/project/core/models/prefecture.model';
 import { Commune } from 'app/project/core/models/commune.model';
 import { Quartier } from 'app/project/core/models/quartier.model';
 import { Secteur } from 'app/project/core/models/secteur.model';
+import intlTelInput from 'intl-tel-input';
 
 @Component({
   selector: 'app-edit-user',
@@ -55,54 +56,41 @@ export class EditUserComponent implements OnInit {
     this.isNew = isNaN(this.userId);
     this.roles$ = this.userService.getAllRoles();
     this.initForm();
+    this.initPhone();
     this.onEdit();
     this.loadInfos();
     this.onChangeSelectLocalite(); 
   }
 
   initForm() {
-    this.userForm = this.fb.group({
-      nom: ['', [Validators.required, Validators.minLength(2)]],
-      prenom: ['', [Validators.required, Validators.minLength(2)]],
-      email: ['', [Validators.required, Validators.email]],
-      region: this.fb.group({id: [null, [Validators.pattern(SELECT_NUMBER_PATTERN)]]}),
-      prefecture: this.fb.group({
-        id: [null, [Validators.pattern(SELECT_NUMBER_PATTERN)]]
-      }),
-      commune: this.fb.group({
-        id: [null, [Validators.pattern(SELECT_NUMBER_PATTERN)]]
-      }),
-      quartier: this.fb.group({
-        id: [null, [Validators.pattern(SELECT_NUMBER_PATTERN)]]
-      }),
-      secteur: this.fb.group({
-        id: [null, [Validators.pattern(SELECT_NUMBER_PATTERN)]]
-      }),
-      telephone: ['', [Validators.required, Validators.pattern(TEL_PATTERN)]],
-      role: this.fb.group({
-        id: [null, [Validators.required, Validators.pattern(SELECT_NUMBER_PATTERN)]]
+    this.userForm = new FormGroup(
+      {
+        nom: new FormControl("", Validators.required),
+        prenom: new FormControl("", Validators.required),
+        telephone: new FormControl('', [Validators.required, Validators.pattern(TEL_PATTERN)]),
+        email: new FormControl(""),
+        role: new FormControl("", Validators.required),
+        region:  new FormControl(null),
+        prefecture:  new FormControl(null),
+        commune:  new FormControl(null),
+        quartier:  new FormControl(null),
+        secteur:  new FormControl(null),
+        
       })
-    });
   }
 
   resetForm() {
     this.initForm();
-    this.userForm.markAsPristine();
-    this.userForm.markAsUntouched();
-    this.userForm.updateValueAndValidity();
+    // this.userForm.markAsPristine();
+    // this.userForm.markAsUntouched();
+    // this.userForm.updateValueAndValidity();
   }
 
-  async onSubmit() {
+  async onSubmit($event) {
     if (!this.userForm.invalid) {
-      const user = this.userForm.value as Partial<User>;
-      user.role = await this.userService.getOneRole(user.role.id).toPromise();
-      user.region = user.region ? await this.localiteService.getOneRegion(user.region.id).toPromise() : null;
-      user.prefecture = user.prefecture ? await this.localiteService.getOnePrefecture(user.prefecture.id).toPromise(): null;
-      user.commune = user.commune ? await this.localiteService.getOnecommune(user.commune.id).toPromise() : null;
-      user.quartier =  user.quartier ? await this.localiteService.getOneQuartier(user.quartier.id).toPromise() : null;
-      user.secteur = user.secteur ? await this.localiteService.getOneSecteur(user.secteur.id).toPromise() : null;
-
-      const userActions$ = this.isNew ? this.userService.add(user) : this.userService.update(this.userId, user);
+      $event.preventDefault();
+      let data = { ...this.userForm.value };
+      const userActions$ = this.isNew ? this.userService.add(data) : this.userService.update(this.userId, data);
       userActions$.subscribe(
         () => {
           this.initLoc();
@@ -135,20 +123,20 @@ export class EditUserComponent implements OnInit {
 
   // Actualisation des champs de la localite en fonction des informations selectionnees
  onChangeSelectLocalite() {
-    this.userForm.get('region.id').valueChanges.subscribe(id => {
-      this.localiteService.subjectPrefecture.next(id);
+    this.userForm.get('region').valueChanges.subscribe(region => {
+      this.localiteService.subjectPrefecture.next(region.id);
     });
 
-    this.userForm.get('prefecture.id').valueChanges.subscribe(idPrefecture => {
-      this.localiteService.subjectCommune.next(idPrefecture);
+    this.userForm.get('prefecture').valueChanges.subscribe(prefecture => {
+      this.localiteService.subjectCommune.next(prefecture.id);
     });
 
-    this.userForm.get('commune.id').valueChanges.subscribe(idCommune => {
-      this.localiteService.subjectQuartier.next(idCommune);
+    this.userForm.get('commune').valueChanges.subscribe(commune => {
+      this.localiteService.subjectQuartier.next(commune.id);
     });
 
-    this.userForm.get('quartier.id').valueChanges.subscribe(idQuartier => {
-      this.localiteService.subjectSecteur.next(idQuartier);
+    this.userForm.get('quartier').valueChanges.subscribe(quartier => {
+      this.localiteService.subjectSecteur.next(quartier.id);
     });
   } 
 
@@ -159,23 +147,19 @@ export class EditUserComponent implements OnInit {
       prenom: user.prenom,
       email: user.email,
       telephone: user.telephone, 
-      role: { id: user.role.id },
-      region:  user.region ? {id: user.region.id} : this.fb.group({
-        id: [null, [Validators.pattern(SELECT_NUMBER_PATTERN)]]
-      }),
-      prefecture: user.prefecture ? {id: user.prefecture.id} : this.fb.group({
-        id: [null, [Validators.pattern(SELECT_NUMBER_PATTERN)]]
-      }),
-      commune: user.commune ? {id: user.commune.id} : this.fb.group({
-        id: [null, [Validators.pattern(SELECT_NUMBER_PATTERN)]]
-      }),
-      quartier: user.quartier ? {id: user.quartier.id} : this.fb.group({
-        id: [null, [Validators.pattern(SELECT_NUMBER_PATTERN)]]
-      }),
-      secteur:  user.secteur ? {id: user.secteur.id}: this.fb.group({
-        id: [null, [Validators.pattern(SELECT_NUMBER_PATTERN)]]
-      })
+      role: user.role,
+      region: user.region,
+      prefecture: user.prefecture,
+      commune: user.commune,
+      quartier: user.quartier,
+      secteur:  user.secteur
     })
+    this.userForm.patchValue({ role: user.role });
+    // this.userForm.get('role').setValue(user.role); 
+  }
+
+  compareObjects(object1: any, object2: any) {
+    return object1 && object2 && object1.id == object2.id;
   }
 
   onEdit() {
@@ -187,31 +171,35 @@ export class EditUserComponent implements OnInit {
   // Apres enregistrement d'un nouveau quartier dans le modal, MAJ du champs
   onNewQuartier(isDone: {done: boolean, id: number}) {
     if (isDone.done) {
-      this.localiteService.subjectQuartier.next(this.communeId);
-      this.userForm.get('quartier.id').setValue(isDone.id);
-      this.modalReference.close();
+      this.localiteService.getOneQuartier(isDone.id).subscribe((data) => {
+        this.localiteService.subjectQuartier.next(data.commune.id);
+        this.userForm.get('quartier').setValue(data);
+        this.modalReference.close();
+      },error => console.log(error))
     }
   }
 
   // Apres enregistrement d'un nouveau secteur dans le modal, MAJ du champs
   onNewSecteur(isDone: {done: boolean, id: number}) {
     if (isDone.done) {
-      this.localiteService.subjectSecteur.next(this.quartierId);
-      this.userForm.get('secteur.id').setValue(isDone.id);
-      this.modalReference.close();
+      this.localiteService.getOneSecteur(isDone.id).subscribe((data) => {
+        this.localiteService.subjectSecteur.next(data.quartier.id);
+        this.userForm.get('secteur').setValue(data);
+        this.modalReference.close();
+      },error => console.log(error))
     }
   }
 
   // Fonction permettant d'ouvrir un modal pour enregistrer un quartier ou un secteur
   onOpenModal(content: any, isSecteur= false) {
     if (isSecteur) {
-      this.quartierId = this.userForm.get('quartier.id').value;
+      this.quartierId = this.userForm.get('quartier').value;
       if (!this.quartierId) {
         this.snackBar.open('Selectionnez un quartier', '', {duration: 3000, verticalPosition: 'top', horizontalPosition: 'right', panelClass: ['my-snack-warning']})
         return;
       }
     } else {
-      this.communeId = this.userForm.get('commune.id').value;
+      this.communeId = this.userForm.get('commune').value;
       if (!this.communeId) {
         this.snackBar.open('Selectionnez une commune ou sous-prefecture', '', {duration: 3000, verticalPosition: 'top', horizontalPosition: 'right', panelClass: ['my-snack-warning']})
         return;
@@ -219,5 +207,35 @@ export class EditUserComponent implements OnInit {
     }
     this.modalReference = this.modalService.open(content, {backdrop: 'static', centered: true});
   }
+
+  initPhone() {
+    const input = document.querySelector("#phone");
+    // Récupérer le champ email et sa taille
+    const emailInput = document.querySelector("#email");
+    const emailInputStyle = window.getComputedStyle(emailInput);
+    const emailInputWidth = emailInputStyle.getPropertyValue("width");
+    // Appliquer la taille au champ téléphone
+    if (input instanceof HTMLInputElement) {
+      input.style.width = emailInputWidth;
+    }
+
+    // Appliquer le gn au champ téléphone
+    if (input) {
+      const iti = intlTelInput(input, {
+        initialCountry: "gn",
+        separateDialCode: true,
+        autoPlaceholder: "polite",
+        nationalMode: false,
+        formatOnDisPROFESSIONplay: false,
+        customPlaceholder: function (
+          selectedCountryPlaceholder,
+          selectedCountryData
+        ) {
+          return "Ex: " + selectedCountryPlaceholder;
+        },
+      });
+    }
+  }
+
 
 }

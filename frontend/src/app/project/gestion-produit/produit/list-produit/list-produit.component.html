@@ -18,7 +18,7 @@
       </div>
     </div>
   </div>
-  <!-- <app-search-local (onSearchEvent)="onSearch($event)"></app-search-local> -->
+  <app-search-produit (onSearchEvent)="onSearch($event)"></app-search-produit>
   <div class="card-body">
     <!--  -->
     <!-- Spinner -->
@@ -30,11 +30,11 @@
 
 
         <div class="table-responsive mb-2" [hidden]="!dataSource || dataSource.data.length === 0">
-          <div class="mat-table-header">
+          <!-- <div class="mat-table-header">
             <mat-form-field>
               <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Rechercher">
             </mat-form-field>
-          </div>
+          </div> -->
           <mat-table [dataSource]="dataSource" matSort>
             <!-- code Column -->
             <ng-container matColumnDef="nom">
@@ -59,11 +59,12 @@
               <mat-cell *matCellDef="let row">{{ row.poids }}</mat-cell>
             </ng-container>
 
-            <!-- TypeCas Column -->
-            <!-- <ng-container matColumnDef="categorie">
-                <mat-header-cell *matHeaderCellDef mat-sort-header><strong>CATEGORIE</strong> </mat-header-cell>
-                <mat-cell *matCellDef="let row">{{ row.categorie.libelle }}</mat-cell>
-              </ng-container> -->
+            <!-- Quantite Column -->
+            <ng-container matColumnDef="quantite">
+              <mat-header-cell *matHeaderCellDef mat-sort-header><strong>QUANTITE</strong> </mat-header-cell>
+              <mat-cell *matCellDef="let row">{{ row.quantite }}</mat-cell>
+            </ng-container>
+
 
             <!-- TypeCas Column -->
             <ng-container matColumnDef="groupement">

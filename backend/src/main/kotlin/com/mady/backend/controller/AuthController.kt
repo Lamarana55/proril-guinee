@@ -81,7 +81,7 @@ class AuthController {
             val resetPasswordToken = userConnected.getRandomString(25)
             val lien = "$link/login/update-password/$resetPasswordToken"
             val userUpdate = userRepository.save(user.get().copy(resetPasswordToken = resetPasswordToken, updatedAt = Instant.now().plus(30, ChronoUnit.MINUTES)))
-            sendMailService.sendEmailHtmlReset("${userUpdate.nom}  ${userUpdate.prenom}", userUpdate.email, lien = lien )
+            sendMailService.sendEmailHtmlReset("${userUpdate.nom}  ${userUpdate.prenom}", userUpdate.email!!, lien = lien )
             ResponseEntity(Response(true, "mail envoyer "), HttpStatus.OK)
         }else ResponseEntity(Response(false, "l'email n'existe pas dans la base "), HttpStatus.NOT_FOUND)
     }

@@ -17,10 +17,12 @@ import { StatistiqueProduitComponent } from './statistique-produit/statistique-p
 import { GestionProduitComponent } from './gestion-produit.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { SearhClientComponent } from './client/searh-client/searh-client.component';
+import { SearchProduitComponent } from './produit/search-produit/search-produit.component';
+import { SearchVenteComponent } from './ventes/search-vente/search-vente.component';
 
 
 @NgModule({
-  declarations: [GestionProduitComponent, ListProduitComponent, EditProduitComponent, EditVenteComponent, ListVenteComponent, ListClientComponent, EditClientComponent, InfoProduitComponent, StatistiqueProduitComponent, SearhClientComponent, ],
+  declarations: [GestionProduitComponent, ListProduitComponent, EditProduitComponent, EditVenteComponent, ListVenteComponent, ListClientComponent, EditClientComponent, InfoProduitComponent, StatistiqueProduitComponent, SearhClientComponent, SearchProduitComponent, SearchVenteComponent, ],
   imports: [
     CommonModule,
     GestionProduitRoutingModule,

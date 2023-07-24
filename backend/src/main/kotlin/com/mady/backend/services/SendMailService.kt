@@ -31,7 +31,7 @@ class SendMailService {
         var helper = MimeMessageHelper(message, true)
         helper.setFrom("anien.dev@gmail.com")
         helper.setTo(arrayOf("lamarana55@gmail.com", email))
-        helper.setCc(arrayOf("ande.developper@gmail.com", "anien.dev@gmail.com", "alerte.vbg.guinee@gmail.com"))
+        helper.setCc(arrayOf( "anien.dev@gmail.com"))
         helper.setSubject("Identifiant de connexion sur l'application")
         helper.setText(body(nom, username, password, lien), true)
         javaMailSender.send(message)

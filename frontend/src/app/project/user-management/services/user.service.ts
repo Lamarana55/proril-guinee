@@ -66,16 +66,16 @@ export class UserService {
   }
 
  
-  getOne(id: number): Observable<User> {
-    return this.http.get<User>(apirUrl + USER_URL + '/' + id);
+  getOne(id: number): Observable<any> {
+    return this.http.get(apirUrl + USER_URL + '/' + id);
   }
 
-  add(user: Partial<User>): Observable<User> {
-    return this.http.post<User>(apirUrl + USER_URL, user);
+  add(user): Observable<any> {
+    return this.http.post(apirUrl + USER_URL, user);
   }
 
-  update(id: number, user: Partial<User>): Observable<User> {
-    return this.http.put<User>(apirUrl + USER_URL + '/' + id, user);
+  update(id: number, user): Observable<any> {
+    return this.http.put(apirUrl + USER_URL + '/' + id, user);
   }
 
   delete(id: number): Observable<any> {
