@@ -46,7 +46,7 @@ export class ListProduitComponent implements OnInit {
   showFullDescription = false;
   description = "";
 
-  displayedColumns = [ 'nom', 'prixUnit','marque', 'poids','groupement', 'description',  'option'];
+  displayedColumns = [ 'nom', 'prixUnit','marque', 'poids','quantite', 'groupement', 'description',  'option'];
   dataSource: MatTableDataSource<Produit> = new MatTableDataSource([]);
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
@@ -73,6 +73,7 @@ export class ListProduitComponent implements OnInit {
         id: dd.id,
         nom: dd.nom,
         poids: dd.poids,
+        quantite: dd.quantite,
         prixUnit: dd.prixUnit,
         description: dd.description,
         marque: dd.groupement.marque,
@@ -86,7 +87,7 @@ export class ListProduitComponent implements OnInit {
     this.dataSource.data = displayData
     setTimeout(() => {
       // this.paginator.pageIndex = this.currentPage;
-      this.paginator.length = this.totalRows;
+      // this.paginator.length = this.totalRows;
     });
     // this.dataSource.data.push.apply(this.dataSource.data, displayData);
     this.dataSource._updateChangeSubscription();

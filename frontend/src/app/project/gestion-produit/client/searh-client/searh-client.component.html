@@ -9,8 +9,8 @@
             <div class="row">
                 <div class="col-md-4 col-sm-12">
                     <mat-form-field>
-                        <mat-label>Nom</mat-label>
-                        <input matInput type="text" name="nom" [(ngModel)]="params.nom">
+                        <mat-label>Nom </mat-label>
+                        <input matInput type="text" name="nom"  [(ngModel)]="params.nom">
                      </mat-form-field>
                 </div> 
                 <div class="col-md-4 col-sm-12">
@@ -19,6 +19,22 @@
                         <input matInput type="text" name="prenom" [(ngModel)]="params.prenom">
                      </mat-form-field>
                 </div>
+                <div class="col-md-4 col-sm-12">
+                  <mat-form-field>
+                    <!-- <mat-label>Téléphone </mat-label>  -->
+                    <input matInput type="number" minlength="1"  [(ngModel)]="params.telephone" id="phone">
+                  </mat-form-field>
+                </div>
+                <div class="col-md-4 col-sm-12 form-inline"> <!--[class.spinner]="isLoading"-->
+                  <button type="button" mat-raised-button color="info" class="mr-1" (click)="onSearch()" [disabled]="isLoading">
+                      <mat-icon>search</mat-icon>
+                      Rechercher
+                  </button>
+                  <button type="button" mat-raised-button (click)="resetForm()">
+                      <mat-icon>restart_alt</mat-icon>
+                      Annuler
+                  </button>
+              </div>
             </div>  
           </form>
         </mat-expansion-panel>

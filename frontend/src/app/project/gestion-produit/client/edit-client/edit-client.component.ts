@@ -12,6 +12,8 @@ import { ParametrageService } from 'app/project/parametrage/services/parametrage
 import { Categorie } from 'app/project/parametrage/models/categorie.model';
 import { Client } from '../../models/client.model';
 import { CLIENT_URL, GestionProduitService } from '../../services/gestion-produit.service';
+import intlTelInput from 'intl-tel-input';
+import { GlobalConstants } from 'app/global-constants';
 
 @Component({
   selector: 'app-edit-client',
@@ -45,6 +47,7 @@ export class EditClientComponent implements OnInit {
   ngOnInit(): void {
     this.clientId = this.route.snapshot.params['id'];
     this.isNew = isNaN(this.clientId);
+    this.initPhone();
     this.groupements$ = this.parametrageService.getGroupements();
     this.categories$ = this.parametrageService.getAllCategories();
     this.initForm();
@@ -55,9 +58,9 @@ export class EditClientComponent implements OnInit {
     this.clientForm = this.fb.group({
       nom: ['', [Validators.required, Validators.minLength(2)]],
       prenom: ['', [Validators.required, Validators.minLength(2)]],
-      telephone: ['', [Validators.required, Validators.pattern(TEL_PATTERN)]],
+      telephone: ['', [Validators.required, Validators.pattern('^6[2165][0-9]{7}$')]],
       adresse: ['', [Validators.minLength(DESCRIPTION_MINIMUM_LENGTH)]],
-    });
+    }); 
   }
 
   resetForm() {
@@ -97,6 +100,35 @@ export class EditClientComponent implements OnInit {
   onEdit() {
     if (!this.isNew && this.clientId > 0) {
       this.mapclient();
+    }
+  }
+
+  initPhone() {
+    const input = document.querySelector("#phone");
+    // Récupérer le champ nom et sa taille
+    const nomInput = document.querySelector("#prenom");
+    const nomInputStyle = window.getComputedStyle(nomInput);
+    const nomInputWidth = nomInputStyle.getPropertyValue("width");
+    // Appliquer la taille au champ téléphone
+    if (input instanceof HTMLInputElement) {
+      input.style.width = nomInputWidth;
+    }
+
+    // Appliquer le gn au champ téléphone
+    if (input) {
+      const iti = intlTelInput(input, {
+        initialCountry: "gn",
+        separateDialCode: true,
+        autoPlaceholder: "polite",
+        nationalMode: false,
+        formatOnDisPROFESSIONplay: false,
+        customPlaceholder: function (
+          selectedCountryPlaceholder,
+          selectedCountryData
+        ) {
+          return "Ex: " + selectedCountryPlaceholder;
+        },
+      });
     }
   }
 }

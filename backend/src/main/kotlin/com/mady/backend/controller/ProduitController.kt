@@ -52,7 +52,7 @@ class ProduitController {
 
 //        return if (true) {
         when {
-            userConnected.getAutorisation(Permissions.CAN_VIEW_GROUPEMENT_LIST) -> return when {
+            userConnected.getAutorisation(Permissions.CAN_VIEW_PRODUIT_LIST) -> return when {
                 nom != null -> ResponseEntity.ok().body(apiService.myTreePage(produitRepository.findByNomAndIsDelete(nom, Delete.No, pageRequest)))
                 groupement != null -> ResponseEntity.ok().body(apiService.myTreePage(produitRepository.findByGroupementNomAndIsDelete(groupement, Delete.No, pageRequest)))
                 else -> ResponseEntity.ok().body(apiService.myTreePage(produitRepository.findAllByIsDeleteOrderByNomAsc(Delete.No, pageRequest)))
@@ -103,6 +103,7 @@ class ProduitController {
                     nom = produit.nom,
                     poids = produit.poids,
                     prixUnit = produit.prixUnit,
+                    quantite = produit.quantite,
                     description = produit.description,
                     groupement = produit.groupement,
                     updatedAt = Instant.now()
@@ -134,7 +135,7 @@ class ProduitController {
     fun getAll(): ResponseEntity<Any> {
         return when {
 //            true -> {
-            userConnected.getAutorisation(Permissions.CAN_VIEW_GROUPEMENT_LIST) ->{
+            userConnected.getAutorisation(Permissions.CAN_VIEW_PRODUIT_LIST) ->{
                 ResponseEntity.ok(produitRepository.findAll().filter { produit -> produit.isDelete == Delete.No })
             }
             else -> ResponseEntity(MessageResponse("le user n'est pas autorisé "), HttpStatus.UNAUTHORIZED)

@@ -59,11 +59,12 @@
               <mat-cell *matCellDef="let row">{{ row.poids }}</mat-cell>
             </ng-container>
 
-            <!-- TypeCas Column -->
-            <!-- <ng-container matColumnDef="categorie">
-                <mat-header-cell *matHeaderCellDef mat-sort-header><strong>CATEGORIE</strong> </mat-header-cell>
-                <mat-cell *matCellDef="let row">{{ row.categorie.libelle }}</mat-cell>
-              </ng-container> -->
+            <!-- Quantite Column -->
+            <ng-container matColumnDef="quantite">
+              <mat-header-cell *matHeaderCellDef mat-sort-header><strong>QUANTITE</strong> </mat-header-cell>
+              <mat-cell *matCellDef="let row">{{ row.quantite }}</mat-cell>
+            </ng-container>
+
 
             <!-- TypeCas Column -->
             <ng-container matColumnDef="groupement">

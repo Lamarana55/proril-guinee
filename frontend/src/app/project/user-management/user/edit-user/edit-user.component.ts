@@ -59,9 +59,7 @@ export class EditUserComponent implements OnInit {
     this.initPhone();
     this.onEdit();
     this.loadInfos();
-    if(this.isNew){
-      this.onChangeSelectLocalite(); 
-    }
+    this.onChangeSelectLocalite(); 
   }
 
   initForm() {
@@ -158,6 +156,10 @@ export class EditUserComponent implements OnInit {
     })
     this.userForm.patchValue({ role: user.role });
     // this.userForm.get('role').setValue(user.role); 
+  }
+
+  compareObjects(object1: any, object2: any) {
+    return object1 && object2 && object1.id == object2.id;
   }
 
   onEdit() {

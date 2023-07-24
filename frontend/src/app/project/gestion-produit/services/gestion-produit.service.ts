@@ -95,4 +95,38 @@ export class GestionProduitService {
     return this.http.delete(API_URL + CLIENT_URL + '/' + id);
   }
 
+
+    // =============================== Ventes =============================== //
+
+
+    getAllVentes(params?: RequestProduitParam): Observable<Pagination> {
+      let request = API_URL + PRODUIT_URL + `?page=${params.page}&size=${params.size}`;
+      if (params) {
+        request += makeParams(params);
+      }
+      return this.http.get<Pagination>(request);
+      
+    }
+    
+    getProduits(): Observable<Produit[]> {
+      return this.http.get<Produit[]>(API_URL + PRODUIT_URL + '/all');
+    }
+  
+    getOneproduit(id: number): Observable<Produit> {
+      return this.http.get<Produit>(API_URL + PRODUIT_URL + '/' + id);
+    }
+  
+    addProduit(produit: Partial<Produit>): Observable<Produit> {
+      console.log(produit);
+      return this.http.post<Produit>(API_URL + PRODUIT_URL, produit);
+    }
+  
+    updateProduit(id: number, produit: Partial<Produit>): Observable<Produit> {
+      return this.http.put<Produit>(API_URL + PRODUIT_URL + '/' + id, produit);
+    }
+  
+    deleteProduit(id: number): Observable<any> {
+      return this.http.delete(API_URL + PRODUIT_URL + '/' + id);
+    }
+
 }

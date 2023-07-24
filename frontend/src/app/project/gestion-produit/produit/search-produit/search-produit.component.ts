@@ -2,6 +2,7 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 //import { EventEmitter } from 'protractor';
 import { ParametrageService } from 'app/project/parametrage/services/parametrage.service';
 import { RequestProduitParam } from '../../models/request.produit.model';
+
 @Component({
   selector: 'app-search-produit',
   templateUrl: './search-produit.component.html',
@@ -17,6 +18,8 @@ export class SearchProduitComponent implements OnInit {
   params: RequestProduitParam;
 
   groupements$: any;
+
+  poids: number[] = [1, 2, 5, 10];
 
   constructor(
               private parametrageService: ParametrageService) { }

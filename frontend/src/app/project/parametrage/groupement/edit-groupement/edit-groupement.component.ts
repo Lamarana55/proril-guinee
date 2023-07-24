@@ -74,18 +74,18 @@ export class EditGroupementComponent implements OnInit {
 
   resetForm() {
     this.initForm();
-    this.groupementForm.markAsPristine();
-    this.groupementForm.markAsUntouched();
-    this.groupementForm.updateValueAndValidity();
+    // this.groupementForm.markAsPristine();
+    // this.groupementForm.markAsUntouched();
+    // this.groupementForm.updateValueAndValidity();
   }
 
   async onSubmit() {
     if (!this.groupementForm.invalid) {
       const groupement = this.groupementForm.value as Partial<Groupement>;
-      groupement.region = groupement.region?.id ? await this.localiteService.getOneRegion(groupement.region?.id).toPromise(): null;
+      /* groupement.region = groupement.region?.id ? await this.localiteService.getOneRegion(groupement.region?.id).toPromise(): null;
       groupement.prefecture = groupement.prefecture?.id ? await this.localiteService.getOnePrefecture(groupement.prefecture.id).toPromise() : null;
       groupement.commune = groupement.commune?.id ? await this.localiteService.getOnecommune(groupement.commune.id).toPromise() : null;
-      groupement.quartier = groupement.quartier?.id ? await this.localiteService.getOneQuartier(groupement.quartier.id).toPromise() : null;
+      groupement.quartier = groupement.quartier?.id ? await this.localiteService.getOneQuartier(groupement.quartier.id).toPromise() : null; */
       const groupementActions$ = this.isNew ? this.parametrageService.addGroupement(groupement) : this.parametrageService.updateGroupement(this.groupementId, groupement);
       groupementActions$.subscribe(
         () => {
@@ -135,20 +135,6 @@ export class EditGroupementComponent implements OnInit {
     });
   } 
 
-  onChangeSelectRegion(){
-    const selectedRegion = this.groupementForm.get('region').value;
-    this.localiteService.subjectPrefecture.next(selectedRegion.id);
-  }
-
-  onChangeSelectPrefecture(){
-    const selectedPrefecture = this.groupementForm.get('prefecture').value;
-    this.localiteService.subjectCommune.next(selectedPrefecture.id);
-  }
-
-  onChangeSelectCommune(){
-    const selectedCommune = this.groupementForm.get('commune').value;
-    this.localiteService.subjectQuartier.next(selectedCommune.id);
-  }
 
   async mapGroupement() {
     const groupement = await this.parametrageService.getOneGroupement(this.groupementId).toPromise();
@@ -162,8 +148,13 @@ export class EditGroupementComponent implements OnInit {
       commune: groupement.commune,
       quartier: groupement.quartier,
     })
+    this.groupementForm.get('commune').setValue(groupement.commune);
+    
   }
 
+  compareObjects(object1: any, object2: any) {
+    return object1 && object2 && object1.id == object2.id;
+  }
   onEdit() {
     if (!this.isNew && this.groupementId > 0) {
       this.mapGroupement();
